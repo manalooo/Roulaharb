@@ -109,32 +109,45 @@ a   { text-decoration: none; color: inherit; }
 .btn-sm { padding: 0.55rem 1.3rem; font-size: 0.7rem; }
 
 /* ─── LABELS & TITLES ─── */
+/*
+  Type scale — Major Third (×1.25):
+  xs: 0.68rem | sm: 0.8rem | base: 1rem | md: 1.25rem
+  lg: 1.56rem | xl: 1.95rem | 2xl: 2.44rem | 3xl: 3.05rem
+  display: fluid clamp()
+*/
 .section-label {
-  font-size: 0.7rem;
+  font-size: 0.68rem;
   font-weight: 500;
-  letter-spacing: 0.28em;
+  letter-spacing: 0.32em;
   text-transform: uppercase;
   color: var(--gold);
-  margin-bottom: 0.8rem;
+  margin-bottom: 1rem;
 }
 .jookh-label { color: var(--jookh); }
 .plo-label   { color: var(--plo); }
 
 .section-title {
   font-family: var(--font-serif);
-  font-size: clamp(2.2rem, 5vw, 3.8rem);
+  font-size: clamp(2.8rem, 6vw, 5rem);
   font-weight: 400;
-  line-height: 1.1;
-  margin-bottom: 1.2rem;
+  line-height: 1.05;
+  letter-spacing: -0.01em;
+  margin-bottom: 1.4rem;
 }
 .section-title em { font-style: italic; color: var(--jookh-2); }
 .jookh-title { color: #fff; }
 .plo-title   { color: var(--plo); }
 
-.section-desc { font-size: 1rem; line-height: 1.85; color: var(--text-body); max-width: 580px; }
-.jookh-desc  { color: rgba(255,255,255,0.7); }
+/* Body copy — 18px baseline for comfortable reading */
+.section-desc {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--text-body);
+  max-width: 560px;
+}
+.jookh-desc  { color: rgba(255,255,255,0.68); }
 
-.section-header { text-align: center; margin-bottom: 4rem; }
+.section-header { text-align: center; margin-bottom: 4.5rem; }
 .section-header .section-desc { margin: 0 auto; }
 
 /* ─── BRAND LOGOS ─── */
@@ -159,13 +172,13 @@ a   { text-decoration: none; color: inherit; }
   position: fixed;
   top: 0; left: 0; right: 0;
   z-index: 100;
-  padding: 1.5rem 0;
+  padding: 1.6rem 0;
   transition: background 0.4s, padding 0.4s;
 }
 #navbar.scrolled {
   background: rgba(45,10,30,0.95);
   backdrop-filter: blur(14px);
-  padding: 0.9rem 0;
+  padding: 1rem 0;
   border-bottom: 2px solid rgba(227,30,36,0.4);
 }
 .nav-inner {
@@ -176,25 +189,25 @@ a   { text-decoration: none; color: inherit; }
   align-items: center;
   justify-content: space-between;
 }
-.nav-logo { display: flex; flex-direction: column; line-height: 1.1; }
+.nav-logo { display: flex; flex-direction: column; line-height: 1.15; }
 .nav-logo-main {
   font-family: var(--font-serif);
-  font-size: 1.5rem;
+  font-size: 1.65rem;       /* slightly larger — feels more confident */
   font-weight: 400;
   color: #fff;
   letter-spacing: 0.04em;
 }
 .nav-logo-sub {
-  font-size: 0.58rem;
-  letter-spacing: 0.22em;
+  font-size: 0.6rem;
+  letter-spacing: 0.24em;
   text-transform: uppercase;
   color: var(--gold);
 }
-.nav-links { list-style: none; display: flex; gap: 2.5rem; }
+.nav-links { list-style: none; display: flex; gap: 2.8rem; }
 .nav-links a {
-  font-size: 0.76rem;
+  font-size: 0.72rem;        /* refined, not too small */
   font-weight: 400;
-  letter-spacing: 0.18em;
+  letter-spacing: 0.2em;
   text-transform: uppercase;
   color: rgba(255,255,255,0.75);
   transition: color var(--trans);
@@ -310,49 +323,68 @@ a   { text-decoration: none; color: inherit; }
   position: relative; z-index: 2;
   text-align: center;
   padding: 0 2rem;
-  max-width: 900px;
+  max-width: 1000px;
 }
+
+/*
+  Hero typography hierarchy:
+  1. Eyebrow (context)  — tiny, wide-tracked caps
+  2. Name (identity)    — ENORMOUS display, commanding
+  3. Rule (pause)       — coloured line
+  4. Tagline (poetic)   — large italic serif, breathes
+  5. Micro-copy (info)  — almost invisible, spaced caps
+  6. Buttons (action)   — clear, contained
+*/
+
 .hero-eyebrow {
-  font-size: 0.8rem;
+  font-size: 0.72rem;         /* deliberately small — sets up the contrast */
   font-weight: 400;
-  letter-spacing: 0.32em;
+  letter-spacing: 0.38em;
   text-transform: uppercase;
   color: var(--gold-light);
-  margin-bottom: 0.6rem;
+  margin-bottom: 1.2rem;
 }
 .hero-title {
   font-family: var(--font-serif);
-  font-size: clamp(5rem, 14vw, 11rem);
+  /* Floor: 5rem (80px) so it never gets too small on mobile
+     Ideal: 17vw fills the screen dramatically
+     Ceiling: 14rem (224px) — monumental */
+  font-size: clamp(5rem, 17vw, 14rem);
   font-weight: 300;
-  line-height: 0.92;
+  line-height: 0.88;          /* tighter for giant display type */
   color: #fff;
-  letter-spacing: -0.02em;
-  margin-bottom: 1.5rem;
-  text-shadow: 4px 4px 0 rgba(227,30,36,0.3), -2px -2px 0 rgba(217,30,192,0.2);
+  letter-spacing: -0.03em;    /* tighten large display text */
+  margin-bottom: 2rem;
+  text-shadow:
+    6px 6px 0 rgba(227,30,36,0.25),
+    -3px -3px 0 rgba(217,30,192,0.15);
 }
 .hero-rule {
-  width: 100px; height: 4px;
+  width: 80px; height: 4px;
   background: linear-gradient(to right, var(--jookh), var(--jookh-2), var(--plo), var(--yellow));
-  margin: 0 auto 1.5rem;
+  margin: 0 auto 2rem;
   border-radius: 2px;
 }
 .hero-sub {
   font-family: var(--font-serif);
-  font-size: clamp(1.1rem, 2.5vw, 1.7rem);
+  /* Comfortable reading size — large enough to feel poetic,
+     not so large it competes with the name */
+  font-size: clamp(1.25rem, 2.8vw, 2rem);
   font-style: italic;
-  color: rgba(255,255,255,0.85);
-  margin-bottom: 0.7rem;
-  line-height: 1.4;
+  font-weight: 300;
+  color: rgba(255,255,255,0.82);
+  margin-bottom: 1rem;
+  line-height: 1.45;
 }
 .hero-sub em { font-style: normal; color: var(--gold-light); }
 .hero-tagline {
-  font-size: 0.75rem;
-  letter-spacing: 0.18em;
+  font-size: 0.68rem;         /* whisper — purely informational */
+  letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: rgba(255,255,255,0.45);
-  margin-bottom: 2.5rem;
+  color: rgba(255,255,255,0.38);
+  margin-bottom: 3rem;        /* generous space before buttons */
 }
-.hero-cta { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+.hero-cta { display: flex; gap: 1.2rem; justify-content: center; flex-wrap: wrap; }
 
 .scroll-indicator {
   position: absolute; bottom: 2.5rem;
@@ -372,55 +404,6 @@ a   { text-decoration: none; color: inherit; }
   50%       { opacity: 1;   transform: scaleY(1); }
 }
 
-/* ─── STATEMENT ─── */
-#statement { padding: 0; }
-
-.statement-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-}
-.statement-tile {
-  padding: 4rem 2.5rem;
-  position: relative;
-  overflow: hidden;
-  cursor: default;
-  transition: transform 0.4s var(--ease);
-}
-.statement-tile:hover { transform: translateY(-4px); }
-
-.statement-tile--red     { background: var(--jookh); }
-.statement-tile--magenta { background: var(--jookh-2); }
-.statement-tile--orange  { background: var(--plo); }
-
-.tile-number {
-  position: absolute;
-  top: 1rem; right: 1.5rem;
-  font-family: var(--font-serif);
-  font-size: 5rem;
-  font-weight: 300;
-  color: rgba(255,255,255,0.12);
-  line-height: 1;
-  pointer-events: none;
-}
-.tile-icon {
-  display: block;
-  font-size: 1.2rem;
-  color: rgba(255,255,255,0.6);
-  margin-bottom: 1rem;
-}
-.tile-heading {
-  font-family: var(--font-serif);
-  font-size: 1.8rem;
-  font-weight: 400;
-  color: #fff;
-  margin-bottom: 0.8rem;
-}
-.tile-body {
-  font-size: 0.92rem;
-  color: rgba(255,255,255,0.78);
-  line-height: 1.7;
-  max-width: 260px;
-}
 
 /* ─── JOOKH ─── */
 #jookh {
@@ -568,20 +551,25 @@ a   { text-decoration: none; color: inherit; }
 .collection-item {}
 .collection-img-wrap { background: var(--cream-2); }
 
-.collection-info { padding: 0.9rem 0 0; }
+.collection-info { padding: 1rem 0 0; }
 .piece-number {
-  font-size: 0.68rem; font-weight: 500;
-  letter-spacing: 0.22em; text-transform: uppercase;
+  font-size: 0.65rem;
+  font-weight: 500;
+  letter-spacing: 0.26em;
+  text-transform: uppercase;
   color: var(--plo);
 }
 .collection-info h4 {
   font-family: var(--font-serif);
-  font-size: 1.05rem; font-weight: 400;
+  font-size: 1.2rem;          /* clear product title */
+  font-weight: 400;
   color: var(--text-dark);
-  margin: 0.25rem 0 0.15rem;
+  margin: 0.3rem 0 0.2rem;
 }
 .collection-info p {
-  font-size: 0.76rem; color: var(--text-muted); letter-spacing: 0.04em;
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  letter-spacing: 0.05em;
 }
 
 #plo .collection-note { border-color: rgba(224,123,10,0.2); }
@@ -715,15 +703,19 @@ a   { text-decoration: none; color: inherit; }
 .about-text .section-title em { color: var(--plo); }
 
 .about-body {
-  font-size: 0.97rem; line-height: 1.9;
-  color: var(--text-body); margin-bottom: 1.2rem;
+  font-size: 1.05rem;         /* 16.8px — comfortable long-form reading */
+  line-height: 1.85;
+  color: var(--text-body);
+  margin-bottom: 1.4rem;
 }
 .about-body strong { color: var(--text-dark); font-weight: 500; }
 .about-sig {
-  margin-top: 2rem;
+  margin-top: 2.5rem;
   font-family: var(--font-serif);
-  font-style: italic; font-size: 1.15rem;
+  font-style: italic;
+  font-size: 1.3rem;          /* sign-off — slightly larger than body */
   color: var(--jookh);
+  letter-spacing: 0.02em;
 }
 
 /* ─── PHILOSOPHY ─── */
@@ -761,20 +753,22 @@ a   { text-decoration: none; color: inherit; }
 }
 .philosophy-quote p {
   font-family: var(--font-serif);
-  font-size: clamp(1.5rem, 3.5vw, 2.6rem);
+  /* Make this feel like a billboard — large, poetic, unmissable */
+  font-size: clamp(1.7rem, 4vw, 3.2rem);
   font-weight: 300;
   font-style: italic;
-  line-height: 1.5;
+  line-height: 1.4;
   color: #fff;
-  margin-bottom: 2rem;
-  text-shadow: 0 2px 20px rgba(0,0,0,0.15);
+  margin-bottom: 2.5rem;
+  text-shadow: 0 2px 30px rgba(0,0,0,0.12);
+  letter-spacing: -0.01em;
 }
 .philosophy-quote cite {
-  font-size: 0.78rem;
+  font-size: 0.72rem;
   font-style: normal;
-  letter-spacing: 0.22em;
+  letter-spacing: 0.28em;
   text-transform: uppercase;
-  color: rgba(255,255,255,0.7);
+  color: rgba(255,255,255,0.65);
 }
 
 /* ─── CONTACT ─── */
@@ -841,10 +835,16 @@ a   { text-decoration: none; color: inherit; }
 
 .contact-card h4 {
   font-family: var(--font-serif);
-  font-size: 1.1rem; font-weight: 400;
-  color: #fff; margin-bottom: 0.3rem;
+  font-size: 1.25rem;         /* clear, readable card title */
+  font-weight: 400;
+  color: #fff;
+  margin-bottom: 0.4rem;
 }
-.contact-card p { font-size: 0.8rem; color: rgba(255,255,255,0.45); }
+.contact-card p {
+  font-size: 0.82rem;
+  color: rgba(255,255,255,0.45);
+  letter-spacing: 0.04em;
+}
 .delivery-card { cursor: default; }
 .delivery-card:hover { transform: none; box-shadow: none; }
 
@@ -869,19 +869,24 @@ a   { text-decoration: none; color: inherit; }
 }
 .footer-logo {
   font-family: var(--font-serif);
-  font-size: 1.9rem; font-weight: 400;
-  color: #fff; margin-bottom: 0.3rem;
+  font-size: 2.2rem;          /* substantial brand mark in footer */
+  font-weight: 400;
+  color: #fff;
+  margin-bottom: 0.4rem;
+  letter-spacing: 0.02em;
 }
 .footer-tagline {
-  font-size: 0.65rem; letter-spacing: 0.22em;
+  font-size: 0.62rem;
+  letter-spacing: 0.26em;
   text-transform: uppercase;
   color: var(--gold);
 }
 .footer-links { display: flex; gap: 2rem; }
 .footer-links a {
-  font-size: 0.73rem; letter-spacing: 0.16em;
+  font-size: 0.7rem;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: rgba(255,255,255,0.4);
+  color: rgba(255,255,255,0.38);
   transition: color var(--trans);
 }
 .footer-links a:hover { color: var(--jookh-2); }
@@ -923,7 +928,6 @@ a   { text-decoration: none; color: inherit; }
   .nav-links a { display: block; padding: 1.1rem 2rem; font-size: 0.88rem; }
   .nav-links a::after { display: none; }
 
-  .statement-grid { grid-template-columns: 1fr; }
   .jookh-grid     { grid-template-columns: 1fr; max-width: 380px; margin: 0 auto 3rem; }
   .collection-grid { grid-template-columns: repeat(2, 1fr); }
   .about-container { grid-template-columns: 1fr; gap: 3rem; }
@@ -933,7 +937,8 @@ a   { text-decoration: none; color: inherit; }
   .footer-links { justify-content: center; }
   .footer-social { grid-column: auto; justify-content: center; }
 
-  .hero-title { font-size: clamp(4rem, 16vw, 8rem); }
+  .hero-title { font-size: clamp(4.5rem, 20vw, 9rem); }
+  .hero-sub   { font-size: clamp(1.1rem, 3.5vw, 1.5rem); }
   #jookh, #plo, #about, #contact, #philosophy { padding: 5rem 0; }
 
   .about-paint-slash { display: none; }
