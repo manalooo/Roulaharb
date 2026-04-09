@@ -7,7 +7,7 @@
   <meta name="description" content="The Conceptual Art World of Roula Harb — Transforming the chaos of experience into the sanity of art. Jookh wearable art and P-Lo hand-painted sanctuary pieces from Beirut." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -19,7 +19,7 @@
         <span class="nav-logo-main">Roula Harb</span>
         <span class="nav-logo-sub">The Conceptual Art World</span>
       </a>
-      <button class="hamburger" id="hamburger" aria-label="Menu">
+      <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
       <ul class="nav-links" id="nav-links">
@@ -33,21 +33,27 @@
 
   <!-- ─── HERO ─── -->
   <section id="hero">
-    <div class="hero-bg">
-      <img src="images/hero-bg.jpg" alt="" class="hero-img" id="hero-img" />
-      <div class="hero-overlay"></div>
-    </div>
+    <!-- Animated paint blob shapes -->
+    <div class="blob blob-1" aria-hidden="true"></div>
+    <div class="blob blob-2" aria-hidden="true"></div>
+    <div class="blob blob-3" aria-hidden="true"></div>
+    <!-- Pollock-style drip marks -->
+    <div class="drip drip-1" aria-hidden="true"></div>
+    <div class="drip drip-2" aria-hidden="true"></div>
+    <div class="drip drip-3" aria-hidden="true"></div>
+
     <div class="hero-content">
       <p class="hero-eyebrow reveal">The Conceptual Art World of</p>
-      <h1 class="hero-title reveal">Roula Harb</h1>
-      <div class="hero-divider reveal"></div>
-      <p class="hero-sub reveal">Transforming the <em>chaos of experience</em> into the sanity of art.</p>
-      <p class="hero-tagline reveal">Hand-painted · Handcrafted · Signed · No two pieces alike</p>
+      <h1 class="hero-title reveal">Roula<br />Harb</h1>
+      <div class="hero-rule reveal" aria-hidden="true"></div>
+      <p class="hero-sub reveal">Transforming the <em>chaos of experience</em><br />into the sanity of art.</p>
+      <p class="hero-tagline reveal">Hand-painted &middot; Handcrafted &middot; Signed &middot; No two pieces alike</p>
       <div class="hero-cta reveal">
         <a href="#jookh" class="btn btn-jookh">Discover Jookh</a>
         <a href="#plo" class="btn btn-plo">Explore P-Lo</a>
       </div>
     </div>
+
     <a href="#about" class="scroll-indicator" aria-label="Scroll down">
       <span class="scroll-line"></span>
     </a>
@@ -55,39 +61,41 @@
 
   <!-- ─── BRAND STATEMENT ─── -->
   <section id="statement">
-    <div class="container">
-      <div class="statement-grid">
-        <div class="statement-item reveal" style="--accent: var(--coral)">
-          <span class="statement-icon">◈</span>
-          <h3>The Vision</h3>
-          <p>Transforming the chaos of experience into the sanity of art.</p>
-        </div>
-        <div class="statement-item reveal" style="--accent: var(--violet)">
-          <span class="statement-icon">◈</span>
-          <h3>The Work</h3>
-          <p>Jookh — exquisite wearable art. P-Lo — hand-painted sanctuary pieces.</p>
-        </div>
-        <div class="statement-item reveal" style="--accent: var(--teal)">
-          <span class="statement-icon">◈</span>
-          <h3>The Promise</h3>
-          <p>Every creation is unique, authenticated, and signed by the artist herself.</p>
-        </div>
+    <div class="statement-grid">
+      <div class="statement-tile statement-tile--red reveal">
+        <span class="tile-icon" aria-hidden="true">&#9670;</span>
+        <h3 class="tile-heading">The Vision</h3>
+        <p class="tile-body">Transforming the chaos of experience into the sanity of art.</p>
+      </div>
+      <div class="statement-tile statement-tile--magenta reveal">
+        <span class="tile-icon" aria-hidden="true">&#9670;</span>
+        <h3 class="tile-heading">The Work</h3>
+        <p class="tile-body">Jookh — exquisite wearable art. P-Lo — hand-painted sanctuary pieces.</p>
+      </div>
+      <div class="statement-tile statement-tile--orange reveal">
+        <span class="tile-icon" aria-hidden="true">&#9670;</span>
+        <h3 class="tile-heading">The Promise</h3>
+        <p class="tile-body">Every creation is unique, authenticated, and signed by the artist herself.</p>
       </div>
     </div>
   </section>
 
   <!-- ─── ABOUT ─── -->
   <section id="about">
+    <!-- Decorative huge background number -->
+    <div class="about-bg-number" aria-hidden="true">15</div>
     <div class="container about-container">
       <div class="about-image reveal">
         <div class="img-frame">
           <img src="images/about/roula-harb.jpg" alt="Roula Harb" onerror="this.parentElement.classList.add('img-placeholder')" />
           <div class="img-placeholder-text">Photo of Roula Harb</div>
         </div>
+        <!-- Red accent paint slash -->
+        <div class="about-paint-slash" aria-hidden="true"></div>
       </div>
       <div class="about-text reveal">
         <p class="section-label">About the Artist</p>
-        <h2 class="section-title">Born in Paris.<br />Rooted in Beirut.</h2>
+        <h2 class="section-title">Born in Paris.<br /><em>Rooted in Beirut.</em></h2>
         <p class="about-body">
           Roula Harb is a creative designer with over 15 years of experience in fashion and sales. Born in Paris and based in Beirut, she draws inspiration from modern painters — Jackson Pollock, Cy Twombly — and fashion icons including Rei Kawakubo and Manish Arora, alongside master makeup artist Elise Faas.
         </p>
@@ -97,20 +105,25 @@
         <p class="about-body">
           This journey gave birth to <strong>Jookh Couture</strong> — exquisite wearable art — and <strong>P-Lo</strong>, a brand of hand-painted, hand-embroidered pillows. Each piece is a testament to resilience, beauty, and the transformative power of creation.
         </p>
-        <div class="about-sig">— Roula Harb</div>
+        <div class="about-sig">&#8212; Roula Harb</div>
       </div>
     </div>
   </section>
 
-  <!-- ─── JOOKH COUTURE ─── (first, as requested) -->
+  <!-- ─── JOOKH COUTURE ─── -->
   <section id="jookh">
-    <div class="container">
+    <!-- Diagonal color slash via pseudo (see CSS) -->
+    <div class="jookh-slash" aria-hidden="true"></div>
+    <!-- Big decorative background word -->
+    <div class="jookh-bg-word" aria-hidden="true">JOOKH</div>
+
+    <div class="container jookh-inner">
       <div class="section-header reveal">
         <div class="brand-logo-wrap">
           <img src="images/logos/jookh-logo.png" alt="Jookh Couture" class="brand-logo" onerror="this.style.display='none'" />
         </div>
         <p class="section-label jookh-label">Wearable Art</p>
-        <h2 class="section-title jookh-title">Jookh</h2>
+        <h2 class="section-title jookh-title">Jookh Couture</h2>
         <p class="section-desc">
           Exquisite wearable art — where fashion meets fine art. Each Jookh piece carries Roula's signature brushstroke, made to be worn, felt, and lived in.
         </p>
@@ -121,7 +134,7 @@
           <div class="collection-img-wrap tall">
             <img src="images/jookh/piece-1.jpg" alt="Jookh Piece 1" onerror="this.parentElement.classList.add('img-placeholder')" />
             <div class="img-placeholder-text">Jookh Wearable Art</div>
-            <div class="collection-overlay">
+            <div class="collection-overlay jookh-overlay">
               <a href="#contact" class="btn btn-light btn-sm">Inquire</a>
             </div>
           </div>
@@ -130,7 +143,7 @@
           <div class="collection-img-wrap tall">
             <img src="images/jookh/piece-2.jpg" alt="Jookh Piece 2" onerror="this.parentElement.classList.add('img-placeholder')" />
             <div class="img-placeholder-text">Jookh Wearable Art</div>
-            <div class="collection-overlay">
+            <div class="collection-overlay jookh-overlay">
               <a href="#contact" class="btn btn-light btn-sm">Inquire</a>
             </div>
           </div>
@@ -139,7 +152,7 @@
           <div class="collection-img-wrap tall">
             <img src="images/jookh/piece-3.jpg" alt="Jookh Piece 3" onerror="this.parentElement.classList.add('img-placeholder')" />
             <div class="img-placeholder-text">Jookh Wearable Art</div>
-            <div class="collection-overlay">
+            <div class="collection-overlay jookh-overlay">
               <a href="#contact" class="btn btn-light btn-sm">Inquire</a>
             </div>
           </div>
@@ -154,13 +167,16 @@
 
   <!-- ─── P-LO COLLECTION ─── -->
   <section id="plo">
+    <!-- Giant faded background word -->
+    <div class="plo-bg-word" aria-hidden="true">P-LO</div>
+
     <div class="container">
       <div class="section-header reveal">
         <div class="brand-logo-wrap">
           <img src="images/logos/plo-logo.png" alt="P-Lo" class="brand-logo" onerror="this.style.display='none'" />
         </div>
         <p class="section-label plo-label">Sanctuary Pieces</p>
-        <h2 class="section-title plo-title">P-Lo</h2>
+        <h2 class="section-title plo-title">P-Lo Art Pillows</h2>
         <p class="section-desc">
           Each pillow is a unique world — handpainted, handcrafted, and hand-embroidered. Inspired by the people, music, colors, and textiles surrounding Roula's life in Beirut. Every piece from the <em>Emerge</em> collection is signed and numbered by the artist.
         </p>
@@ -171,14 +187,14 @@
           <div class="collection-img-wrap">
             <img src="images/plo/piece-1.jpg" alt="P-Lo Pillow No. 1" onerror="this.parentElement.classList.add('img-placeholder')" />
             <div class="img-placeholder-text">P-Lo Piece No. 1</div>
-            <div class="collection-overlay">
+            <div class="collection-overlay plo-overlay">
               <a href="#contact" class="btn btn-light btn-sm">Inquire</a>
             </div>
           </div>
           <div class="collection-info">
             <span class="piece-number">No. 01</span>
             <h4>Emerge Series</h4>
-            <p>Hand-painted · Hand-embroidered · Signed</p>
+            <p>Hand-painted &middot; Hand-embroidered &middot; Signed</p>
           </div>
         </div>
 
@@ -186,14 +202,14 @@
           <div class="collection-img-wrap">
             <img src="images/plo/piece-2.jpg" alt="P-Lo Pillow No. 2" onerror="this.parentElement.classList.add('img-placeholder')" />
             <div class="img-placeholder-text">P-Lo Piece No. 2</div>
-            <div class="collection-overlay">
+            <div class="collection-overlay plo-overlay">
               <a href="#contact" class="btn btn-light btn-sm">Inquire</a>
             </div>
           </div>
           <div class="collection-info">
             <span class="piece-number">No. 02</span>
             <h4>Emerge Series</h4>
-            <p>Hand-painted · Hand-embroidered · Signed</p>
+            <p>Hand-painted &middot; Hand-embroidered &middot; Signed</p>
           </div>
         </div>
 
@@ -201,14 +217,14 @@
           <div class="collection-img-wrap">
             <img src="images/plo/piece-3.jpg" alt="P-Lo Pillow No. 3" onerror="this.parentElement.classList.add('img-placeholder')" />
             <div class="img-placeholder-text">P-Lo Piece No. 3</div>
-            <div class="collection-overlay">
+            <div class="collection-overlay plo-overlay">
               <a href="#contact" class="btn btn-light btn-sm">Inquire</a>
             </div>
           </div>
           <div class="collection-info">
             <span class="piece-number">No. 03</span>
             <h4>Emerge Series</h4>
-            <p>Hand-painted · Hand-embroidered · Signed</p>
+            <p>Hand-painted &middot; Hand-embroidered &middot; Signed</p>
           </div>
         </div>
 
@@ -216,14 +232,14 @@
           <div class="collection-img-wrap">
             <img src="images/plo/piece-4.jpg" alt="P-Lo Pillow No. 4" onerror="this.parentElement.classList.add('img-placeholder')" />
             <div class="img-placeholder-text">P-Lo Piece No. 4</div>
-            <div class="collection-overlay">
+            <div class="collection-overlay plo-overlay">
               <a href="#contact" class="btn btn-light btn-sm">Inquire</a>
             </div>
           </div>
           <div class="collection-info">
             <span class="piece-number">No. 04</span>
             <h4>Emerge Series</h4>
-            <p>Hand-painted · Hand-embroidered · Signed</p>
+            <p>Hand-painted &middot; Hand-embroidered &middot; Signed</p>
           </div>
         </div>
 
@@ -231,14 +247,14 @@
           <div class="collection-img-wrap">
             <img src="images/plo/piece-5.jpg" alt="P-Lo Pillow No. 5" onerror="this.parentElement.classList.add('img-placeholder')" />
             <div class="img-placeholder-text">P-Lo Piece No. 5</div>
-            <div class="collection-overlay">
+            <div class="collection-overlay plo-overlay">
               <a href="#contact" class="btn btn-light btn-sm">Inquire</a>
             </div>
           </div>
           <div class="collection-info">
             <span class="piece-number">No. 05</span>
             <h4>Emerge Series</h4>
-            <p>Hand-painted · Hand-embroidered · Signed</p>
+            <p>Hand-painted &middot; Hand-embroidered &middot; Signed</p>
           </div>
         </div>
 
@@ -246,14 +262,14 @@
           <div class="collection-img-wrap">
             <img src="images/plo/piece-6.jpg" alt="P-Lo Pillow No. 6" onerror="this.parentElement.classList.add('img-placeholder')" />
             <div class="img-placeholder-text">P-Lo Piece No. 6</div>
-            <div class="collection-overlay">
+            <div class="collection-overlay plo-overlay">
               <a href="#contact" class="btn btn-light btn-sm">Inquire</a>
             </div>
           </div>
           <div class="collection-info">
             <span class="piece-number">No. 06</span>
             <h4>Emerge Series</h4>
-            <p>Hand-painted · Hand-embroidered · Signed</p>
+            <p>Hand-painted &middot; Hand-embroidered &middot; Signed</p>
           </div>
         </div>
       </div>
@@ -267,12 +283,13 @@
 
   <!-- ─── PHILOSOPHY QUOTE ─── -->
   <section id="philosophy">
-    <div class="container">
-      <blockquote class="philosophy-quote reveal">
-        <p>"Each piece is inspired by the things surrounding me — people, music, colors, and textiles. Created through a journey of healing, every work is a conversation between chaos and beauty."</p>
-        <cite>— Roula Harb</cite>
-      </blockquote>
-    </div>
+    <!-- Decorative paint splatter blobs -->
+    <div class="phil-blob phil-blob-1" aria-hidden="true"></div>
+    <div class="phil-blob phil-blob-2" aria-hidden="true"></div>
+    <blockquote class="philosophy-quote reveal">
+      <p>&#8220;Each piece is inspired by the things surrounding me &#8212; people, music, colors, and textiles. Created through a journey of healing, every work is a conversation between chaos and beauty.&#8221;</p>
+      <cite>&#8212; Roula Harb</cite>
+    </blockquote>
   </section>
 
   <!-- ─── CONTACT ─── -->
@@ -280,7 +297,7 @@
     <div class="container">
       <div class="section-header reveal">
         <p class="section-label">Get in Touch</p>
-        <h2 class="section-title">Acquire a Piece</h2>
+        <h2 class="section-title contact-title">Acquire<br /><em>a Piece</em></h2>
         <p class="section-desc">
           Roula delivers worldwide. Reach out through Instagram or WhatsApp to inquire about availability, commissions, or delivery.
         </p>
@@ -288,32 +305,36 @@
 
       <div class="contact-grid reveal">
         <a href="https://www.instagram.com/jookhcouture" target="_blank" rel="noopener" class="contact-card jookh-card">
+          <div class="contact-card-accent" aria-hidden="true"></div>
           <div class="contact-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
           </div>
           <h4>Jookh on Instagram</h4>
           <p>@jookhcouture</p>
         </a>
 
         <a href="https://www.instagram.com/artonpillows/" target="_blank" rel="noopener" class="contact-card plo-card">
+          <div class="contact-card-accent" aria-hidden="true"></div>
           <div class="contact-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
           </div>
           <h4>P-Lo on Instagram</h4>
           <p>@artonpillows</p>
         </a>
 
         <a href="#" class="contact-card whatsapp-card" id="whatsapp-btn">
+          <div class="contact-card-accent" aria-hidden="true"></div>
           <div class="contact-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
           </div>
           <h4>WhatsApp</h4>
           <p>Coming soon</p>
         </a>
 
         <div class="contact-card delivery-card">
+          <div class="contact-card-accent" aria-hidden="true"></div>
           <div class="contact-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
           </div>
           <h4>Worldwide Delivery</h4>
           <p>Roula ships internationally</p>
@@ -324,6 +345,7 @@
 
   <!-- ─── FOOTER ─── -->
   <footer id="footer">
+    <div class="footer-gradient-bar" aria-hidden="true"></div>
     <div class="container footer-inner">
       <div class="footer-brand">
         <p class="footer-logo">Roula Harb</p>
@@ -337,15 +359,15 @@
       </div>
       <div class="footer-social">
         <a href="https://www.instagram.com/jookhcouture" target="_blank" rel="noopener" aria-label="Jookh Instagram">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
         </a>
         <a href="https://www.instagram.com/artonpillows/" target="_blank" rel="noopener" aria-label="P-Lo Instagram">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
         </a>
       </div>
     </div>
     <div class="footer-bottom">
-      <p>© 2024 The Conceptual Art World of Roula Harb. All rights reserved. Each piece is an original work of art.</p>
+      <p>&copy; 2024 The Conceptual Art World of Roula Harb. All rights reserved. Each piece is an original work of art.</p>
     </div>
   </footer>
 
