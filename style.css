@@ -14,28 +14,24 @@
   --cream-light: #faf8f4;
   --warm-white:  #fffdf9;
 
-  /* Brand colours — bold & artistic */
+  /* Brand colours — from actual logos */
   --coral:       #e8614a;
-  --coral-light: #f08070;
-  --violet:      #7b4fa6;
-  --violet-light:#9d6ec9;
   --teal:        #2a9d8f;
   --teal-light:  #3bbfaf;
   --gold:        #e8a020;
   --gold-light:  #f0b840;
-  --mustard:     #d4a017;
-  --rose:        #c9506a;
   --cobalt:      #2d5fa6;
 
-  /* Jookh brand colour */
-  --jookh:       #7b4fa6;
-  --jookh-light: #9d6ec9;
-  --jookh-bg:    #f5f0fc;
+  /* Jookh brand colours — red + magenta split */
+  --jookh:       #e31e24;
+  --jookh-2:     #d91ec0;
+  --jookh-light: #ee4d52;
+  --jookh-bg:    #fff0f5;
 
-  /* P-Lo brand colour */
-  --plo:         #e8614a;
-  --plo-light:   #f08070;
-  --plo-bg:      #fff5f3;
+  /* P-Lo brand colour — orange */
+  --plo:         #e07b0a;
+  --plo-light:   #f09030;
+  --plo-bg:      #fff8f0;
 
   /* Text */
   --text-main:   #1a1816;
@@ -149,16 +145,22 @@ a { text-decoration: none; color: inherit; }
 
 /* ─── BRAND LOGOS ─── */
 .brand-logo-wrap {
-  min-height: 60px;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
 }
 .brand-logo {
-  max-height: 70px;
-  width: auto;
-  object-fit: contain;
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+  transition: transform 0.4s var(--ease-out), box-shadow 0.4s var(--ease-out);
+}
+.brand-logo:hover {
+  transform: scale(1.04);
+  box-shadow: 0 16px 48px rgba(0,0,0,0.28);
 }
 
 /* ─── REVEAL ANIMATIONS ─── */
@@ -182,7 +184,7 @@ a { text-decoration: none; color: inherit; }
   background: rgba(14,13,11,0.94);
   backdrop-filter: blur(12px);
   padding: 1rem 0;
-  border-bottom: 2px solid var(--coral);
+  border-bottom: 2px solid var(--jookh);
 }
 
 .nav-inner {
@@ -271,9 +273,9 @@ a { text-decoration: none; color: inherit; }
   position: absolute; inset: 0;
   background: linear-gradient(
     135deg,
-    rgba(123,79,166,0.45) 0%,
+    rgba(227,30,36,0.5) 0%,
     rgba(14,13,11,0.6) 40%,
-    rgba(232,97,74,0.35) 100%
+    rgba(224,123,10,0.45) 100%
   );
 }
 
@@ -305,7 +307,7 @@ a { text-decoration: none; color: inherit; }
 
 .hero-divider {
   width: 80px; height: 3px;
-  background: linear-gradient(to right, var(--jookh), var(--coral));
+  background: linear-gradient(to right, var(--jookh), var(--jookh-2), var(--plo));
   margin: 0 auto 1.5rem;
   border-radius: 2px;
 }
@@ -425,7 +427,7 @@ a { text-decoration: none; color: inherit; }
 .img-frame::before {
   content: '';
   position: absolute; inset: -8px;
-  border: 2px solid var(--violet);
+  border: 2px solid var(--jookh);
   z-index: 1; pointer-events: none;
   opacity: 0.35;
   transition: opacity var(--transition);
@@ -467,14 +469,15 @@ a { text-decoration: none; color: inherit; }
   margin-top: 2rem;
   font-family: var(--font-serif);
   font-style: italic; font-size: 1.1rem;
-  color: var(--violet); letter-spacing: 0.02em;
+  color: var(--jookh); letter-spacing: 0.02em;
 }
 
 /* ─── JOOKH ─── */
 #jookh {
   padding: 8rem 0;
   background: var(--jookh-bg);
-  border-top: 4px solid var(--jookh);
+  border-top: 4px solid;
+  border-image: linear-gradient(to right, var(--jookh), var(--jookh-2)) 1;
 }
 
 .jookh-grid {
@@ -501,7 +504,7 @@ a { text-decoration: none; color: inherit; }
 
 .collection-overlay {
   position: absolute; inset: 0;
-  background: rgba(123,79,166,0.6);
+  background: linear-gradient(135deg, rgba(227,30,36,0.7), rgba(217,30,192,0.7));
   display: flex; align-items: center; justify-content: center;
   opacity: 0;
   transition: opacity var(--transition);
@@ -564,7 +567,7 @@ a { text-decoration: none; color: inherit; }
 /* ─── PHILOSOPHY ─── */
 #philosophy {
   padding: 8rem 0;
-  background: linear-gradient(135deg, var(--jookh) 0%, var(--cobalt) 50%, var(--plo) 100%);
+  background: linear-gradient(135deg, var(--jookh) 0%, var(--jookh-2) 50%, var(--plo) 100%);
 }
 
 .philosophy-quote {
@@ -621,7 +624,7 @@ a { text-decoration: none; color: inherit; }
   width: 48px; height: 48px;
   margin-bottom: 1.2rem;
 }
-.jookh-card .contact-icon { color: var(--jookh); }
+.jookh-card .contact-icon { color: var(--jookh-2); }
 .plo-card .contact-icon   { color: var(--plo); }
 .whatsapp-card .contact-icon { color: var(--teal); }
 .delivery-card .contact-icon { color: var(--gold); }
@@ -641,7 +644,7 @@ a { text-decoration: none; color: inherit; }
   background: var(--black);
   padding-top: 4rem;
   border-top: 3px solid transparent;
-  border-image: linear-gradient(to right, var(--jookh), var(--coral), var(--gold)) 1;
+  border-image: linear-gradient(to right, var(--jookh), var(--jookh-2), var(--plo)) 1;
 }
 
 .footer-inner {
