@@ -189,19 +189,21 @@ a   { text-decoration: none; color: inherit; }
   align-items: center;
   justify-content: space-between;
 }
-.nav-logo { display: flex; flex-direction: column; line-height: 1.15; }
-.nav-logo-main {
-  font-family: var(--font-serif);
-  font-size: 1.65rem;       /* slightly larger — feels more confident */
-  font-weight: 400;
-  color: #fff;
-  letter-spacing: 0.04em;
-}
-.nav-logo-sub {
-  font-size: 0.6rem;
-  letter-spacing: 0.24em;
+.nav-logo { display: flex; flex-direction: column; line-height: 1.2; }
+.nav-logo-top {
+  font-size: 0.58rem;
+  letter-spacing: 0.2em;
   text-transform: uppercase;
   color: var(--gold);
+  font-weight: 400;
+}
+.nav-logo-name {
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: #fff;
+  letter-spacing: 0.03em;
+  line-height: 1.1;
 }
 .nav-links { list-style: none; display: flex; gap: 2.8rem; }
 .nav-links a {
@@ -336,28 +338,38 @@ a   { text-decoration: none; color: inherit; }
   6. Buttons (action)   — clear, contained
 */
 
-.hero-eyebrow {
-  font-size: 0.72rem;         /* deliberately small — sets up the contrast */
-  font-weight: 400;
-  letter-spacing: 0.38em;
-  text-transform: uppercase;
-  color: var(--gold-light);
-  margin-bottom: 1.2rem;
-}
+/* Hero title = full brand name as one unified element */
 .hero-title {
   font-family: var(--font-serif);
-  /* Floor: 5rem (80px) so it never gets too small on mobile
-     Ideal: 17vw fills the screen dramatically
-     Ceiling: 14rem (224px) — monumental */
-  font-size: clamp(5rem, 17vw, 14rem);
   font-weight: 300;
-  line-height: 0.88;          /* tighter for giant display type */
-  color: #fff;
-  letter-spacing: -0.03em;    /* tighten large display text */
+  text-align: center;
   margin-bottom: 2rem;
+  line-height: 1;
+}
+
+/* "The Conceptual Art World of" — contextual line */
+.hero-title-pre {
+  display: block;
+  font-size: clamp(0.9rem, 2vw, 1.4rem);
+  font-weight: 300;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--gold-light);
+  margin-bottom: 0.4em;
+  line-height: 1;
+}
+
+/* "ROULA HARB" — the name, dominant but not overwhelming */
+.hero-title-name {
+  display: block;
+  font-size: clamp(3.5rem, 10vw, 8.5rem);
+  font-weight: 300;
+  letter-spacing: -0.02em;
+  color: #fff;
+  line-height: 0.92;
   text-shadow:
-    6px 6px 0 rgba(227,30,36,0.25),
-    -3px -3px 0 rgba(217,30,192,0.15);
+    4px 4px 0 rgba(227,30,36,0.2),
+    -2px -2px 0 rgba(217,30,192,0.12);
 }
 .hero-rule {
   width: 80px; height: 4px;
@@ -937,8 +949,9 @@ a   { text-decoration: none; color: inherit; }
   .footer-links { justify-content: center; }
   .footer-social { grid-column: auto; justify-content: center; }
 
-  .hero-title { font-size: clamp(4.5rem, 20vw, 9rem); }
-  .hero-sub   { font-size: clamp(1.1rem, 3.5vw, 1.5rem); }
+  .hero-title-pre  { font-size: clamp(0.7rem, 3vw, 1rem); }
+  .hero-title-name { font-size: clamp(2.8rem, 14vw, 5rem); }
+  .hero-sub        { font-size: clamp(1.05rem, 3.5vw, 1.4rem); }
   #jookh, #plo, #about, #contact, #philosophy { padding: 5rem 0; }
 
   .about-paint-slash { display: none; }
