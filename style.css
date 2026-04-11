@@ -486,6 +486,42 @@ a   { text-decoration: none; color: inherit; }
   gap: 1.5rem;
   margin-bottom: 0;
 }
+
+/* Wearables — multi-view cards */
+.wearables-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+.wearable-card { display: flex; flex-direction: column; }
+.wearable-main-wrap { flex: 1; }
+
+.wearable-thumbs {
+  display: flex;
+  gap: 6px;
+  margin-top: 8px;
+}
+.wearable-thumb {
+  flex: 1;
+  aspect-ratio: 1/1;
+  overflow: hidden;
+  cursor: pointer;
+  border: 2px solid transparent;
+  padding: 0;
+  background: var(--wine-mid);
+  transition: border-color 0.25s, opacity 0.25s;
+  opacity: 0.55;
+}
+.wearable-thumb img {
+  width: 100%; height: 100%; object-fit: cover;
+  pointer-events: none;
+}
+.wearable-thumb:hover { opacity: 0.85; }
+.wearable-thumb.active {
+  border-color: var(--jookh-2);
+  opacity: 1;
+}
+
 .collection-img-wrap {
   position: relative;
   overflow: hidden;
@@ -966,6 +1002,7 @@ a   { text-decoration: none; color: inherit; }
   .nav-links a::after { display: none; }
 
   .jookh-grid     { grid-template-columns: 1fr; max-width: 380px; margin: 0 auto; }
+  .wearables-grid { grid-template-columns: 1fr; max-width: 380px; margin: 0 auto; }
   .jookh-category { margin-bottom: 3.5rem; }
   .jookh-cat-title { font-size: 1.3rem; }
   .collection-grid { grid-template-columns: repeat(2, 1fr); }

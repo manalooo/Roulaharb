@@ -117,9 +117,35 @@
   sections.forEach(function (section) { sectionObserver.observe(section); });
 
   // ─── STAGGER REVEAL for grid items ───────────────
-  // Re-observe to apply stagger correctly
-  document.querySelectorAll('.collection-grid .reveal, .jookh-grid .reveal, .statement-grid .reveal, .contact-grid .reveal').forEach(function (el, i) {
+  document.querySelectorAll('.collection-grid .reveal, .jookh-grid .reveal, .contact-grid .reveal').forEach(function (el, i) {
     el.style.transitionDelay = (i % 6) * 100 + 'ms';
+  });
+
+  // ─── WEARABLE THUMBNAIL SWITCHER ─────────────────
+  document.querySelectorAll('.wearable-card').forEach(function (card) {
+    var mainImg = card.querySelector('.wearable-main-img');
+    var thumbs  = card.querySelectorAll('.wearable-thumb');
+
+    thumbs.forEach(function (thumb) {
+      thumb.addEventListener('click', function () {
+        var src = thumb.getAttribute('data-src');
+        if (!src || !mainImg) return;
+
+        // Fade swap
+        mainImg.style.opacity = '0';
+        mainImg.style.transition = 'opacity 0.25s';
+        setTimeout(function () {
+          mainImg.src = src;
+          mainImg.onload = function () { mainImg.style.opacity = '1'; };
+          // Fallback if image is cached
+          if (mainImg.complete) mainImg.style.opacity = '1';
+        }, 220);
+
+        // Update active thumb
+        thumbs.forEach(function (t) { t.classList.remove('active'); });
+        thumb.classList.add('active');
+      });
+    });
   });
 
 })();
