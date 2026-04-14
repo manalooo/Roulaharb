@@ -110,7 +110,7 @@ a   { text-decoration: none; color: inherit; }
 .btn-jookh:hover {
   background: transparent;
   color: var(--jookh);
-  box-shadow: 4px 4px 0 var(--jookh), 0 0 18px rgba(227,30,36,0.55);
+  box-shadow: 3px 3px 0 var(--jookh);
 }
 
 .btn-plo {
@@ -123,7 +123,7 @@ a   { text-decoration: none; color: inherit; }
 .btn-plo:hover {
   background: transparent;
   color: var(--plo);
-  box-shadow: 4px 4px 0 var(--plo), 0 0 18px rgba(224,123,10,0.55);
+  box-shadow: 3px 3px 0 var(--plo);
 }
 
 .btn-sm { padding: 0.55rem 1.3rem; font-size: 0.7rem; }
@@ -528,25 +528,26 @@ a   { text-decoration: none; color: inherit; }
   display: block;
   transition: opacity 0.3s;
 }
-.wearable-strip:hover img { opacity: 0.35; transition: opacity 0.4s ease-in-out; }
+.wearable-strip:hover img { opacity: 0.55; transition: opacity 0.4s ease; }
 .wearable-strip img:hover { opacity: 1 !important; }
 .wearable-piece-footer {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0.8rem 0 0;
-  border-top: 1px solid rgba(255,255,255,0.08);
-  margin-top: 4px;
+  padding: 1rem 0 0;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  margin-top: 8px;
 }
 /* P-Lo footer sits on a light bg */
 .plo-piece-footer {
-  border-top-color: rgba(224,123,10,0.2);
+  border-top-color: rgba(224,123,10,0.18);
 }
 .wearable-piece-num {
-  font-size: 0.65rem;
-  letter-spacing: 0.22em;
+  font-size: 0.68rem;
+  letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: rgba(255,255,255,0.35);
+  color: rgba(255,255,255,0.55);
+  font-weight: 500;
 }
 
 /* P-Lo strips — same pattern as wearables but for pillows */
@@ -559,25 +560,22 @@ a   { text-decoration: none; color: inherit; }
   overflow: hidden;
   cursor: pointer;
   aspect-ratio: 1/1;
-  background: var(--wine-mid);
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(232,160,32,0.14);
 }
 .collection-img-wrap.tall { aspect-ratio: 2/3; }
 .collection-img-wrap img {
   width: 100%; height: 100%; object-fit: contain;
-  padding: 8%;
-  filter: drop-shadow(8px 8px 0px rgba(0,0,0,0.5));
-  transition: opacity 0.4s ease-in-out, filter 0.4s ease-in-out;
+  padding: 10%;
+  filter: drop-shadow(0 6px 18px rgba(0,0,0,0.22));
+  transition: opacity 0.45s ease, transform 0.45s ease, filter 0.45s ease;
 }
 .collection-img-wrap:hover img {
-  opacity: 0.88;
-  filter: drop-shadow(8px 8px 0px rgba(0,0,0,0.5)) brightness(1.08) saturate(1.15);
+  opacity: 0.92;
+  transform: scale(1.02);
+  filter: drop-shadow(0 10px 28px rgba(0,0,0,0.28));
 }
 
-/* ─── ROTATING VIVID BACKDROPS ─── */
-.jookh-item:nth-child(4n+1) .collection-img-wrap { background: var(--vivid-orange); }
-.jookh-item:nth-child(4n+2) .collection-img-wrap { background: var(--deep-plum); }
-.jookh-item:nth-child(4n+3) .collection-img-wrap { background: var(--cobalt); }
-.jookh-item:nth-child(4n+4) .collection-img-wrap { background: var(--crimson); }
 
 .collection-overlay {
   position: absolute; inset: 0;
@@ -665,7 +663,7 @@ a   { text-decoration: none; color: inherit; }
   margin-bottom: 3rem;
 }
 .collection-item {}
-.collection-img-wrap { background: var(--cream-2); }
+.collection-img-wrap { background: var(--cream-2); border-color: rgba(224,123,10,0.12); }
 
 .collection-info { padding: 1rem 0 0; }
 .piece-number {
