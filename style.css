@@ -483,47 +483,61 @@ a   { text-decoration: none; color: inherit; }
 .jookh-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
+  gap: 1rem;
   margin-bottom: 0;
 }
+/* 4-col variant for bags */
+.jookh-grid-4 { grid-template-columns: repeat(4, 1fr); }
 
-/* Wearables — multi-view cards */
-.wearables-grid {
+/* Wearable organic photo strips */
+.wearable-piece {
+  margin-bottom: 2.5rem;
+}
+.wearable-strip {
+  display: flex;
+  gap: 4px;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+.wearable-strip::-webkit-scrollbar { display: none; }
+.wearable-strip img {
+  height: 300px;
+  width: auto;
+  flex-shrink: 0;
+  object-fit: cover;
+  display: block;
+  transition: opacity 0.3s;
+}
+.wearable-strip img:hover { opacity: 0.85; }
+.wearable-piece-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.8rem 0 0;
+  border-top: 1px solid rgba(255,255,255,0.08);
+  margin-top: 4px;
+}
+.wearable-piece-num {
+  font-size: 0.65rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.35);
+}
+
+/* P-Lo — 3 columns, one pillow per column with stacked views */
+.plo-pieces-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
+  gap: 2rem;
+  margin-bottom: 3rem;
 }
-.wearable-card { display: flex; flex-direction: column; }
-.wearable-main-wrap { flex: 1; }
-
-.wearable-thumbs {
+.plo-piece-stack {
   display: flex;
-  gap: 6px;
-  margin-top: 8px;
-  overflow-x: auto;
-  scrollbar-width: none; /* Firefox */
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
 }
-.wearable-thumbs::-webkit-scrollbar { display: none; }
-.wearable-thumb {
-  flex: 0 0 18%;
-  aspect-ratio: 1/1;
-  overflow: hidden;
-  cursor: pointer;
-  border: 2px solid transparent;
-  padding: 0;
-  background: var(--wine-mid);
-  transition: border-color 0.25s, opacity 0.25s;
-  opacity: 0.55;
-}
-.wearable-thumb img {
-  width: 100%; height: 100%; object-fit: cover;
-  pointer-events: none;
-}
-.wearable-thumb:hover { opacity: 0.85; }
-.wearable-thumb.active {
-  border-color: var(--jookh-2);
-  opacity: 1;
-}
+.plo-piece-stack .collection-img-wrap { background: var(--cream-2); }
 
 .collection-img-wrap {
   position: relative;
@@ -1004,9 +1018,11 @@ a   { text-decoration: none; color: inherit; }
   .nav-links a { display: block; padding: 1.1rem 2rem; font-size: 0.88rem; }
   .nav-links a::after { display: none; }
 
-  .jookh-grid     { grid-template-columns: 1fr; max-width: 380px; margin: 0 auto; }
-  .wearables-grid { grid-template-columns: 1fr; max-width: 380px; margin: 0 auto; }
-  .jookh-category { margin-bottom: 3.5rem; }
+  .jookh-grid     { grid-template-columns: repeat(2, 1fr); }
+  .jookh-grid-4   { grid-template-columns: repeat(2, 1fr); }
+  .plo-pieces-grid { grid-template-columns: 1fr; }
+  .wearable-strip img { height: 220px; }
+  .jookh-category { margin-bottom: 3rem; }
   .jookh-cat-title { font-size: 1.3rem; }
   .collection-grid { grid-template-columns: repeat(2, 1fr); }
   .about-container { grid-template-columns: 1fr; gap: 3rem; }
