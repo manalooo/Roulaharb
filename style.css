@@ -500,9 +500,12 @@ a   { text-decoration: none; color: inherit; }
   display: flex;
   gap: 6px;
   margin-top: 8px;
+  overflow-x: auto;
+  scrollbar-width: none; /* Firefox */
 }
+.wearable-thumbs::-webkit-scrollbar { display: none; }
 .wearable-thumb {
-  flex: 1;
+  flex: 0 0 18%;
   aspect-ratio: 1/1;
   overflow: hidden;
   cursor: pointer;
