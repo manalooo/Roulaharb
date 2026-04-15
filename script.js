@@ -75,8 +75,11 @@
     });
   }
 
-  // Run once on DOMContentLoaded (catches static .reveal elements),
-  // then again after a tick so dynamically rendered cards are included.
+  // Expose globally so render.js can call it after async fetch resolves
+  window.initReveal = initReveal;
+
+  // Run once immediately (static .reveal elements),
+  // then again after a tick in case render.js has already appended cards.
   initReveal();
   setTimeout(initReveal, 0);
 
