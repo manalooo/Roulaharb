@@ -326,18 +326,24 @@ a   { text-decoration: none; color: inherit; }
 }
 .hero-sub em { font-style: normal; color: rgba(255,255,255,0.5); }
 
-/* Both hero buttons visible on dark background */
-#hero .btn-jookh,
-#hero .btn-plo {
-  color: rgba(255,255,255,0.8);
-  border-color: rgba(255,255,255,0.22);
+/* Hero buttons — each branded with its logo colour */
+#hero .btn-jookh {
+  color: var(--jookh);
+  border-color: var(--jookh);
   background: transparent;
 }
-#hero .btn-jookh:hover,
+#hero .btn-jookh:hover {
+  color: #fff;
+  background: var(--jookh);
+}
+#hero .btn-plo {
+  color: var(--plo);
+  border-color: var(--plo);
+  background: transparent;
+}
 #hero .btn-plo:hover {
   color: #fff;
-  border-color: rgba(255,255,255,0.6);
-  background: rgba(255,255,255,0.05);
+  background: var(--plo);
 }
 .hero-tagline {
   font-size: 0.62rem;
