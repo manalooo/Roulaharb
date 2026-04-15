@@ -1,10 +1,16 @@
 /* ===================================================
    ROULA HARB — script.js
-   Handles: nav scroll, reveal animations, mobile menu
+   Handles: nav scroll, reveal animations, mobile menu,
+            lightbox, inquiry basket
    =================================================== */
 
 (function () {
   'use strict';
+
+  // ─── WHATSAPP NUMBER ─────────────────────────────
+  // Fill in Roula's number in international format, no + or spaces.
+  // Example: '9613001234'  (Lebanon +961 prefix)
+  var WHATSAPP_NUMBER = '';
 
   // ─── NAVBAR SCROLL ───────────────────────────────
   const navbar = document.getElementById('navbar');
@@ -31,7 +37,6 @@
       hamburger.setAttribute('aria-expanded', isOpen);
     });
 
-    // Close menu when a link is clicked
     navLinks.querySelectorAll('a').forEach(function (link) {
       link.addEventListener('click', function () {
         navLinks.classList.remove('open');
@@ -42,59 +47,48 @@
   }
 
   // ─── SCROLL REVEAL ───────────────────────────────
-  const revealEls = document.querySelectorAll('.reveal');
+  function initReveal() {
+    const revealEls = document.querySelectorAll('.reveal:not(.reveal-wired)');
 
-  const revealObserver = new IntersectionObserver(function (entries) {
-    entries.forEach(function (entry) {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-        revealObserver.unobserve(entry.target);
-      }
+    const revealObserver = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: 0.12,
+      rootMargin: '0px 0px -40px 0px'
     });
-  }, {
-    threshold: 0.12,
-    rootMargin: '0px 0px -40px 0px'
-  });
 
-  revealEls.forEach(function (el, i) {
-    // Stagger delay for grid children
-    const parent = el.parentElement;
-    if (parent && (parent.classList.contains('collection-grid') ||
-                   parent.classList.contains('jookh-grid') ||
-                   parent.classList.contains('statement-grid') ||
-                   parent.classList.contains('contact-grid'))) {
-      el.style.transitionDelay = (i % 6) * 80 + 'ms';
-    }
-    revealObserver.observe(el);
-  });
-
-  // ─── HERO IMAGE PARALLAX ─────────────────────────
-  const heroImg = document.getElementById('hero-img');
-
-  if (heroImg) {
-    heroImg.addEventListener('load', function () {
-      heroImg.classList.add('loaded');
-    });
-    // If already cached
-    if (heroImg.complete) heroImg.classList.add('loaded');
-
-    window.addEventListener('scroll', function () {
-      const scrolled = window.scrollY;
-      if (scrolled < window.innerHeight) {
-        heroImg.style.transform = 'scale(1) translateY(' + scrolled * 0.25 + 'px)';
+    revealEls.forEach(function (el) {
+      const parent = el.parentElement;
+      if (parent && (parent.classList.contains('collection-grid') ||
+                     parent.classList.contains('jookh-grid') ||
+                     parent.classList.contains('statement-grid') ||
+                     parent.classList.contains('contact-grid'))) {
+        // stagger handled per-card in render.js
       }
-    }, { passive: true });
+      el.classList.add('reveal-wired');
+      revealObserver.observe(el);
+    });
   }
 
-  // ─── SMOOTH SCROLL (fallback for older browsers) ─
-  document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
-    anchor.addEventListener('click', function (e) {
-      const target = document.querySelector(this.getAttribute('href'));
-      if (target) {
-        e.preventDefault();
-        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }
-    });
+  // Run once on DOMContentLoaded (catches static .reveal elements),
+  // then again after a tick so dynamically rendered cards are included.
+  initReveal();
+  setTimeout(initReveal, 0);
+
+  // ─── SMOOTH SCROLL ───────────────────────────────
+  document.addEventListener('click', function (e) {
+    const anchor = e.target.closest('a[href^="#"]');
+    if (!anchor) return;
+    const target = document.querySelector(anchor.getAttribute('href'));
+    if (target) {
+      e.preventDefault();
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
   });
 
   // ─── ACTIVE NAV LINK HIGHLIGHT ───────────────────
@@ -116,15 +110,9 @@
 
   sections.forEach(function (section) { sectionObserver.observe(section); });
 
-  // ─── STAGGER REVEAL for grid items ───────────────
-  document.querySelectorAll('.collection-grid .reveal, .jookh-grid .reveal, .contact-grid .reveal').forEach(function (el, i) {
-    el.style.transitionDelay = (i % 6) * 80 + 'ms';
-  });
-
   // ─── LIGHTBOX ────────────────────────────────────
   var lbImages = [], lbIndex = 0;
 
-  // Build overlay DOM once
   var lb = document.createElement('div');
   lb.className = 'lb-overlay';
   lb.setAttribute('role', 'dialog');
@@ -188,16 +176,209 @@
     if (e.key === 'ArrowRight') lbShow(lbIndex + 1);
   });
 
-  // Wire cards
-  document.querySelectorAll('[data-lightbox]').forEach(function (card) {
-    var wrap = card.querySelector('.card-img-wrap');
+  // Event delegation — works for dynamically rendered cards
+  document.addEventListener('click', function (e) {
+    // Don't open lightbox from Inquire button or basket trigger
+    if (e.target.closest('.btn-inquire') || e.target.closest('.basket-widget')) return;
+
+    var wrap = e.target.closest('.card-img-wrap');
     if (!wrap) return;
-    wrap.addEventListener('click', function (e) {
-      // Don't intercept clicks on the Inquire link
-      if (e.target.closest('.btn-inquire')) return;
+    var card = wrap.closest('[data-lightbox]');
+    if (!card) return;
+
+    try {
       var images = JSON.parse(card.dataset.lightbox);
       lbOpen(images, 0);
-    });
+    } catch (err) { /* ignore */ }
   });
+
+  // ─── INQUIRY BASKET ──────────────────────────────
+  var STORAGE_KEY = 'rh_basket';
+
+  function loadBasket() {
+    try {
+      return JSON.parse(sessionStorage.getItem(STORAGE_KEY)) || [];
+    } catch (e) { return []; }
+  }
+
+  function saveBasket(items) {
+    sessionStorage.setItem(STORAGE_KEY, JSON.stringify(items));
+  }
+
+  function basketContains(id) {
+    return loadBasket().some(function (p) { return p.id === id; });
+  }
+
+  function addToBasket(product) {
+    var items = loadBasket();
+    if (!items.some(function (p) { return p.id === product.id; })) {
+      items.push(product);
+      saveBasket(items);
+    }
+    updateBasketUI();
+  }
+
+  function removeFromBasket(id) {
+    var items = loadBasket().filter(function (p) { return p.id !== id; });
+    saveBasket(items);
+    updateBasketUI();
+  }
+
+  function clearBasket() {
+    sessionStorage.removeItem(STORAGE_KEY);
+    updateBasketUI();
+  }
+
+  function buildWhatsAppMessage() {
+    var items = loadBasket();
+    if (!items.length) return '';
+    var lines = ['Hello Roula, I am interested in the following piece(s):'];
+    items.forEach(function (p, i) {
+      lines.push((i + 1) + '. ' + p.name + ' (' + p.collection + ')');
+    });
+    lines.push('\nCould you please let me know about availability and pricing? Thank you.');
+    return encodeURIComponent(lines.join('\n'));
+  }
+
+  // ── Build basket widget DOM ──────────────────────
+  var basketWidget = document.createElement('div');
+  basketWidget.className = 'basket-widget';
+  basketWidget.setAttribute('aria-label', 'Inquiry basket');
+  basketWidget.innerHTML =
+    '<button class="basket-trigger" id="basket-trigger" aria-label="Open inquiry basket">' +
+      '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' +
+        '<path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/>' +
+        '<line x1="3" y1="6" x2="21" y2="6"/>' +
+        '<path d="M16 10a4 4 0 01-8 0"/>' +
+      '</svg>' +
+      '<span class="basket-count" id="basket-count">0</span>' +
+    '</button>' +
+    '<div class="basket-panel" id="basket-panel" role="dialog" aria-label="Your inquiry list" hidden>' +
+      '<div class="basket-panel-header">' +
+        '<h4 class="basket-panel-title">Your Inquiry</h4>' +
+        '<button class="basket-panel-close" id="basket-close" aria-label="Close">&#215;</button>' +
+      '</div>' +
+      '<div class="basket-panel-empty" id="basket-empty">No pieces selected yet.</div>' +
+      '<ul class="basket-item-list" id="basket-item-list" aria-label="Selected pieces"></ul>' +
+      '<div class="basket-panel-footer" id="basket-footer" hidden>' +
+        '<button class="basket-clear" id="basket-clear">Clear all</button>' +
+        '<a class="basket-send-btn" id="basket-send" href="#" target="_blank" rel="noopener">Send to Roula via WhatsApp</a>' +
+      '</div>' +
+    '</div>';
+  document.body.appendChild(basketWidget);
+
+  var trigger     = document.getElementById('basket-trigger');
+  var panel       = document.getElementById('basket-panel');
+  var countBadge  = document.getElementById('basket-count');
+  var emptyNote   = document.getElementById('basket-empty');
+  var itemList    = document.getElementById('basket-item-list');
+  var footer      = document.getElementById('basket-footer');
+  var sendBtn     = document.getElementById('basket-send');
+  var clearBtn    = document.getElementById('basket-clear');
+  var closeBtn    = document.getElementById('basket-close');
+
+  function updateBasketUI() {
+    var items = loadBasket();
+    var count = items.length;
+
+    // Badge
+    countBadge.textContent = count;
+    trigger.classList.toggle('basket-has-items', count > 0);
+
+    // Update Inquire buttons
+    document.querySelectorAll('.btn-inquire').forEach(function (btn) {
+      var id = btn.dataset.productId;
+      if (basketContains(id)) {
+        btn.classList.add('in-basket');
+        btn.textContent = 'Added';
+      } else {
+        btn.classList.remove('in-basket');
+        btn.textContent = 'Inquire';
+      }
+    });
+
+    // Panel list
+    itemList.innerHTML = '';
+    if (count === 0) {
+      emptyNote.hidden = false;
+      footer.hidden = true;
+    } else {
+      emptyNote.hidden = true;
+      footer.hidden = false;
+      items.forEach(function (p) {
+        var li = document.createElement('li');
+        li.className = 'basket-item';
+        li.innerHTML =
+          '<img class="basket-thumb" src="' + p.thumb + '" alt="' + p.name + '" />' +
+          '<div class="basket-item-info">' +
+            '<span class="basket-item-name">' + p.name + '</span>' +
+            '<span class="basket-item-col">' + p.collection + '</span>' +
+          '</div>' +
+          '<button class="basket-item-remove" data-remove-id="' + p.id + '" aria-label="Remove ' + p.name + '">&times;</button>';
+        itemList.appendChild(li);
+      });
+
+      // WhatsApp link
+      var msg = buildWhatsAppMessage();
+      var wa  = WHATSAPP_NUMBER
+        ? 'https://wa.me/' + WHATSAPP_NUMBER + '?text=' + msg
+        : 'https://wa.me/?text=' + msg;
+      sendBtn.href = wa;
+    }
+  }
+
+  // Toggle panel
+  trigger.addEventListener('click', function () {
+    var isOpen = !panel.hidden;
+    panel.hidden = isOpen;
+    trigger.setAttribute('aria-expanded', !isOpen);
+  });
+
+  closeBtn.addEventListener('click', function () {
+    panel.hidden = true;
+    trigger.setAttribute('aria-expanded', 'false');
+  });
+
+  clearBtn.addEventListener('click', function () {
+    clearBasket();
+  });
+
+  // Remove items via event delegation
+  itemList.addEventListener('click', function (e) {
+    var btn = e.target.closest('[data-remove-id]');
+    if (btn) removeFromBasket(btn.dataset.removeId);
+  });
+
+  // Close panel on outside click
+  document.addEventListener('click', function (e) {
+    if (!panel.hidden && !basketWidget.contains(e.target)) {
+      panel.hidden = true;
+      trigger.setAttribute('aria-expanded', 'false');
+    }
+  });
+
+  // Inquire button click — event delegation
+  document.addEventListener('click', function (e) {
+    var btn = e.target.closest('.btn-inquire');
+    if (!btn) return;
+    e.preventDefault();
+
+    var id         = btn.dataset.productId;
+    var name       = btn.dataset.productName;
+    var collection = btn.dataset.productCollection;
+    var thumb      = btn.dataset.productThumb;
+
+    if (basketContains(id)) {
+      removeFromBasket(id);
+    } else {
+      addToBasket({ id: id, name: name, collection: collection, thumb: thumb });
+      // Open panel briefly to confirm
+      panel.hidden = false;
+      trigger.setAttribute('aria-expanded', 'true');
+    }
+  });
+
+  // Initialise on load (restore any session state)
+  updateBasketUI();
 
 })();
