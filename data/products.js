@@ -107,6 +107,51 @@ window.PRODUCTS = [
     "status": "available"
   },
   {
+    "id": "scarf-08",
+    "name": "ENTER NAME HERE",
+    "category": "scarves",
+    "collection": "Jookh Couture",
+    "price": "ENTER PRICE HERE",
+    "medium": "ENTER MATERIAL HERE",
+    "dimensions": "ENTER DIMENSIONS HERE",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "story": "ENTER STORY HERE",
+    "views": [
+      "images/jookh/scarves/piece-8.jpeg"
+    ],
+    "status": "available"
+  },
+  {
+    "id": "scarf-09",
+    "name": "ENTER NAME HERE",
+    "category": "scarves",
+    "collection": "Jookh Couture",
+    "price": "ENTER PRICE HERE",
+    "medium": "ENTER MATERIAL HERE",
+    "dimensions": "ENTER DIMENSIONS HERE",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "story": "ENTER STORY HERE",
+    "views": [
+      "images/jookh/scarves/piece-9.jpeg"
+    ],
+    "status": "available"
+  },
+  {
+    "id": "scarf-10",
+    "name": "ENTER NAME HERE",
+    "category": "scarves",
+    "collection": "Jookh Couture",
+    "price": "ENTER PRICE HERE",
+    "medium": "ENTER MATERIAL HERE",
+    "dimensions": "ENTER DIMENSIONS HERE",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "story": "ENTER STORY HERE",
+    "views": [
+      "images/jookh/scarves/piece-10.jpeg"
+    ],
+    "status": "available"
+  },
+  {
     "id": "bag-01",
     "name": "OSAKA",
     "category": "bags",
@@ -375,10 +420,7 @@ window.PRODUCTS = [
       "images/jookh/wearables/piece-1-view-1.jpeg",
       "images/jookh/wearables/piece-1-view-2.jpeg",
       "images/jookh/wearables/piece-1-view-3.jpeg",
-      "images/jookh/wearables/piece-1-view-4.jpeg",
-      "images/jookh/wearables/piece-1-view-5.jpg.jpeg",
-      "images/jookh/wearables/piece-1-view-6.jpg.jpeg",
-      "images/jookh/wearables/piece-1-view-7.jpg.jpeg"
+      "images/jookh/wearables/piece-1-view-4.jpeg"
     ],
     "status": "available"
   },
@@ -445,10 +487,181 @@ window.PRODUCTS = [
     "edition": "One-of-a-kind · Signed by the artist",
     "story": "ENTER STORY HERE",
     "views": [
-      "images/jookh/wearables/piece-5-view-1.jpeg",
-      "images/jookh/wearables/piece-5-view-2.jpeg",
-      "images/jookh/wearables/piece-5-view-3.jpeg",
-      "images/jookh/wearables/piece-5-view-4.jpeg"
+      "images/jookh/wearables/piece-5-view-1.jpg",
+      "images/jookh/wearables/piece-5-view-2.jpeg"
+    ],
+    "status": "available"
+  },
+  {
+    "id": "wear-06",
+    "name": "ENTER NAME HERE",
+    "category": "wearables",
+    "collection": "Jookh Couture",
+    "price": "ENTER PRICE HERE",
+    "medium": "ENTER MATERIAL HERE",
+    "dimensions": "ENTER DIMENSIONS HERE",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "story": "ENTER STORY HERE",
+    "views": [
+      "images/jookh/wearables/piece-6-view-1.jpg",
+      "images/jookh/wearables/piece-6-view-2.jpg"
+    ],
+    "status": "available"
+  },
+  {
+    "id": "wear-07",
+    "name": "ENTER NAME HERE",
+    "category": "wearables",
+    "collection": "Jookh Couture",
+    "price": "ENTER PRICE HERE",
+    "medium": "ENTER MATERIAL HERE",
+    "dimensions": "ENTER DIMENSIONS HERE",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "story": "ENTER STORY HERE",
+    "views": [
+      "images/jookh/wearables/piece-7-view-1.jpg",
+      "images/jookh/wearables/piece-7-view-2.jpg"
+    ],
+    "status": "available"
+  },
+  {
+    "id": "wear-08",
+    "name": "ENTER NAME HERE",
+    "category": "wearables",
+    "collection": "Jookh Couture",
+    "price": "ENTER PRICE HERE",
+    "medium": "ENTER MATERIAL HERE",
+    "dimensions": "ENTER DIMENSIONS HERE",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "story": "ENTER STORY HERE",
+    "views": [
+      "images/jookh/wearables/piece-8-view-1.jpg",
+      "images/jookh/wearables/piece-8-view-2.jpg"
+    ],
+    "status": "available"
+  },
+  {
+    "id": "wear-09",
+    "name": "ENTER NAME HERE",
+    "category": "wearables",
+    "collection": "Jookh Couture",
+    "price": "ENTER PRICE HERE",
+    "medium": "ENTER MATERIAL HERE",
+    "dimensions": "ENTER DIMENSIONS HERE",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "story": "ENTER STORY HERE",
+    "views": [
+      "images/jookh/wearables/piece-9-view-1.jpg",
+      "images/jookh/wearables/piece-9-view-2.jpg"
+    ],
+    "status": "available"
+  },
+  {
+    "id": "wear-10",
+    "name": "ENTER NAME HERE",
+    "category": "wearables",
+    "collection": "Jookh Couture",
+    "price": "ENTER PRICE HERE",
+    "medium": "ENTER MATERIAL HERE",
+    "dimensions": "ENTER DIMENSIONS HERE",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "story": "ENTER STORY HERE",
+    "views": [
+      "images/jookh/wearables/piece-10-view-1.jpg",
+      "images/jookh/wearables/piece-10-view-2.jpg"
+    ],
+    "status": "available"
+  },
+  {
+    "id": "wear-11",
+    "name": "ENTER NAME HERE",
+    "category": "wearables",
+    "collection": "Jookh Couture",
+    "price": "ENTER PRICE HERE",
+    "medium": "ENTER MATERIAL HERE",
+    "dimensions": "ENTER DIMENSIONS HERE",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "story": "ENTER STORY HERE",
+    "views": [
+      "images/jookh/wearables/piece-11-view-1.jpg",
+      "images/jookh/wearables/piece-11-view-2.jpg"
+    ],
+    "status": "available"
+  },
+  {
+    "id": "wear-12",
+    "name": "ENTER NAME HERE",
+    "category": "wearables",
+    "collection": "Jookh Couture",
+    "price": "ENTER PRICE HERE",
+    "medium": "ENTER MATERIAL HERE",
+    "dimensions": "ENTER DIMENSIONS HERE",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "story": "ENTER STORY HERE",
+    "views": [
+      "images/jookh/wearables/piece-12-view-1.jpg",
+      "images/jookh/wearables/piece-12-view-2.jpg"
+    ],
+    "status": "available"
+  },
+  {
+    "id": "wear-13",
+    "name": "ENTER NAME HERE",
+    "category": "wearables",
+    "collection": "Jookh Couture",
+    "price": "ENTER PRICE HERE",
+    "medium": "ENTER MATERIAL HERE",
+    "dimensions": "ENTER DIMENSIONS HERE",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "story": "ENTER STORY HERE",
+    "views": [
+      "images/jookh/wearables/piece-13-view-2.jpg"
+    ],
+    "status": "available"
+  },
+  {
+    "id": "wear-14",
+    "name": "ENTER NAME HERE",
+    "category": "wearables",
+    "collection": "Jookh Couture",
+    "price": "ENTER PRICE HERE",
+    "medium": "ENTER MATERIAL HERE",
+    "dimensions": "ENTER DIMENSIONS HERE",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "story": "ENTER STORY HERE",
+    "views": [
+      "images/jookh/wearables/piece-14-view-1.jpg",
+      "images/jookh/wearables/piece-14-view-2.jpg"
+    ],
+    "status": "available"
+  },
+  {
+    "id": "wear-15",
+    "name": "ENTER NAME HERE",
+    "category": "wearables",
+    "collection": "Jookh Couture",
+    "price": "ENTER PRICE HERE",
+    "medium": "ENTER MATERIAL HERE",
+    "dimensions": "ENTER DIMENSIONS HERE",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "story": "ENTER STORY HERE",
+    "views": [
+      "images/jookh/wearables/piece-15-view-1.jpg"
+    ],
+    "status": "available"
+  },
+  {
+    "id": "wear-16",
+    "name": "ENTER NAME HERE",
+    "category": "wearables",
+    "collection": "Jookh Couture",
+    "price": "ENTER PRICE HERE",
+    "medium": "ENTER MATERIAL HERE",
+    "dimensions": "ENTER DIMENSIONS HERE",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "story": "ENTER STORY HERE",
+    "views": [
+      "images/jookh/wearables/piece-16-view-1.jpg"
     ],
     "status": "available"
   },
@@ -500,6 +713,69 @@ window.PRODUCTS = [
       "images/plo/piece-3-view-1.jpeg",
       "images/plo/piece-3-view-2.jpeg",
       "images/plo/piece-3-view-3.jpeg"
+    ],
+    "status": "available"
+  },
+  {
+    "id": "plo-04",
+    "name": "ENTER NAME HERE",
+    "category": "pillows",
+    "collection": "P-Lo",
+    "price": "ENTER PRICE HERE",
+    "medium": "Hand-painted · Hand-embroidered linen",
+    "dimensions": "ENTER DIMENSIONS HERE",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "story": "ENTER STORY HERE",
+    "views": [
+      "images/plo/piece-4-view-1.jpeg",
+      "images/plo/piece-4-view-2.jpeg"
+    ],
+    "status": "available"
+  },
+  {
+    "id": "plo-05",
+    "name": "ENTER NAME HERE",
+    "category": "pillows",
+    "collection": "P-Lo",
+    "price": "ENTER PRICE HERE",
+    "medium": "Hand-painted · Hand-embroidered linen",
+    "dimensions": "ENTER DIMENSIONS HERE",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "story": "ENTER STORY HERE",
+    "views": [
+      "images/plo/piece-5-view-1.jpeg",
+      "images/plo/piece-5-view-2.jpeg"
+    ],
+    "status": "available"
+  },
+  {
+    "id": "plo-06",
+    "name": "ENTER NAME HERE",
+    "category": "pillows",
+    "collection": "P-Lo",
+    "price": "ENTER PRICE HERE",
+    "medium": "Hand-painted · Hand-embroidered linen",
+    "dimensions": "ENTER DIMENSIONS HERE",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "story": "ENTER STORY HERE",
+    "views": [
+      "images/plo/piece-6-view-1.jpeg",
+      "images/plo/piece-6-view-2.jpeg"
+    ],
+    "status": "available"
+  },
+  {
+    "id": "plo-07",
+    "name": "ENTER NAME HERE",
+    "category": "pillows",
+    "collection": "P-Lo",
+    "price": "ENTER PRICE HERE",
+    "medium": "Hand-painted · Hand-embroidered linen",
+    "dimensions": "ENTER DIMENSIONS HERE",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "story": "ENTER STORY HERE",
+    "views": [
+      "images/plo/piece-7-view-1.jpeg"
     ],
     "status": "available"
   }
