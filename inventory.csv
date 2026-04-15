@@ -1,33 +1,33 @@
 ID,Name,Category,Price,Material,Dimensions,Status,Story,Main_Image,Hover_Image
-scarf-01,ENTER NAME HERE,scarves,ENTER PRICE HERE,ENTER MATERIAL HERE,ENTER DIMENSIONS HERE,available,ENTER STORY HERE,images/jookh/scarves/piece-1.jpeg,
-scarf-02,ENTER NAME HERE,scarves,ENTER PRICE HERE,ENTER MATERIAL HERE,ENTER DIMENSIONS HERE,available,ENTER STORY HERE,images/jookh/scarves/piece-2.jpeg,
-scarf-03,ENTER NAME HERE,scarves,ENTER PRICE HERE,ENTER MATERIAL HERE,ENTER DIMENSIONS HERE,available,ENTER STORY HERE,images/jookh/scarves/piece-3.jpeg,
-scarf-04,ENTER NAME HERE,scarves,ENTER PRICE HERE,ENTER MATERIAL HERE,ENTER DIMENSIONS HERE,available,ENTER STORY HERE,images/jookh/scarves/piece-4.jpeg,
-scarf-05,ENTER NAME HERE,scarves,ENTER PRICE HERE,ENTER MATERIAL HERE,ENTER DIMENSIONS HERE,available,ENTER STORY HERE,images/jookh/scarves/piece-5.jpeg,
-scarf-06,ENTER NAME HERE,scarves,ENTER PRICE HERE,ENTER MATERIAL HERE,ENTER DIMENSIONS HERE,available,ENTER STORY HERE,images/jookh/scarves/piece-6.jpeg,
-scarf-07,ENTER NAME HERE,scarves,ENTER PRICE HERE,ENTER MATERIAL HERE,ENTER DIMENSIONS HERE,available,ENTER STORY HERE,images/jookh/scarves/piece-7.jpeg,
-bag-01,ENTER NAME HERE,bags,ENTER PRICE HERE,ENTER MATERIAL HERE,ENTER DIMENSIONS HERE,available,ENTER STORY HERE,images/jookh/bags/piece-1.jpg,
-bag-02,ENTER NAME HERE,bags,ENTER PRICE HERE,ENTER MATERIAL HERE,ENTER DIMENSIONS HERE,available,ENTER STORY HERE,images/jookh/bags/piece-2.jpg,
-bag-03,ENTER NAME HERE,bags,ENTER PRICE HERE,ENTER MATERIAL HERE,ENTER DIMENSIONS HERE,available,ENTER STORY HERE,images/jookh/bags/piece-3.jpg,
-bag-04,ENTER NAME HERE,bags,ENTER PRICE HERE,ENTER MATERIAL HERE,ENTER DIMENSIONS HERE,available,ENTER STORY HERE,images/jookh/bags/piece-4.jpeg,
-bag-05,ENTER NAME HERE,bags,ENTER PRICE HERE,ENTER MATERIAL HERE,ENTER DIMENSIONS HERE,available,ENTER STORY HERE,images/jookh/bags/piece-5.jpeg,
-bag-06,ENTER NAME HERE,bags,ENTER PRICE HERE,ENTER MATERIAL HERE,ENTER DIMENSIONS HERE,available,ENTER STORY HERE,images/jookh/bags/piece-6.jpeg,
-bag-07,ENTER NAME HERE,bags,ENTER PRICE HERE,ENTER MATERIAL HERE,ENTER DIMENSIONS HERE,available,ENTER STORY HERE,images/jookh/bags/piece-7.jpeg,
-bag-08,ENTER NAME HERE,bags,ENTER PRICE HERE,ENTER MATERIAL HERE,ENTER DIMENSIONS HERE,available,ENTER STORY HERE,images/jookh/bags/piece-8.jpeg,
-bag-09,ENTER NAME HERE,bags,ENTER PRICE HERE,ENTER MATERIAL HERE,ENTER DIMENSIONS HERE,available,ENTER STORY HERE,images/jookh/bags/piece-9.jpeg,
-bag-10,ENTER NAME HERE,bags,ENTER PRICE HERE,ENTER MATERIAL HERE,ENTER DIMENSIONS HERE,available,ENTER STORY HERE,images/jookh/bags/piece-10.jpeg,
-bag-11,ENTER NAME HERE,bags,ENTER PRICE HERE,ENTER MATERIAL HERE,ENTER DIMENSIONS HERE,available,ENTER STORY HERE,images/jookh/bags/piece-11.jpeg,
-bag-12,ENTER NAME HERE,bags,ENTER PRICE HERE,ENTER MATERIAL HERE,ENTER DIMENSIONS HERE,available,ENTER STORY HERE,images/jookh/bags/piece-12.jpeg,
-bag-13,ENTER NAME HERE,bags,ENTER PRICE HERE,ENTER MATERIAL HERE,ENTER DIMENSIONS HERE,available,ENTER STORY HERE,images/jookh/bags/piece-13.jpeg,
-bag-14,ENTER NAME HERE,bags,ENTER PRICE HERE,ENTER MATERIAL HERE,ENTER DIMENSIONS HERE,available,ENTER STORY HERE,images/jookh/bags/piece-14.jpeg,
-bag-15,ENTER NAME HERE,bags,ENTER PRICE HERE,ENTER MATERIAL HERE,ENTER DIMENSIONS HERE,available,ENTER STORY HERE,images/jookh/bags/piece-15.jpeg,
-bag-16,ENTER NAME HERE,bags,ENTER PRICE HERE,ENTER MATERIAL HERE,ENTER DIMENSIONS HERE,available,ENTER STORY HERE,images/jookh/bags/piece-16.jpeg,
-bag-17,ENTER NAME HERE,bags,ENTER PRICE HERE,ENTER MATERIAL HERE,ENTER DIMENSIONS HERE,available,ENTER STORY HERE,images/jookh/bags/piece-17.jpeg,
-wear-01,ENTER NAME HERE,wearables,ENTER PRICE HERE,ENTER MATERIAL HERE,ENTER DIMENSIONS HERE,available,ENTER STORY HERE,images/jookh/wearables/piece-1-view-1.jpeg,images/jookh/wearables/piece-1-view-2.jpeg
-wear-02,ENTER NAME HERE,wearables,ENTER PRICE HERE,ENTER MATERIAL HERE,ENTER DIMENSIONS HERE,available,ENTER STORY HERE,images/jookh/wearables/piece-2-view-1.jpeg,images/jookh/wearables/piece-2-view-2.jpeg
-wear-03,ENTER NAME HERE,wearables,ENTER PRICE HERE,ENTER MATERIAL HERE,ENTER DIMENSIONS HERE,available,ENTER STORY HERE,images/jookh/wearables/piece-3-view-1.jpeg,images/jookh/wearables/piece-3-view-2.jpeg
-wear-04,ENTER NAME HERE,wearables,ENTER PRICE HERE,ENTER MATERIAL HERE,ENTER DIMENSIONS HERE,available,ENTER STORY HERE,images/jookh/wearables/piece-4-view-1.jpeg,images/jookh/wearables/piece-4-view-2.jpeg
-wear-05,ENTER NAME HERE,wearables,ENTER PRICE HERE,ENTER MATERIAL HERE,ENTER DIMENSIONS HERE,available,ENTER STORY HERE,images/jookh/wearables/piece-5-view-1.jpeg,images/jookh/wearables/piece-5-view-2.jpeg
-plo-01,ENTER NAME HERE,pillows,ENTER PRICE HERE,Hand-painted · Hand-embroidered linen,ENTER DIMENSIONS HERE,available,ENTER STORY HERE,images/plo/piece-1-view-1.jpeg,images/plo/piece-1-view-2.jpeg
+scarf-01,Black,scarves,220,ENTER MATERIAL HERE,ENTER DIMENSIONS HERE,available,ENTER STORY HERE,images/jookh/scarves/piece-1.jpeg,
+scarf-02,Yellow,scarves,220,ENTER MATERIAL HERE,ENTER DIMENSIONS HERE,available,ENTER STORY HERE,images/jookh/scarves/piece-2.jpeg,
+scarf-03,Orange,scarves,220,ENTER MATERIAL HERE,ENTER DIMENSIONS HERE,available,ENTER STORY HERE,images/jookh/scarves/piece-3.jpeg,
+scarf-04,Sand,scarves,220,ENTER MATERIAL HERE,ENTER DIMENSIONS HERE,available,ENTER STORY HERE,images/jookh/scarves/piece-4.jpeg,
+scarf-05,Beige,scarves,220,ENTER MATERIAL HERE,ENTER DIMENSIONS HERE,available,ENTER STORY HERE,images/jookh/scarves/piece-5.jpeg,
+scarf-06,Red,scarves,220,ENTER MATERIAL HERE,ENTER DIMENSIONS HERE,available,ENTER STORY HERE,images/jookh/scarves/piece-6.jpeg,
+scarf-07,Green,scarves,220,ENTER MATERIAL HERE,ENTER DIMENSIONS HERE,available,ENTER STORY HERE,images/jookh/scarves/piece-7.jpeg,
+bag-01,OSAKA,bags,220,ENTER MATERIAL HERE,ENTER DIMENSIONS HERE,available,ENTER STORY HERE,images/jookh/bags/piece-1.jpg,
+bag-02,OSAKA,bags,220,ENTER MATERIAL HERE,ENTER DIMENSIONS HERE,available,ENTER STORY HERE,images/jookh/bags/piece-2.jpg,
+bag-03,OSAKA,bags,220,ENTER MATERIAL HERE,ENTER DIMENSIONS HERE,available,ENTER STORY HERE,images/jookh/bags/piece-3.jpg,
+bag-04,OSAKA,bags,220,ENTER MATERIAL HERE,ENTER DIMENSIONS HERE,available,ENTER STORY HERE,images/jookh/bags/piece-4.jpeg,
+bag-05,OSAKA,bags,220,ENTER MATERIAL HERE,ENTER DIMENSIONS HERE,available,ENTER STORY HERE,images/jookh/bags/piece-5.jpeg,
+bag-06,OSAKA,bags,220,ENTER MATERIAL HERE,ENTER DIMENSIONS HERE,available,ENTER STORY HERE,images/jookh/bags/piece-6.jpeg,
+bag-07,OSAKA,bags,220,ENTER MATERIAL HERE,ENTER DIMENSIONS HERE,available,ENTER STORY HERE,images/jookh/bags/piece-7.jpeg,
+bag-08,OSAKA,bags,220,ENTER MATERIAL HERE,ENTER DIMENSIONS HERE,available,ENTER STORY HERE,images/jookh/bags/piece-8.jpeg,
+bag-09,OSAKA,bags,220,ENTER MATERIAL HERE,ENTER DIMENSIONS HERE,available,ENTER STORY HERE,images/jookh/bags/piece-9.jpeg,
+bag-10,OSAKA,bags,220,ENTER MATERIAL HERE,ENTER DIMENSIONS HERE,available,ENTER STORY HERE,images/jookh/bags/piece-10.jpeg,
+bag-11,OSAKA,bags,220,ENTER MATERIAL HERE,ENTER DIMENSIONS HERE,available,ENTER STORY HERE,images/jookh/bags/piece-11.jpeg,
+bag-12,OSAKA,bags,220,ENTER MATERIAL HERE,ENTER DIMENSIONS HERE,available,ENTER STORY HERE,images/jookh/bags/piece-12.jpeg,
+bag-13,OSAKA,bags,220,ENTER MATERIAL HERE,ENTER DIMENSIONS HERE,available,ENTER STORY HERE,images/jookh/bags/piece-13.jpeg,
+bag-14,OSAKA,bags,220,ENTER MATERIAL HERE,ENTER DIMENSIONS HERE,available,ENTER STORY HERE,images/jookh/bags/piece-14.jpeg,
+bag-15,OSAKA,bags,220,ENTER MATERIAL HERE,ENTER DIMENSIONS HERE,available,ENTER STORY HERE,images/jookh/bags/piece-15.jpeg,
+bag-16,OSAKA,bags,220,ENTER MATERIAL HERE,ENTER DIMENSIONS HERE,available,ENTER STORY HERE,images/jookh/bags/piece-16.jpeg,
+bag-17,OSAKA,bags,220,ENTER MATERIAL HERE,ENTER DIMENSIONS HERE,available,ENTER STORY HERE,images/jookh/bags/piece-17.jpeg,
+wear-01,Roma Pink,wearables,380,ENTER MATERIAL HERE,ENTER DIMENSIONS HERE,available,ENTER STORY HERE,images/jookh/wearables/piece-1-view-1.jpeg,images/jookh/wearables/piece-1-view-2.jpeg
+wear-02,Grey Silk,wearables,550,ENTER MATERIAL HERE,ENTER DIMENSIONS HERE,available,ENTER STORY HERE,images/jookh/wearables/piece-2-view-1.jpeg,images/jookh/wearables/piece-2-view-2.jpeg
+wear-03,Roma Red,wearables,380,ENTER MATERIAL HERE,ENTER DIMENSIONS HERE,available,ENTER STORY HERE,images/jookh/wearables/piece-3-view-1.jpeg,images/jookh/wearables/piece-3-view-2.jpeg
+wear-04,White Silk,wearables,550,ENTER MATERIAL HERE,ENTER DIMENSIONS HERE,available,ENTER STORY HERE,images/jookh/wearables/piece-4-view-1.jpeg,images/jookh/wearables/piece-4-view-2.jpeg
+wear-05,White Lace,wearables,450,ENTER MATERIAL HERE,ENTER DIMENSIONS HERE,available,ENTER STORY HERE,images/jookh/wearables/piece-5-view-1.jpeg,images/jookh/wearables/piece-5-view-2.jpeg
+plo-01,,pillows,ENTER PRICE HERE,Hand-painted · Hand-embroidered linen,ENTER DIMENSIONS HERE,available,ENTER STORY HERE,images/plo/piece-1-view-1.jpeg,images/plo/piece-1-view-2.jpeg
 plo-02,ENTER NAME HERE,pillows,ENTER PRICE HERE,Hand-painted · Hand-embroidered linen,ENTER DIMENSIONS HERE,available,ENTER STORY HERE,images/plo/piece-2-view-1.jpeg,images/plo/piece-2-view-2.jpeg
 plo-03,ENTER NAME HERE,pillows,ENTER PRICE HERE,Hand-painted · Hand-embroidered linen,ENTER DIMENSIONS HERE,available,ENTER STORY HERE,images/plo/piece-3-view-1.jpeg,images/plo/piece-3-view-2.jpeg
