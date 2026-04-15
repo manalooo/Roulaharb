@@ -265,79 +265,91 @@ a   { text-decoration: none; color: inherit; }
   display: flex; align-items: center; justify-content: center;
   overflow: hidden;
   background: var(--wine-dark);
+  /* Subtle warm centre glow — gives the name a presence without decoration */
+  background-image: radial-gradient(ellipse 70% 60% at 50% 45%, #3a1428 0%, var(--wine-dark) 70%);
 }
 
 .hero-content {
   position: relative; z-index: 2;
   text-align: center;
   padding: 0 2rem;
-  max-width: 1000px;
+  width: 100%;
+  max-width: 1100px;
 }
-
-/*
-  Hero typography hierarchy:
-  1. Eyebrow (context)  — tiny, wide-tracked caps
-  2. Name (identity)    — ENORMOUS display, commanding
-  3. Rule (pause)       — coloured line
-  4. Tagline (poetic)   — large italic serif, breathes
-  5. Micro-copy (info)  — almost invisible, spaced caps
-  6. Buttons (action)   — clear, contained
-*/
 
 /* Hero title */
 .hero-title {
   font-family: var(--font-serif);
   font-weight: 300;
   text-align: center;
-  margin-bottom: 2rem;
+  margin-bottom: 2.5rem;
   line-height: 1;
+  overflow: hidden;
 }
 
-/* "ROULA HARB" — the name, alone */
+/* "ROULA HARB" — name on one line, commanding */
 .hero-title-name {
   display: block;
-  font-size: clamp(3.5rem, 10vw, 9rem);
+  font-size: clamp(3rem, 9vw, 8rem);
   font-weight: 300;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.18em;
   color: #fff;
-  line-height: 0.95;
+  line-height: 1;
+  white-space: nowrap;
 }
 
 /* Letter-by-letter reveal animation */
 .hero-letter {
   display: inline-block;
   opacity: 0;
-  transform: translateY(24px);
-  animation: letterReveal 0.7s var(--ease) forwards;
+  transform: translateY(30px);
+  animation: letterReveal 0.8s var(--ease) forwards;
 }
 @keyframes letterReveal {
   to { opacity: 1; transform: translateY(0); }
 }
+
 .hero-rule {
-  width: 48px; height: 1px;
-  background: rgba(255,255,255,0.25);
-  margin: 0 auto 2rem;
+  width: 1px; height: 52px;
+  background: linear-gradient(to bottom, transparent, rgba(255,255,255,0.3), transparent);
+  margin: 0 auto 2.5rem;
 }
+
 .hero-sub {
   font-family: var(--font-serif);
-  /* Comfortable reading size — large enough to feel poetic,
-     not so large it competes with the name */
-  font-size: clamp(1.25rem, 2.8vw, 2rem);
+  font-size: clamp(1.1rem, 2.4vw, 1.7rem);
   font-style: italic;
   font-weight: 300;
   color: rgba(255,255,255,0.82);
   margin-bottom: 1rem;
   line-height: 1.45;
 }
-.hero-sub em { font-style: normal; color: rgba(255,255,255,0.55); }
-.hero-tagline {
-  font-size: 0.68rem;         /* whisper — purely informational */
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
-  color: rgba(255,255,255,0.38);
-  margin-bottom: 3rem;        /* generous space before buttons */
+.hero-sub em { font-style: normal; color: rgba(255,255,255,0.5); }
+
+/* Both hero buttons visible on dark background */
+#hero .btn-jookh,
+#hero .btn-plo {
+  color: rgba(255,255,255,0.8);
+  border-color: rgba(255,255,255,0.22);
+  background: transparent;
 }
-.hero-cta { display: flex; gap: 1.2rem; justify-content: center; flex-wrap: wrap; }
+#hero .btn-jookh:hover,
+#hero .btn-plo:hover {
+  color: #fff;
+  border-color: rgba(255,255,255,0.6);
+  background: rgba(255,255,255,0.05);
+}
+.hero-tagline {
+  font-size: 0.62rem;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.25);
+  margin-bottom: 3rem;
+}
+.hero-cta {
+  display: flex; gap: 1.4rem;
+  justify-content: center; flex-wrap: wrap;
+}
 
 .scroll-indicator {
   position: absolute; bottom: 2.5rem;
