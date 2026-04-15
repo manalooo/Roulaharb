@@ -4,13 +4,16 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>The Conceptual Art World of Roula Harb</title>
-  <meta name="description" content="The Conceptual Art World of Roula Harb — Transforming the chaos of experience into the sanity of art. Jookh wearable art and P-Lo hand-painted sanctuary pieces from Beirut." />
+  <meta name="description" content="The Conceptual Art World of Roula Harb — Chaos made wearable. Silence made visible. Jookh wearable art and P-Lo hand-painted sanctuary pieces from Beirut." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+
+  <!-- Custom cursor -->
+  <div class="cursor-dot" id="cursor-dot" aria-hidden="true"></div>
 
   <!-- NAV -->
   <nav id="navbar">
@@ -33,26 +36,16 @@
 
   <!-- HERO -->
   <section id="hero">
-    <div class="blob blob-1" aria-hidden="true"></div>
-    <div class="blob blob-2" aria-hidden="true"></div>
-    <div class="blob blob-3" aria-hidden="true"></div>
-    <div class="drip drip-1" aria-hidden="true"></div>
-    <div class="drip drip-2" aria-hidden="true"></div>
-    <div class="drip drip-3" aria-hidden="true"></div>
-    <div class="hero-corner hero-corner--tl" aria-hidden="true"></div>
-    <div class="hero-corner hero-corner--br" aria-hidden="true"></div>
-
     <div class="hero-content">
       <h1 class="hero-title reveal">
-        <span class="hero-title-pre">The Conceptual Art World of</span>
-        <span class="hero-title-name">ROULA HARB</span>
+        <span class="hero-title-name" id="hero-name">ROULA HARB</span>
       </h1>
       <div class="hero-rule reveal" aria-hidden="true"></div>
-      <p class="hero-sub reveal">Transforming the <em>chaos of experience</em><br />into the sanity of art.</p>
+      <p class="hero-sub reveal">Chaos made wearable.<br /><em>Silence made visible.</em></p>
       <p class="hero-tagline reveal">Hand-painted &middot; Handcrafted &middot; Signed &middot; No two pieces alike</p>
       <div class="hero-cta reveal">
-        <a href="#jookh" class="btn btn-jookh">Discover Jookh</a>
-        <a href="#plo" class="btn btn-plo">Explore P-Lo</a>
+        <a href="#jookh" class="btn btn-jookh">Enter Jookh</a>
+        <a href="#plo" class="btn btn-plo">Enter P-Lo</a>
       </div>
     </div>
 
@@ -63,9 +56,6 @@
 
   <!-- JOOKH COUTURE -->
   <section id="jookh">
-    <div class="jookh-slash" aria-hidden="true"></div>
-    <div class="jookh-bg-word" aria-hidden="true">JOOKH</div>
-
     <div class="container jookh-inner">
       <div class="section-header reveal">
         <div class="brand-logo-wrap">
@@ -78,7 +68,6 @@
         </p>
       </div>
 
-      <!-- SCARVES — rendered by render.js from data/products.js -->
       <div class="jookh-category">
         <div class="jookh-cat-header reveal">
           <h3 class="jookh-cat-title">Scarves</h3>
@@ -87,7 +76,6 @@
         <div id="scarves-grid"></div>
       </div>
 
-      <!-- BAGS — rendered by render.js from data/products.js -->
       <div class="jookh-category">
         <div class="jookh-cat-header reveal">
           <h3 class="jookh-cat-title">Bags</h3>
@@ -96,7 +84,6 @@
         <div id="bags-grid"></div>
       </div>
 
-      <!-- WEARABLES — rendered by render.js from data/products.js -->
       <div class="jookh-category">
         <div class="jookh-cat-header reveal">
           <h3 class="jookh-cat-title">Wearables</h3>
@@ -113,10 +100,6 @@
 
   <!-- P-LO COLLECTION -->
   <section id="plo">
-    <div class="plo-bg-word" aria-hidden="true">P-LO</div>
-    <div class="plo-paint-mark plo-paint-mark--a" aria-hidden="true"></div>
-    <div class="plo-paint-mark plo-paint-mark--b" aria-hidden="true"></div>
-
     <div class="container">
       <div class="section-header reveal">
         <div class="brand-logo-wrap">
@@ -129,7 +112,6 @@
         </p>
       </div>
 
-      <!-- Pillows — rendered by render.js from data/products.js -->
       <div id="plo-grid"></div>
 
       <div class="collection-note reveal">
@@ -139,11 +121,8 @@
     </div>
   </section>
 
-  <!-- ABOUT — after P-Lo as requested -->
+  <!-- ABOUT -->
   <section id="about">
-    <div class="about-bg-number" aria-hidden="true">15</div>
-    <div class="about-paint-mark about-paint-mark--a" aria-hidden="true"></div>
-    <div class="about-paint-mark about-paint-mark--b" aria-hidden="true"></div>
     <div class="container about-container">
       <div class="about-image reveal">
         <div class="img-frame">
@@ -151,22 +130,18 @@
           <div class="img-placeholder-text">Photo of Roula Harb</div>
         </div>
         <div class="about-paint-slash" aria-hidden="true"></div>
-        <div class="about-year-badge" aria-hidden="true">
-          <span class="badge-num">15</span>
-          <span class="badge-text">years of art</span>
-        </div>
       </div>
       <div class="about-text reveal">
         <p class="section-label">About the Artist</p>
         <h2 class="section-title">Born in Paris.<br /><em>Rooted in Beirut.</em></h2>
         <p class="about-body">
-          Roula Harb is a creative designer with over 15 years of experience in fashion and sales. Born in Paris and based in Beirut, she draws inspiration from modern painters — Jackson Pollock, Cy Twombly — and fashion icons including Rei Kawakubo and Manish Arora, alongside master makeup artist Elise Faas.
+          Roula Harb is a creative designer with over 15 years of experience in fashion and sales. Born in Paris and based in Beirut, she draws inspiration from modern painters — Jackson Pollock, Cy Twombly — and fashion icons including Rei Kawakubo and Manish Arora.
         </p>
         <p class="about-body">
-          After the August 4th explosion that devastated Beirut, Roula witnessed catastrophic tragedy — both in her city and in her own life. Seeking healing, she turned to color and art. What emerged was a powerful creative practice: painting as a path to sanity amid chaos.
+          After the August 4th explosion that devastated Beirut, Roula witnessed catastrophic tragedy — both in her city and in her own life. She turned to color. What emerged was painting as a path to sanity amid chaos.
         </p>
         <p class="about-body">
-          This journey gave birth to <strong>Jookh Couture</strong> — exquisite wearable art — and <strong>P-Lo</strong>, a brand of hand-painted, hand-embroidered pillows. Each piece is a testament to resilience, beauty, and the transformative power of creation.
+          This journey gave birth to <strong>Jookh Couture</strong> and <strong>P-Lo</strong> — each piece a testament to resilience, beauty, and the transformative power of creation.
         </p>
         <div class="about-sig">&#8212; Roula Harb</div>
       </div>
@@ -175,23 +150,18 @@
 
   <!-- PHILOSOPHY QUOTE -->
   <section id="philosophy">
-    <div class="phil-blob phil-blob-1" aria-hidden="true"></div>
-    <div class="phil-blob phil-blob-2" aria-hidden="true"></div>
-    <div class="phil-blob phil-blob-3" aria-hidden="true"></div>
-    <div class="phil-deco-quote" aria-hidden="true">&#8220;</div>
     <blockquote class="philosophy-quote reveal">
-      <p>&#8220;Each piece is inspired by the things surrounding me &#8212; people, music, colors, and textiles. Created through a journey of healing, every work is a conversation between chaos and beauty.&#8221;</p>
+      <p>Every work is a conversation<br />between chaos and beauty.</p>
       <cite>&#8212; Roula Harb</cite>
     </blockquote>
   </section>
 
   <!-- CONTACT -->
   <section id="contact">
-    <div class="contact-bg-mark" aria-hidden="true"></div>
     <div class="container">
       <div class="section-header reveal">
         <p class="section-label">Get in Touch</p>
-        <h2 class="section-title contact-title">Acquire<br /><em>a Piece</em></h2>
+        <h2 class="section-title contact-title">To hold one of these works,<br /><em>write to Roula directly.</em></h2>
         <p class="section-desc">
           Roula delivers worldwide. Reach out through Instagram or WhatsApp to inquire about availability, commissions, or delivery.
         </p>
@@ -222,14 +192,6 @@
           <h4>WhatsApp</h4>
           <p>Coming soon</p>
         </a>
-        <div class="contact-card delivery-card">
-          <div class="contact-card-accent" aria-hidden="true"></div>
-          <div class="contact-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
-          </div>
-          <h4>Worldwide Delivery</h4>
-          <p>Roula ships internationally</p>
-        </div>
       </div>
     </div>
   </section>
@@ -258,7 +220,7 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <p>&copy; 2024 The Conceptual Art World of Roula Harb. All rights reserved. Each piece is an original work of art.</p>
+      <p>&copy; 2025 The Conceptual Art World of Roula Harb. All rights reserved. Each piece is an original work of art.</p>
     </div>
   </footer>
 

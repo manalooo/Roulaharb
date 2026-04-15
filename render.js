@@ -134,7 +134,7 @@
     } else {
       var btn = el('a', 'btn-inquire' + (isPlo ? ' btn-inquire--plo' : ''));
       btn.href                      = '#contact';
-      btn.textContent               = 'Inquire';
+      btn.textContent               = 'Request';
       btn.dataset.productId         = product.id;
       btn.dataset.productName       = product.name || '';
       btn.dataset.productCollection = product.collection || '';

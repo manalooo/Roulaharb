@@ -12,15 +12,30 @@
   // Example: '9613001234'  (Lebanon +961 prefix)
   var WHATSAPP_NUMBER = '';
 
-  // ─── NAVBAR SCROLL ───────────────────────────────
+  // ─── NAVBAR SCROLL + HIDE ON SCROLL DOWN ────────
   const navbar = document.getElementById('navbar');
+  var lastScrollY = 0;
 
   function handleNavScroll() {
-    if (window.scrollY > 60) {
+    var scrollY = window.scrollY;
+
+    // Scrolled state (background)
+    if (scrollY > 60) {
       navbar.classList.add('scrolled');
     } else {
       navbar.classList.remove('scrolled');
+      navbar.classList.remove('nav-hidden');
+      lastScrollY = scrollY;
+      return;
     }
+
+    // Hide on scroll down, reveal on scroll up
+    if (scrollY > lastScrollY + 8) {
+      navbar.classList.add('nav-hidden');
+    } else if (scrollY < lastScrollY - 8) {
+      navbar.classList.remove('nav-hidden');
+    }
+    lastScrollY = scrollY;
   }
 
   window.addEventListener('scroll', handleNavScroll, { passive: true });
@@ -78,10 +93,48 @@
   // Expose globally so render.js can call it after async fetch resolves
   window.initReveal = initReveal;
 
-  // Run once immediately (static .reveal elements),
-  // then again after a tick in case render.js has already appended cards.
+  // Run once immediately, then after a tick for dynamic cards
   initReveal();
   setTimeout(initReveal, 0);
+
+  // ─── HERO NAME — LETTER BY LETTER ────────────────
+  var heroNameEl = document.getElementById('hero-name');
+  if (heroNameEl) {
+    var heroText = heroNameEl.textContent;
+    heroNameEl.textContent = '';
+    heroText.split('').forEach(function (char, i) {
+      var span = document.createElement('span');
+      span.className = 'hero-letter';
+      span.textContent = char === ' ' ? '\u00A0' : char;
+      span.style.animationDelay = (300 + i * 55) + 'ms';
+      heroNameEl.appendChild(span);
+    });
+  }
+
+  // ─── CUSTOM CURSOR ───────────────────────────────
+  var cursorDot = document.getElementById('cursor-dot');
+  if (cursorDot && window.matchMedia('(pointer: fine)').matches) {
+    document.addEventListener('mousemove', function (e) {
+      cursorDot.style.left = e.clientX + 'px';
+      cursorDot.style.top  = e.clientY + 'px';
+    }, { passive: true });
+
+    document.addEventListener('mouseover', function (e) {
+      if (e.target.closest('.card-img-wrap, .brand-logo, .img-frame')) {
+        cursorDot.classList.add('cursor-over-image');
+      } else if (e.target.closest('a, button')) {
+        cursorDot.classList.add('cursor-over-link');
+      }
+    });
+
+    document.addEventListener('mouseout', function (e) {
+      if (e.target.closest('.card-img-wrap, .brand-logo, .img-frame')) {
+        cursorDot.classList.remove('cursor-over-image');
+      } else if (e.target.closest('a, button')) {
+        cursorDot.classList.remove('cursor-over-link');
+      }
+    });
+  }
 
   // ─── SMOOTH SCROLL ───────────────────────────────
   document.addEventListener('click', function (e) {
@@ -296,7 +349,7 @@
         btn.textContent = 'Added';
       } else {
         btn.classList.remove('in-basket');
-        btn.textContent = 'Inquire';
+        btn.textContent = 'Request';
       }
     });
 
