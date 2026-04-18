@@ -301,48 +301,85 @@ a   { text-decoration: none; color: inherit; }
   z-index: 2;
 }
 
-/* Left image panel: 44% width */
+/* ─── HERO IMAGE PANEL ─── */
 .hero-image-panel {
   flex: 0 0 44%;
   position: relative;
   overflow: hidden;
 }
-.hero-feature-img {
+
+/* Each slide: stacked absolutely, crossfades in turn */
+.hero-slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  animation: heroFade 30s ease-in-out infinite;
+}
+.hero-slide img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center top;
   display: block;
-  filter: brightness(0.78) saturate(0.92);
-  transition: transform 8s ease;
+  filter: brightness(0.82) saturate(0.88);
+  /* Zoom into the painting texture */
+  transform: scale(1.35);
+  animation: heroZoom 30s ease-in-out infinite;
 }
-#hero:hover .hero-feature-img {
-  transform: scale(1.04);
+
+/* Stagger each slide by 6s (30s ÷ 5 slides) */
+.hero-slide--1 { animation-delay:  0s; }
+.hero-slide--1 img { animation-delay:  0s; object-position: 50% 35%; }
+.hero-slide--2 { animation-delay:  6s; }
+.hero-slide--2 img { animation-delay:  6s; object-position: 40% 55%; }
+.hero-slide--3 { animation-delay: 12s; }
+.hero-slide--3 img { animation-delay: 12s; object-position: 55% 30%; }
+.hero-slide--4 { animation-delay: 18s; }
+.hero-slide--4 img { animation-delay: 18s; object-position: 45% 45%; }
+.hero-slide--5 { animation-delay: 24s; }
+.hero-slide--5 img { animation-delay: 24s; object-position: 50% 40%; }
+
+/* Fade: in over 1s, hold, out over 1s */
+@keyframes heroFade {
+  0%       { opacity: 0; }
+  3.3%     { opacity: 1; }
+  16.7%    { opacity: 1; }
+  20%      { opacity: 0; }
+  100%     { opacity: 0; }
 }
-/* Gradient veil: fades the right edge into the dark background */
+/* Slow Ken Burns zoom drift */
+@keyframes heroZoom {
+  0%   { transform: scale(1.35) translate(0, 0); }
+  50%  { transform: scale(1.45) translate(-2%, 2%); }
+  100% { transform: scale(1.35) translate(0, 0); }
+}
+
+/* Gradient veil: right edge dissolves into dark bg */
 .hero-img-veil {
   position: absolute;
   inset: 0;
   background: linear-gradient(
     to right,
-    transparent 55%,
-    rgba(20,5,15,0.55) 78%,
+    transparent 45%,
+    rgba(20,5,15,0.5) 72%,
     var(--wine-dark) 100%
   );
   pointer-events: none;
+  z-index: 2;
 }
-/* Museum-style caption — bottom left of image */
+/* Museum caption */
 .hero-img-caption {
   position: absolute;
   bottom: 2.2rem;
   left: 2rem;
   font-family: var(--font-sans);
-  font-size: 0.55rem;
+  font-size: 0.54rem;
   letter-spacing: 0.26em;
   text-transform: uppercase;
-  color: rgba(255,255,255,0.38);
+  color: rgba(255,255,255,0.35);
   white-space: nowrap;
   pointer-events: none;
+  z-index: 3;
+  transition: opacity 0.6s ease;
 }
 
 /* Right content panel */
@@ -988,13 +1025,12 @@ a   { text-decoration: none; color: inherit; }
   position: relative;
   overflow: hidden;
   aspect-ratio: 1 / 1;
-  background: linear-gradient(145deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.02) 100%);
-  border: 1px solid rgba(232,160,32,0.14);
+  background: transparent;
   cursor: pointer;
-  transition: border-color 0.4s var(--ease), box-shadow 0.4s var(--ease);
+  transition: box-shadow 0.4s var(--ease);
 }
 #plo .card-img-wrap {
-  background: linear-gradient(145deg, rgba(224,123,10,0.06) 0%, rgba(255,248,240,0.8) 100%);
+  background: transparent;
 }
 .card-tall { aspect-ratio: 3 / 4; }
 
@@ -1004,7 +1040,8 @@ a   { text-decoration: none; color: inherit; }
   inset: 0;
   width: 100%; height: 100%;
   object-fit: contain;
-  padding: 16px;
+  object-position: center top;
+  padding: 0;
   transition: opacity 0.4s ease-in-out;
 }
 .card-img-wrap .main-img  { opacity: 1; }
