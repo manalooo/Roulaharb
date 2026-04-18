@@ -280,35 +280,23 @@ a   { text-decoration: none; color: inherit; }
 .hamburger.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
 
 /* ─── HERO ─── */
+/* ═══════════════════════════════════════════════════
+   HERO — full-bleed cinematic editorial
+   ═══════════════════════════════════════════════════ */
+
 #hero {
   position: relative;
   min-height: 100vh;
-  display: flex; align-items: stretch; justify-content: stretch;
   overflow: hidden;
   background: var(--wine-dark);
-  background-image:
-    radial-gradient(ellipse 38% 42% at 18% 30%, rgba(227,30,36,0.13) 0%, transparent 70%),
-    radial-gradient(ellipse 32% 36% at 82% 70%, rgba(217,30,192,0.10) 0%, transparent 70%),
-    radial-gradient(ellipse 70% 60% at 50% 45%, #3a1428 0%, var(--wine-dark) 70%);
 }
 
-/* ─── HERO SPLIT LAYOUT ─── */
-.hero-split {
-  display: flex;
-  width: 100%;
-  min-height: 100vh;
-  position: relative;
-  z-index: 2;
+/* ── Slideshow: fills entire hero behind everything ── */
+.hero-slides {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
 }
-
-/* ─── HERO IMAGE PANEL ─── */
-.hero-image-panel {
-  flex: 0 0 44%;
-  position: relative;
-  overflow: hidden;
-}
-
-/* Each slide: stacked absolutely, crossfades in turn */
 .hero-slide {
   position: absolute;
   inset: 0;
@@ -320,184 +308,167 @@ a   { text-decoration: none; color: inherit; }
   height: 100%;
   object-fit: cover;
   display: block;
-  filter: brightness(0.82) saturate(0.88);
-  /* Zoom into the painting texture */
-  transform: scale(1.35);
+  /* Zoom deep into fabric texture */
+  transform-origin: center center;
   animation: heroZoom 30s ease-in-out infinite;
 }
+/* Each slide staggered 6s apart */
+.hero-slide--1             { animation-delay:  0s; }
+.hero-slide--1 img         { animation-delay:  0s; object-position: 50% 30%; }
+.hero-slide--2             { animation-delay:  6s; }
+.hero-slide--2 img         { animation-delay:  6s; object-position: 42% 58%; }
+.hero-slide--3             { animation-delay: 12s; }
+.hero-slide--3 img         { animation-delay: 12s; object-position: 55% 28%; }
+.hero-slide--4             { animation-delay: 18s; }
+.hero-slide--4 img         { animation-delay: 18s; object-position: 48% 42%; }
+.hero-slide--5             { animation-delay: 24s; }
+.hero-slide--5 img         { animation-delay: 24s; object-position: 52% 38%; }
 
-/* Stagger each slide by 6s (30s ÷ 5 slides) */
-.hero-slide--1 { animation-delay:  0s; }
-.hero-slide--1 img { animation-delay:  0s; object-position: 50% 35%; }
-.hero-slide--2 { animation-delay:  6s; }
-.hero-slide--2 img { animation-delay:  6s; object-position: 40% 55%; }
-.hero-slide--3 { animation-delay: 12s; }
-.hero-slide--3 img { animation-delay: 12s; object-position: 55% 30%; }
-.hero-slide--4 { animation-delay: 18s; }
-.hero-slide--4 img { animation-delay: 18s; object-position: 45% 45%; }
-.hero-slide--5 { animation-delay: 24s; }
-.hero-slide--5 img { animation-delay: 24s; object-position: 50% 40%; }
-
-/* Fade: in over 1s, hold, out over 1s */
 @keyframes heroFade {
-  0%       { opacity: 0; }
-  3.3%     { opacity: 1; }
-  16.7%    { opacity: 1; }
-  20%      { opacity: 0; }
-  100%     { opacity: 0; }
+  0%    { opacity: 0; }
+  4%    { opacity: 1; }
+  17%   { opacity: 1; }
+  21%   { opacity: 0; }
+  100%  { opacity: 0; }
 }
-/* Slow Ken Burns zoom drift */
 @keyframes heroZoom {
-  0%   { transform: scale(1.35) translate(0, 0); }
-  50%  { transform: scale(1.45) translate(-2%, 2%); }
-  100% { transform: scale(1.35) translate(0, 0); }
+  0%   { transform: scale(1.55) translate(0%,  0%); }
+  50%  { transform: scale(1.65) translate(-2%, 2%); }
+  100% { transform: scale(1.55) translate(0%,  0%); }
 }
 
-/* Gradient veil: right edge dissolves into dark bg */
-.hero-img-veil {
+/* ── Cinematic overlay ──────────────────────────────
+   Dark at top (nav), opens in the middle (image glows
+   through), dark again at the bottom (text readable)  */
+.hero-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    to right,
-    transparent 45%,
-    rgba(20,5,15,0.5) 72%,
-    var(--wine-dark) 100%
-  );
+  z-index: 1;
+  background:
+    linear-gradient(to bottom,
+      rgba(18, 4, 14, 0.72)  0%,
+      rgba(18, 4, 14, 0.18) 28%,
+      rgba(18, 4, 14, 0.08) 48%,
+      rgba(18, 4, 14, 0.55) 68%,
+      rgba(18, 4, 14, 0.93) 85%,
+      rgba(18, 4, 14, 1.00) 100%
+    );
   pointer-events: none;
-  z-index: 2;
-}
-/* Museum caption */
-.hero-img-caption {
-  position: absolute;
-  bottom: 2.2rem;
-  left: 2rem;
-  font-family: var(--font-sans);
-  font-size: 0.54rem;
-  letter-spacing: 0.26em;
-  text-transform: uppercase;
-  color: rgba(255,255,255,0.35);
-  white-space: nowrap;
-  pointer-events: none;
-  z-index: 3;
-  transition: opacity 0.6s ease;
 }
 
-/* Right content panel */
+/* ── Hero content ───────────────────────────────────
+   Pinned to the bottom half, floats over the image    */
 .hero-content {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 5rem 4rem 5rem 3rem;
-  text-align: center;
-}
-#hero::before {
-  content: '';
   position: absolute;
-  inset: 0;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");
-  opacity: 0.028;
-  pointer-events: none;
-  z-index: 1;
-}
-#hero::after {
-  content: '';
-  position: absolute;
-  left: 50%; bottom: 0;
+  bottom: 0;
+  left: 50%;
   transform: translateX(-50%);
-  width: 1px;
-  height: 35%;
-  background: linear-gradient(to bottom, transparent, rgba(232,160,32,0.15));
-  z-index: 1;
-  pointer-events: none;
+  z-index: 2;
+  text-align: center;
+  padding: 0 2rem 5rem;
+  width: 100%;
+  max-width: 860px;
 }
 
-/* .hero-content defined in hero-split block above */
+/* Tiny label above the name */
+.hero-eyebrow {
+  font-family: var(--font-sans);
+  font-size: 0.6rem;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.38);
+  margin: 0 0 1.2rem;
+  display: block;
+}
 
-/* Hero title */
+/* Hero title block */
 .hero-title {
   font-family: var(--font-serif);
   font-weight: 300;
   text-align: center;
-  margin-bottom: 2.5rem;
+  margin: 0 0 1.4rem;
   line-height: 1;
-  overflow: hidden;
 }
-
-/* "ROULA HARB" — name on one line, commanding */
 .hero-title-name {
   display: block;
-  font-size: clamp(3rem, 9vw, 8rem);
+  font-size: clamp(2.8rem, 6vw, 5.8rem);
   font-weight: 300;
-  letter-spacing: 0.18em;
+  letter-spacing: 0.22em;
   color: #fff;
   line-height: 1;
   white-space: nowrap;
 }
 
+/* Pulsing gold hairline rule */
+.hero-rule {
+  width: 1px; height: 48px;
+  background: linear-gradient(to bottom, transparent, var(--gold), transparent);
+  margin: 0 auto 2rem;
+  animation: rulePulse 3s ease-in-out infinite;
+}
+@keyframes rulePulse {
+  0%, 100% { opacity: 0.28; }
+  50%       { opacity: 1; }
+}
+
+/* Italic quote */
+.hero-sub {
+  font-family: var(--font-serif);
+  font-size: clamp(1rem, 2.2vw, 1.5rem);
+  font-style: italic;
+  font-weight: 300;
+  color: rgba(255,255,255,0.8);
+  margin: 0 0 0.8rem;
+  line-height: 1.5;
+}
+.hero-sub em { font-style: normal; color: rgba(255,255,255,0.42); }
+
+/* Fine print tag */
+.hero-tagline {
+  font-size: 0.58rem;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.32);
+  margin: 0 0 2.8rem;
+}
+
+/* CTA buttons */
+.hero-cta {
+  display: flex; gap: 1.2rem;
+  justify-content: center; flex-wrap: wrap;
+}
+#hero .btn-jookh {
+  color: var(--jookh); border-color: rgba(227,30,36,0.55); background: transparent;
+}
+#hero .btn-jookh:hover { color: #fff; background: var(--jookh); border-color: var(--jookh); }
+#hero .btn-plo {
+  color: var(--plo); border-color: rgba(224,123,10,0.55); background: transparent;
+}
+#hero .btn-plo:hover { color: #fff; background: var(--plo); border-color: var(--plo); }
+
 /* Letter-by-letter reveal animation */
 .hero-letter {
   display: inline-block;
   opacity: 0;
-  transform: translateY(30px);
+  transform: translateY(24px);
   animation: letterReveal 0.8s var(--ease) forwards;
 }
 @keyframes letterReveal {
   to { opacity: 1; transform: translateY(0); }
 }
 
-.hero-rule {
-  width: 1px; height: 52px;
-  background: linear-gradient(to bottom, transparent, var(--gold), transparent);
-  margin: 0 auto 2.5rem;
-  animation: rulePulse 3s ease-in-out infinite;
-}
-@keyframes rulePulse {
-  0%, 100% { opacity: 0.3; }
-  50%       { opacity: 0.9; }
-}
-
-.hero-sub {
-  font-family: var(--font-serif);
-  font-size: clamp(1.1rem, 2.4vw, 1.7rem);
-  font-style: italic;
-  font-weight: 300;
-  color: rgba(255,255,255,0.82);
-  margin-bottom: 1rem;
-  line-height: 1.45;
-}
-.hero-sub em { font-style: normal; color: rgba(255,255,255,0.5); }
-
-/* Hero buttons — each branded with its logo colour */
-#hero .btn-jookh {
-  color: var(--jookh);
-  border-color: var(--jookh);
-  background: transparent;
-}
-#hero .btn-jookh:hover {
-  color: #fff;
-  background: var(--jookh);
-}
-#hero .btn-plo {
-  color: var(--plo);
-  border-color: var(--plo);
-  background: transparent;
-}
-#hero .btn-plo:hover {
-  color: #fff;
-  background: var(--plo);
-}
-.hero-tagline {
-  font-size: 0.62rem;
+/* Piece caption — bottom left, fades with slides */
+.hero-img-caption {
+  position: absolute;
+  bottom: 2rem; left: 2rem;
+  z-index: 3;
+  font-family: var(--font-sans);
+  font-size: 0.52rem;
   letter-spacing: 0.28em;
   text-transform: uppercase;
-  color: rgba(255,255,255,0.38);
-  margin-bottom: 3rem;
-}
-.hero-cta {
-  display: flex; gap: 1.4rem;
-  justify-content: center; flex-wrap: wrap;
+  color: rgba(255,255,255,0.28);
+  pointer-events: none;
+  white-space: nowrap;
 }
 
 .scroll-indicator {
@@ -1453,35 +1424,11 @@ a   { text-decoration: none; color: inherit; }
   .footer-links { justify-content: center; }
   .footer-social { grid-column: auto; justify-content: center; }
 
-  /* Hero: stack on mobile — image on top, content below */
-  .hero-split {
-    flex-direction: column;
-    min-height: 100vh;
-  }
-  .hero-image-panel {
-    flex: 0 0 45vh;
-    min-height: 45vh;
-  }
-  .hero-feature-img {
-    object-position: center 20%;
-  }
-  .hero-img-veil {
-    background: linear-gradient(
-      to bottom,
-      transparent 50%,
-      rgba(20,5,15,0.6) 80%,
-      var(--wine-dark) 100%
-    );
-  }
-  .hero-img-caption { font-size: 0.48rem; bottom: 1rem; left: 1rem; }
-  .hero-content {
-    flex: 1;
-    padding: 2.5rem 2rem 4rem;
-    justify-content: flex-start;
-  }
-  .hero-title-pre  { font-size: clamp(0.7rem, 3vw, 1rem); }
-  .hero-title-name { font-size: clamp(2.8rem, 14vw, 5rem); }
-  .hero-sub        { font-size: clamp(1.05rem, 3.5vw, 1.4rem); }
+  .hero-content     { padding: 0 1.4rem 4.5rem; max-width: 100%; }
+  .hero-title-name  { font-size: clamp(2.2rem, 10vw, 3.8rem); letter-spacing: 0.16em; }
+  .hero-sub         { font-size: clamp(0.9rem, 3.8vw, 1.2rem); }
+  .hero-eyebrow     { font-size: 0.52rem; }
+  .hero-img-caption { font-size: 0.44rem; bottom: 1rem; left: 1rem; }
   #jookh, #plo, #about, #contact, #philosophy { padding: 5rem 0; }
 
   .lb-prev { left: 0.5rem; } .lb-next { right: 0.5rem; }
