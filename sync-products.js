@@ -124,8 +124,9 @@ function collectionFor(category) {
 // ─── BUILD PRODUCT ───────────────────────────────────────────────────────────
 
 function buildProduct(row) {
-  var category = (row.Category || '').toLowerCase().trim();
-  var status   = (row.Status   || 'available').toLowerCase().trim();
+  var category      = (row.Category      || '').toLowerCase().trim();
+  var status        = (row.Status        || 'available').toLowerCase().trim();
+  var subcollection = (row.Subcollection || '').trim();
   if (status !== 'sold') status = 'available';
 
   // Build views array: main → hover → any extra views auto-detected on disk
@@ -138,19 +139,22 @@ function buildProduct(row) {
     if (views.indexOf(v) === -1) views.push(v);
   });
 
-  return {
+  var product = {
     id:         row.ID,
     name:       row.Name,
     category:   category,
     collection: collectionFor(category),
     price:      row.Price,
     medium:     row.Material,
-    dimensions: row.Dimensions,
     edition:    'One-of-a-kind \u00b7 Signed by the artist',
-    story:      row.Story,
     views:      views,
     status:     status
   };
+
+  // Only include subcollection if filled in
+  if (subcollection) product.subcollection = subcollection;
+
+  return product;
 }
 
 // ─── MAIN ────────────────────────────────────────────────────────────────────

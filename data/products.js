@@ -7,10 +7,8 @@ window.PRODUCTS = [
     "category": "scarves",
     "collection": "Jookh Couture",
     "price": "220",
-    "medium": "ENTER MATERIAL HERE",
-    "dimensions": "ENTER DIMENSIONS HERE",
+    "medium": "Hand-painted silk",
     "edition": "One-of-a-kind · Signed by the artist",
-    "story": "ENTER STORY HERE",
     "views": [
       "images/jookh/scarves/piece-1.jpeg"
     ],
@@ -22,10 +20,8 @@ window.PRODUCTS = [
     "category": "scarves",
     "collection": "Jookh Couture",
     "price": "220",
-    "medium": "ENTER MATERIAL HERE",
-    "dimensions": "ENTER DIMENSIONS HERE",
+    "medium": "Hand-painted silk",
     "edition": "One-of-a-kind · Signed by the artist",
-    "story": "ENTER STORY HERE",
     "views": [
       "images/jookh/scarves/piece-2.jpeg"
     ],
@@ -37,10 +33,8 @@ window.PRODUCTS = [
     "category": "scarves",
     "collection": "Jookh Couture",
     "price": "220",
-    "medium": "ENTER MATERIAL HERE",
-    "dimensions": "ENTER DIMENSIONS HERE",
+    "medium": "Hand-painted silk",
     "edition": "One-of-a-kind · Signed by the artist",
-    "story": "ENTER STORY HERE",
     "views": [
       "images/jookh/scarves/piece-3.jpeg"
     ],
@@ -52,10 +46,8 @@ window.PRODUCTS = [
     "category": "scarves",
     "collection": "Jookh Couture",
     "price": "220",
-    "medium": "ENTER MATERIAL HERE",
-    "dimensions": "ENTER DIMENSIONS HERE",
+    "medium": "Hand-painted silk",
     "edition": "One-of-a-kind · Signed by the artist",
-    "story": "ENTER STORY HERE",
     "views": [
       "images/jookh/scarves/piece-4.jpeg"
     ],
@@ -67,10 +59,8 @@ window.PRODUCTS = [
     "category": "scarves",
     "collection": "Jookh Couture",
     "price": "220",
-    "medium": "ENTER MATERIAL HERE",
-    "dimensions": "ENTER DIMENSIONS HERE",
+    "medium": "Hand-painted silk",
     "edition": "One-of-a-kind · Signed by the artist",
-    "story": "ENTER STORY HERE",
     "views": [
       "images/jookh/scarves/piece-5.jpeg"
     ],
@@ -82,10 +72,8 @@ window.PRODUCTS = [
     "category": "scarves",
     "collection": "Jookh Couture",
     "price": "220",
-    "medium": "ENTER MATERIAL HERE",
-    "dimensions": "ENTER DIMENSIONS HERE",
+    "medium": "Hand-painted silk",
     "edition": "One-of-a-kind · Signed by the artist",
-    "story": "ENTER STORY HERE",
     "views": [
       "images/jookh/scarves/piece-6.jpeg"
     ],
@@ -97,10 +85,8 @@ window.PRODUCTS = [
     "category": "scarves",
     "collection": "Jookh Couture",
     "price": "220",
-    "medium": "ENTER MATERIAL HERE",
-    "dimensions": "ENTER DIMENSIONS HERE",
+    "medium": "Hand-painted silk",
     "edition": "One-of-a-kind · Signed by the artist",
-    "story": "ENTER STORY HERE",
     "views": [
       "images/jookh/scarves/piece-7.jpeg"
     ],
@@ -112,10 +98,8 @@ window.PRODUCTS = [
     "category": "scarves",
     "collection": "Jookh Couture",
     "price": "ENTER PRICE HERE",
-    "medium": "ENTER MATERIAL HERE",
-    "dimensions": "ENTER DIMENSIONS HERE",
+    "medium": "Hand-painted silk",
     "edition": "One-of-a-kind · Signed by the artist",
-    "story": "ENTER STORY HERE",
     "views": [
       "images/jookh/scarves/piece-8.jpeg"
     ],
@@ -127,10 +111,8 @@ window.PRODUCTS = [
     "category": "scarves",
     "collection": "Jookh Couture",
     "price": "ENTER PRICE HERE",
-    "medium": "ENTER MATERIAL HERE",
-    "dimensions": "ENTER DIMENSIONS HERE",
+    "medium": "Hand-painted silk",
     "edition": "One-of-a-kind · Signed by the artist",
-    "story": "ENTER STORY HERE",
     "views": [
       "images/jookh/scarves/piece-9.jpeg"
     ],
@@ -142,10 +124,8 @@ window.PRODUCTS = [
     "category": "scarves",
     "collection": "Jookh Couture",
     "price": "ENTER PRICE HERE",
-    "medium": "ENTER MATERIAL HERE",
-    "dimensions": "ENTER DIMENSIONS HERE",
+    "medium": "Hand-painted silk",
     "edition": "One-of-a-kind · Signed by the artist",
-    "story": "ENTER STORY HERE",
     "views": [
       "images/jookh/scarves/piece-10.jpeg"
     ],
@@ -158,9 +138,7 @@ window.PRODUCTS = [
     "collection": "Jookh Couture",
     "price": "220",
     "medium": "ENTER MATERIAL HERE",
-    "dimensions": "ENTER DIMENSIONS HERE",
     "edition": "One-of-a-kind · Signed by the artist",
-    "story": "ENTER STORY HERE",
     "views": [
       "images/jookh/bags/piece-1.jpg"
     ],
@@ -173,9 +151,7 @@ window.PRODUCTS = [
     "collection": "Jookh Couture",
     "price": "220",
     "medium": "ENTER MATERIAL HERE",
-    "dimensions": "ENTER DIMENSIONS HERE",
     "edition": "One-of-a-kind · Signed by the artist",
-    "story": "ENTER STORY HERE",
     "views": [
       "images/jookh/bags/piece-2.jpg"
     ],
@@ -188,9 +164,7 @@ window.PRODUCTS = [
     "collection": "Jookh Couture",
     "price": "220",
     "medium": "ENTER MATERIAL HERE",
-    "dimensions": "ENTER DIMENSIONS HERE",
     "edition": "One-of-a-kind · Signed by the artist",
-    "story": "ENTER STORY HERE",
     "views": [
       "images/jookh/bags/piece-3.jpg"
     ],
@@ -203,9 +177,7 @@ window.PRODUCTS = [
     "collection": "Jookh Couture",
     "price": "220",
     "medium": "ENTER MATERIAL HERE",
-    "dimensions": "ENTER DIMENSIONS HERE",
     "edition": "One-of-a-kind · Signed by the artist",
-    "story": "ENTER STORY HERE",
     "views": [
       "images/jookh/bags/piece-4.jpeg"
     ],
@@ -218,9 +190,7 @@ window.PRODUCTS = [
     "collection": "Jookh Couture",
     "price": "220",
     "medium": "ENTER MATERIAL HERE",
-    "dimensions": "ENTER DIMENSIONS HERE",
     "edition": "One-of-a-kind · Signed by the artist",
-    "story": "ENTER STORY HERE",
     "views": [
       "images/jookh/bags/piece-5.jpeg"
     ],
@@ -233,9 +203,7 @@ window.PRODUCTS = [
     "collection": "Jookh Couture",
     "price": "220",
     "medium": "ENTER MATERIAL HERE",
-    "dimensions": "ENTER DIMENSIONS HERE",
     "edition": "One-of-a-kind · Signed by the artist",
-    "story": "ENTER STORY HERE",
     "views": [
       "images/jookh/bags/piece-6.jpeg"
     ],
@@ -248,9 +216,7 @@ window.PRODUCTS = [
     "collection": "Jookh Couture",
     "price": "220",
     "medium": "ENTER MATERIAL HERE",
-    "dimensions": "ENTER DIMENSIONS HERE",
     "edition": "One-of-a-kind · Signed by the artist",
-    "story": "ENTER STORY HERE",
     "views": [
       "images/jookh/bags/piece-7.jpeg"
     ],
@@ -263,9 +229,7 @@ window.PRODUCTS = [
     "collection": "Jookh Couture",
     "price": "220",
     "medium": "ENTER MATERIAL HERE",
-    "dimensions": "ENTER DIMENSIONS HERE",
     "edition": "One-of-a-kind · Signed by the artist",
-    "story": "ENTER STORY HERE",
     "views": [
       "images/jookh/bags/piece-8.jpeg"
     ],
@@ -278,9 +242,7 @@ window.PRODUCTS = [
     "collection": "Jookh Couture",
     "price": "220",
     "medium": "ENTER MATERIAL HERE",
-    "dimensions": "ENTER DIMENSIONS HERE",
     "edition": "One-of-a-kind · Signed by the artist",
-    "story": "ENTER STORY HERE",
     "views": [
       "images/jookh/bags/piece-9.jpeg"
     ],
@@ -293,9 +255,7 @@ window.PRODUCTS = [
     "collection": "Jookh Couture",
     "price": "220",
     "medium": "ENTER MATERIAL HERE",
-    "dimensions": "ENTER DIMENSIONS HERE",
     "edition": "One-of-a-kind · Signed by the artist",
-    "story": "ENTER STORY HERE",
     "views": [
       "images/jookh/bags/piece-10.jpeg"
     ],
@@ -308,9 +268,7 @@ window.PRODUCTS = [
     "collection": "Jookh Couture",
     "price": "220",
     "medium": "ENTER MATERIAL HERE",
-    "dimensions": "ENTER DIMENSIONS HERE",
     "edition": "One-of-a-kind · Signed by the artist",
-    "story": "ENTER STORY HERE",
     "views": [
       "images/jookh/bags/piece-11.jpeg"
     ],
@@ -323,9 +281,7 @@ window.PRODUCTS = [
     "collection": "Jookh Couture",
     "price": "220",
     "medium": "ENTER MATERIAL HERE",
-    "dimensions": "ENTER DIMENSIONS HERE",
     "edition": "One-of-a-kind · Signed by the artist",
-    "story": "ENTER STORY HERE",
     "views": [
       "images/jookh/bags/piece-12.jpeg"
     ],
@@ -338,9 +294,7 @@ window.PRODUCTS = [
     "collection": "Jookh Couture",
     "price": "220",
     "medium": "ENTER MATERIAL HERE",
-    "dimensions": "ENTER DIMENSIONS HERE",
     "edition": "One-of-a-kind · Signed by the artist",
-    "story": "ENTER STORY HERE",
     "views": [
       "images/jookh/bags/piece-13.jpeg"
     ],
@@ -353,9 +307,7 @@ window.PRODUCTS = [
     "collection": "Jookh Couture",
     "price": "220",
     "medium": "ENTER MATERIAL HERE",
-    "dimensions": "ENTER DIMENSIONS HERE",
     "edition": "One-of-a-kind · Signed by the artist",
-    "story": "ENTER STORY HERE",
     "views": [
       "images/jookh/bags/piece-14.jpeg"
     ],
@@ -368,9 +320,7 @@ window.PRODUCTS = [
     "collection": "Jookh Couture",
     "price": "220",
     "medium": "ENTER MATERIAL HERE",
-    "dimensions": "ENTER DIMENSIONS HERE",
     "edition": "One-of-a-kind · Signed by the artist",
-    "story": "ENTER STORY HERE",
     "views": [
       "images/jookh/bags/piece-15.jpeg"
     ],
@@ -383,9 +333,7 @@ window.PRODUCTS = [
     "collection": "Jookh Couture",
     "price": "220",
     "medium": "ENTER MATERIAL HERE",
-    "dimensions": "ENTER DIMENSIONS HERE",
     "edition": "One-of-a-kind · Signed by the artist",
-    "story": "ENTER STORY HERE",
     "views": [
       "images/jookh/bags/piece-16.jpeg"
     ],
@@ -398,9 +346,7 @@ window.PRODUCTS = [
     "collection": "Jookh Couture",
     "price": "220",
     "medium": "ENTER MATERIAL HERE",
-    "dimensions": "ENTER DIMENSIONS HERE",
     "edition": "One-of-a-kind · Signed by the artist",
-    "story": "ENTER STORY HERE",
     "views": [
       "images/jookh/bags/piece-17.jpeg"
     ],
@@ -413,9 +359,7 @@ window.PRODUCTS = [
     "collection": "Jookh Couture",
     "price": "ENTER PRICE HERE",
     "medium": "ENTER MATERIAL HERE",
-    "dimensions": "ENTER DIMENSIONS HERE",
     "edition": "One-of-a-kind · Signed by the artist",
-    "story": "ENTER STORY HERE",
     "views": [
       "images/jookh/wearables/piece-17-view-1.jpg",
       "images/jookh/wearables/piece-17-view-2.jpg"
@@ -429,9 +373,7 @@ window.PRODUCTS = [
     "collection": "Jookh Couture",
     "price": "ENTER PRICE HERE",
     "medium": "ENTER MATERIAL HERE",
-    "dimensions": "ENTER DIMENSIONS HERE",
     "edition": "One-of-a-kind · Signed by the artist",
-    "story": "ENTER STORY HERE",
     "views": [
       "images/jookh/wearables/piece-18-view-1.jpg",
       "images/jookh/wearables/piece-18-view-2.jpg"
@@ -445,9 +387,7 @@ window.PRODUCTS = [
     "collection": "Jookh Couture",
     "price": "ENTER PRICE HERE",
     "medium": "ENTER MATERIAL HERE",
-    "dimensions": "ENTER DIMENSIONS HERE",
     "edition": "One-of-a-kind · Signed by the artist",
-    "story": "ENTER STORY HERE",
     "views": [
       "images/jookh/wearables/piece-19-view-1.jpg",
       "images/jookh/wearables/piece-19-view-2.jpg"
@@ -461,9 +401,7 @@ window.PRODUCTS = [
     "collection": "Jookh Couture",
     "price": "ENTER PRICE HERE",
     "medium": "ENTER MATERIAL HERE",
-    "dimensions": "ENTER DIMENSIONS HERE",
     "edition": "One-of-a-kind · Signed by the artist",
-    "story": "ENTER STORY HERE",
     "views": [
       "images/jookh/wearables/piece-20-view-1.jpg",
       "images/jookh/wearables/piece-20-view-2.jpg"
@@ -477,9 +415,7 @@ window.PRODUCTS = [
     "collection": "Jookh Couture",
     "price": "ENTER PRICE HERE",
     "medium": "ENTER MATERIAL HERE",
-    "dimensions": "ENTER DIMENSIONS HERE",
     "edition": "One-of-a-kind · Signed by the artist",
-    "story": "ENTER STORY HERE",
     "views": [
       "images/jookh/wearables/piece-21-view-1.jpg",
       "images/jookh/wearables/piece-21-view-2.jpg"
@@ -493,9 +429,7 @@ window.PRODUCTS = [
     "collection": "Jookh Couture",
     "price": "ENTER PRICE HERE",
     "medium": "ENTER MATERIAL HERE",
-    "dimensions": "ENTER DIMENSIONS HERE",
     "edition": "One-of-a-kind · Signed by the artist",
-    "story": "ENTER STORY HERE",
     "views": [
       "images/jookh/wearables/piece-22-view-1.jpg",
       "images/jookh/wearables/piece-22-view-2.jpg"
@@ -509,9 +443,7 @@ window.PRODUCTS = [
     "collection": "Jookh Couture",
     "price": "ENTER PRICE HERE",
     "medium": "ENTER MATERIAL HERE",
-    "dimensions": "ENTER DIMENSIONS HERE",
     "edition": "One-of-a-kind · Signed by the artist",
-    "story": "ENTER STORY HERE",
     "views": [
       "images/jookh/wearables/piece-23-view-1.jpg",
       "images/jookh/wearables/piece-23-view-2.jpg"
@@ -525,9 +457,7 @@ window.PRODUCTS = [
     "collection": "Jookh Couture",
     "price": "ENTER PRICE HERE",
     "medium": "ENTER MATERIAL HERE",
-    "dimensions": "ENTER DIMENSIONS HERE",
     "edition": "One-of-a-kind · Signed by the artist",
-    "story": "ENTER STORY HERE",
     "views": [
       "images/jookh/wearables/piece-24-view-1.jpg",
       "images/jookh/wearables/piece-24-view-2.jpg"
@@ -541,9 +471,7 @@ window.PRODUCTS = [
     "collection": "Jookh Couture",
     "price": "ENTER PRICE HERE",
     "medium": "ENTER MATERIAL HERE",
-    "dimensions": "ENTER DIMENSIONS HERE",
     "edition": "One-of-a-kind · Signed by the artist",
-    "story": "ENTER STORY HERE",
     "views": [
       "images/jookh/wearables/piece-25-view-1.jpg",
       "images/jookh/wearables/piece-25-view-2.jpg"
@@ -557,9 +485,7 @@ window.PRODUCTS = [
     "collection": "Jookh Couture",
     "price": "ENTER PRICE HERE",
     "medium": "ENTER MATERIAL HERE",
-    "dimensions": "ENTER DIMENSIONS HERE",
     "edition": "One-of-a-kind · Signed by the artist",
-    "story": "ENTER STORY HERE",
     "views": [
       "images/jookh/wearables/piece-26-view-1.jpg",
       "images/jookh/wearables/piece-26-view-2.jpg"
@@ -573,9 +499,7 @@ window.PRODUCTS = [
     "collection": "Jookh Couture",
     "price": "ENTER PRICE HERE",
     "medium": "ENTER MATERIAL HERE",
-    "dimensions": "ENTER DIMENSIONS HERE",
     "edition": "One-of-a-kind · Signed by the artist",
-    "story": "ENTER STORY HERE",
     "views": [
       "images/jookh/wearables/piece-27-view-1.jpg",
       "images/jookh/wearables/piece-27-view-2.jpg"
@@ -589,9 +513,7 @@ window.PRODUCTS = [
     "collection": "Jookh Couture",
     "price": "ENTER PRICE HERE",
     "medium": "ENTER MATERIAL HERE",
-    "dimensions": "ENTER DIMENSIONS HERE",
     "edition": "One-of-a-kind · Signed by the artist",
-    "story": "ENTER STORY HERE",
     "views": [
       "images/jookh/wearables/piece-28-view-1.jpg",
       "images/jookh/wearables/piece-28-view-2.jpg"
@@ -605,9 +527,7 @@ window.PRODUCTS = [
     "collection": "Jookh Couture",
     "price": "ENTER PRICE HERE",
     "medium": "ENTER MATERIAL HERE",
-    "dimensions": "ENTER DIMENSIONS HERE",
     "edition": "One-of-a-kind · Signed by the artist",
-    "story": "ENTER STORY HERE",
     "views": [
       "images/jookh/wearables/piece-29-view-1.jpg",
       "images/jookh/wearables/piece-29-view-2.jpg"
@@ -621,9 +541,7 @@ window.PRODUCTS = [
     "collection": "Jookh Couture",
     "price": "ENTER PRICE HERE",
     "medium": "ENTER MATERIAL HERE",
-    "dimensions": "ENTER DIMENSIONS HERE",
     "edition": "One-of-a-kind · Signed by the artist",
-    "story": "ENTER STORY HERE",
     "views": [
       "images/jookh/wearables/piece-30-view-1.jpg",
       "images/jookh/wearables/piece-30-view-2.jpg"
@@ -637,9 +555,7 @@ window.PRODUCTS = [
     "collection": "Jookh Couture",
     "price": "ENTER PRICE HERE",
     "medium": "ENTER MATERIAL HERE",
-    "dimensions": "ENTER DIMENSIONS HERE",
     "edition": "One-of-a-kind · Signed by the artist",
-    "story": "ENTER STORY HERE",
     "views": [
       "images/jookh/wearables/piece-31-view-1.jpg",
       "images/jookh/wearables/piece-31-view-2.jpg"
@@ -653,9 +569,7 @@ window.PRODUCTS = [
     "collection": "Jookh Couture",
     "price": "ENTER PRICE HERE",
     "medium": "ENTER MATERIAL HERE",
-    "dimensions": "ENTER DIMENSIONS HERE",
     "edition": "One-of-a-kind · Signed by the artist",
-    "story": "ENTER STORY HERE",
     "views": [
       "images/jookh/wearables/piece-32-view-1.jpg",
       "images/jookh/wearables/piece-32-view-2.jpg"
@@ -669,9 +583,7 @@ window.PRODUCTS = [
     "collection": "Jookh Couture",
     "price": "ENTER PRICE HERE",
     "medium": "ENTER MATERIAL HERE",
-    "dimensions": "ENTER DIMENSIONS HERE",
     "edition": "One-of-a-kind · Signed by the artist",
-    "story": "ENTER STORY HERE",
     "views": [
       "images/jookh/wearables/piece-33-view-1.jpg",
       "images/jookh/wearables/piece-33-view-2.jpg"
@@ -685,9 +597,7 @@ window.PRODUCTS = [
     "collection": "Jookh Couture",
     "price": "ENTER PRICE HERE",
     "medium": "ENTER MATERIAL HERE",
-    "dimensions": "ENTER DIMENSIONS HERE",
     "edition": "One-of-a-kind · Signed by the artist",
-    "story": "ENTER STORY HERE",
     "views": [
       "images/jookh/wearables/piece-34-view-1.jpg",
       "images/jookh/wearables/piece-34-view-2.jpg"
@@ -701,9 +611,7 @@ window.PRODUCTS = [
     "collection": "Jookh Couture",
     "price": "ENTER PRICE HERE",
     "medium": "ENTER MATERIAL HERE",
-    "dimensions": "ENTER DIMENSIONS HERE",
     "edition": "One-of-a-kind · Signed by the artist",
-    "story": "ENTER STORY HERE",
     "views": [
       "images/jookh/wearables/piece-35-view-1.jpg",
       "images/jookh/wearables/piece-35-view-2.jpg"
@@ -717,9 +625,7 @@ window.PRODUCTS = [
     "collection": "Jookh Couture",
     "price": "ENTER PRICE HERE",
     "medium": "ENTER MATERIAL HERE",
-    "dimensions": "ENTER DIMENSIONS HERE",
     "edition": "One-of-a-kind · Signed by the artist",
-    "story": "ENTER STORY HERE",
     "views": [
       "images/jookh/wearables/piece-36-view-1.jpg",
       "images/jookh/wearables/piece-36-view-2.jpg"
@@ -733,9 +639,7 @@ window.PRODUCTS = [
     "collection": "Jookh Couture",
     "price": "ENTER PRICE HERE",
     "medium": "ENTER MATERIAL HERE",
-    "dimensions": "ENTER DIMENSIONS HERE",
     "edition": "One-of-a-kind · Signed by the artist",
-    "story": "ENTER STORY HERE",
     "views": [
       "images/jookh/wearables/piece-37-view-1.jpg",
       "images/jookh/wearables/piece-37-view-2.jpg"
@@ -749,9 +653,7 @@ window.PRODUCTS = [
     "collection": "Jookh Couture",
     "price": "ENTER PRICE HERE",
     "medium": "ENTER MATERIAL HERE",
-    "dimensions": "ENTER DIMENSIONS HERE",
     "edition": "One-of-a-kind · Signed by the artist",
-    "story": "ENTER STORY HERE",
     "views": [
       "images/jookh/wearables/piece-38-view-1.jpg"
     ],
@@ -764,9 +666,7 @@ window.PRODUCTS = [
     "collection": "Jookh Couture",
     "price": "ENTER PRICE HERE",
     "medium": "ENTER MATERIAL HERE",
-    "dimensions": "ENTER DIMENSIONS HERE",
     "edition": "One-of-a-kind · Signed by the artist",
-    "story": "ENTER STORY HERE",
     "views": [
       "images/jookh/wearables/piece-39-view-1.jpg",
       "images/jookh/wearables/piece-39-view-2.jpg"
@@ -780,9 +680,7 @@ window.PRODUCTS = [
     "collection": "Jookh Couture",
     "price": "ENTER PRICE HERE",
     "medium": "ENTER MATERIAL HERE",
-    "dimensions": "ENTER DIMENSIONS HERE",
     "edition": "One-of-a-kind · Signed by the artist",
-    "story": "ENTER STORY HERE",
     "views": [
       "images/jookh/wearables/piece-40-view-1.jpg",
       "images/jookh/wearables/piece-40-view-2.jpg"
@@ -796,9 +694,7 @@ window.PRODUCTS = [
     "collection": "Jookh Couture",
     "price": "ENTER PRICE HERE",
     "medium": "ENTER MATERIAL HERE",
-    "dimensions": "ENTER DIMENSIONS HERE",
     "edition": "One-of-a-kind · Signed by the artist",
-    "story": "ENTER STORY HERE",
     "views": [
       "images/jookh/wearables/piece-41-view-1.jpg",
       "images/jookh/wearables/piece-41-view-2.jpg"
@@ -812,9 +708,7 @@ window.PRODUCTS = [
     "collection": "Jookh Couture",
     "price": "ENTER PRICE HERE",
     "medium": "ENTER MATERIAL HERE",
-    "dimensions": "ENTER DIMENSIONS HERE",
     "edition": "One-of-a-kind · Signed by the artist",
-    "story": "ENTER STORY HERE",
     "views": [
       "images/jookh/wearables/piece-42-view-1.jpg",
       "images/jookh/wearables/piece-42-view-2.jpg"
@@ -828,9 +722,7 @@ window.PRODUCTS = [
     "collection": "Jookh Couture",
     "price": "ENTER PRICE HERE",
     "medium": "ENTER MATERIAL HERE",
-    "dimensions": "ENTER DIMENSIONS HERE",
     "edition": "One-of-a-kind · Signed by the artist",
-    "story": "ENTER STORY HERE",
     "views": [
       "images/jookh/wearables/piece-43-view-1.jpg",
       "images/jookh/wearables/piece-43-view-2.jpg"
@@ -844,9 +736,7 @@ window.PRODUCTS = [
     "collection": "Jookh Couture",
     "price": "ENTER PRICE HERE",
     "medium": "ENTER MATERIAL HERE",
-    "dimensions": "ENTER DIMENSIONS HERE",
     "edition": "One-of-a-kind · Signed by the artist",
-    "story": "ENTER STORY HERE",
     "views": [
       "images/jookh/wearables/piece-44-view-1.jpg",
       "images/jookh/wearables/piece-44-view-2.jpg"
@@ -860,9 +750,7 @@ window.PRODUCTS = [
     "collection": "Jookh Couture",
     "price": "ENTER PRICE HERE",
     "medium": "ENTER MATERIAL HERE",
-    "dimensions": "ENTER DIMENSIONS HERE",
     "edition": "One-of-a-kind · Signed by the artist",
-    "story": "ENTER STORY HERE",
     "views": [
       "images/jookh/wearables/piece-45-view-1.jpg",
       "images/jookh/wearables/piece-45-view-2.jpg"
@@ -876,9 +764,7 @@ window.PRODUCTS = [
     "collection": "Jookh Couture",
     "price": "ENTER PRICE HERE",
     "medium": "ENTER MATERIAL HERE",
-    "dimensions": "ENTER DIMENSIONS HERE",
     "edition": "One-of-a-kind · Signed by the artist",
-    "story": "ENTER STORY HERE",
     "views": [
       "images/jookh/wearables/piece-46-view-1.jpg"
     ],
@@ -891,9 +777,7 @@ window.PRODUCTS = [
     "collection": "Jookh Couture",
     "price": "ENTER PRICE HERE",
     "medium": "ENTER MATERIAL HERE",
-    "dimensions": "ENTER DIMENSIONS HERE",
     "edition": "One-of-a-kind · Signed by the artist",
-    "story": "ENTER STORY HERE",
     "views": [
       "images/jookh/wearables/piece-47-view-1.jpg"
     ],
@@ -906,9 +790,7 @@ window.PRODUCTS = [
     "collection": "Jookh Couture",
     "price": "ENTER PRICE HERE",
     "medium": "ENTER MATERIAL HERE",
-    "dimensions": "ENTER DIMENSIONS HERE",
     "edition": "One-of-a-kind · Signed by the artist",
-    "story": "ENTER STORY HERE",
     "views": [
       "images/jookh/wearables/piece-48-view-1.jpg"
     ],
@@ -921,9 +803,7 @@ window.PRODUCTS = [
     "collection": "Jookh Couture",
     "price": "ENTER PRICE HERE",
     "medium": "ENTER MATERIAL HERE",
-    "dimensions": "ENTER DIMENSIONS HERE",
     "edition": "One-of-a-kind · Signed by the artist",
-    "story": "ENTER STORY HERE",
     "views": [
       "images/jookh/wearables/piece-sold-olive-view-1.jpg",
       "images/jookh/wearables/piece-sold-olive-view-2.jpg"
@@ -932,14 +812,12 @@ window.PRODUCTS = [
   },
   {
     "id": "plo-01",
-    "name": "",
+    "name": "Pomegranate I",
     "category": "pillows",
     "collection": "P-Lo",
     "price": "ENTER PRICE HERE",
     "medium": "Hand-painted · Hand-embroidered linen",
-    "dimensions": "ENTER DIMENSIONS HERE",
     "edition": "One-of-a-kind · Signed by the artist",
-    "story": "ENTER STORY HERE",
     "views": [
       "images/plo/piece-1-view-1.jpeg",
       "images/plo/piece-1-view-2.jpeg",
@@ -949,14 +827,12 @@ window.PRODUCTS = [
   },
   {
     "id": "plo-02",
-    "name": "ENTER NAME HERE",
+    "name": "Pomegranate II",
     "category": "pillows",
     "collection": "P-Lo",
     "price": "ENTER PRICE HERE",
     "medium": "Hand-painted · Hand-embroidered linen",
-    "dimensions": "ENTER DIMENSIONS HERE",
     "edition": "One-of-a-kind · Signed by the artist",
-    "story": "ENTER STORY HERE",
     "views": [
       "images/plo/piece-2-view-1.jpeg",
       "images/plo/piece-2-view-2.jpeg",
@@ -971,9 +847,7 @@ window.PRODUCTS = [
     "collection": "P-Lo",
     "price": "ENTER PRICE HERE",
     "medium": "Hand-painted · Hand-embroidered linen",
-    "dimensions": "ENTER DIMENSIONS HERE",
     "edition": "One-of-a-kind · Signed by the artist",
-    "story": "ENTER STORY HERE",
     "views": [
       "images/plo/piece-3-view-1.jpeg",
       "images/plo/piece-3-view-2.jpeg",
@@ -988,9 +862,7 @@ window.PRODUCTS = [
     "collection": "P-Lo",
     "price": "ENTER PRICE HERE",
     "medium": "Hand-painted · Hand-embroidered linen",
-    "dimensions": "ENTER DIMENSIONS HERE",
     "edition": "One-of-a-kind · Signed by the artist",
-    "story": "ENTER STORY HERE",
     "views": [
       "images/plo/piece-4-view-1.jpeg",
       "images/plo/piece-4-view-2.jpeg"
@@ -1004,9 +876,7 @@ window.PRODUCTS = [
     "collection": "P-Lo",
     "price": "ENTER PRICE HERE",
     "medium": "Hand-painted · Hand-embroidered linen",
-    "dimensions": "ENTER DIMENSIONS HERE",
     "edition": "One-of-a-kind · Signed by the artist",
-    "story": "ENTER STORY HERE",
     "views": [
       "images/plo/piece-5-view-1.jpeg",
       "images/plo/piece-5-view-2.jpeg"
@@ -1020,9 +890,7 @@ window.PRODUCTS = [
     "collection": "P-Lo",
     "price": "ENTER PRICE HERE",
     "medium": "Hand-painted · Hand-embroidered linen",
-    "dimensions": "ENTER DIMENSIONS HERE",
     "edition": "One-of-a-kind · Signed by the artist",
-    "story": "ENTER STORY HERE",
     "views": [
       "images/plo/piece-6-view-1.jpeg",
       "images/plo/piece-6-view-2.jpeg"
@@ -1036,9 +904,7 @@ window.PRODUCTS = [
     "collection": "P-Lo",
     "price": "ENTER PRICE HERE",
     "medium": "Hand-painted · Hand-embroidered linen",
-    "dimensions": "ENTER DIMENSIONS HERE",
     "edition": "One-of-a-kind · Signed by the artist",
-    "story": "ENTER STORY HERE",
     "views": [
       "images/plo/piece-7-view-1.jpeg"
     ],
