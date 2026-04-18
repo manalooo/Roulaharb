@@ -131,6 +131,20 @@ a   { text-decoration: none; color: inherit; }
   text-transform: uppercase;
   color: var(--gold);
   margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+.section-label::before,
+.section-label::after {
+  content: '';
+  display: block;
+  width: 32px;
+  height: 1px;
+  background: currentColor;
+  opacity: 0.5;
+  flex-shrink: 0;
 }
 .jookh-label { color: var(--jookh); }
 .plo-label   { color: var(--plo); }
@@ -167,14 +181,21 @@ a   { text-decoration: none; color: inherit; }
   margin-bottom: 2rem;
 }
 .brand-logo {
-  width: 130px;
-  height: 130px;
-  object-fit: cover;
+  width: 140px;
+  height: 140px;
+  object-fit: contain;
   border-radius: 0;
-  box-shadow: 6px 6px 0 rgba(0,0,0,0.35);
-  transition: transform 0.5s var(--ease), box-shadow 0.5s var(--ease);
+  filter: drop-shadow(0 8px 24px rgba(0,0,0,0.45));
+  transition: transform 0.5s var(--ease), filter 0.5s var(--ease);
 }
-.brand-logo:hover { transform: scale(1.06) rotate(-1deg); box-shadow: 0 20px 60px rgba(0,0,0,0.35); }
+#jookh .brand-logo { filter: drop-shadow(0 8px 24px rgba(227,30,36,0.3)); }
+#plo   .brand-logo { filter: drop-shadow(0 8px 24px rgba(224,123,10,0.3)); }
+.brand-logo:hover {
+  transform: scale(1.07) rotate(-1deg);
+  filter: drop-shadow(0 16px 40px rgba(0,0,0,0.5));
+}
+#jookh .brand-logo:hover { filter: drop-shadow(0 16px 40px rgba(227,30,36,0.4)); }
+#plo   .brand-logo:hover { filter: drop-shadow(0 16px 40px rgba(224,123,10,0.4)); }
 
 /* ─── NAVBAR ─── */
 #navbar {
@@ -265,8 +286,30 @@ a   { text-decoration: none; color: inherit; }
   display: flex; align-items: center; justify-content: center;
   overflow: hidden;
   background: var(--wine-dark);
-  /* Subtle warm centre glow — gives the name a presence without decoration */
-  background-image: radial-gradient(ellipse 70% 60% at 50% 45%, #3a1428 0%, var(--wine-dark) 70%);
+  background-image:
+    radial-gradient(ellipse 38% 42% at 18% 30%, rgba(227,30,36,0.13) 0%, transparent 70%),
+    radial-gradient(ellipse 32% 36% at 82% 70%, rgba(217,30,192,0.10) 0%, transparent 70%),
+    radial-gradient(ellipse 70% 60% at 50% 45%, #3a1428 0%, var(--wine-dark) 70%);
+}
+#hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");
+  opacity: 0.028;
+  pointer-events: none;
+  z-index: 1;
+}
+#hero::after {
+  content: '';
+  position: absolute;
+  left: 50%; bottom: 0;
+  transform: translateX(-50%);
+  width: 1px;
+  height: 35%;
+  background: linear-gradient(to bottom, transparent, rgba(232,160,32,0.15));
+  z-index: 1;
+  pointer-events: none;
 }
 
 .hero-content {
@@ -311,8 +354,13 @@ a   { text-decoration: none; color: inherit; }
 
 .hero-rule {
   width: 1px; height: 52px;
-  background: linear-gradient(to bottom, transparent, rgba(255,255,255,0.3), transparent);
+  background: linear-gradient(to bottom, transparent, var(--gold), transparent);
   margin: 0 auto 2.5rem;
+  animation: rulePulse 3s ease-in-out infinite;
+}
+@keyframes rulePulse {
+  0%, 100% { opacity: 0.3; }
+  50%       { opacity: 0.9; }
 }
 
 .hero-sub {
@@ -349,7 +397,7 @@ a   { text-decoration: none; color: inherit; }
   font-size: 0.62rem;
   letter-spacing: 0.28em;
   text-transform: uppercase;
-  color: rgba(255,255,255,0.25);
+  color: rgba(255,255,255,0.38);
   margin-bottom: 3rem;
 }
 .hero-cta {
@@ -381,6 +429,9 @@ a   { text-decoration: none; color: inherit; }
   position: relative;
   padding: 8rem 0;
   background: var(--wine);
+  background-image:
+    radial-gradient(ellipse 60% 40% at 90% 10%, rgba(227,30,36,0.12) 0%, transparent 70%),
+    radial-gradient(ellipse 50% 40% at 10% 90%, rgba(217,30,192,0.08) 0%, transparent 70%);
   overflow: hidden;
 }
 
@@ -404,6 +455,8 @@ a   { text-decoration: none; color: inherit; }
   color: var(--gold-light);
   white-space: nowrap;
   letter-spacing: 0.04em;
+  padding-left: 1rem;
+  border-left: 3px solid var(--jookh);
 }
 .jookh-cat-line {
   flex: 1;
@@ -530,6 +583,9 @@ a   { text-decoration: none; color: inherit; }
   position: relative;
   padding: 8rem 0;
   background: var(--plo-bg);
+  background-image:
+    radial-gradient(ellipse 55% 50% at 95% 5%, rgba(224,123,10,0.12) 0%, transparent 70%),
+    radial-gradient(ellipse 40% 35% at 5% 95%, rgba(232,160,32,0.09) 0%, transparent 70%);
   border-top: 1px solid rgba(224,123,10,0.15);
   overflow: hidden;
 }
@@ -595,13 +651,18 @@ a   { text-decoration: none; color: inherit; }
 }
 .img-frame::before {
   content: '';
-  position: absolute; inset: -4px;
-  border: 1px solid rgba(0,0,0,0.1);
-  z-index: 1; pointer-events: none;
-  opacity: 1;
-  transition: opacity var(--trans);
+  position: absolute;
+  inset: auto;
+  bottom: -14px;
+  right: -14px;
+  width: calc(100% - 20px);
+  height: calc(100% - 20px);
+  border: 2px solid var(--gold);
+  opacity: 0.35;
+  z-index: 0; pointer-events: none;
+  transition: opacity var(--trans), transform var(--trans);
 }
-.about-image:hover .img-frame::before { opacity: 0; }
+.about-image:hover .img-frame::before { opacity: 0.7; transform: translate(-4px, -4px); }
 .img-frame img {
   width: 100%; height: 100%; object-fit: cover; display: block;
   transition: transform 0.9s var(--ease);
@@ -657,12 +718,31 @@ a   { text-decoration: none; color: inherit; }
   position: relative;
   padding: 10rem 2rem;
   background: var(--wine-dark);
+  background-image:
+    radial-gradient(ellipse 60% 50% at 50% 50%, rgba(227,30,36,0.07) 0%, transparent 70%);
   text-align: center;
 }
 .philosophy-quote {
   max-width: 760px;
   margin: 0 auto;
   border: none;
+}
+.philosophy-quote {
+  position: relative;
+}
+.philosophy-quote::before {
+  content: '\201C';
+  position: absolute;
+  top: -2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: var(--font-serif);
+  font-size: clamp(8rem, 16vw, 14rem);
+  font-weight: 300;
+  color: rgba(255,255,255,0.04);
+  line-height: 1;
+  pointer-events: none;
+  user-select: none;
 }
 .philosophy-quote p {
   font-family: var(--font-serif);
@@ -673,6 +753,8 @@ a   { text-decoration: none; color: inherit; }
   color: rgba(255,255,255,0.9);
   margin-bottom: 3rem;
   letter-spacing: -0.01em;
+  position: relative;
+  z-index: 1;
 }
 .philosophy-quote cite {
   font-size: 0.68rem;
@@ -680,6 +762,19 @@ a   { text-decoration: none; color: inherit; }
   letter-spacing: 0.3em;
   text-transform: uppercase;
   color: rgba(255,255,255,0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.2rem;
+}
+.philosophy-quote cite::before,
+.philosophy-quote cite::after {
+  content: '';
+  display: block;
+  width: 40px;
+  height: 1px;
+  background: rgba(232,160,32,0.4);
+  flex-shrink: 0;
 }
 
 /* ─── CONTACT ─── */
@@ -705,18 +800,33 @@ a   { text-decoration: none; color: inherit; }
   position: relative;
   display: flex; flex-direction: column;
   align-items: center; text-align: center;
-  padding: 2.5rem 1.5rem 2rem;
+  padding: 2.8rem 1.5rem 2.2rem;
   background: rgba(255,255,255,0.04);
   border: 1px solid rgba(255,255,255,0.08);
   transition: var(--trans);
   cursor: pointer;
   overflow: hidden;
 }
-.contact-card:hover {
-  background: rgba(255,255,255,0.08);
-  transform: translateY(-6px);
-  box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+.contact-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 0.4s var(--ease);
+  pointer-events: none;
 }
+.jookh-card::after  { background: radial-gradient(ellipse 80% 60% at 50% 100%, rgba(227,30,36,0.12) 0%, transparent 70%); }
+.plo-card::after    { background: radial-gradient(ellipse 80% 60% at 50% 100%, rgba(224,123,10,0.12) 0%, transparent 70%); }
+.whatsapp-card::after { background: radial-gradient(ellipse 80% 60% at 50% 100%, rgba(232,160,32,0.12) 0%, transparent 70%); }
+.contact-card:hover::after { opacity: 1; }
+.contact-card:hover {
+  background: rgba(255,255,255,0.07);
+  transform: translateY(-8px);
+  box-shadow: 0 24px 60px rgba(0,0,0,0.35);
+}
+.jookh-card:hover  { border-color: rgba(227,30,36,0.35); }
+.plo-card:hover    { border-color: rgba(224,123,10,0.35); }
+.whatsapp-card:hover { border-color: rgba(232,160,32,0.35); }
 
 /* Coloured top border per card */
 .contact-card-accent {
@@ -755,8 +865,14 @@ a   { text-decoration: none; color: inherit; }
   padding-top: 0;
 }
 .footer-gradient-bar {
-  height: 1px;
-  background: rgba(255,255,255,0.07);
+  height: 3px;
+  background: linear-gradient(to right,
+    var(--jookh) 0%,
+    var(--jookh-2) 33%,
+    var(--plo) 66%,
+    var(--gold) 100%
+  );
+  opacity: 0.7;
 }
 .footer-inner {
   display: grid;
@@ -814,9 +930,13 @@ a   { text-decoration: none; color: inherit; }
   position: relative;
   overflow: hidden;
   aspect-ratio: 1 / 1;
-  background: rgba(255,255,255,0.03);
+  background: linear-gradient(145deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.02) 100%);
   border: 1px solid rgba(232,160,32,0.14);
   cursor: pointer;
+  transition: border-color 0.4s var(--ease), box-shadow 0.4s var(--ease);
+}
+#plo .card-img-wrap {
+  background: linear-gradient(145deg, rgba(224,123,10,0.06) 0%, rgba(255,248,240,0.8) 100%);
 }
 .card-tall { aspect-ratio: 3 / 4; }
 
@@ -826,7 +946,7 @@ a   { text-decoration: none; color: inherit; }
   inset: 0;
   width: 100%; height: 100%;
   object-fit: contain;
-  padding: 40px;
+  padding: 16px;
   transition: opacity 0.4s ease-in-out;
 }
 .card-img-wrap .main-img  { opacity: 1; }
@@ -947,7 +1067,13 @@ a   { text-decoration: none; color: inherit; }
   transition: transform 0.4s var(--ease);
 }
 .product-card:hover {
-  transform: translateY(-4px);
+  transform: translateY(-6px);
+}
+#jookh .product-card:hover .card-img-wrap {
+  box-shadow: 0 16px 48px rgba(227,30,36,0.18), 0 4px 16px rgba(0,0,0,0.3);
+}
+#plo .product-card:hover .card-img-wrap {
+  box-shadow: 0 16px 48px rgba(224,123,10,0.18), 0 4px 16px rgba(0,0,0,0.1);
 }
 
 /* ─── CUSTOM CURSOR ─── */
