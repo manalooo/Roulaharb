@@ -102,10 +102,10 @@
       imgWrap.appendChild(dots);
     }
 
-    // Sold ribbon
+    // Claimed ribbon
     if (isSold) {
       var soldTag = el('div', 'card-sold-tag');
-      soldTag.textContent = 'Sold';
+      soldTag.textContent = 'Claimed';
       imgWrap.appendChild(soldTag);
     }
 
@@ -129,12 +129,12 @@
 
     if (isSold) {
       var soldLbl = el('span', 'card-sold-label');
-      soldLbl.textContent = 'Sold';
+      soldLbl.textContent = 'This piece found its person';
       infoRow.appendChild(soldLbl);
     } else {
       var btn = el('a', 'btn-inquire' + (isPlo ? ' btn-inquire--plo' : ''));
       btn.href                      = '#contact';
-      btn.textContent               = 'Request';
+      btn.textContent               = 'Reserve this piece';
       btn.dataset.productId         = product.id;
       btn.dataset.productName       = product.name || '';
       btn.dataset.productCollection = product.collection || '';
