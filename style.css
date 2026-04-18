@@ -1054,10 +1054,24 @@ a   { text-decoration: none; color: inherit; }
   aspect-ratio: 1 / 1;
   background: transparent;
   cursor: pointer;
-  transition: box-shadow 0.4s var(--ease);
+  transition: box-shadow 0.4s var(--ease), border-color 0.4s var(--ease);
 }
+
+/* Jookh — warm cream contour on dark background */
+#jookh .card-img-wrap {
+  border: 1px solid rgba(232, 210, 178, 0.45);
+}
+#jookh .product-card:hover .card-img-wrap {
+  border-color: rgba(232, 210, 178, 0.75);
+}
+
+/* P-Lo — linen mat board behind each pillow, taupe frame */
 #plo .card-img-wrap {
-  background: transparent;
+  background: #FAF3E6;
+  border: 1.5px solid rgba(190, 155, 105, 0.45);
+}
+#plo .product-card:hover .card-img-wrap {
+  border-color: rgba(224, 123, 10, 0.65);
 }
 .card-tall { aspect-ratio: 3 / 4; }
 
@@ -1070,6 +1084,11 @@ a   { text-decoration: none; color: inherit; }
   object-position: center top;
   padding: 0;
   transition: opacity 0.4s ease-in-out;
+}
+/* Pillows sit centred on the linen mat */
+#plo .card-img-wrap .main-img,
+#plo .card-img-wrap .hover-img {
+  object-position: center center;
 }
 .card-img-wrap .main-img  { opacity: 1; }
 .card-img-wrap .hover-img { opacity: 0; }
