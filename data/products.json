@@ -351,6 +351,19 @@
     "status": "available"
   },
   {
+    "id": "bag-18",
+    "name": "Noir Gold Tote",
+    "category": "bags",
+    "collection": "Jookh Couture",
+    "price": "ENTER PRICE HERE",
+    "medium": "Hand-painted leather",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/jookh/bags/piece-18.jpg"
+    ],
+    "status": "available"
+  },
+  {
     "id": "wear-17",
     "name": "Black Duster",
     "category": "wearables",
@@ -791,6 +804,62 @@
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
       "images/jookh/wearables/piece-48-view-1.jpg"
+    ],
+    "status": "available"
+  },
+  {
+    "id": "wear-49",
+    "name": "Noir Rouge Duster",
+    "category": "wearables",
+    "collection": "Jookh Couture",
+    "price": "ENTER PRICE HERE",
+    "medium": "ENTER MATERIAL HERE",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/jookh/wearables/piece-49-view-1.jpg",
+      "images/jookh/wearables/piece-49-view-2.jpg"
+    ],
+    "status": "available"
+  },
+  {
+    "id": "wear-50",
+    "name": "Khaki Circle Coat",
+    "category": "wearables",
+    "collection": "Jookh Couture",
+    "price": "ENTER PRICE HERE",
+    "medium": "ENTER MATERIAL HERE",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/jookh/wearables/piece-50-view-1.jpg",
+      "images/jookh/wearables/piece-50-view-2.jpg"
+    ],
+    "status": "available"
+  },
+  {
+    "id": "wear-51",
+    "name": "Black Bloom Blazer",
+    "category": "wearables",
+    "collection": "Jookh Couture",
+    "price": "ENTER PRICE HERE",
+    "medium": "ENTER MATERIAL HERE",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/jookh/wearables/piece-51-view-1.jpg",
+      "images/jookh/wearables/piece-51-view-2.jpg"
+    ],
+    "status": "available"
+  },
+  {
+    "id": "wear-52",
+    "name": "Navy Cosmos Blazer",
+    "category": "wearables",
+    "collection": "Jookh Couture",
+    "price": "ENTER PRICE HERE",
+    "medium": "ENTER MATERIAL HERE",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/jookh/wearables/piece-52-view-1.jpg",
+      "images/jookh/wearables/piece-52-view-2.jpg"
     ],
     "status": "available"
   },
