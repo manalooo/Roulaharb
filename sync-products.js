@@ -127,6 +127,7 @@ function buildProduct(row) {
   var category      = (row.Category      || '').toLowerCase().trim();
   var status        = (row.Status        || 'available').toLowerCase().trim();
   var subcollection = (row.Subcollection || '').trim();
+  var era           = (row.Era           || '').trim().toLowerCase(); // 'new' | 'archive' | ''
   if (status !== 'sold') status = 'available';
 
   // Build views array: main → hover → any extra views auto-detected on disk
@@ -151,8 +152,9 @@ function buildProduct(row) {
     status:     status
   };
 
-  // Only include subcollection if filled in
+  // Only include subcollection / era if filled in
   if (subcollection) product.subcollection = subcollection;
+  if (era)           product.era           = era; // 'new' | 'archive'
 
   return product;
 }
