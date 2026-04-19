@@ -70,36 +70,26 @@
 
   // ─── CARD BUILDER ────────────────────────────────
   function buildCard(product, variant, index) {
-    var isPlo    = product.collection === 'P-Lo';
-    var isSold   = product.status === 'sold';
-    var hasHover = Array.isArray(product.views) && product.views.length >= 2;
-    var dotCount = Math.min(Array.isArray(product.views) ? product.views.length : 1, 3);
+    var isPlo  = product.collection === 'P-Lo';
+    var isSold = product.status === 'sold';
 
     // ── Image container ──────────────────────────
-    var imgWrap = el('div', 'card-img-wrap' + (variant === 'tall' ? ' card-tall' : ''));
+    var imgWrap = el('div', 'card-img-wrap');
 
-    // Front image
+    // Main image — cover fill, consistent ratio
     var mainImg = el('img', 'main-img');
     mainImg.src     = (product.views && product.views[0]) || '';
     mainImg.alt     = product.name || '';
     mainImg.loading = 'lazy';
     imgWrap.appendChild(mainImg);
 
-    // Hover image (crossfades in on hover)
-    if (hasHover) {
-      var hoverImg = el('img', 'hover-img');
-      hoverImg.src     = product.views[1];
-      hoverImg.alt     = (product.name || '') + ' \u2014 detail view';
-      hoverImg.loading = 'lazy';
-      imgWrap.appendChild(hoverImg);
-
-      // Gallery dots
-      var dots = el('div', 'card-dots');
-      dots.setAttribute('aria-hidden', 'true');
-      for (var d = 0; d < dotCount; d++) {
-        dots.appendChild(el('span', 'dot'));
-      }
-      imgWrap.appendChild(dots);
+    // Glassmorphism hover overlay with VIEW DETAILS
+    if (!isSold) {
+      var glass = el('div', 'card-glass-overlay');
+      var viewBtn = el('span', 'card-view-btn');
+      viewBtn.textContent = 'View Details';
+      glass.appendChild(viewBtn);
+      imgWrap.appendChild(glass);
     }
 
     // Claimed ribbon
@@ -109,23 +99,19 @@
       imgWrap.appendChild(soldTag);
     }
 
-    // ── Label row ────────────────────────────────
+    // ── Info row — centred under the image ───────
     var infoRow = el('div', 'card-info' + (isPlo ? ' card-info--plo' : ''));
-
-    var textBlock = el('div', 'card-text');
 
     var nameEl = el('span', 'card-piece-num' + (isPlo ? ' card-piece-num--plo' : ''));
     nameEl.textContent = product.name || '';
-    textBlock.appendChild(nameEl);
+    infoRow.appendChild(nameEl);
 
-    // Show medium only if it has been filled in (not a placeholder)
+    // Medium line (only if filled in)
     if (product.medium && product.medium.indexOf('ENTER') === -1 && product.medium.indexOf('[') === -1) {
       var medEl = el('span', 'card-medium');
       medEl.textContent = product.medium;
-      textBlock.appendChild(medEl);
+      infoRow.appendChild(medEl);
     }
-
-    infoRow.appendChild(textBlock);
 
     if (isSold) {
       var soldLbl = el('span', 'card-sold-label');
