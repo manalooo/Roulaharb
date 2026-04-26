@@ -16,7 +16,7 @@ database_id = "5be3f366-93a2-43a4-8271-30295e2db9e1"
 # After `wrangler r2 bucket create roulaharb-images` this binding is enough.
 [[r2_buckets]]
 binding = "IMAGES"
-bucket_name = "roulaharb-images"
+bucket_name = "roulaharb-bucket"
 
 # ─── Environment variables (also configurable in Cloudflare dashboard) ───
 [vars]

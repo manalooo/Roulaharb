@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
-# Upload everything in /images/ to the R2 bucket "roulaharb-images",
-# preserving folder structure. Run AFTER `wrangler r2 bucket create roulaharb-images`.
+# Upload everything in /images/ to the R2 bucket "roulaharb-bucket",
+# preserving folder structure. Run AFTER `wrangler r2 bucket create roulaharb-bucket`.
 set -euo pipefail
-BUCKET="roulaharb-images"
+BUCKET="roulaharb-bucket"
 cd "$(dirname "$0")/.."
 
 count=0
