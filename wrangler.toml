@@ -1,0 +1,27 @@
+# Cloudflare Pages config for Roula Harb
+# Pages auto-detects this; bindings here are also injected into Pages Functions.
+
+name = "roulaharb"
+compatibility_date = "2025-01-01"
+pages_build_output_dir = "."
+
+# ─── D1 database — product catalog ───
+# After `wrangler d1 create roulaharb-products`, paste the database_id below.
+[[d1_databases]]
+binding = "DB"
+database_name = "roulaharb-products"
+database_id = "REPLACE_WITH_D1_ID_FROM_CLOUDFLARE"
+
+# ─── R2 bucket — product / sticker / hero images ───
+# After `wrangler r2 bucket create roulaharb-images` this binding is enough.
+[[r2_buckets]]
+binding = "IMAGES"
+bucket_name = "roulaharb-images"
+
+# ─── Environment variables (also configurable in Cloudflare dashboard) ───
+[vars]
+# Public base URL where R2 images are served from.
+# Local dev: leave as "/images/" so the local images folder is used.
+# Production: set in Cloudflare Pages → Settings → Environment Variables to your R2 public URL,
+# e.g.  "https://images.roulaharb.com/"  or  "https://pub-xxxx.r2.dev/"
+IMAGE_BASE = "/images/"

@@ -1,0 +1,80 @@
+# Cloudflare Deployment — D1 + R2 + Pages
+
+## One-time setup (10 min)
+
+### 1. Install wrangler (Cloudflare CLI)
+```bash
+npm install -g wrangler
+wrangler login
+```
+
+### 2. Create the D1 database
+```bash
+wrangler d1 create roulaharb-products
+```
+This prints a `database_id`. **Open `wrangler.toml` and paste it** in place of `REPLACE_WITH_D1_ID_FROM_CLOUDFLARE`.
+
+### 3. Create the schema + seed it
+```bash
+wrangler d1 execute roulaharb-products --remote --file=db/schema.sql
+wrangler d1 execute roulaharb-products --remote --file=db/seed.sql
+```
+Verify:
+```bash
+wrangler d1 execute roulaharb-products --remote --command="SELECT COUNT(*) FROM products;"
+```
+Should print `91`.
+
+### 4. Create the R2 bucket
+```bash
+wrangler r2 bucket create roulaharb-images
+```
+
+### 5. Upload all images to R2
+```bash
+bash scripts/upload-r2.sh
+```
+(~760 files; takes a few minutes.)
+
+### 6. Make the R2 bucket public
+- Cloudflare dashboard → **R2** → `roulaharb-images` → **Settings** → enable **Public access**
+- It gives you a URL like `https://pub-xxxxxxxxxxxx.r2.dev/`
+- (Optional, recommended) Add a custom subdomain: **Connect Domain** → `images.roulaharb.com`
+
+### 7. Connect Pages to GitHub
+- Cloudflare dashboard → **Workers & Pages** → **Create** → **Pages** → **Connect to Git**
+- Repo: `manalooo/Roulaharb`
+- **Production branch:** `claude/elegant-matsumoto`
+- Build command: *(blank)*
+- Build output directory: `/`
+- Save and deploy.
+
+### 8. Set the environment variable
+- Pages project → **Settings** → **Environment variables** → **Production**
+- Add `IMAGE_BASE` = your R2 public URL from step 6 (e.g. `https://images.roulaharb.com/`)
+- Re-deploy.
+
+### 9. Done
+Visit `roulaharb.pages.dev`. Products come from D1, images from R2.
+
+---
+
+## Updating products
+
+When you change `inventory.csv`:
+```bash
+node scripts/csv-to-sql.js                                          # regenerates db/seed.sql
+wrangler d1 execute roulaharb-products --remote --file=db/seed.sql  # re-seeds D1
+```
+The site updates immediately — no rebuild needed.
+
+## Adding new images
+
+```bash
+# put new file in images/jookh/..., then:
+npx wrangler r2 object put roulaharb-images/jookh/.../piece-N.jpg --file=images/jookh/.../piece-N.jpg --remote
+```
+
+## Local dev
+
+`wrangler.toml` has `IMAGE_BASE = "/images/"` so when you open `index.html` locally the static `images/` folder is used. The `/api/products` endpoint won't work locally without `wrangler pages dev`, so render.js falls back to `data/products.json` automatically — you'll still see all products in dev.

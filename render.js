@@ -190,19 +190,22 @@
   }
 
   // ─── LOAD STRATEGY ───────────────────────────────
-  // 1. Try fetch('data/products.json')  — works over HTTP (dev server / live site)
-  // 2. Fall back to window.PRODUCTS    — works when opened as a local file://
+  // 1. Try /api/products       — Cloudflare D1-backed (production)
+  // 2. Try data/products.json  — static fallback (dev server, GitHub Pages, etc.)
+  // 3. Fall back to window.PRODUCTS — works when opened as a local file://
+
+  function tryFetch(url) {
+    return fetch(url).then(function (r) {
+      if (!r.ok) throw new Error('HTTP ' + r.status);
+      return r.json();
+    });
+  }
 
   if (typeof fetch !== 'undefined') {
-    fetch('data/products.json')
-      .then(function (r) {
-        if (!r.ok) throw new Error('HTTP ' + r.status);
-        return r.json();
-      })
+    tryFetch('/api/products')
+      .catch(function () { return tryFetch('data/products.json'); })
       .then(renderAll)
-      .catch(function () {
-        renderAll(window.PRODUCTS || []);
-      });
+      .catch(function () { renderAll(window.PRODUCTS || []); });
   } else {
     renderAll(window.PRODUCTS || []);
   }
