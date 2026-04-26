@@ -7,23 +7,38 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
-  /* Core darks */
+  /* Core darks — never pure black */
   --wine:        #2D0A1E;
-  --wine-dark:   #1A0A14;
+  --wine-dark:   #1E0713;   /* was near-black, now deep wine */
   --wine-mid:    #4A1030;
+  --ink:         #1E0713;   /* replaces all #000/#111 */
+
+  /* ─── COUTURE GRADIENT PALETTE ─────────────────────
+     Runway-editorial sunset. Dawn blush → peach → terracotta
+     → champagne → dusk plum. Ivory champagne frame.
+     Source of truth — swap these to reshape the brand. */
+  --pg-ink:      #2B1220;   /* aubergine — body text, nav */
+  --pg-frame:    #F4EDE4;   /* ivory champagne — header, footer */
+  --pg-wash-0:   #FBE4D8;   /* dawn blush — hero, brands-intro, about */
+  --pg-wash-mid: #F5B99C;   /* peach sorbet — Jookh middle */
+  --pg-wash-1:   #E88B6E;   /* terracotta — Jookh end */
+  --pg-wash-2:   #3B1E3A;   /* dusk plum — philosophy, contact */
+  --pg-plo:      #F6D9A8;   /* champagne gold — P-Lo */
+  --pg-jookh:    #C94A5A;   /* rose madder — Jookh hover accent */
+  --pg-saffron:  #D48A3A;   /* burnt amber — P-Lo hover accent */
 
   /* Warm off-whites */
   --cream:       #FFF8F0;
   --cream-2:     #FDF3E8;
   --warm-white:  #FFFCF8;
 
-  /* Jookh brand */
-  --jookh:       #E31E24;
-  --jookh-2:     #D91EC0;
+  /* Jookh brand — exact logo hex */
+  --jookh:       #E61D25;   /* red */
+  --jookh-2:     #E61E8D;   /* magenta */
   --jookh-bg:    #FFF0F5;
 
-  /* P-Lo brand */
-  --plo:         #E07B0A;
+  /* P-Lo brand — exact logo hex */
+  --plo:         #EF7D1A;   /* orange */
   --plo-bg:      #FFF8F0;
 
   /* Accent */
@@ -37,11 +52,34 @@
 
   --font-serif: 'Cormorant Garamond', Georgia, serif;
   --font-sans:  'Inter', system-ui, sans-serif;
-  --ease:       cubic-bezier(0.16, 1, 0.3, 1);
-  --trans:      0.4s var(--ease);
+
+  /* ─── SECTION TEXT COLORS ─── each section gets its own warm world */
+  --txt-blush-title:   #6B1F2E;   /* deep wine-madder — on blush */
+  --txt-blush-body:    #3D1820;   /* aubergine-burgundy */
+  --txt-jookh-title:   #4A1820;   /* burgundy — deepens on Jookh */
+  --txt-jookh-accent:  #B84530;   /* painterly terracotta — italics, signatures */
+  --txt-plo-title:     #5B2E1A;   /* cacao — on champagne */
+  --txt-plo-accent:    #A8632A;   /* burnt saffron — italics on P-Lo */
+  --txt-dusk-title:    #F6D9A8;   /* champagne — on dusk plum */
+  --txt-dusk-body:     #FBE4D8;   /* blush-cream — candlelight */
+
+  /* Motion — the Luxury Touch */
+  --ease:        cubic-bezier(0.25, 1, 0.5, 1);        /* silk, not snap */
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --trans:       0.8s var(--ease);                      /* default hover */
+  --trans-fast:  0.4s var(--ease);                      /* micro-ui */
+
+  /* Spacing — Golden Ratio scale (φ ≈ 1.618) */
+  --space-xs:  0.618rem;
+  --space-sm:  1rem;
+  --space-md:  1.618rem;
+  --space-lg:  2.618rem;
+  --space-xl:  4.236rem;
+  --space-2xl: 6.854rem;
+  --space-3xl: 11.09rem;   /* ≈ section rhythm */
 }
 
-html { scroll-behavior: smooth; font-size: 16px; }
+html { scroll-behavior: auto; font-size: 16px; } /* scroll handled by JS for gentle easing */
 
 body {
   font-family: var(--font-sans);
@@ -49,7 +87,9 @@ body {
   color: var(--text-dark);
   line-height: 1.6;
   overflow-x: hidden;
+  transition: background-color 0.8s ease;
 }
+body.plo-active { background-color: #F6D9A8; }
 
 img { display: block; max-width: 100%; }
 a   { text-decoration: none; color: inherit; }
@@ -71,17 +111,20 @@ a   { text-decoration: none; color: inherit; }
 /* ─── BUTTONS ─── */
 .btn {
   display: inline-block;
-  padding: 0.9rem 2.4rem;
+  padding: 1rem 2.618rem;                /* φ */
   font-family: var(--font-sans);
-  font-size: 0.78rem;
-  font-weight: 700;
-  letter-spacing: 0.18em;
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.28em;                /* airier */
   text-transform: uppercase;
   cursor: pointer;
-  border: 2px solid transparent;
+  border: 1px solid transparent;
   border-radius: 0;
-  transition: var(--trans);
+  transition: all 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+  position: relative;
+  overflow: hidden;
 }
+.btn:hover { letter-spacing: 0.32em; }
 .btn-light {
   background: #fff;
   color: var(--wine);
@@ -105,7 +148,7 @@ a   { text-decoration: none; color: inherit; }
 .btn-plo {
   background: transparent;
   color: var(--text-body);
-  border-color: rgba(0,0,0,0.18);
+  border-color: rgba(30,7,19,0.22);
   border-radius: 0;
   font-weight: 400;
   letter-spacing: 0.22em;
@@ -125,52 +168,62 @@ a   { text-decoration: none; color: inherit; }
   display: fluid clamp()
 */
 .section-label {
-  font-size: 0.68rem;
+  font-size: 0.66rem;
   font-weight: 500;
-  letter-spacing: 0.32em;
+  letter-spacing: 0.42em;        /* airier — gallery kicker */
   text-transform: uppercase;
   color: var(--gold);
-  margin-bottom: 1rem;
+  margin-bottom: 1.4rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 1rem;
+  gap: 1.2rem;
+  padding-left: 0.42em;          /* optical balance for tracking */
 }
 .section-label::before,
 .section-label::after {
   content: '';
   display: block;
-  width: 32px;
+  width: 38px;
   height: 1px;
   background: currentColor;
-  opacity: 0.5;
+  opacity: 0.55;
   flex-shrink: 0;
 }
 .jookh-label { color: var(--jookh); }
 .plo-label   { color: var(--plo); }
 
+/* Cormorant display titles — light, airy, expensive */
 .section-title {
   font-family: var(--font-serif);
   font-size: clamp(2.8rem, 6vw, 5rem);
-  font-weight: 700;
-  line-height: 1.05;
-  letter-spacing: -0.01em;
-  margin-bottom: 1.4rem;
+  font-weight: 300;              /* light for couture feel */
+  line-height: 1.08;             /* tight but breathing */
+  letter-spacing: 0.005em;       /* nearly zero; no negative crunch */
+  margin-bottom: 1.618rem;       /* φ */
+  color: var(--text-dark);
 }
-.section-title em { font-style: italic; color: var(--jookh-2); }
-.jookh-title { color: #1a1a1a; }
+.section-title em {
+  font-style: italic;
+  font-weight: 300;
+  color: var(--jookh-2);
+  letter-spacing: 0.01em;
+}
+.jookh-title { color: var(--wine-dark); }
 .plo-title   { color: var(--plo); }
 
-/* Body copy — 18px baseline for comfortable reading */
+/* Body copy — airy, 1.85 line-height for reading ease */
 .section-desc {
-  font-size: 1.1rem;
-  line-height: 1.8;
+  font-size: 1.05rem;
+  line-height: 1.85;
+  letter-spacing: 0.005em;
   color: var(--text-body);
   max-width: 560px;
+  font-weight: 300;
 }
-.jookh-desc  { color: #555; }
+.jookh-desc  { color: var(--text-body); }
 
-.section-header { text-align: center; margin-bottom: 4.5rem; }
+.section-header { text-align: center; margin-bottom: 4.854rem; /* φ × 3 */ }
 .section-header .section-desc { margin: 0 auto; }
 
 /* ─── BRAND LOGOS ─── */
@@ -198,69 +251,150 @@ a   { text-decoration: none; color: inherit; }
 #plo   .brand-logo:hover { filter: drop-shadow(0 16px 40px rgba(224,123,10,0.4)); }
 
 /* ─── NAVBAR ─── */
+/* ── Asymmetric editorial flag ──────────────────────
+   Left wordmark · right nav · "Est. Beirut" tab
+   Thin double gold rules, single row                 */
 #navbar {
   position: fixed;
   top: 0; left: 0; right: 0;
   z-index: 100;
-  padding: 1.6rem 0;
-  transition: background 0.4s, padding 0.4s;
-}
-#navbar {
-  transition: background 0.4s, padding 0.4s, transform 0.4s var(--ease);
+  padding: 1.1rem 0;
+  background: #F4EDE4;
+  transition: padding 0.4s, background 0.4s, transform 0.4s var(--ease);
+  box-shadow:
+    inset 0 -1px 0 rgba(43, 18, 32,0.25),
+    0 8px 32px rgba(43, 18, 32,0.12);
 }
 #navbar.scrolled {
-  background: rgba(26,10,20,0.97);
+  padding: 0.85rem 0;
+  background: rgba(244, 237, 228,0.96);
   backdrop-filter: blur(14px);
-  padding: 1rem 0;
-  border-bottom: 1px solid rgba(255,255,255,0.06);
 }
+#navbar.scrolled .nav-logo-name { font-size: 1.25rem; }
 #navbar.nav-hidden {
   transform: translateY(-100%);
 }
 .nav-inner {
-  max-width: 1200px;
+  max-width: 1320px;
   margin: 0 auto;
-  padding: 0 2rem;
+  padding: 0 2.2rem;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 2rem;
+  position: relative;
+}
+
+/* LEFT — wordmark, single line */
+.nav-logo {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-}
-.nav-logo { display: flex; flex-direction: column; line-height: 1.2; }
-.nav-logo-top {
-  font-size: 0.58rem;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: var(--gold);
-  font-weight: 400;
+  justify-self: start;
+  line-height: 1;
+  text-decoration: none;
+  transition: all 0.4s var(--ease);
 }
 .nav-logo-name {
   font-family: var(--font-serif);
-  font-size: 1.5rem;
-  font-weight: 400;
-  color: #fff;
-  letter-spacing: 0.03em;
-  line-height: 1.1;
-}
-.nav-links { list-style: none; display: flex; gap: 2.8rem; }
-.nav-links a {
-  font-size: 0.72rem;        /* refined, not too small */
-  font-weight: 400;
+  font-size: 1.4rem;
+  font-weight: 300;
+  color: #2B1220;
   letter-spacing: 0.2em;
+  line-height: 1;
+  text-indent: 0.2em;
   text-transform: uppercase;
-  color: rgba(255,255,255,0.75);
+  transition: all 0.4s var(--ease);
+}
+
+/* CENTER — nav links with dot separators */
+.nav-links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 0;
+  justify-self: center;
+}
+.nav-links li {
+  display: flex;
+  align-items: center;
+}
+.nav-links li + li::before {
+  content: '';
+  width: 3px; height: 3px;
+  border-radius: 50%;
+  background: rgba(43, 18, 32,0.55);
+  margin: 0 1.4rem;
+}
+.nav-links a {
+  font-size: 0.62rem;
+  font-weight: 400;
+  letter-spacing: 0.34em;
+  text-transform: uppercase;
+  color: rgba(43, 18, 32,0.75);
   transition: color var(--trans);
   position: relative;
+  text-decoration: none;
+  padding: 0.25rem 0;
 }
 .nav-links a::after {
   content: '';
   position: absolute;
-  bottom: -3px; left: 0;
-  width: 0; height: 2px;
-  background: linear-gradient(to right, var(--jookh), var(--jookh-2));
-  transition: width var(--trans);
+  bottom: -3px; left: 50%;
+  width: 0; height: 1px;
+  background: #2B1220;
+  transform: translateX(-50%);
+  transition: width 0.3s var(--ease);
 }
-.nav-links a:hover { color: #fff; }
+.nav-links a:hover { color: #2B1220; }
 .nav-links a:hover::after { width: 100%; }
+.nav-links a.active { color: #2B1220; }
+.nav-links a.active::after { width: 100%; }
+
+/* ─── BRAND-LINK PAINT — Jookh & P-Lo earn their logo colours on touch ─── */
+.nav-links a[href="#jookh"],
+.nav-links a[href="#plo"] {
+  transition: color 0.6s cubic-bezier(0.25, 1, 0.5, 1), letter-spacing 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+/* Jookh — red→magenta paint-stroke, like a brush dragged under the word */
+.nav-links a[href="#jookh"]::after {
+  background: linear-gradient(90deg, #E61D25 0%, #E61E8D 100%);
+  height: 2px; bottom: -4px;
+}
+.nav-links a[href="#jookh"]:hover,
+.nav-links a[href="#jookh"].active { color: #E61E8D; letter-spacing: 0.38em; }
+
+/* P-Lo — saffron orange wash */
+.nav-links a[href="#plo"]::after {
+  background: linear-gradient(90deg, #F3B391 0%, #EF7D1A 100%);
+  height: 2px; bottom: -4px;
+}
+.nav-links a[href="#plo"]:hover,
+.nav-links a[href="#plo"].active { color: #EF7D1A; letter-spacing: 0.38em; }
+
+/* RIGHT — "Est. Beirut" tab */
+.nav-edition {
+  justify-self: end;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-family: var(--font-sans);
+  font-size: 0.5rem;
+  font-weight: 400;
+  letter-spacing: 0.42em;
+  text-transform: uppercase;
+  color: rgba(43, 18, 32,0.85);
+  padding: 0.4rem 0.9rem 0.4rem 0.75rem;
+  border: 1px solid rgba(43, 18, 32,0.35);
+  border-radius: 999px;
+  transition: all 0.4s var(--ease);
+}
+.nav-edition-dot {
+  width: 5px; height: 5px;
+  border-radius: 50%;
+  background: #2B1220;
+  box-shadow: 0 0 8px rgba(43, 18, 32,0.45);
+}
+#navbar.scrolled .nav-edition { opacity: 0.7; transform: scale(0.92); }
 
 .hamburger {
   display: none;
@@ -272,7 +406,7 @@ a   { text-decoration: none; color: inherit; }
 .hamburger span {
   display: block;
   width: 24px; height: 1.5px;
-  background: #fff;
+  background: #2B1220;
   transition: var(--trans);
 }
 .hamburger.open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
@@ -288,89 +422,114 @@ a   { text-decoration: none; color: inherit; }
   position: relative;
   min-height: 100vh;
   overflow: hidden;
-  background: var(--wine-dark);
+  background: #2B1220;
 }
 
-/* ── Slideshow: fills entire hero behind everything ── */
+/* ── Slideshow: starts below the navbar, extends to bottom ── */
 .hero-slides {
   position: absolute;
-  inset: 0;
+  top: 62px;                     /* right under the slim nav */
+  left: 0; right: 0; bottom: 0;
   z-index: 0;
 }
+
+/* Pure crossfade — classes toggled by script.js */
 .hero-slide {
   position: absolute;
   inset: 0;
+  z-index: 0;
   opacity: 0;
-  animation: heroFade 30s ease-in-out infinite;
+  transition: opacity 2.2s ease;
+  will-change: opacity;
 }
+.hero-slide.is-active {
+  opacity: 1;
+  z-index: 2;
+}
+.hero-slide.is-prev {
+  opacity: 0;
+  z-index: 1;
+  transition: opacity 2.2s ease;
+}
+
 .hero-slide img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
-  /* Zoom deep into fabric texture */
-  transform-origin: center center;
-  animation: heroZoom 30s ease-in-out infinite;
 }
-/* 6 slides × 6s each = 36s cycle */
-.hero-slide     { animation-duration: 36s; }
-.hero-slide img { animation-duration: 36s; }
 
-.hero-slide--1             { animation-delay:  0s; }
-.hero-slide--1 img         { animation-delay:  0s; object-position: 50% 30%; }
-.hero-slide--2             { animation-delay:  6s; }
-.hero-slide--2 img         { animation-delay:  6s; object-position: 50% 50%; }
-.hero-slide--3             { animation-delay: 12s; }
-.hero-slide--3 img         { animation-delay: 12s; object-position: 55% 28%; }
-.hero-slide--4             { animation-delay: 18s; }
-.hero-slide--4 img         { animation-delay: 18s; object-position: 50% 50%; }
-.hero-slide--5             { animation-delay: 24s; }
-.hero-slide--5 img         { animation-delay: 24s; object-position: 48% 42%; }
-.hero-slide--6             { animation-delay: 30s; }
-.hero-slide--6 img         { animation-delay: 30s; object-position: 52% 38%; }
-
-@keyframes heroFade {
-  0%   { opacity: 0; }
-  4%   { opacity: 1; }
-  14%  { opacity: 1; }
-  18%  { opacity: 0; }
-  100% { opacity: 0; }
+/* ── Hero carousel arrows ───────────────────────────
+   Thin, luminous, positioned at the vertical middle
+   of the image zone — editorial, not touristy         */
+.hero-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 3;
+  width: 52px; height: 52px;
+  display: flex; align-items: center; justify-content: center;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.28);
+  border-radius: 50%;
+  color: rgba(255,255,255,0.85);
+  font-size: 1.2rem;
+  cursor: pointer;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  opacity: 0.55;
+  transition: opacity 0.6s cubic-bezier(0.25, 1, 0.5, 1),
+              background 0.6s cubic-bezier(0.25, 1, 0.5, 1),
+              border-color 0.6s cubic-bezier(0.25, 1, 0.5, 1),
+              transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
 }
-@keyframes heroZoom {
-  0%   { transform: scale(1.55) translate(0%,  0%); }
-  50%  { transform: scale(1.65) translate(-2%, 2%); }
-  100% { transform: scale(1.55) translate(0%,  0%); }
+.hero-arrow--prev { left: clamp(1rem, 3vw, 2.2rem); }
+.hero-arrow--next { right: clamp(1rem, 3vw, 2.2rem); }
+.hero-arrow:hover {
+  opacity: 1;
+  background: rgba(255,255,255,0.18);
+  border-color: rgba(255,255,255,0.55);
+}
+.hero-arrow--prev:hover { transform: translateY(-50%) translateX(-3px); }
+.hero-arrow--next:hover { transform: translateY(-50%) translateX(3px); }
+.hero-arrow:focus-visible {
+  outline: 2px solid rgba(255,255,255,0.7);
+  outline-offset: 3px;
+}
+@media (max-width: 600px) {
+  .hero-arrow { width: 42px; height: 42px; font-size: 1rem; opacity: 0.7; }
 }
 
 /* ── Cinematic overlay ──────────────────────────────
-   Dark at top (nav), opens in the middle (image glows
-   through), dark again at the bottom (text readable)  */
+   Plum at top (matches navbar — no seam), clears in
+   the middle so image glows, melts to blush at bottom */
 .hero-overlay {
   position: absolute;
   inset: 0;
   z-index: 1;
   background:
     linear-gradient(to bottom,
-      rgba(18, 4, 14, 0.72)  0%,
-      rgba(18, 4, 14, 0.18) 28%,
-      rgba(18, 4, 14, 0.08) 48%,
-      rgba(18, 4, 14, 0.55) 68%,
-      rgba(18, 4, 14, 0.93) 85%,
-      rgba(18, 4, 14, 1.00) 100%
+      rgba(244, 237, 228, 1.00)  0%,      /* lemon — matches nav, no seam */
+      rgba(244, 237, 228, 0.55)  10%,
+      rgba(244, 237, 228, 0.00)  28%,
+      rgba(251, 228, 216, 0.00)  65%,    /* image breathes through middle */
+      rgba(251, 228, 216, 0.80)  88%,    /* sorbet pink bottom → brands-intro */
+      rgba(251, 228, 216, 1.00) 100%
     );
   pointer-events: none;
 }
 
 /* ── Hero content ───────────────────────────────────
-   Pinned to the bottom half, floats over the image    */
+   Centred vertically in the viewport, slight downward
+   nudge so it sits in the visual middle of the image  */
 .hero-content {
   position: absolute;
-  bottom: 0;
+  bottom: 7%;
   left: 50%;
   transform: translateX(-50%);
   z-index: 2;
   text-align: center;
-  padding: 0 2rem 5rem;
+  padding: 0 2rem;
   width: 100%;
   max-width: 860px;
 }
@@ -387,69 +546,94 @@ a   { text-decoration: none; color: inherit; }
 }
 
 /* Hero title block */
-.hero-title {
+/* ── Hero statement — the poetic heart of the page ── */
+.hero-statement {
   font-family: var(--font-serif);
+  font-size: clamp(2.2rem, 4.8vw, 3.6rem);
   font-weight: 300;
-  text-align: center;
-  margin: 0 0 1.4rem;
-  line-height: 1;
-}
-.hero-title-name {
-  display: block;
-  font-size: clamp(2.8rem, 6vw, 5.8rem);
-  font-weight: 300;
-  letter-spacing: 0.22em;
-  color: #fff;
-  line-height: 1;
-  white-space: nowrap;
-}
-
-/* Pulsing gold hairline rule */
-.hero-rule {
-  width: 1px; height: 48px;
-  background: linear-gradient(to bottom, transparent, var(--gold), transparent);
-  margin: 0 auto 2rem;
-  animation: rulePulse 3s ease-in-out infinite;
-}
-@keyframes rulePulse {
-  0%, 100% { opacity: 0.28; }
-  50%       { opacity: 1; }
-}
-
-/* Italic quote */
-.hero-sub {
-  font-family: var(--font-serif);
-  font-size: clamp(1rem, 2.2vw, 1.5rem);
   font-style: italic;
+  color: #fff;
+  line-height: 1.32;                     /* more breath */
+  letter-spacing: 0.015em;               /* airy */
+  margin: 0 0 2.236rem;                  /* φ-based */
+  text-shadow: 0 2px 24px rgba(30,7,19,0.55), 0 0 48px rgba(30,7,19,0.30);
+  text-align: center;
+}
+.hero-statement em {
+  font-style: italic;
+  color: rgba(255,255,255,0.78);
   font-weight: 300;
-  color: rgba(255,255,255,0.8);
-  margin: 0 0 0.8rem;
-  line-height: 1.5;
 }
-.hero-sub em { font-style: normal; color: rgba(255,255,255,0.42); }
 
-/* Fine print tag */
+/* Hand-painted · One of a kind · Signed */
 .hero-tagline {
-  font-size: 0.58rem;
-  letter-spacing: 0.28em;
+  font-size: 0.6rem;
+  letter-spacing: 0.42em;
   text-transform: uppercase;
-  color: rgba(255,255,255,0.32);
-  margin: 0 0 2.8rem;
+  color: rgba(255,255,255,0.70);
+  margin: 0 0 2.6rem;
+  text-shadow: 0 1px 8px rgba(0,0,0,0.45);
+  position: relative;
+  display: inline-block;
 }
+.hero-tagline::before,
+.hero-tagline::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  width: 28px; height: 1px;
+  background: rgba(232,160,32,0.55);
+}
+.hero-tagline::before { right: calc(100% + 1.2rem); }
+.hero-tagline::after  { left:  calc(100% + 0.8rem); }
 
-/* CTA buttons */
+/* CTA logo buttons — refined with labels beneath */
 .hero-cta {
-  display: flex; gap: 1.2rem;
-  justify-content: center; flex-wrap: wrap;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  background: #FBE4D8;   /* pale rose-oyster — first Byzantine wash */
+  padding: 2.4rem 3rem;
 }
-#hero .btn-jookh {
-  color: var(--jookh); border-color: rgba(227,30,36,0.55); background: transparent;
+.hero-logo-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.9rem;
+  text-decoration: none;
+  padding: 0 3.5rem;
+  opacity: 0.75;
+  transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1);
 }
-#hero .btn-jookh:hover { color: #fff; background: var(--jookh); border-color: var(--jookh); }
-#hero .btn-plo {
-  color: var(--plo); border-color: rgba(224,123,10,0.55); background: transparent;
+.hero-logo-btn img {
+  width: 58px;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+  box-shadow: 0 6px 20px rgba(30,7,19,0.12);
+  transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.5s cubic-bezier(0.25, 1, 0.5, 1);
 }
-#hero .btn-plo:hover { color: #fff; background: var(--plo); border-color: var(--plo); }
+.hero-logo-label {
+  font-family: var(--font-sans);
+  font-size: 0.56rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  transition: color 0.4s ease;
+}
+.hero-logo-btn:hover { opacity: 1; }
+.hero-logo-btn:hover img { transform: translateY(-3px); box-shadow: 0 12px 32px rgba(30,7,19,0.18); }
+.hero-logo-btn:hover .hero-logo-label { color: var(--wine-dark); }
+
+.hero-logo-divider {
+  width: 1px;
+  height: 3rem;
+  background: rgba(30,7,19,0.12);
+  flex-shrink: 0;
+  display: block;
+}
 
 /* Letter-by-letter reveal animation */
 .hero-letter {
@@ -495,11 +679,132 @@ a   { text-decoration: none; color: inherit; }
 }
 
 
+/* ─── TWO BRANDS INTRO ─── */
+.brands-intro {
+  background: #FBE4D8;              /* pale rose-oyster — seamless from hero */
+  padding: var(--space-3xl) clamp(1.5rem, 4vw, 3rem) var(--space-lg);  /* tighter bottom — flows into Jookh */
+}
+.brands-intro-inner {
+  max-width: 1180px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(1.25rem, 2.5vw, 2rem);
+}
+
+.brand-panel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 1rem;
+  padding: clamp(2.5rem, 4vw, 3.6rem) clamp(2rem, 4vw, 3.2rem);
+  background: transparent;          /* breathes with the section by default */
+  border: 1px solid rgba(43, 18, 32,0.18);
+  border-radius: 4px;
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.8s cubic-bezier(0.25, 1, 0.5, 1),
+              box-shadow 0.8s cubic-bezier(0.25, 1, 0.5, 1),
+              background-color 0.8s cubic-bezier(0.25, 1, 0.5, 1),
+              border-color 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+  box-shadow: 0 0 0 rgba(0,0,0,0);
+}
+.brand-panel:hover {
+  transform: translateY(-4px);
+  border-color: transparent;
+}
+
+/* Logo — centred identity, no name needed */
+.brand-panel-logo {
+  width: 68px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+}
+
+.brand-panel-sub {
+  font-family: var(--font-sans);
+  font-size: 0.62rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  margin-top: 0.3rem;
+}
+/* Resting state — transparent, wine text reads on section background */
+.brand-panel .brand-panel-sub,
+.brand-panel .brand-panel-desc,
+.brand-panel .brand-panel-cta { transition: color 0.8s cubic-bezier(0.25, 1, 0.5, 1), border-color 0.8s cubic-bezier(0.25, 1, 0.5, 1), letter-spacing 0.6s ease; }
+.brand-panel--jookh .brand-panel-sub  { color: #2B1220; }
+.brand-panel--jookh .brand-panel-desc { color: rgba(43, 18, 32,0.82); }
+.brand-panel--jookh .brand-panel-cta  { color: rgba(43, 18, 32,0.6); border-color: rgba(43, 18, 32,0.28); }
+.brand-panel--plo   .brand-panel-sub  { color: #2B1220; }
+.brand-panel--plo   .brand-panel-desc { color: rgba(43, 18, 32,0.82); }
+.brand-panel--plo   .brand-panel-cta  { color: rgba(43, 18, 32,0.6); border-color: rgba(43, 18, 32,0.28); }
+
+/* Hover — Jookh deepens into blush pink; P-Lo fills with its section's cream */
+.brand-panel--jookh:hover {
+  background: #E61E8D;           /* electric fuchsia — the Jookh logo, amplified */
+  box-shadow: 0 22px 50px rgba(200,30,120,0.38);
+}
+.brand-panel--plo:hover {
+  background: #EF7D1A;           /* pure saffron — the P-Lo logo, amplified */
+  box-shadow: 0 22px 50px rgba(200,90,0,0.34);
+}
+.brand-panel--jookh:hover .brand-panel-sub,
+.brand-panel--plo:hover   .brand-panel-sub  { color: #fff; }
+.brand-panel--jookh:hover .brand-panel-desc,
+.brand-panel--plo:hover   .brand-panel-desc { color: rgba(255,255,255,0.95); }
+.brand-panel--jookh:hover .brand-panel-cta,
+.brand-panel--plo:hover   .brand-panel-cta  { color: #fff; border-color: rgba(255,255,255,0.75); }
+.brand-panel--jookh:hover .brand-panel-sub,
+.brand-panel--plo:hover   .brand-panel-sub  { color: #2B1220; }
+.brand-panel--jookh:hover .brand-panel-desc,
+.brand-panel--plo:hover   .brand-panel-desc { color: rgba(43, 18, 32,0.88); }
+.brand-panel--jookh:hover .brand-panel-cta,
+.brand-panel--plo:hover   .brand-panel-cta  { color: #2B1220; border-color: rgba(43, 18, 32,0.6); }
+
+.brand-panel-desc {
+  font-family: var(--font-serif);
+  font-size: 1rem;
+  font-weight: 300;
+  font-style: italic;
+  line-height: 1.75;
+  color: rgba(255,255,255,0.78);
+  max-width: 34ch;
+}
+.brand-panel-cta {
+  font-family: var(--font-sans);
+  font-size: 0.62rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.55);
+  border-bottom: 1px solid rgba(255,255,255,0.25);
+  padding-bottom: 3px;
+  margin-top: 0.4rem;
+  transition: color 0.4s ease, border-color 0.4s ease, letter-spacing 0.4s ease;
+}
+.brand-panel:hover .brand-panel-cta {
+  color: #fff;
+  border-color: rgba(255,255,255,0.6);
+  letter-spacing: 0.28em;
+}
+
+@media (max-width: 700px) {
+  .brands-intro-inner { grid-template-columns: 1fr; }
+}
+
 /* ─── JOOKH ─── */
 #jookh {
   position: relative;
-  padding: 8rem 0;
-  background: #F7F5F2;
+  padding: var(--space-xl) 0 var(--space-2xl);  /* tighter top — brands-intro already breathes */
+  background: linear-gradient(
+    180deg,
+    #FBE4D8  0%,          /* top: sorbet pink — seamless from brands-intro */
+    #F5B99C 50%,          /* mid: coral pink — pigment deepens */
+    #E88B6E 100%          /* end: hot magenta-rose — the bloom */
+  );
   overflow: hidden;
 }
 
@@ -517,29 +822,63 @@ a   { text-decoration: none; color: inherit; }
 }
 .jookh-cat-title {
   font-family: var(--font-serif);
-  font-size: clamp(1.4rem, 3vw, 2rem);
-  font-weight: 400;
+  font-size: clamp(2rem, 4.5vw, 3.2rem);
+  font-weight: 300;
   font-style: italic;
-  color: #1a1a1a;
+  color: var(--wine-dark);
   white-space: nowrap;
-  letter-spacing: 0.04em;
-  padding-left: 1rem;
-  border-left: 3px solid var(--jookh);
+  letter-spacing: 0.03em;
+  line-height: 1.1;
+  padding-left: 1.4rem;
+  position: relative;
+}
+.jookh-cat-title::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 12%; bottom: 12%;
+  width: 3px;
+  background: linear-gradient(180deg, var(--jookh) 0%, var(--jookh-2) 100%);
 }
 .jookh-cat-line {
   flex: 1;
   height: 1px;
-  background: linear-gradient(to right, rgba(26,26,26,0.15), transparent);
+  background: linear-gradient(to right, rgba(30,7,19,0.18), transparent);
 }
 
 .jookh-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
+  gap: 2.8rem 2.2rem;
   margin-bottom: 0;
 }
 /* 4-col variant for bags */
-.jookh-grid-4 { grid-template-columns: repeat(4, 1fr); }
+.jookh-grid-4 { grid-template-columns: repeat(4, 1fr); gap: 2.2rem 1.6rem; }
+
+/* ── Subcollection headers ── */
+.jookh-subcat-header {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  margin: 2.5rem 0 1.5rem;
+}
+.jookh-subcat-header:first-child { margin-top: 0; }
+.jookh-subcat-title {
+  font-family: var(--font-serif);
+  font-size: clamp(1.3rem, 2.5vw, 1.9rem);
+  font-weight: 300;
+  font-style: italic;
+  letter-spacing: 0.08em;
+  color: var(--wine-dark);
+  white-space: nowrap;
+}
+.jookh-subcat-line {
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(to right, rgba(30,7,19,0.22), transparent);
+}
+.jookh-subgrid {
+  margin-bottom: 2.5rem;
+}
 
 /* Wearable organic photo strips */
 .wearable-piece {
@@ -636,25 +975,81 @@ a   { text-decoration: none; color: inherit; }
 
 .collection-note {
   text-align: center;
-  border-top: 1px solid rgba(255,255,255,0.1);
+  border-top: 1px solid rgba(30,7,19,0.1);
   padding-top: 3rem;
 }
 .collection-note p {
   font-size: 0.88rem;
   font-style: italic;
-  color: rgba(255,255,255,0.45);
+  color: var(--text-muted);
   margin-bottom: 1.5rem;
+}
+
+/* ─── BRAND CHAPTER DIVIDER ─── */
+/* A natural visual evolution from Jookh red to P-Lo orange — chapter page of a book */
+.brand-chapter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2.618rem;                 /* φ */
+  padding: 5.236rem 2rem;        /* φ × ... */
+  position: relative;            /* anchor stickers in the gutter */
+  overflow: hidden;
+  background: linear-gradient(
+    180deg,
+    #E88B6E 0%,                  /* catches Jookh's hot magenta */
+    #F2A86E 50%,                 /* coral-peach: hot pink blooms into warm */
+    #F6D9A8 100%                 /* lands in P-Lo's saffron cream */
+  );
+  text-align: center;
+  position: relative;
+}
+.brand-chapter::before,
+.brand-chapter::after {
+  content: '';
+  position: absolute;
+  left: 50%; transform: translateX(-50%);
+  width: 3px; height: 3px;
+  border-radius: 50%;
+  background: var(--jookh);
+  opacity: 0.4;
+}
+.brand-chapter::before { top: 1.8rem; }
+.brand-chapter::after  { bottom: 1.8rem; background: var(--plo); }
+.brand-chapter-rule {
+  flex: 1;
+  max-width: 200px;
+  height: 1px;
+  background: linear-gradient(to right, transparent, rgba(230,29,37,0.28), rgba(239,125,26,0.28), transparent);
+}
+.brand-chapter-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+}
+.brand-chapter-logo {
+  width: 72px;
+  height: 72px;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 12px rgba(227,30,36,0.2));
+  opacity: 0.88;
+}
+.brand-chapter-label {
+  font-size: 0.6rem;
+  font-weight: 500;
+  letter-spacing: 0.38em;
+  text-transform: uppercase;
+  color: var(--jookh);
+  margin: 0;
 }
 
 /* ─── P-LO ─── */
 #plo {
   position: relative;
-  padding: 8rem 0;
-  background: var(--plo-bg);
-  background-image:
-    radial-gradient(ellipse 55% 50% at 95% 5%, rgba(224,123,10,0.12) 0%, transparent 70%),
-    radial-gradient(ellipse 40% 35% at 5% 95%, rgba(232,160,32,0.09) 0%, transparent 70%);
-  border-top: 1px solid rgba(224,123,10,0.15);
+  padding: var(--space-2xl) 0 var(--space-3xl);  /* mirror Jookh: tighter top (from chapter), φ breath at bottom */
+  background: #F6D9A8;
+  border-top: none;
   overflow: hidden;
 }
 
@@ -693,10 +1088,10 @@ a   { text-decoration: none; color: inherit; }
 /* ─── ABOUT ─── */
 #about {
   position: relative;
-  padding: 8rem 0;
-  background: var(--cream);
+  padding: var(--space-3xl) 0;
+  background: #FBE4D8;              /* pale oyster-rose — echoes hero top, bookends */
   overflow: hidden;
-  border-top: 1px solid rgba(0,0,0,0.06);
+  border-top: none;
 }
 
 
@@ -814,7 +1209,7 @@ a   { text-decoration: none; color: inherit; }
 #philosophy {
   position: relative;
   padding: 10rem 2rem;
-  background: var(--wine-dark);
+  background: #3B1E3A;
   text-align: center;
   overflow: hidden;
 }
@@ -835,12 +1230,7 @@ a   { text-decoration: none; color: inherit; }
   position: absolute;
   inset: 0;
   z-index: 1;
-  background:
-    linear-gradient(to bottom,
-      rgba(18,4,14,0.72) 0%,
-      rgba(18,4,14,0.45) 40%,
-      rgba(18,4,14,0.55) 70%,
-      rgba(18,4,14,0.85) 100%);
+  background: rgba(59, 30, 58, 0.78);
 }
 .philosophy-quote {
   position: relative;
@@ -858,7 +1248,7 @@ a   { text-decoration: none; color: inherit; }
   font-family: var(--font-serif);
   font-size: clamp(8rem, 16vw, 14rem);
   font-weight: 300;
-  color: rgba(255,255,255,0.04);
+  color: rgba(255,255,255,0.07);
   line-height: 1;
   pointer-events: none;
   user-select: none;
@@ -869,7 +1259,7 @@ a   { text-decoration: none; color: inherit; }
   font-weight: 300;
   font-style: italic;
   line-height: 1.35;
-  color: rgba(255,255,255,0.9);
+  color: rgba(255,255,255,0.92);
   margin-bottom: 3rem;
   letter-spacing: -0.01em;
   position: relative;
@@ -880,7 +1270,7 @@ a   { text-decoration: none; color: inherit; }
   font-style: normal;
   letter-spacing: 0.3em;
   text-transform: uppercase;
-  color: rgba(255,255,255,0.3);
+  color: rgba(255,255,255,0.45);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -899,14 +1289,14 @@ a   { text-decoration: none; color: inherit; }
 /* ─── CONTACT ─── */
 #contact {
   position: relative;
-  padding: 8rem 0;
-  background: var(--wine);
+  padding: var(--space-3xl) 0;
+  background: #3B1E3A;
   overflow: hidden;
 }
-#contact .section-label { color: var(--gold); }
+#contact .section-label { color: #D8B0C0; }        /* dusty rose — echoes Jookh's end-wash */
 #contact .section-title { color: #fff; }
-.contact-title em { color: rgba(255,255,255,0.55); }
-#contact .section-desc { color: rgba(255,255,255,0.6); }
+.contact-title em { color: rgba(255,255,255,0.6); }
+#contact .section-desc { color: rgba(255,255,255,0.7); }
 
 .contact-grid {
   display: grid;
@@ -919,10 +1309,10 @@ a   { text-decoration: none; color: inherit; }
   position: relative;
   display: flex; flex-direction: column;
   align-items: center; text-align: center;
-  padding: 2.8rem 1.5rem 2.2rem;
-  background: rgba(255,255,255,0.04);
-  border: 1px solid rgba(255,255,255,0.08);
-  transition: var(--trans);
+  padding: 2.854rem 1.618rem 2.236rem;   /* φ-rhythm */
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.18);
+  transition: all 0.8s cubic-bezier(0.25, 1, 0.5, 1);
   cursor: pointer;
   overflow: hidden;
 }
@@ -939,9 +1329,9 @@ a   { text-decoration: none; color: inherit; }
 .whatsapp-card::after { background: radial-gradient(ellipse 80% 60% at 50% 100%, rgba(232,160,32,0.12) 0%, transparent 70%); }
 .contact-card:hover::after { opacity: 1; }
 .contact-card:hover {
-  background: rgba(255,255,255,0.07);
-  transform: translateY(-8px);
-  box-shadow: 0 24px 60px rgba(0,0,0,0.35);
+  background: rgba(255,255,255,0.14);
+  transform: translateY(-6px);
+  box-shadow: 0 24px 64px rgba(30,7,19,0.28);
 }
 .jookh-card:hover  { border-color: rgba(227,30,36,0.35); }
 .plo-card:hover    { border-color: rgba(224,123,10,0.35); }
@@ -965,14 +1355,14 @@ a   { text-decoration: none; color: inherit; }
 
 .contact-card h4 {
   font-family: var(--font-serif);
-  font-size: 1.25rem;         /* clear, readable card title */
+  font-size: 1.25rem;
   font-weight: 400;
   color: #fff;
   margin-bottom: 0.4rem;
 }
 .contact-card p {
   font-size: 0.82rem;
-  color: rgba(255,255,255,0.45);
+  color: rgba(255,255,255,0.55);
   letter-spacing: 0.04em;
 }
 .delivery-card { cursor: default; }
@@ -980,8 +1370,10 @@ a   { text-decoration: none; color: inherit; }
 
 /* ─── FOOTER ─── */
 #footer {
-  background: var(--wine-dark);
+  background: #F4EDE4;          /* same as header — unified lime brand frame */
   padding-top: 0;
+  position: relative;
+  overflow: hidden;             /* contain stickers in footer gutters */
 }
 .footer-gradient-bar {
   height: 3px;
@@ -1001,13 +1393,13 @@ a   { text-decoration: none; color: inherit; }
   padding: 3rem 2rem;
   max-width: 1200px;
   margin: 0 auto;
-  border-bottom: 1px solid rgba(255,255,255,0.06);
+  border-bottom: 1px solid rgba(43, 18, 32,0.12);
 }
 .footer-logo {
   font-family: var(--font-serif);
   font-size: 2.2rem;          /* substantial brand mark in footer */
   font-weight: 400;
-  color: #fff;
+  color: #2B1220;
   margin-bottom: 0.4rem;
   letter-spacing: 0.02em;
 }
@@ -1015,30 +1407,42 @@ a   { text-decoration: none; color: inherit; }
   font-size: 0.62rem;
   letter-spacing: 0.26em;
   text-transform: uppercase;
-  color: var(--gold);
+  color: rgba(43, 18, 32,0.72);
 }
-.footer-links { display: flex; gap: 2rem; }
+.footer-links { display: flex; gap: 2.618rem; }
 .footer-links a {
-  font-size: 0.7rem;
+  font-size: 0.66rem;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: rgba(43, 18, 32,0.78);
+  transition: all 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+}
+.footer-links a:hover { color: #2B1220; letter-spacing: 0.32em; }
+.footer-social { display: flex; gap: 1.5rem; justify-content: flex-end; }
+.footer-social-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.35rem;
+  color: rgba(43, 18, 32,0.75);
+  transition: color var(--trans);
+  width: 34px;
+}
+.footer-social-link:hover { color: #2B1220; }
+.footer-social-link svg { width: 100%; height: 34px; }
+.footer-social-label {
+  font-family: var(--font-sans);
+  font-size: 0.48rem;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: rgba(255,255,255,0.38);
-  transition: color var(--trans);
+  color: inherit;
+  opacity: 0.85;
 }
-.footer-links a:hover { color: var(--jookh-2); }
-.footer-social { display: flex; gap: 1rem; justify-content: flex-end; }
-.footer-social a {
-  width: 34px; height: 34px;
-  color: rgba(255,255,255,0.35);
-  transition: color var(--trans);
-}
-.footer-social a:hover { color: var(--jookh); }
-.footer-social svg { width: 100%; height: 100%; }
 
 .footer-bottom { padding: 1.5rem 2rem; text-align: center; }
 .footer-bottom p {
   font-size: 0.7rem;
-  color: rgba(255,255,255,0.18);
+  color: rgba(43, 18, 32,0.55);
   letter-spacing: 0.05em;
 }
 
@@ -1048,20 +1452,21 @@ a   { text-decoration: none; color: inherit; }
 .card-img-wrap {
   position: relative;
   overflow: hidden;
-  aspect-ratio: 1 / 1;
-  background: transparent;
+  aspect-ratio: 1 / 1.2;              /* razor-sharp portrait grid */
+  background: #EDD4D8;
+  border: 1px solid rgba(30,7,19,0.08);
   cursor: pointer;
-  transition: box-shadow 0.4s var(--ease), border-color 0.4s var(--ease);
+  transition: all 0.8s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
-/* ── Consistent 1/1.2 portrait ratio, cover fill ── */
-.card-img-wrap {
-  aspect-ratio: 1 / 1.2;
-  background: #ECEAE6;
-  border: 1px solid rgba(26,26,26,0.08);
+/* ── Pillows are square — override portrait ratio ── */
+#plo .card-img-wrap {
+  aspect-ratio: 1 / 1;
+  background: #D8AEB2;
+  object-position: center center;
 }
 
-/* Image fills the frame */
+/* Image fills the frame — silk transition */
 .card-img-wrap .main-img {
   position: absolute;
   inset: 0;
@@ -1069,24 +1474,48 @@ a   { text-decoration: none; color: inherit; }
   object-fit: cover;
   object-position: center top;
   display: block;
-  transition: transform 0.6s var(--ease);
+  transition: all 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+  will-change: transform;
+}
+#plo .card-img-wrap .main-img,
+#plo .card-img-wrap .hover-img {
+  object-position: center center;
 }
 .product-card:hover .card-img-wrap .main-img {
-  transform: scale(1.04);
+  transform: scale(1.035);            /* gentler — silk */
+}
+.product-card:hover .card-img-wrap {
+  border-color: rgba(30,7,19,0.16);
+  box-shadow: 0 12px 48px rgba(30,7,19,0.12);
 }
 
-/* ── Glassmorphism hover overlay ── */
+/* ── Wearable crossfade — hover-img dissolves in on top ── */
+.card-crossfade .hover-img {
+  position: absolute;
+  inset: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+  opacity: 0;
+  transition: opacity 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+  z-index: 2;
+}
+.product-card:hover .card-crossfade .hover-img { opacity: 1; }
+.product-card:hover .card-crossfade .main-img { transform: none; }
+
+/* ── Glassmorphism hover overlay — slower, more elegant ── */
 .card-glass-overlay {
   position: absolute;
   inset: 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(255,255,255,0.42);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  background: rgba(255,248,240,0.38);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   opacity: 0;
-  transition: opacity 0.4s var(--ease);
+  transition: opacity 0.8s cubic-bezier(0.25, 1, 0.5, 1);
   z-index: 3;
 }
 .product-card:hover .card-glass-overlay { opacity: 1; }
@@ -1097,8 +1526,8 @@ a   { text-decoration: none; color: inherit; }
   font-weight: 500;
   letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: #1a1a1a;
-  border: 1px solid rgba(26,26,26,0.55);
+  color: var(--wine-dark);
+  border: 1px solid rgba(30,7,19,0.55);
   padding: 0.7rem 1.6rem;
   pointer-events: none;
   transition: background 0.3s, color 0.3s;
@@ -1110,36 +1539,151 @@ a   { text-decoration: none; color: inherit; }
   flex-direction: column;
   align-items: center;
   text-align: center;
-  padding: 1rem 0.5rem 0.25rem;
-  gap: 0.35rem;
-  border-top: 1px solid rgba(26,26,26,0.07);
+  padding: 1.1rem 0.5rem 0.25rem;
+  gap: 0.45rem;
+  border-top: 1px solid rgba(30,7,19,0.08);
 }
 .card-piece-num {
   font-family: var(--font-serif);
-  font-size: 1rem;
+  font-size: 1.05rem;
   font-weight: 400;
   font-style: italic;
-  letter-spacing: 0.01em;
-  color: #1a1a1a;
+  letter-spacing: 0.015em;
+  color: var(--wine-dark);
+  line-height: 1.3;
 }
 .btn-inquire {
   font-family: var(--font-sans);
-  font-size: 0.6rem;
-  letter-spacing: 0.2em;
+  font-size: 0.58rem;
+  letter-spacing: 0.28em;                /* airier */
   text-transform: uppercase;
   font-weight: 500;
-  color: #888;
-  border-bottom: 1px solid rgba(26,26,26,0.2);
-  padding-bottom: 2px;
-  transition: color 0.3s, border-color 0.3s;
+  color: var(--text-muted);
+  border-bottom: 1px solid rgba(30,7,19,0.18);
+  padding: 0.1rem 0.28em 3px 0;
+  transition: all 0.8s cubic-bezier(0.25, 1, 0.5, 1);
   text-decoration: none;
 }
-.btn-inquire:hover { color: #1a1a1a; border-color: #1a1a1a; }
+.btn-inquire:hover { color: var(--jookh); border-color: var(--jookh); letter-spacing: 0.32em; }
 
 /* P-Lo overrides */
-.card-info--plo      { border-top-color: rgba(224,123,10,0.12); }
-.card-piece-num--plo { color: #1a1a1a; }
+.card-info--plo      { border-top-color: rgba(239,125,26,0.14); }
+.card-piece-num--plo { color: var(--wine-dark); }
 .btn-inquire--plo:hover { color: var(--plo); border-color: var(--plo); }
+
+/* ─── PRODUCT CARD HOVER — invisible luxury ─── */
+.product-card {
+  transition: all 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+}
+.product-card:hover {
+  transform: translateY(-4px);
+}
+
+/* ─── ARCHIVE DIVIDER ─── */
+.archive-divider {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.2rem;
+  padding: 5rem 2rem 4rem;
+  text-align: center;
+}
+.archive-divider-rule {
+  width: 100%;
+  max-width: 280px;
+  height: 1px;
+  background: linear-gradient(to right, transparent, rgba(30,7,19,0.18), transparent);
+}
+.archive-divider-label {
+  font-family: var(--font-serif);
+  font-size: clamp(1.6rem, 3.5vw, 2.6rem);
+  font-weight: 300;
+  font-style: italic;
+  color: var(--wine-dark);
+  letter-spacing: 0.06em;
+  display: block;
+}
+.archive-divider-sub {
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  line-height: 1.8;
+  letter-spacing: 0.06em;
+  color: var(--text-muted);
+  max-width: 420px;
+  margin: 0 auto;
+  font-weight: 300;
+}
+
+/* Archive subcollection headers — slightly muted vs new collection */
+.archive-subcat-header .jookh-subcat-title {
+  color: var(--text-muted);
+  font-size: clamp(1rem, 2vw, 1.4rem);
+  letter-spacing: 0.14em;
+}
+
+/* ─── ARCHIVE CARDS ─── */
+.archive-grid {
+  transition: opacity 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+}
+.card--archive .card-piece-num {
+  color: var(--text-muted);
+}
+
+/* Collapsible archive — shows ~2 rows, expands on click */
+.archive-wrap {
+  position: relative;
+  max-height: 920px;                 /* ~2 rows of 4-col cards + one header */
+  overflow: hidden;
+  transition: max-height 1s cubic-bezier(0.25, 1, 0.5, 1);
+}
+.archive-wrap.expanded {
+  max-height: 20000px;
+}
+.archive-wrap:not(.expanded)::after {
+  content: '';
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  height: 220px;
+  background: linear-gradient(to bottom,
+    rgba(232, 139, 110,0) 0%,
+    rgba(232, 139, 110,0.85) 55%,
+    #E88B6E 100%);
+  pointer-events: none;
+}
+
+/* See More toggle button */
+.archive-toggle {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin: 2.5rem auto 0;
+  padding: 0.95rem 2.2rem;
+  background: transparent;
+  border: 1px solid rgba(43, 18, 32,0.35);
+  border-radius: 999px;
+  color: var(--wine-dark);
+  font-family: var(--font-sans);
+  font-size: 0.68rem;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+.archive-toggle:hover {
+  background: #2B1220;
+  border-color: #2B1220;
+  color: #fff;
+  letter-spacing: 0.28em;
+}
+.archive-toggle-icon {
+  display: inline-block;
+  transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+  font-size: 0.9rem;
+  letter-spacing: 0;
+}
+.archive-toggle.is-expanded .archive-toggle-icon {
+  transform: rotate(180deg);
+}
 
 /* ─── LIGHTBOX ─── */
 .lb-overlay {
@@ -1196,15 +1740,6 @@ a   { text-decoration: none; color: inherit; }
   text-transform: uppercase; color: rgba(255,255,255,0.3);
 }
 
-/* ─── PRODUCT CARD HOVER LIFT ─── */
-.product-card {
-  transition: transform 0.5s var(--ease), box-shadow 0.5s var(--ease);
-}
-.product-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 12px 40px rgba(0,0,0,0.1);
-}
-
 /* ─── CUSTOM CURSOR ─── */
 @media (pointer: fine) {
   * { cursor: none !important; }
@@ -1254,7 +1789,21 @@ a   { text-decoration: none; color: inherit; }
   pointer-events: none;
   z-index: 2;
 }
+/* Archive pieces keep their original colour — the overlay is for recently-claimed pieces elsewhere */
+.card--archive.card--sold .card-img-wrap::after { display: none; }
+.card--archive .card-img-wrap img { filter: none; }
 /* "Claimed" pill — top right, warm tone */
+/* ── "New" badge ── */
+.card-new-tag {
+  position: absolute; top: 10px; left: 10px; z-index: 4;
+  font-family: var(--font-sans);
+  font-size: 0.5rem; letter-spacing: 0.28em; text-transform: uppercase;
+  color: #fff;
+  background: linear-gradient(135deg, var(--jookh) 0%, var(--jookh-2) 100%);
+  padding: 4px 10px;
+  font-weight: 500;
+}
+
 .card-sold-tag {
   position: absolute; top: 12px; right: 12px; z-index: 4;
   font-family: var(--font-sans);
@@ -1276,12 +1825,26 @@ a   { text-decoration: none; color: inherit; }
 .card-medium {
   display: block;
   font-family: var(--font-sans);
-  font-size: 0.58rem;
-  letter-spacing: 0.12em;
+  font-size: 0.56rem;
+  letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: #999;
+  color: var(--text-muted);
+  font-weight: 400;
 }
-.card-info--plo .card-medium { color: #aaa; }
+.card-info--plo .card-medium { color: var(--text-muted); }
+
+/* ─── PRICE — clean gallery tag ─── */
+.card-price {
+  display: inline-block;
+  font-family: var(--font-serif);
+  font-size: 1.05rem;
+  font-weight: 300;
+  font-style: italic;
+  letter-spacing: 0.04em;
+  color: var(--jookh);
+  margin: 0.2rem 0 0.1rem;
+}
+.card-price--plo { color: var(--plo); }
 
 /* ─── INQUIRE IN-BASKET STATE ─── */
 .btn-inquire.in-basket {
@@ -1301,49 +1864,50 @@ a   { text-decoration: none; color: inherit; }
   display: flex; flex-direction: column; align-items: flex-end;
 }
 
-/* Trigger button */
+/* Trigger button — Jookh red → magenta, like the logo */
 .basket-trigger {
   position: relative;
-  width: 52px; height: 52px;
+  width: 54px; height: 54px;
   border-radius: 0;
-  background: var(--wine-dark);
-  border: 1px solid rgba(232,160,32,0.35);
-  color: rgba(255,255,255,0.65);
+  background: linear-gradient(135deg, var(--jookh) 0%, var(--jookh-2) 100%);
+  border: 1px solid rgba(255,255,255,0.18);
+  color: #fff;
   cursor: pointer;
   display: flex; align-items: center; justify-content: center;
-  transition: background 0.25s, border-color 0.25s, color 0.25s;
-  box-shadow: 0 4px 24px rgba(0,0,0,0.45);
+  transition: all 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+  box-shadow: 0 10px 28px rgba(230,29,37,0.32), 0 4px 12px rgba(230,30,141,0.22);
 }
 .basket-trigger svg { width: 22px; height: 22px; }
 .basket-trigger:hover {
-  background: var(--wine-mid);
-  border-color: var(--gold);
-  color: var(--gold);
+  transform: translateY(-2px);
+  box-shadow: 0 14px 36px rgba(230,29,37,0.42), 0 6px 18px rgba(230,30,141,0.32);
+  border-color: rgba(255,255,255,0.32);
 }
-.basket-trigger.basket-has-items { border-color: var(--gold); color: var(--gold); }
+.basket-trigger.basket-has-items { border-color: var(--gold); }
 
 /* Count badge */
 .basket-count {
   position: absolute;
-  top: -6px; right: -6px;
-  min-width: 18px; height: 18px;
+  top: -7px; right: -7px;
+  min-width: 20px; height: 20px;
   background: var(--gold);
   color: var(--wine-dark);
   font-family: var(--font-sans);
-  font-size: 0.62rem; font-weight: 600;
-  line-height: 18px; text-align: center;
-  padding: 0 4px;
-  border-radius: 9px;
+  font-size: 0.62rem; font-weight: 700;
+  line-height: 20px; text-align: center;
+  padding: 0 5px;
+  border-radius: 10px;
   display: none;
+  box-shadow: 0 2px 8px rgba(232,160,32,0.45);
 }
 .basket-has-items .basket-count { display: block; }
 
 /* Slide-up panel */
 .basket-panel {
   width: 300px;
-  background: var(--wine-dark);
-  border: 1px solid rgba(232,160,32,0.22);
-  box-shadow: 0 8px 40px rgba(0,0,0,0.55);
+  background: linear-gradient(180deg, var(--wine-dark) 0%, #2D0A1E 100%);
+  border: 1px solid rgba(230,29,37,0.28);
+  box-shadow: 0 8px 40px rgba(30,7,19,0.55), 0 0 0 1px rgba(230,30,141,0.12);
   margin-bottom: 0.75rem;
   display: flex; flex-direction: column;
 }
@@ -1460,20 +2024,36 @@ a   { text-decoration: none; color: inherit; }
   .footer-social { grid-column: span 2; justify-content: center; }
 }
 
+@media (max-width: 900px) {
+  .nav-inner {
+    grid-template-columns: auto 1fr auto;
+    padding: 0 1.2rem;
+    gap: 1rem;
+  }
+  .nav-edition { display: none; }
+  .nav-logo-name { font-size: 1.25rem; letter-spacing: 0.18em; }
+  .nav-logo-top { font-size: 0.46rem; letter-spacing: 0.36em; }
+}
+
 @media (max-width: 768px) {
-  .hamburger { display: flex; }
+  .hamburger { display: flex; justify-self: end; }
   .nav-links {
     display: none;
-    position: absolute; top: 100%; left: 0; right: 0;
-    background: rgba(45,10,30,0.97);
-    backdrop-filter: blur(14px);
+    position: absolute; top: calc(100% + 0.6rem); right: 1rem;
+    background: rgba(244, 237, 228,0.97);
+    border: 1px solid rgba(43, 18, 32,0.18);
+    backdrop-filter: blur(18px);
+    box-shadow: 0 14px 38px rgba(43, 18, 32,0.18);
     flex-direction: column; gap: 0;
-    border-top: 2px solid var(--jookh);
+    padding: 0.6rem;
+    border-radius: 18px;
+    min-width: 180px;
   }
   .nav-links.open { display: flex; }
-  .nav-links li { border-bottom: 1px solid rgba(255,255,255,0.06); }
-  .nav-links a { display: block; padding: 1.1rem 2rem; font-size: 0.88rem; }
-  .nav-links a::after { display: none; }
+  .nav-links li { border-bottom: 1px solid rgba(43, 18, 32,0.14); }
+  .nav-links li:last-child { border-bottom: none; }
+  .nav-links li + li::before { display: none; }
+  .nav-links a { display: block; padding: 0.9rem 1rem; font-size: 0.7rem; }
 
   .jookh-grid     { grid-template-columns: repeat(2, 1fr); gap: 1rem; }
   .jookh-grid-4   { grid-template-columns: repeat(2, 1fr); gap: 1rem; }
@@ -1506,8 +2086,303 @@ a   { text-decoration: none; color: inherit; }
 @media (max-width: 480px) {
   .collection-grid { grid-template-columns: 1fr; }
   .contact-grid    { grid-template-columns: 1fr; }
-  .hero-cta { flex-direction: column; align-items: center; }
-  .hero-cta .btn { width: 100%; max-width: 260px; text-align: center; }
+  .hero-cta { max-width: 380px; }
+  .hero-logo-btn { padding: 1rem 1.2rem; }
+  .hero-cta { max-width: 320px; }
   .blob-1 { width: 80vw; height: 80vw; }
   .blob-2 { width: 70vw; height: 70vw; }
 }
+
+/* ═══════════════════════════════════════════════════════
+   SECTION-SCOPED TEXT COLOR WORLDS
+   Each palette zone gets its own warm text family so every
+   section feels like its own little painting, not flat ink.
+   Fraunces italic lives in the accent colour of each zone.
+   ═══════════════════════════════════════════════════════ */
+
+/* ─── BLUSH ZONES: hero-logo, brands-intro, about ─── */
+.brands-intro .section-title,
+#about .section-title,
+.brands-intro h1, .brands-intro h2, .brands-intro h3 {
+  color: var(--txt-blush-title);
+}
+.brands-intro .section-title em,
+#about .section-title em {
+  color: var(--txt-jookh-accent);   /* terracotta italics lift the blush */
+}
+.brands-intro .section-desc,
+#about .section-desc,
+.about-body {
+  color: var(--txt-blush-body);
+}
+.brand-panel--jookh .brand-panel-desc,
+.brand-panel--plo .brand-panel-desc {
+  color: var(--txt-blush-body);
+}
+
+/* ─── JOOKH ZONE: the gradient ladder ─── */
+#jookh .section-title,
+#jookh .jookh-cat-title {
+  color: var(--txt-jookh-title);
+}
+#jookh .section-title em,
+#jookh .jookh-cat-title em {
+  color: var(--txt-jookh-accent);
+  font-style: italic;
+}
+#jookh .section-desc,
+#jookh .section-label {
+  color: var(--txt-blush-body);
+}
+
+/* ─── P-LO ZONE: champagne gold ─── */
+#plo .section-title,
+#plo .plo-title,
+#plo h1, #plo h2, #plo h3 {
+  color: var(--txt-plo-title);
+}
+#plo .section-title em,
+#plo em {
+  color: var(--txt-plo-accent);
+  font-style: italic;
+}
+#plo .section-desc,
+#plo .section-label {
+  color: var(--txt-plo-title);
+  opacity: 0.78;
+}
+
+/* ─── DUSK ZONES: philosophy & contact on plum ─── */
+#philosophy .philosophy-quote p,
+#philosophy .section-title,
+#contact .section-title {
+  color: var(--txt-dusk-title);
+}
+#philosophy .philosophy-quote cite,
+#philosophy .section-desc,
+#contact .section-desc,
+#contact .contact-card p {
+  color: var(--txt-dusk-body);
+}
+#philosophy .section-title em,
+#contact .section-title em,
+.contact-title em {
+  color: var(--txt-dusk-body);
+  opacity: 0.72;
+  font-style: italic;
+}
+
+
+
+
+/* ═══════════════════════════════════════════════════════
+   STICKERS — fresh adventure: scattered flowers across the
+   page, with strong parallax drift, fast smooth scroll-rotation,
+   subtle viewport-progress breathing, hover bloom.
+   No pins, no washes, no clusters — just flowers in air.
+   ═══════════════════════════════════════════════════════ */
+
+/* For smooth interpolation of the rotation custom property */
+@property --scroll-rot {
+  syntax: '<angle>';
+  inherits: false;
+  initial-value: 0deg;
+}
+
+/* Sections need relative positioning to anchor stickers */
+.brands-intro, #jookh, #plo, #about, #philosophy, #contact, #footer,
+.brand-chapter, #hero { position: relative; }
+
+.sticker {
+  position: absolute;
+  user-select: none;
+  -webkit-user-drag: none;
+  pointer-events: auto;
+  z-index: 1;                        /* above section bg, below product grids (z:2) */
+  width: var(--w, 120px);
+  height: auto;
+  opacity: 0;                        /* fade in via .visible */
+  /* compose three transforms cleanly */
+  translate: 0 var(--py, 0px);
+  rotate: calc(var(--rot, 0deg) + var(--scroll-rot, 0deg));
+  scale: var(--breath, 1);
+  transform-origin: 50% 50%;
+
+  filter:
+    drop-shadow(0 4px 9px rgba(60, 20, 30, 0.26))
+    drop-shadow(0 16px 32px rgba(60, 20, 30, 0.16));
+
+  transition:
+    opacity 1.4s cubic-bezier(0.25, 1, 0.5, 1),
+    filter 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+
+  will-change: translate, rotate, scale;
+}
+.sticker.visible { opacity: 1; }
+
+/* Hover — bloom slightly, lift on top */
+.sticker:hover {
+  scale: calc(var(--breath, 1) * 1.08);
+  z-index: 99;
+  filter:
+    drop-shadow(0 6px 14px rgba(60, 20, 30, 0.36))
+    drop-shadow(0 24px 48px rgba(60, 20, 30, 0.22));
+}
+
+/* Dusk sections (philosophy, contact) — warm amber glow shadow */
+#philosophy .sticker,
+#contact .sticker {
+  filter:
+    drop-shadow(0 0 14px rgba(246, 217, 168, 0.55))
+    drop-shadow(0 10px 22px rgba(0, 0, 0, 0.35));
+}
+#philosophy .sticker:hover,
+#contact .sticker:hover {
+  filter:
+    drop-shadow(0 0 22px rgba(246, 217, 168, 0.78))
+    drop-shadow(0 14px 30px rgba(0, 0, 0, 0.45));
+}
+
+/* Hero stickers sit above the cinematic overlay */
+#hero .sticker { z-index: 2; }
+
+/* Mobile — shrink + reduce density via opacity */
+@media (max-width: 768px) {
+  .sticker { width: clamp(60px, 18vw, 110px); }
+  .sticker.visible { opacity: 0.9; }
+}
+
+/* Reduced motion — keep stickers visible but skip transforms */
+@media (prefers-reduced-motion: reduce) {
+  .sticker { translate: 0 !important; rotate: var(--rot, 0deg) !important; scale: 1 !important; transition: opacity 0.4s; }
+}
+
+/* Stacking — content above stickers, always */
+.jookh-inner, #plo > .container, #about .about-container,
+#philosophy .philosophy-quote, #contact .container, .brands-intro-inner {
+  position: relative; z-index: 2;
+}
+#scarves-grid, #bags-grid, #wearables-grid, #plo-grid,
+.section-header, .jookh-category, .collection-note { position: relative; z-index: 2; }
+.card, .product-card { position: relative; z-index: 2; }
+
+/* ═══════════════════════════════════════════════════════
+   POLAROID PRODUCT CARDS — scrapbook-couture treatment.
+   Each card becomes a printed photo: cream paper frame,
+   soft shadow, subtle tilt on a few cards (not all).
+   On hover: card straightens, lifts, deepens shadow.
+   ═══════════════════════════════════════════════════════ */
+
+.product-card {
+  background: #F4EDE4;                         /* ivory champagne paper frame */
+  padding: 14px 14px 22px;                     /* polaroid padding — extra bottom for the "label" area */
+  border-radius: 2px;
+  background: #F4EDE4;                         /* ivory champagne — warm cream paper frame */
+  box-shadow:
+    0 4px 10px rgba(60, 20, 30, 0.14),
+    0 16px 36px rgba(60, 20, 30, 0.10);
+  transition:
+    transform 0.55s cubic-bezier(0.25, 1, 0.5, 1),
+    rotate 0.55s cubic-bezier(0.25, 1, 0.5, 1),
+    box-shadow 0.55s cubic-bezier(0.25, 1, 0.5, 1);
+  position: relative;
+  z-index: 2;
+}
+
+/* Subtle pseudo-random tilt — softer, almost half of before */
+.product-card:nth-child(3n+1)  { rotate: 0.3deg;  }
+.product-card:nth-child(5n+2)  { rotate: -0.4deg; }
+.product-card:nth-child(7n+3)  { rotate: 0.6deg;  }
+.product-card:nth-child(11n+4) { rotate: -0.5deg; }
+
+/* Hover — pick up the photo: straighten, lift, deepen shadow */
+.product-card:hover {
+  rotate: 0deg;
+  transform: translateY(-8px);
+  box-shadow:
+    0 10px 20px rgba(60, 20, 30, 0.22),
+    0 32px 64px rgba(60, 20, 30, 0.18);
+  z-index: 10;
+}
+
+/* The image inside the polaroid — strip any inherited background/border */
+.product-card .card-img-wrap {
+  background: transparent;
+  border: none;
+  margin: 0;
+  border-radius: 0;
+  overflow: hidden;
+}
+
+/* Caption area — sits inside the polaroid, on the dark frame */
+.product-card .card-info {
+  padding: 0.85rem 0.25rem 0;
+  text-align: center;
+}
+/* Sold/archive cards — slightly deeper cream, image desaturated */
+.product-card.card--sold,
+.product-card.card--archive {
+  background: #EFE6DA;                         /* one shade deeper cream */
+  box-shadow:
+    0 3px 8px rgba(60, 20, 30, 0.10),
+    0 12px 26px rgba(60, 20, 30, 0.08);
+}
+.product-card.card--sold .main-img,
+.product-card.card--archive .main-img {
+  filter: saturate(0.88);
+}
+
+/* Mobile — kill the rotation, ease the lift (single column already feels intimate) */
+@media (max-width: 768px) {
+  .product-card { rotate: 0deg !important; }
+  .product-card:hover { transform: translateY(-4px); }
+}
+
+/* Reduced motion — kill the tilt + lift */
+@media (prefers-reduced-motion: reduce) {
+  .product-card { rotate: 0deg !important; transition: none; }
+  .product-card:hover { transform: none; }
+}
+
+/* ═══════════════════════════════════════════════════════
+   GRID EXPANDERS — "+ see N more" button under long grids.
+   Hides cards beyond a per-section limit; click to reveal.
+   ═══════════════════════════════════════════════════════ */
+.product-card.is-hidden { display: none; }
+
+.grid-expand-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin: 2.4rem auto 0;
+  padding: 0.85rem 2.2rem;
+  background: transparent;
+  border: 1px solid rgba(43, 18, 32, 0.32);
+  color: #2B1220;
+  font-family: var(--font-sans);
+  font-size: 0.66rem;
+  font-weight: 500;
+  letter-spacing: 0.26em;
+  text-transform: uppercase;
+  cursor: pointer;
+  border-radius: 30px;
+  transition:
+    background 0.4s cubic-bezier(0.25, 1, 0.5, 1),
+    color 0.4s cubic-bezier(0.25, 1, 0.5, 1),
+    border-color 0.4s cubic-bezier(0.25, 1, 0.5, 1),
+    transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+  position: relative;
+  z-index: 3;
+}
+.grid-expand-btn:hover {
+  background: #2B1220;
+  color: #F4EDE4;
+  border-color: #2B1220;
+  transform: translateY(-2px);
+}
+.grid-expand-btn .arrow {
+  display: inline-block;
+  font-size: 0.85rem;
+  transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+.grid-expand-btn[aria-expanded="true"] .arrow { transform: rotate(180deg); }

@@ -19,94 +19,137 @@
   <nav id="navbar">
     <div class="nav-inner">
       <a href="#hero" class="nav-logo">
-        <span class="nav-logo-top">The Conceptual Art World of</span>
         <span class="nav-logo-name">Roula Harb</span>
       </a>
-      <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
       <ul class="nav-links" id="nav-links">
         <li><a href="#jookh">Jookh</a></li>
         <li><a href="#plo">P-Lo</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
+      <span class="nav-edition" aria-hidden="true">
+        <span class="nav-edition-dot"></span>
+        Est. Beirut
+      </span>
+      <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
     </div>
   </nav>
 
   <!-- HERO -->
   <section id="hero">
 
-    <!-- Full-bleed texture slideshow (behind everything) -->
-    <div class="hero-slides" aria-hidden="true">
-      <div class="hero-slide hero-slide--1">
-        <img src="images/jookh/wearables/piece-46-view-1.jpg" alt="" draggable="false" />
-      </div>
-      <div class="hero-slide hero-slide--2">
-        <img src="images/close-up/texture-floral-warm.jpg" alt="" draggable="false" />
-      </div>
-      <div class="hero-slide hero-slide--3">
-        <img src="images/jookh/wearables/piece-43-view-1.jpg" alt="" draggable="false" />
-      </div>
-      <div class="hero-slide hero-slide--4">
-        <img src="images/close-up/texture-floral-pink.jpg" alt="" draggable="false" />
-      </div>
-      <div class="hero-slide hero-slide--5">
-        <img src="images/jookh/wearables/piece-29-view-1.jpg" alt="" draggable="false" />
-      </div>
-      <div class="hero-slide hero-slide--6">
-        <img src="images/jookh/wearables/piece-39-view-1.jpg" alt="" draggable="false" />
-      </div>
-    </div>
+    <!-- Hero slideshow — managed via images/hero/ folder.
+         To change slides: add/remove images from images/hero/
+         then run: node sync-hero.js -->
+    <div class="hero-slides" id="hero-slides" aria-hidden="true"></div>
 
     <!-- Cinematic overlay: dark edges, image glows through centre -->
     <div class="hero-overlay" aria-hidden="true"></div>
 
-    <!-- Typography — floats over the image in lower portion -->
+    <!-- Typography — the tagline IS the hero statement -->
     <div class="hero-content">
-      <h1 class="hero-title reveal">
-        <span class="hero-title-name" id="hero-name">ROULA HARB</span>
+      <h1 class="hero-statement reveal">
+        Chaos made wearable.<br />
+        <em>Silence made visible.</em>
       </h1>
-      <div class="hero-rule reveal" aria-hidden="true"></div>
-      <p class="hero-sub reveal">Chaos made wearable.<br /><em>Silence made visible.</em></p>
       <p class="hero-tagline reveal">Hand-painted &middot; One of a kind &middot; Signed</p>
-      <div class="hero-cta reveal">
-        <a href="#jookh" class="btn btn-jookh">Jookh Couture</a>
-        <a href="#plo" class="btn btn-plo">P-Lo</a>
-      </div>
     </div>
-
-    <!-- Rotating piece caption — bottom left -->
-    <span class="hero-img-caption" aria-hidden="true">Jookh · Hand-painted fabric</span>
-
-    <a href="#jookh" class="scroll-indicator" aria-label="Scroll down">
-      <span class="scroll-line"></span>
-    </a>
 
   </section>
 
-  <!-- TEXTURE STRIP — detail intro to Jookh wearables -->
-  <div class="texture-strip" aria-hidden="true">
-    <div class="texture-strip-img">
-      <img src="images/close-up/texture-circles-orange.png" alt="" draggable="false" />
+  <!-- TWO BRANDS INTRODUCTION -->
+  <section class="brands-intro">
+    <!-- BRANDS-INTRO STICKERS — pure margins, well-spaced, no overlaps -->
+    <img class="sticker" src="images/stickers/roses-pink-trio.png" data-parallax="0.2" alt="" style="top: 8%; left: 2%; --w: 150px; --rot: -12deg;" />
+    <img class="sticker" src="images/stickers/cosmos-pink.png" data-parallax="0.34" alt="" style="top: 48%; left: 1%; --w: 90px; --rot: 22deg;" />
+    <img class="sticker" src="images/stickers/babys-breath-pink.png" data-parallax="0.42" alt="" style="bottom: 8%; left: 3%; --w: 95px; --rot: -8deg;" />
+    <img class="sticker" src="images/stickers/poppy-painted.png" data-parallax="0.18" alt="" style="top: 8%; right: 2%; --w: 140px; --rot: 14deg;" />
+    <img class="sticker" src="images/stickers/iris-blue-purple.png" data-parallax="0.32" alt="" style="top: 48%; right: 3%; --w: 90px; --rot: -22deg;" />
+    <img class="sticker" src="images/stickers/balloon-flower-violet.png" data-parallax="0.4" alt="" style="bottom: 8%; right: 2%; --w: 100px; --rot: 18deg;" />
+    <div class="brands-intro-inner">
+      <a href="#jookh" class="brand-panel brand-panel--jookh reveal">
+        <img src="images/logos/jookh-logo.png" alt="Jookh Couture" class="brand-panel-logo" onerror="this.style.display='none'" />
+        <p class="brand-panel-sub">Wearable Art</p>
+        <p class="brand-panel-desc">Hand-painted scarves, bags &amp; statement coats — each a brushstroke made wearable.</p>
+        <span class="brand-panel-cta">Explore Collection ↓</span>
+      </a>
+      <a href="#plo" class="brand-panel brand-panel--plo reveal">
+        <img src="images/logos/plo-logo.png" alt="P-Lo Art Pillows" class="brand-panel-logo" onerror="this.style.display='none'" />
+        <p class="brand-panel-sub">Sanctuary Pieces</p>
+        <p class="brand-panel-desc">Hand-painted, hand-embroidered linen pillows — one-of-a-kind worlds for your home.</p>
+        <span class="brand-panel-cta">Explore Collection ↓</span>
+      </a>
     </div>
-    <div class="texture-strip-img">
-      <img src="images/close-up/texture-circles-grey.png" alt="" draggable="false" />
-    </div>
-    <div class="texture-strip-img">
-      <img src="images/close-up/texture-flower-lapel.png" alt="" draggable="false" />
-    </div>
-  </div>
+  </section>
 
   <!-- JOOKH COUTURE -->
   <section id="jookh">
-    <div class="container jookh-inner">
+    <!-- JOOKH STICKERS — pure margins, vertical stagger, no overlaps.
+         Left column: stops at 4%, 18%, 32%, 46%, 60%, 74%, 88%
+         Right column: stops at 10%, 24%, 38%, 52%, 66%, 80%, 94% -->
+    <!-- Left margin -->
+    <img class="sticker" src="images/stickers/poppy-tall-red.png" data-parallax="0.14" alt="" style="top: 4%; left: -2%; --w: 200px; --rot: -8deg;" />
+    <!-- LOGO FLANKERS — fill the empty band around the centered Jookh logo at the top -->
+    <img class="sticker" src="images/stickers/peony-pink.png" data-parallax="0.26" alt="" style="top: 2%; left: 16%; --w: 130px; --rot: 16deg;" />
+    <img class="sticker" src="images/stickers/daisy-white.png" data-parallax="0.4" alt="" style="top: 8%; left: 28%; --w: 90px; --rot: -12deg;" />
+    <img class="sticker" src="images/stickers/anemone-red.png" data-parallax="0.34" alt="" style="top: 1%; left: 36%; --w: 80px; --rot: 22deg;" />
+    <img class="sticker" src="images/stickers/rose-yellow-flame.png" data-parallax="0.22" alt="" style="top: 2%; right: 16%; --w: 140px; --rot: -14deg;" />
+    <img class="sticker" src="images/stickers/cherry-blossom-pink.png" data-parallax="0.36" alt="" style="top: 8%; right: 28%; --w: 95px; --rot: 18deg;" />
+    <img class="sticker" src="images/stickers/balloon-flower-violet.png" data-parallax="0.3" alt="" style="top: 1%; right: 38%; --w: 85px; --rot: -22deg;" />
+    <img class="sticker" src="images/stickers/lavender-bunch.png" data-parallax="0.28" alt="" style="top: 18%; left: 1%; --w: 130px; --rot: 14deg;" />
+    <!-- moved off the Bags heading — sits along the horizontal rule on the right -->
+    <img class="sticker" src="images/stickers/anemone-red.png" data-parallax="0.36" alt="" style="top: 32%; right: 26%; --w: 80px; --rot: -22deg;" />
+    <img class="sticker" src="images/stickers/babys-breath-pink.png" data-parallax="0.42" alt="" style="top: 33%; right: 14%; --w: 75px; --rot: 18deg;" />
+    <img class="sticker" src="images/stickers/poppy-decorative.png" data-parallax="0.16" alt="" style="top: 46%; left: -1%; --w: 180px; --rot: 10deg;" />
+    <img class="sticker" src="images/stickers/ranunculus-pink.png" data-parallax="0.42" alt="" style="top: 60%; left: 2%; --w: 105px; --rot: 28deg;" />
+    <img class="sticker" src="images/stickers/poppy-cutout-navy.png" data-parallax="0.18" alt="" style="top: 74%; left: 1%; --w: 170px; --rot: -10deg;" />
+    <img class="sticker" src="images/stickers/cherry-blossom-pink.png" data-parallax="0.34" alt="" style="top: 88%; left: 3%; --w: 95px; --rot: 22deg;" />
+    <!-- Right margin -->
+    <img class="sticker" src="images/stickers/gerbera-fuchsia.png" data-parallax="0.22" alt="" style="top: 10%; right: 1%; --w: 150px; --rot: 14deg;" />
+    <img class="sticker" src="images/stickers/babys-breath-white.png" data-parallax="0.4" alt="" style="top: 24%; right: 3%; --w: 100px; --rot: -18deg;" />
+    <img class="sticker" src="images/stickers/plumbago-blue.png" data-parallax="0.18" alt="" style="top: 38%; right: -2%; --w: 200px; --rot: 12deg;" />
+    <img class="sticker" src="images/stickers/rose-red-bloom.png" data-parallax="0.32" alt="" style="top: 52%; right: 2%; --w: 90px; --rot: 24deg;" />
+    <img class="sticker" src="images/stickers/rose-fuchsia-bloom.png" data-parallax="0.16" alt="" style="top: 66%; right: 1%; --w: 170px; --rot: -14deg;" />
+    <img class="sticker" src="images/stickers/iris-blue-purple.png" data-parallax="0.26" alt="" style="top: 80%; right: 3%; --w: 120px; --rot: 18deg;" />
+    <img class="sticker" src="images/stickers/poppy-painted.png" data-parallax="0.2" alt="" style="top: 94%; right: 2%; --w: 140px; --rot: -22deg;" />
+    <!-- IN-GRID DEAD-ZONE FILLERS — sit in the empty cells where last row of a sub-grid has only 1 item -->
+    <!-- End of scarves (Holi alone, right cols empty) -->
+    <img class="sticker" src="images/stickers/zinnia-orange.png" data-parallax="0.24" alt="" style="top: 26%; right: 22%; --w: 140px; --rot: 18deg;" />
+    <img class="sticker" src="images/stickers/babys-breath-pink.png" data-parallax="0.4" alt="" style="top: 28%; right: 38%; --w: 90px; --rot: -22deg;" />
+    <!-- End of bags (Kasumi alone often) -->
+    <img class="sticker" src="images/stickers/gerbera-orange.png" data-parallax="0.22" alt="" style="top: 56%; right: 36%; --w: 130px; --rot: -14deg;" />
+    <img class="sticker" src="images/stickers/anemone-red.png" data-parallax="0.36" alt="" style="top: 58%; right: 18%; --w: 95px; --rot: 24deg;" />
+    <!-- Wearables — Roma trailing row -->
+    <img class="sticker" src="images/stickers/rose-pink-wild.png" data-parallax="0.32" alt="" style="top: 70%; right: 24%; --w: 110px; --rot: 16deg;" />
+    <img class="sticker" src="images/stickers/balloon-flower-violet.png" data-parallax="0.26" alt="" style="top: 72%; right: 40%; --w: 100px; --rot: -18deg;" />
+    <!-- Wearables — Bretagne / Atelier trailing rows -->
+    <img class="sticker" src="images/stickers/daisy-white.png" data-parallax="0.42" alt="" style="top: 82%; right: 22%; --w: 95px; --rot: 22deg;" />
+    <img class="sticker" src="images/stickers/rose-fuchsia-bloom.png" data-parallax="0.18" alt="" style="top: 84%; right: 38%; --w: 130px; --rot: -8deg;" />
+    <img class="sticker" src="images/stickers/pansy-purple-face.png" data-parallax="0.3" alt="" style="top: 90%; right: 28%; --w: 105px; --rot: 14deg;" />
+    <!-- ARCHIVE / TRAILING-ROW FILLERS — bottom third of the section -->
+    <!-- Roma/Bretagne trailing single-card rows -->
+    <img class="sticker" src="images/stickers/poppy-decorative.png" data-parallax="0.22" alt="" style="top: 76%; right: 30%; --w: 130px; --rot: -16deg;" />
+    <img class="sticker" src="images/stickers/anemone-red.png" data-parallax="0.4" alt="" style="top: 78%; right: 50%; --w: 80px; --rot: 22deg;" />
+    <!-- Atelier (Voile Doré alone) — fill cols 2 & 3 -->
+    <img class="sticker" src="images/stickers/gerbera-fuchsia.png" data-parallax="0.24" alt="" style="top: 88%; right: 30%; --w: 130px; --rot: 14deg;" />
+    <img class="sticker" src="images/stickers/babys-breath-pink.png" data-parallax="0.42" alt="" style="top: 89%; right: 50%; --w: 90px; --rot: -22deg;" />
+    <!-- Around "The Archive" divider -->
+    <img class="sticker" src="images/stickers/cherry-blossom-pink.png" data-parallax="0.32" alt="" style="top: 93%; right: 18%; --w: 95px; --rot: 18deg;" />
+    <img class="sticker" src="images/stickers/balloon-flower-violet.png" data-parallax="0.28" alt="" style="top: 94%; left: 18%; --w: 100px; --rot: -14deg;" />
+    <!-- Vienna/archive trailing rows when expanded -->
+    <img class="sticker" src="images/stickers/poppy-painted.png" data-parallax="0.18" alt="" style="top: 97%; right: 22%; --w: 130px; --rot: -10deg;" />
+    <img class="sticker" src="images/stickers/babys-breath-white.png" data-parallax="0.44" alt="" style="top: 98%; right: 50%; --w: 80px; --rot: 26deg;" />
+    <!-- "SEE MORE / VIEW INSTAGRAM" CTA breathing room -->
+    <img class="sticker" src="images/stickers/rose-fuchsia-bloom.png" data-parallax="0.2" alt="" style="bottom: 6%; right: 18%; --w: 130px; --rot: 16deg;" />
+    <img class="sticker" src="images/stickers/pansy-purple-deep.png" data-parallax="0.36" alt="" style="bottom: 4%; left: 22%; --w: 100px; --rot: -22deg;" />
+        <div class="container jookh-inner">
       <div class="section-header reveal">
         <div class="brand-logo-wrap">
           <img src="images/logos/jookh-logo.png" alt="Jookh Couture" class="brand-logo" onerror="this.style.display='none'" />
         </div>
         <p class="section-label jookh-label">Wearable Art</p>
-        <h2 class="section-title jookh-title">Jookh Couture</h2>
         <p class="section-desc jookh-desc">
           Exquisite wearable art — where fashion meets fine art. Each Jookh piece carries Roula's signature brushstroke, made to be worn, felt, and lived in.
         </p>
@@ -142,15 +185,48 @@
     </div>
   </section>
 
+  <!-- BRAND CHAPTER DIVIDER — Jookh closing stamp -->
+  <div class="brand-chapter" aria-hidden="true">
+    <!-- BRAND-CHAPTER STICKERS — flank the centered logo -->
+    <img class="sticker" src="images/stickers/poppy-cutout-navy.png" data-parallax="0.18" alt="" style="top: 20%; left: 6%; --w: 120px; --rot: -16deg;" />
+    <img class="sticker" src="images/stickers/anemone-red.png" data-parallax="0.32" alt="" style="bottom: 18%; left: 22%; --w: 65px; --rot: 22deg;" />
+    <img class="sticker" src="images/stickers/poppy-painted.png" data-parallax="0.18" alt="" style="top: 20%; right: 6%; --w: 110px; --rot: 14deg;" />
+    <img class="sticker" src="images/stickers/gerbera-orange.png" data-parallax="0.34" alt="" style="bottom: 18%; right: 22%; --w: 70px; --rot: -22deg;" />
+            <div class="brand-chapter-rule"></div>
+    <div class="brand-chapter-center">
+      <img src="images/logos/jookh-logo.png" alt="Jookh Couture" class="brand-chapter-logo" onerror="this.style.display='none'" />
+      <p class="brand-chapter-label">Wearable Art</p>
+    </div>
+    <div class="brand-chapter-rule"></div>
+  </div>
+
   <!-- P-LO COLLECTION -->
   <section id="plo">
-    <div class="container">
+    <!-- P-LO STICKERS — gold/champagne territory, wider scatter -->
+    <img class="sticker" src="images/stickers/gerbera-orange.png" data-parallax="0.18" alt="" style="top: 4%; right: -1%; --w: 200px; --rot: 12deg;" />
+    <img class="sticker" src="images/stickers/marigold-orange.png" data-parallax="0.26" alt="" style="top: 14%; left: 4%; --w: 150px; --rot: -16deg;" />
+    <img class="sticker" src="images/stickers/peony-pink.png" data-parallax="0.36" alt="" style="top: 30%; left: 44%; --w: 90px; --rot: 22deg;" />
+    <img class="sticker" src="images/stickers/rose-fuchsia-bloom.png" data-parallax="0.16" alt="" style="top: 42%; right: 3%; --w: 170px; --rot: -22deg;" />
+    <img class="sticker" src="images/stickers/pansy-purple-face.png" data-parallax="0.3" alt="" style="top: 56%; left: 6%; --w: 120px; --rot: 18deg;" />
+    <img class="sticker" src="images/stickers/ranunculus-pink.png" data-parallax="0.4" alt="" style="bottom: 26%; right: 38%; --w: 95px; --rot: -10deg;" />
+    <img class="sticker" src="images/stickers/poppy-painted.png" data-parallax="0.18" alt="" style="bottom: 8%; left: -1%; --w: 180px; --rot: 8deg;" />
+    <img class="sticker" src="images/stickers/cherry-blossom-pink.png" data-parallax="0.32" alt="" style="bottom: 14%; right: 6%; --w: 100px; --rot: 24deg;" />
+    <!-- DENSER FILL — P-Lo middle gaps -->
+    <img class="sticker" src="images/stickers/balloon-flower-violet.png" data-parallax="0.32" alt="" style="top: 8%; left: 38%; --w: 90px; --rot: -22deg;" />
+    <img class="sticker" src="images/stickers/babys-breath-white.png" data-parallax="0.42" alt="" style="top: 22%; right: 24%; --w: 80px; --rot: 18deg;" />
+    <img class="sticker" src="images/stickers/poppy-decorative.png" data-parallax="0.18" alt="" style="top: 38%; right: 18%; --w: 100px; --rot: 14deg;" />
+    <img class="sticker" src="images/stickers/anemone-red.png" data-parallax="0.36" alt="" style="top: 50%; right: 6%; --w: 75px; --rot: -16deg;" />
+    <img class="sticker" src="images/stickers/cherry-blossom-pink.png" data-parallax="0.28" alt="" style="top: 64%; left: 22%; --w: 90px; --rot: 22deg;" />
+    <img class="sticker" src="images/stickers/poppy-tall-red.png" data-parallax="0.16" alt="" style="top: 72%; right: 4%; --w: 130px; --rot: -8deg;" />
+    <img class="sticker" src="images/stickers/babys-breath-pink.png" data-parallax="0.44" alt="" style="bottom: 32%; left: 12%; --w: 85px; --rot: 28deg;" />
+    <img class="sticker" src="images/stickers/plumbago-blue.png" data-parallax="0.24" alt="" style="bottom: 4%; left: 40%; --w: 130px; --rot: -22deg;" />
+    <img class="sticker" src="images/stickers/gerbera-fuchsia.png" data-parallax="0.2" alt="" style="bottom: 22%; right: 22%; --w: 100px; --rot: 14deg;" />
+        <div class="container">
       <div class="section-header reveal">
         <div class="brand-logo-wrap">
           <img src="images/logos/plo-logo.png" alt="P-Lo" class="brand-logo" onerror="this.style.display='none'" />
         </div>
         <p class="section-label plo-label">Sanctuary Pieces</p>
-        <h2 class="section-title plo-title">P-Lo Art Pillows</h2>
         <p class="section-desc">
           Each pillow is a unique world — handpainted, handcrafted, and hand-embroidered. Inspired by the people, music, colors, and textiles surrounding Roula's life in Beirut. Every piece from the <em>Emerge</em> collection is signed and numbered by the artist.
         </p>
@@ -167,10 +243,25 @@
 
   <!-- ABOUT -->
   <section id="about">
-    <div class="container about-container">
+    <!-- ABOUT STICKERS — column gutters around the portrait -->
+    <img class="sticker" src="images/stickers/poppy-crimson-photo.png" data-parallax="0.2" alt="" style="top: 8%; right: 2%; --w: 160px; --rot: 10deg;" />
+    <img class="sticker" src="images/stickers/cosmos-pink.png" data-parallax="0.34" alt="" style="top: 28%; left: 44%; --w: 90px; --rot: -22deg;" />
+    <img class="sticker" src="images/stickers/pansy-purple-deep.png" data-parallax="0.26" alt="" style="bottom: 22%; right: 6%; --w: 120px; --rot: 18deg;" />
+    <img class="sticker" src="images/stickers/babys-breath-white.png" data-parallax="0.42" alt="" style="bottom: 10%; left: 38%; --w: 100px; --rot: 14deg;" />
+    <img class="sticker" src="images/stickers/poppy-tall-red.png" data-parallax="0.16" alt="" style="bottom: 6%; right: 38%; --w: 130px; --rot: -10deg;" />
+    <!-- DENSER FILL — about gaps -->
+    <img class="sticker" src="images/stickers/anemone-red.png" data-parallax="0.36" alt="" style="top: 14%; left: 6%; --w: 80px; --rot: 22deg;" />
+    <img class="sticker" src="images/stickers/balloon-flower-violet.png" data-parallax="0.28" alt="" style="top: 38%; right: 22%; --w: 90px; --rot: -28deg;" />
+    <img class="sticker" src="images/stickers/poppy-painted.png" data-parallax="0.2" alt="" style="top: 56%; left: 4%; --w: 110px; --rot: 14deg;" />
+    <img class="sticker" src="images/stickers/babys-breath-pink.png" data-parallax="0.42" alt="" style="top: 70%; right: 28%; --w: 75px; --rot: -18deg;" />
+    <img class="sticker" src="images/stickers/gerbera-orange.png" data-parallax="0.24" alt="" style="bottom: 32%; left: 22%; --w: 85px; --rot: 32deg;" />
+    <img class="sticker" src="images/stickers/rose-fuchsia-bloom.png" data-parallax="0.18" alt="" style="bottom: 10%; left: 4%; --w: 120px; --rot: 8deg;" />
+    <!-- HORSE — pinned OVER Roula's portrait, lower-right corner of the photo -->
+    <img class="sticker" src="images/stickers/horse-magenta.png" data-parallax="0.12" alt="" style="top: 50%; left: 26%; --w: 170px; --rot: -8deg;" />
+        <div class="container about-container">
       <div class="about-image reveal">
         <div class="img-frame">
-          <img src="images/about/roula-harb.jpg" alt="Roula Harb" onerror="this.parentElement.classList.add('img-placeholder')" />
+          <img src="images/about/IMG_20250718_231651_852.webp" alt="Roula Harb" onerror="this.parentElement.classList.add('img-placeholder')" />
           <div class="img-placeholder-text">Photo of Roula Harb</div>
         </div>
         <div class="about-paint-slash" aria-hidden="true"></div>
@@ -194,7 +285,17 @@
 
   <!-- PHILOSOPHY QUOTE -->
   <section id="philosophy">
-    <div class="philosophy-bg" aria-hidden="true">
+    <!-- PHILOSOPHY STICKERS — dusk plum, amber-glow shadow makes them pop -->
+    <img class="sticker" src="images/stickers/balloon-flower-violet.png" data-parallax="0.18" alt="" style="top: 8%; left: 4%; --w: 160px; --rot: -10deg;" />
+    <img class="sticker" src="images/stickers/anemone-red.png" data-parallax="0.32" alt="" style="top: 18%; right: 8%; --w: 90px; --rot: 22deg;" />
+    <img class="sticker" src="images/stickers/balloon-flower-violet.png" data-parallax="0.24" alt="" style="bottom: 24%; left: 8%; --w: 110px; --rot: 18deg;" />
+    <img class="sticker" src="images/stickers/poppy-tall-red.png" data-parallax="0.16" alt="" style="bottom: 8%; right: 6%; --w: 140px; --rot: -16deg;" />
+    <img class="sticker" src="images/stickers/babys-breath-pink.png" data-parallax="0.4" alt="" style="bottom: 14%; left: 42%; --w: 90px; --rot: 28deg;" />
+    <!-- DENSER FILL — philosophy dusk gaps -->
+    <img class="sticker" src="images/stickers/poppy-decorative.png" data-parallax="0.22" alt="" style="top: 38%; left: 22%; --w: 100px; --rot: -22deg;" />
+    <img class="sticker" src="images/stickers/rose-yellow-flame.png" data-parallax="0.36" alt="" style="top: 54%; right: 22%; --w: 80px; --rot: 28deg;" />
+    <img class="sticker" src="images/stickers/gerbera-orange.png" data-parallax="0.28" alt="" style="bottom: 32%; right: 38%; --w: 90px; --rot: -14deg;" />
+        <div class="philosophy-bg" aria-hidden="true">
       <img src="images/close-up/texture-flower-lapel.png" alt="" draggable="false" />
     </div>
     <div class="philosophy-bg-overlay" aria-hidden="true"></div>
@@ -206,7 +307,18 @@
 
   <!-- CONTACT -->
   <section id="contact">
-    <div class="container">
+    <!-- CONTACT STICKERS — dusk plum, amber glow -->
+    <img class="sticker" src="images/stickers/poppy-painted.png" data-parallax="0.16" alt="" style="top: 6%; left: 4%; --w: 150px; --rot: 12deg;" />
+    <img class="sticker" src="images/stickers/roses-pink-trio.png" data-parallax="0.24" alt="" style="top: 16%; right: 4%; --w: 130px; --rot: -18deg;" />
+    <img class="sticker" src="images/stickers/rose-pink-wild.png" data-parallax="0.36" alt="" style="bottom: 28%; left: 38%; --w: 90px; --rot: 22deg;" />
+    <img class="sticker" src="images/stickers/anemone-red.png" data-parallax="0.28" alt="" style="bottom: 10%; right: 8%; --w: 110px; --rot: -10deg;" />
+    <img class="sticker" src="images/stickers/cherry-blossom-pink.png" data-parallax="0.4" alt="" style="bottom: 6%; left: 6%; --w: 95px; --rot: 28deg;" />
+    <!-- DENSER FILL — contact dusk gaps -->
+    <img class="sticker" src="images/stickers/balloon-flower-violet.png" data-parallax="0.32" alt="" style="top: 32%; left: 18%; --w: 90px; --rot: 22deg;" />
+    <img class="sticker" src="images/stickers/poppy-tall-red.png" data-parallax="0.18" alt="" style="top: 48%; right: 4%; --w: 120px; --rot: -16deg;" />
+    <img class="sticker" src="images/stickers/babys-breath-pink.png" data-parallax="0.42" alt="" style="bottom: 36%; right: 38%; --w: 80px; --rot: 18deg;" />
+    <img class="sticker" src="images/stickers/gerbera-fuchsia.png" data-parallax="0.24" alt="" style="bottom: 4%; right: 22%; --w: 100px; --rot: -22deg;" />
+        <div class="container">
       <div class="section-header reveal">
         <p class="section-label">Get in Touch</p>
         <h2 class="section-title contact-title">To hold one of these works,<br /><em>write to Roula directly.</em></h2>
@@ -246,6 +358,10 @@
 
   <!-- FOOTER -->
   <footer id="footer">
+    <!-- FOOTER STICKERS — small corner accents -->
+    <img class="sticker" src="images/stickers/anemone-red.png" data-parallax="0.22" alt="" style="top: 26%; left: 4%; --w: 80px; --rot: -16deg;" />
+    <img class="sticker" src="images/stickers/plumbago-blue.png" data-parallax="0.28" alt="" style="top: 22%; right: 4%; --w: 95px; --rot: 18deg;" />
+    <img class="sticker" src="images/stickers/babys-breath-pink.png" data-parallax="0.36" alt="" style="bottom: 22%; left: 22%; --w: 75px; --rot: 22deg;" />
     <div class="footer-gradient-bar" aria-hidden="true"></div>
     <div class="container footer-inner">
       <div class="footer-brand">
@@ -259,11 +375,13 @@
         <a href="#contact">Contact</a>
       </div>
       <div class="footer-social">
-        <a href="https://www.instagram.com/jookhcouture" target="_blank" rel="noopener" aria-label="Jookh Instagram">
+        <a href="https://www.instagram.com/jookhcouture" target="_blank" rel="noopener" aria-label="Jookh Instagram" class="footer-social-link">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          <span class="footer-social-label">Jookh</span>
         </a>
-        <a href="https://www.instagram.com/artonpillows/" target="_blank" rel="noopener" aria-label="P-Lo Instagram">
+        <a href="https://www.instagram.com/artonpillows/" target="_blank" rel="noopener" aria-label="P-Lo Instagram" class="footer-social-link">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          <span class="footer-social-label">P-Lo</span>
         </a>
       </div>
     </div>
@@ -272,6 +390,7 @@
     </div>
   </footer>
 
+  <script src="data/hero-slides.js"></script>
   <script src="data/products.js"></script>
   <script src="render.js"></script>
   <script src="script.js"></script>

@@ -1,0 +1,15 @@
+# Claude worktrees and backup snapshots
+.claude/
+*.backup-*
+
+# Build artifacts and node deps
+node_modules/
+deploy/
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+# Editor configs
+.vscode/
+.idea/

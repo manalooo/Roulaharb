@@ -7,6 +7,137 @@
 (function () {
   'use strict';
 
+  // ─── HERO SLIDESHOW ──────────────────────────────
+  // Images are loaded from data/hero-slides.js (window.HERO_SLIDES).
+  // To change what shows: put images in images/hero/ then run:
+  //   node sync-hero.js
+  (function () {
+    var container = document.getElementById('hero-slides');
+    if (!container) return;
+
+    // Load image list — fetch JSON over HTTP, fall back to window.HERO_SLIDES
+    function buildSlideshow(paths) {
+      if (!paths || !paths.length) return;
+
+      // Build slide DOM
+      paths.forEach(function (src, i) {
+        var div = document.createElement('div');
+        div.className = 'hero-slide hero-slide--' + (i + 1);
+        var img = document.createElement('img');
+        img.src          = src;
+        img.alt          = '';
+        img.draggable    = false;
+        img.loading      = i === 0 ? 'eager' : 'lazy';
+        div.appendChild(img);
+        container.appendChild(div);
+      });
+
+      // Start the cycle
+      var slides   = Array.from(container.querySelectorAll('.hero-slide'));
+      var DURATION = 6000;  // each slide visible for 6s
+      var CLEANUP  = 2400;  // remove is-prev after crossfade completes (2.2s)
+      var current  = 0;
+      var timer    = null;
+
+      slides[0].classList.add('is-active');
+
+      function go(targetIndex) {
+        if (targetIndex === current || slides.length < 2) return;
+        var prev = slides[current];
+        current  = (targetIndex + slides.length) % slides.length;
+        var next = slides[current];
+        prev.classList.remove('is-active');
+        prev.classList.add('is-prev');
+        next.classList.add('is-active');
+        setTimeout(function () { prev.classList.remove('is-prev'); }, CLEANUP);
+      }
+      function nextSlide() { go(current + 1); }
+      function prevSlide() { go(current - 1); }
+
+      function startAuto() {
+        stopAuto();
+        timer = setInterval(nextSlide, DURATION);
+      }
+      function stopAuto() { if (timer) { clearInterval(timer); timer = null; } }
+      function resetAuto() { startAuto(); }
+      startAuto();
+
+      // ── Arrow navigation ──
+      if (slides.length > 1) {
+        var hero = document.getElementById('hero');
+        var btnPrev = document.createElement('button');
+        btnPrev.type = 'button';
+        btnPrev.className = 'hero-arrow hero-arrow--prev';
+        btnPrev.setAttribute('aria-label', 'Previous image');
+        btnPrev.innerHTML = '<span aria-hidden="true">&#8592;</span>';
+
+        var btnNext = document.createElement('button');
+        btnNext.type = 'button';
+        btnNext.className = 'hero-arrow hero-arrow--next';
+        btnNext.setAttribute('aria-label', 'Next image');
+        btnNext.innerHTML = '<span aria-hidden="true">&#8594;</span>';
+
+        btnPrev.addEventListener('click', function (e) { e.preventDefault(); prevSlide(); resetAuto(); });
+        btnNext.addEventListener('click', function (e) { e.preventDefault(); nextSlide(); resetAuto(); });
+
+        hero.appendChild(btnPrev);
+        hero.appendChild(btnNext);
+
+        // Pause auto-advance while hovering arrows so users aren't rushed
+        [btnPrev, btnNext].forEach(function (b) {
+          b.addEventListener('mouseenter', stopAuto);
+          b.addEventListener('mouseleave', startAuto);
+        });
+      }
+    }
+
+    if (typeof fetch !== 'undefined') {
+      fetch('data/hero-slides.json')
+        .then(function (r) { if (!r.ok) throw new Error(); return r.json(); })
+        .then(buildSlideshow)
+        .catch(function () { buildSlideshow(window.HERO_SLIDES || []); });
+    } else {
+      buildSlideshow(window.HERO_SLIDES || []);
+    }
+  })();
+
+  // ─── GENTLE SMOOTH SCROLL ────────────────────────
+  // Intercepts all anchor links and scrolls softly over 900ms
+  function gentleScrollTo(target) {
+    var start    = window.scrollY;
+    var end      = target.getBoundingClientRect().top + start - 80; // 80px nav offset
+    var distance = end - start;
+    var duration = 900;
+    var startTime = null;
+
+    function ease(t) {
+      // easeInOutCubic — slow start, smooth middle, gentle landing
+      return t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
+    }
+
+    function step(timestamp) {
+      if (!startTime) startTime = timestamp;
+      var elapsed  = timestamp - startTime;
+      var progress = Math.min(elapsed / duration, 1);
+      window.scrollTo(0, start + distance * ease(progress));
+      if (progress < 1) requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+  }
+
+  document.addEventListener('click', function (e) {
+    var link = e.target.closest('a[href^="#"]');
+    if (!link) return;
+    // Reserve-this-piece buttons add to the inquiry basket — never scroll.
+    if (link.classList.contains('btn-inquire')) return;
+    var id = link.getAttribute('href').slice(1);
+    if (!id) return;
+    var el = document.getElementById(id);
+    if (!el) return;
+    e.preventDefault();
+    gentleScrollTo(el);
+  });
+
   // ─── WHATSAPP NUMBER ─────────────────────────────
   // Fill in Roula's number in international format, no + or spaces.
   // Example: '9613001234'  (Lebanon +961 prefix)
@@ -42,21 +173,23 @@
   handleNavScroll();
 
   // ─── MOBILE HAMBURGER ────────────────────────────
-  const hamburger = document.getElementById('hamburger');
-  const navLinks  = document.getElementById('nav-links');
+  const hamburger   = document.getElementById('hamburger');
+  const navLinksAll = document.querySelectorAll('.nav-links');
 
-  if (hamburger && navLinks) {
+  if (hamburger && navLinksAll.length) {
     hamburger.addEventListener('click', function () {
-      const isOpen = navLinks.classList.toggle('open');
-      hamburger.classList.toggle('open', isOpen);
+      const isOpen = hamburger.classList.toggle('open');
+      navLinksAll.forEach(function (nl) { nl.classList.toggle('open', isOpen); });
       hamburger.setAttribute('aria-expanded', isOpen);
     });
 
-    navLinks.querySelectorAll('a').forEach(function (link) {
-      link.addEventListener('click', function () {
-        navLinks.classList.remove('open');
-        hamburger.classList.remove('open');
-        hamburger.setAttribute('aria-expanded', 'false');
+    navLinksAll.forEach(function (nl) {
+      nl.querySelectorAll('a').forEach(function (link) {
+        link.addEventListener('click', function () {
+          navLinksAll.forEach(function (nl2) { nl2.classList.remove('open'); });
+          hamburger.classList.remove('open');
+          hamburger.setAttribute('aria-expanded', 'false');
+        });
       });
     });
   }
@@ -140,6 +273,8 @@
   document.addEventListener('click', function (e) {
     const anchor = e.target.closest('a[href^="#"]');
     if (!anchor) return;
+    // Reserve-this-piece buttons add to the inquiry basket only — don't scroll.
+    if (anchor.classList.contains('btn-inquire')) return;
     const target = document.querySelector(anchor.getAttribute('href'));
     if (target) {
       e.preventDefault();
@@ -160,9 +295,16 @@
             link.classList.add('active');
           }
         });
+
+        // Toggle P-Lo body class for smooth background transition
+        if (entry.target.id === 'plo') {
+          document.body.classList.add('plo-active');
+        } else {
+          document.body.classList.remove('plo-active');
+        }
       }
     });
-  }, { threshold: 0.4 });
+  }, { threshold: 0.25 });
 
   sections.forEach(function (section) { sectionObserver.observe(section); });
 
@@ -437,4 +579,150 @@
   // Initialise on load (restore any session state)
   updateBasketUI();
 
+})();
+
+/* ═══════════════════════════════════════════════════════
+   STICKERS — fresh adventure
+     1. Parallax drift (each sticker moves at its own speed
+        opposite to scroll, anchored to its parent section).
+     2. FAST SMOOTH scroll-rotation — accumulates rotation
+        from scroll distance × per-sticker speed, then lerps
+        toward target each frame for buttery smoothness.
+     3. Subtle viewport-progress breathing — petals scale up
+        gently when near the viewport center, shrink at edges.
+     4. Scroll-reveal fade-in via IntersectionObserver.
+   ═══════════════════════════════════════════════════════ */
+(function stickerAdventure() {
+  'use strict';
+  const stickers = Array.from(document.querySelectorAll('.sticker[data-parallax]'));
+  if (!stickers.length) return;
+
+  const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // ── Cache per-sticker geometry & per-sticker animation state
+  function cache() {
+    stickers.forEach(s => {
+      const parent = s.parentElement;
+      const r = parent.getBoundingClientRect();
+      s.__anchorTop = r.top + window.scrollY;
+      s.__speed     = parseFloat(s.dataset.parallax) || 0.18;
+      s.__rotTarget = s.__rotTarget || 0;   // accumulating target rotation
+      s.__rotCur    = s.__rotCur    || 0;   // smoothed current rotation
+    });
+  }
+
+  // ── Fade-in when each sticker enters viewport
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+  }, { rootMargin: '0px 0px -8% 0px', threshold: 0.04 });
+  stickers.forEach(s => io.observe(s));
+
+  if (prefersReduced) { cache(); return; }
+
+  // ── Main rAF loop: parallax + scroll-rotation + breathing
+  let lastY = window.scrollY;
+  let vh    = window.innerHeight;
+
+  function frame() {
+    const y  = window.scrollY;
+    const dy = y - lastY;            // signed scroll delta (px since last frame)
+    lastY = y;
+
+    // Accumulate rotation target from scroll distance
+    if (dy !== 0) {
+      stickers.forEach(s => {
+        // 0.42 here is the ROTATION GAIN — bigger = faster spin per scroll-px
+        s.__rotTarget += dy * s.__speed * 0.42;
+      });
+    }
+
+    // Per-frame smoothing + parallax + breathing
+    stickers.forEach(s => {
+      // PARALLAX — drift opposite to scroll, anchored to section center
+      const rel = (y + vh * 0.5) - s.__anchorTop;
+      const py  = rel * s.__speed * -0.95;
+      s.style.setProperty('--py', py.toFixed(1) + 'px');
+
+      // SMOOTH ROTATION — lerp curRot → target at 0.28 (high gain = snappy but smooth)
+      s.__rotCur += (s.__rotTarget - s.__rotCur) * 0.28;
+      s.style.setProperty('--scroll-rot', s.__rotCur.toFixed(2) + 'deg');
+
+      // BREATHING — viewport-progress scale (peak at 1.06× when sticker is centered)
+      const r  = s.getBoundingClientRect();
+      const cy = r.top + r.height * 0.5;
+      const distNorm = Math.min(1, Math.abs(cy - vh * 0.5) / (vh * 0.7));
+      const breath   = 0.94 + (1 - distNorm) * 0.12;   // 0.94 at edge, 1.06 at center
+      s.style.setProperty('--breath', breath.toFixed(3));
+    });
+
+    requestAnimationFrame(frame);
+  }
+
+  cache();
+  requestAnimationFrame(frame);
+
+  window.addEventListener('resize', () => { vh = window.innerHeight; cache(); }, { passive: true });
+  window.addEventListener('load',   () => { cache(); }, { passive: true });
+})();
+
+/* ═══════════════════════════════════════════════════════
+   GRID EXPANDERS — show first N cards in long grids,
+   reveal the rest behind a "+ see N more" button.
+   ═══════════════════════════════════════════════════════ */
+(function gridExpanders() {
+  'use strict';
+  const presets = {
+    'scarves-grid': { initial: 6, label: 'scarves' },
+    'bags-grid':    { initial: 8, label: 'bags'    },
+  };
+
+  function setupExpanders() {
+    Object.keys(presets).forEach(gridId => {
+      const container = document.getElementById(gridId);
+      if (!container) return;
+      // skip if already wired
+      if (container.dataset.expanderApplied) return;
+
+      // grids may be wrapped in .jookh-subgrid inside the container
+      const grids = container.querySelectorAll('.jookh-grid, .jookh-subgrid');
+      if (!grids.length) return;
+
+      grids.forEach(grid => {
+        const cards = Array.from(grid.querySelectorAll('.product-card'));
+        const { initial, label } = presets[gridId];
+        if (cards.length <= initial) return;
+
+        const hidden = cards.slice(initial);
+        hidden.forEach(c => c.classList.add('is-hidden'));
+
+        const btn = document.createElement('button');
+        btn.className = 'grid-expand-btn';
+        btn.setAttribute('aria-expanded', 'false');
+        btn.innerHTML =
+          '<span class="btn-text">+ See ' + hidden.length + ' more ' + label + '</span>' +
+          '<span class="arrow">↓</span>';
+
+        btn.addEventListener('click', () => {
+          const wasOpen = btn.getAttribute('aria-expanded') === 'true';
+          btn.setAttribute('aria-expanded', String(!wasOpen));
+          hidden.forEach(c => c.classList.toggle('is-hidden', wasOpen));
+          btn.querySelector('.btn-text').textContent = wasOpen
+            ? '+ See ' + hidden.length + ' more ' + label
+            : '− Show fewer ' + label;
+        });
+
+        // Insert after the grid (so it sits below the cards)
+        grid.parentNode.insertBefore(btn, grid.nextSibling);
+      });
+
+      container.dataset.expanderApplied = '1';
+    });
+  }
+
+  // render.js builds grids on DOMContentLoaded; we run after it.
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', () => setTimeout(setupExpanders, 50));
+  } else {
+    setTimeout(setupExpanders, 50);
+  }
 })();
