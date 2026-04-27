@@ -26,11 +26,26 @@
       return;
     }
 
+    // Accept both legacy static shape (`views`) and API shape (`images.main`/`images.hover`).
+    var normalizedProducts = products.map(function (p) {
+      var out = Object.assign({}, p);
+      if (!Array.isArray(out.views) || !out.views.length) {
+        var mappedViews = [];
+        if (out.images && out.images.main) mappedViews.push(out.images.main);
+        if (out.images && out.images.hover) mappedViews.push(out.images.hover);
+        out.views = mappedViews;
+      }
+      if (!out.medium && out.material) {
+        out.medium = out.material;
+      }
+      return out;
+    });
+
     sections.forEach(function (section) {
       var container = document.getElementById(section.id);
       if (!container) return;
 
-      var items = products.filter(function (p) { return p.category === section.category; });
+      var items = normalizedProducts.filter(function (p) { return p.category === section.category; });
 
       // ── WEARABLES: new collection first, then archive ──
       if (section.category === 'wearables') {

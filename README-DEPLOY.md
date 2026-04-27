@@ -54,6 +54,8 @@ bash scripts/upload-r2.sh
 - Add `IMAGE_BASE` = your R2 public URL from step 6 (e.g. `https://images.roulaharb.com/`)
 - Re-deploy.
 
+Note: the project also includes a Pages Function at `/images/*` that reads from the `IMAGES` R2 binding. If `IMAGE_BASE` is left as `/images/`, images still work through your own domain without exposing the R2 URL.
+
 ### 9. Done
 Visit `roulaharb.pages.dev`. Products come from D1, images from R2.
 

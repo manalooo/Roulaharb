@@ -13,3 +13,4 @@ Thumbs.db
 # Editor configs
 .vscode/
 .idea/
+.wrangler/
