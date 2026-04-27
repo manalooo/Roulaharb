@@ -627,13 +627,8 @@
     const dy = y - lastY;            // signed scroll delta (px since last frame)
     lastY = y;
 
-    // Accumulate rotation target from scroll distance
-    if (dy !== 0) {
-      stickers.forEach(s => {
-        // 1.4 = ROTATION GAIN — visibly fast turning per scroll-px
-        s.__rotTarget += dy * s.__speed * 1.4;
-      });
-    }
+    // Rotation disabled — stickers stay at their fixed --rot only.
+    // (Was: accumulate rotation from scroll distance — felt too busy.)
 
     // Per-frame smoothing + parallax + breathing
     stickers.forEach(s => {
@@ -642,9 +637,8 @@
       const py  = rel * s.__speed * -0.95;
       s.style.setProperty('--py', py.toFixed(1) + 'px');
 
-      // SMOOTH ROTATION — lerp curRot → target at 0.28 (high gain = snappy but smooth)
-      s.__rotCur += (s.__rotTarget - s.__rotCur) * 0.28;
-      s.style.setProperty('--scroll-rot', s.__rotCur.toFixed(2) + 'deg');
+      // Rotation disabled — keep --scroll-rot at 0 so stickers stay still.
+      s.style.setProperty('--scroll-rot', '0deg');
 
       // BREATHING — viewport-progress scale (peak at 1.06× when sticker is centered)
       const r  = s.getBoundingClientRect();

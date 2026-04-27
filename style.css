@@ -1048,12 +1048,11 @@ a   { text-decoration: none; color: inherit; }
 #plo {
   position: relative;
   padding: var(--space-2xl) 0 var(--space-3xl);  /* mirror Jookh: tighter top (from chapter), φ breath at bottom */
-  /* Smooth transitions — top fades from Jookh's terracotta end, bottom fades into About's blush */
+  /* Smooth transitions — top continues from brand-chapter's champagne end, bottom fades into About's blush */
   background: linear-gradient(
     180deg,
-    #E88B6E 0%,      /* terracotta — bridge from Jookh */
-    #F6D9A8 8%,      /* settle into champagne gold */
-    #F6D9A8 92%,     /* hold champagne */
+    #F6D9A8 0%,      /* champagne — seamless from brand-chapter's bottom */
+    #F6D9A8 92%,     /* hold champagne through the section */
     #FBE4D8 100%     /* blend down into About's blush */
   );
   border-top: none;
@@ -1096,11 +1095,10 @@ a   { text-decoration: none; color: inherit; }
 #about {
   position: relative;
   padding: var(--space-3xl) 0;
-  /* Smooth transitions — top fades from P-Lo champagne, bottom fades into Philosophy plum */
+  /* Smooth transitions — top continues P-Lo's blush end, bottom fades into Philosophy plum */
   background: linear-gradient(
     180deg,
-    #F6D9A8 0%,      /* champagne — bridge from P-Lo */
-    #FBE4D8 8%,      /* settle into blush */
+    #FBE4D8 0%,      /* blush — seamless from P-Lo's bottom */
     #FBE4D8 78%,     /* hold blush */
     #3B1E3A 100%     /* blend down into Philosophy's dusk plum */
   );
