@@ -671,9 +671,13 @@
    ═══════════════════════════════════════════════════════ */
 (function gridExpanders() {
   'use strict';
+  // One full row visible by default — desktop has 3 cols (4 for bags).
+  // Click the "+ N more" button to reveal the rest.
   const presets = {
-    'scarves-grid': { initial: 6, label: 'scarves' },
-    'bags-grid':    { initial: 8, label: 'bags'    },
+    'scarves-grid':   { initial: 3, label: 'scarves'   },
+    'bags-grid':      { initial: 4, label: 'bags'      },
+    'wearables-grid': { initial: 3, label: 'pieces'    },
+    'plo-grid':       { initial: 3, label: 'pillows'   },
   };
 
   function setupExpanders() {
@@ -683,11 +687,13 @@
       // skip if already wired
       if (container.dataset.expanderApplied) return;
 
-      // grids may be wrapped in .jookh-subgrid inside the container
-      const grids = container.querySelectorAll('.jookh-grid, .jookh-subgrid');
+      // grids may be wrapped in .jookh-subgrid (or .collection-grid for pillows)
+      const grids = container.querySelectorAll('.jookh-grid, .jookh-subgrid, .collection-grid');
       if (!grids.length) return;
 
       grids.forEach(grid => {
+        // Skip archive grids — they have their own toggle (.archive-wrap)
+        if (grid.closest('.archive-wrap')) return;
         const cards = Array.from(grid.querySelectorAll('.product-card'));
         const { initial, label } = presets[gridId];
         if (cards.length <= initial) return;
