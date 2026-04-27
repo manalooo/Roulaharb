@@ -630,8 +630,8 @@
     // Accumulate rotation target from scroll distance
     if (dy !== 0) {
       stickers.forEach(s => {
-        // 0.42 here is the ROTATION GAIN — bigger = faster spin per scroll-px
-        s.__rotTarget += dy * s.__speed * 0.42;
+        // 1.4 = ROTATION GAIN — visibly fast turning per scroll-px
+        s.__rotTarget += dy * s.__speed * 1.4;
       });
     }
 
@@ -662,6 +662,9 @@
 
   window.addEventListener('resize', () => { vh = window.innerHeight; cache(); }, { passive: true });
   window.addEventListener('load',   () => { cache(); }, { passive: true });
+
+  // Expose so other code (grid expanders, etc.) can re-cache after DOM grows.
+  window.__rerollStickers = cache;
 })();
 
 /* ═══════════════════════════════════════════════════════
@@ -714,6 +717,13 @@
           btn.querySelector('.btn-text').textContent = wasOpen
             ? '+ See ' + hidden.length + ' more ' + label
             : '− Show fewer ' + label;
+          // Section just grew/shrank — re-cache sticker anchors so parallax stays aligned
+          // and stickers don't drift off-screen.
+          if (typeof window.__rerollStickers === 'function') {
+            window.__rerollStickers();
+            // and once more after layout settles
+            setTimeout(window.__rerollStickers, 80);
+          }
         });
 
         // Insert after the grid (so it sits below the cards)
