@@ -139,9 +139,8 @@
   });
 
   // ─── WHATSAPP NUMBER ─────────────────────────────
-  // Fill in Roula's number in international format, no + or spaces.
-  // Example: '9613001234'  (Lebanon +961 prefix)
-  var WHATSAPP_NUMBER = '';
+  // International format, no + or spaces. Lebanon: 961 + 8-digit mobile.
+  var WHATSAPP_NUMBER = '96181341586';
 
   // ─── NAVBAR SCROLL + HIDE ON SCROLL DOWN ────────
   const navbar = document.getElementById('navbar');
