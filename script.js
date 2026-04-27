@@ -741,3 +741,69 @@
     setTimeout(setupExpanders, 50);
   }
 })();
+
+/* ═══════════════════════════════════════════════════════
+   PETAL FALL — clicking any sticker scatters 6-9 petal
+   shapes from its center; petals drift with gravity + sway,
+   slowly rotate, and fade out.
+   ═══════════════════════════════════════════════════════ */
+(function petalFall() {
+  'use strict';
+  const PETAL_COLORS = [
+    '#C94A5A',  // rose madder
+    '#E88B6E',  // terracotta
+    '#F5B99C',  // peach sorbet
+    '#FBE4D8',  // dawn blush
+    '#6B1F2E',  // deep wine madder
+    '#B84530',  // painterly terracotta
+    '#F6D9A8',  // champagne gold
+    '#D48A3A',  // burnt amber
+  ];
+  const GRAVITY  = 0.07;
+  const DRAG     = 0.987;
+
+  function spawn(x, y) {
+    const count = 6 + (Math.random() * 4 | 0);
+    for (let i = 0; i < count; i++) {
+      const p = document.createElement('div');
+      p.className = 'petal-fall';
+      p.style.background = PETAL_COLORS[Math.random() * PETAL_COLORS.length | 0];
+      // randomise size a touch
+      const scale = 0.7 + Math.random() * 0.7;
+      document.body.appendChild(p);
+
+      let px = x + (Math.random() - 0.5) * 14;
+      let py = y + (Math.random() - 0.5) * 14;
+      let vx = (Math.random() - 0.5) * 5;
+      let vy = -Math.random() * 2.5 - 0.4;     // initial upward burst
+      let rot = Math.random() * 360;
+      let rotV = (Math.random() - 0.5) * 5;
+      const sway = 0.04 + Math.random() * 0.05;
+      const phase = Math.random() * Math.PI * 2;
+      let life = 0;
+      const maxLife = 110 + Math.random() * 60;
+
+      function step() {
+        life++;
+        if (life > maxLife || py > window.innerHeight + 60) { p.remove(); return; }
+        vx = (vx + Math.sin(life * sway + phase) * 0.06) * DRAG;
+        vy = (vy + GRAVITY) * DRAG;
+        px += vx;
+        py += vy;
+        rot += rotV * (1 + life * 0.003);
+        const o = 1 - Math.pow(life / maxLife, 2.4);
+        p.style.transform = 'translate(' + px.toFixed(1) + 'px, ' + py.toFixed(1) + 'px) rotate(' + rot.toFixed(1) + 'deg) scale(' + scale.toFixed(2) + ')';
+        p.style.opacity = o.toFixed(2);
+        requestAnimationFrame(step);
+      }
+      requestAnimationFrame(step);
+    }
+  }
+
+  document.addEventListener('click', function (e) {
+    const s = e.target.closest('.sticker');
+    if (!s) return;
+    const r = s.getBoundingClientRect();
+    spawn(r.left + r.width / 2, r.top + r.height / 2);
+  });
+})();

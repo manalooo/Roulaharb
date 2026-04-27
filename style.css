@@ -2406,3 +2406,24 @@ a   { text-decoration: none; color: inherit; }
   transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
 }
 .grid-expand-btn[aria-expanded="true"] .arrow { transform: rotate(180deg); }
+
+/* ═══════════════════════════════════════════════════════
+   PETAL FALL — clicking any sticker scatters petal-shapes
+   that drift down the page with gravity + sway + fade.
+   ═══════════════════════════════════════════════════════ */
+.petal-fall {
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 9999;
+  width: 11px;
+  height: 18px;
+  /* leaf-petal shape — rounded on top-right + bottom-left only */
+  border-radius: 100% 0 100% 0;
+  box-shadow:
+    0 1px 3px rgba(60, 20, 30, 0.32),
+    inset 0 -2px 3px rgba(40, 12, 20, 0.18);
+  will-change: transform, opacity;
+  transform-origin: 50% 50%;
+}
