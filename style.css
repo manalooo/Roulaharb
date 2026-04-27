@@ -1048,7 +1048,14 @@ a   { text-decoration: none; color: inherit; }
 #plo {
   position: relative;
   padding: var(--space-2xl) 0 var(--space-3xl);  /* mirror Jookh: tighter top (from chapter), φ breath at bottom */
-  background: #F6D9A8;
+  /* Smooth transitions — top fades from Jookh's terracotta end, bottom fades into About's blush */
+  background: linear-gradient(
+    180deg,
+    #E88B6E 0%,      /* terracotta — bridge from Jookh */
+    #F6D9A8 8%,      /* settle into champagne gold */
+    #F6D9A8 92%,     /* hold champagne */
+    #FBE4D8 100%     /* blend down into About's blush */
+  );
   border-top: none;
   overflow: hidden;
 }
@@ -1089,7 +1096,14 @@ a   { text-decoration: none; color: inherit; }
 #about {
   position: relative;
   padding: var(--space-3xl) 0;
-  background: #FBE4D8;              /* pale oyster-rose — echoes hero top, bookends */
+  /* Smooth transitions — top fades from P-Lo champagne, bottom fades into Philosophy plum */
+  background: linear-gradient(
+    180deg,
+    #F6D9A8 0%,      /* champagne — bridge from P-Lo */
+    #FBE4D8 8%,      /* settle into blush */
+    #FBE4D8 78%,     /* hold blush */
+    #3B1E3A 100%     /* blend down into Philosophy's dusk plum */
+  );
   overflow: hidden;
   border-top: none;
 }
@@ -1290,7 +1304,13 @@ a   { text-decoration: none; color: inherit; }
 #contact {
   position: relative;
   padding: var(--space-3xl) 0;
-  background: #3B1E3A;
+  /* Bottom fades into Footer's ivory champagne so the seam disappears */
+  background: linear-gradient(
+    180deg,
+    #3B1E3A 0%,      /* dusk plum — continuous from Philosophy */
+    #3B1E3A 78%,     /* hold plum */
+    #F4EDE4 100%     /* blend down into Footer's ivory champagne */
+  );
   overflow: hidden;
 }
 #contact .section-label { color: #D8B0C0; }        /* dusty rose — echoes Jookh's end-wash */
