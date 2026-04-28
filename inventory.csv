@@ -44,7 +44,7 @@ wear-28,Olive Kyoto Tweed,wearables,Kyoto Coat,,sold,ENTER PRICE HERE,wool/cotto
 wear-30,Jaipur Gilded Circle Robe,wearables,Jaipur,,available,ENTER PRICE HERE,ENTER MATERIAL HERE,images/jookh/wearables/piece-30-view-2.jpg,images/jookh/wearables/piece-30-view-1.jpg
 wear-31,Jaipur Noir & Gold Robe,wearables,Jaipur,,available,ENTER PRICE HERE,ENTER MATERIAL HERE,images/jookh/wearables/piece-31-view-2.jpg,images/jookh/wearables/piece-31-view-1.jpg
 wear-33,Roma Scarlet Blazer,wearables,Roma,,available,380,cotton,images/jookh/wearables/piece-33-view-2.jpg,images/jookh/wearables/piece-33-view-1.jpg
-wear-34,Ivory Ikebana Robe,wearables,Japan,,available,550,cotton,images/jookh/wearables/piece-34-view-2.jpg,images/jookh/wearables/piece-34-view-1.jpg
+wear-34,Ivory Ikebana Robe,wearables,Japan,,available,550,cotton,images/jookh/wearables/piece-34-view-1.jpg,images/jookh/wearables/piece-34-view-2.jpg
 wear-35,Coral Roma Blazer,wearables,Roma,,available,420,cotton,images/jookh/wearables/piece-35-view-2.jpg,images/jookh/wearables/piece-35-view-1.jpg
 wear-36,Roma Nero Satin,wearables,Roma,,available,380,cotton,images/jookh/wearables/piece-36-view-2.jpg,images/jookh/wearables/piece-36-view-1.jpg
 wear-37,Prugna Blazer,wearables,Roma,,available,420,cotton,images/jookh/wearables/piece-37-view-2.jpg,images/jookh/wearables/piece-37-view-1.jpg
@@ -54,18 +54,18 @@ wear-40,Camel Tartan Trench,wearables,,,sold,ENTER PRICE HERE,ENTER MATERIAL HER
 wear-41,Terra Tweed Coat,wearables,,,sold,ENTER PRICE HERE,ENTER MATERIAL HERE,images/jookh/wearables/piece-41-view-2.jpg,images/jookh/wearables/piece-41-view-1.jpg
 wear-42,Forest Tartan Coat,wearables,,,sold,ENTER PRICE HERE,ENTER MATERIAL HERE,images/jookh/wearables/piece-42-view-2.jpg,images/jookh/wearables/piece-42-view-1.jpg
 wear-43,Canvas Rêverie Coat,wearables,,,sold,ENTER PRICE HERE,ENTER MATERIAL HERE,images/jookh/wearables/piece-43-view-2.jpg,images/jookh/wearables/piece-43-view-1.jpg
-wear-44,Silver Poppy Noir,wearables,,,sold,ENTER PRICE HERE,ENTER MATERIAL HERE,images/jookh/wearables/piece-44-view-2.jpg,images/jookh/wearables/piece-44-view-1.jpg
-wear-45,Mosaïque Noir Blazer,wearables,,,sold,ENTER PRICE HERE,ENTER MATERIAL HERE,images/jookh/wearables/piece-45-view-2.jpg,images/jookh/wearables/piece-45-view-1.jpg
+wear-44,Silver Poppy Noir,wearables,,,sold,ENTER PRICE HERE,ENTER MATERIAL HERE,images/jookh/wearables/piece-44-view-1.jpg,images/jookh/wearables/piece-44-view-2.jpg
+wear-45,Mosaïque Noir Blazer,wearables,,,sold,ENTER PRICE HERE,ENTER MATERIAL HERE,images/jookh/wearables/piece-45-view-1.jpg,images/jookh/wearables/piece-45-view-2.jpg
 wear-46,Phoenix Gilded Robe,wearables,,,sold,ENTER PRICE HERE,ENTER MATERIAL HERE,images/jookh/wearables/piece-46-view-2.jpg,images/jookh/wearables/piece-46-view-1.jpg
 wear-49,Rouge Noir Duster,wearables,,,sold,ENTER PRICE HERE,ENTER MATERIAL HERE,images/jookh/wearables/piece-49-view-2.jpg,images/jookh/wearables/piece-49-view-1.jpg
 wear-50,Khaki Cercle Coat,wearables,,,sold,ENTER PRICE HERE,ENTER MATERIAL HERE,images/jookh/wearables/piece-50-view-2.jpg,images/jookh/wearables/piece-50-view-1.jpg
-wear-51,Noir en Fleur Blazer,wearables,,,sold,ENTER PRICE HERE,ENTER MATERIAL HERE,images/jookh/wearables/piece-51-view-2.jpg,images/jookh/wearables/piece-51-view-1.jpg
-wear-52,Cosmos Navy Blazer,wearables,,,sold,ENTER PRICE HERE,ENTER MATERIAL HERE,images/jookh/wearables/piece-52-view-2.jpg,images/jookh/wearables/piece-52-view-1.jpg
+wear-51,Noir en Fleur Blazer,wearables,,,sold,ENTER PRICE HERE,ENTER MATERIAL HERE,images/jookh/wearables/piece-51-view-1.jpg,images/jookh/wearables/piece-51-view-2.jpg
+wear-52,Cosmos Navy Blazer,wearables,,,sold,ENTER PRICE HERE,ENTER MATERIAL HERE,images/jookh/wearables/piece-52-view-1.jpg,images/jookh/wearables/piece-52-view-2.jpg
 wear-57,Citrus Dentelle Robe,wearables,Japan,,available,420,ENTER MATERIAL HERE,images/jookh/wearables/piece-57-view-2.jpg,images/jookh/wearables/piece-57-view-1.jpg
-wear-58,Azure Garden Robe,wearables,Japan,,available,550,ENTER MATERIAL HERE,images/jookh/wearables/piece-58-view-2.jpg,images/jookh/wearables/piece-58-view-1.jpg
+wear-58,Azure Garden Robe,wearables,Japan,,available,550,ENTER MATERIAL HERE,images/jookh/wearables/piece-58-view-1.jpg,images/jookh/wearables/piece-58-view-2.jpg
 wear-59,Ivory & Gold Dentelle,wearables,Japan,,available,450,ENTER MATERIAL HERE,images/jookh/wearables/piece-59-view-2.jpg,images/jookh/wearables/piece-59-view-1.jpg
-wear-60,Auburn Tweed,wearables,,,sold,ENTER PRICE HERE,wool/cotton tweed,images/jookh/wearables/piece-60-view-2.png,images/jookh/wearables/piece-60-view-1.png
-wear-61,Admiral Blazer,wearables,,,sold,ENTER PRICE HERE,wool,images/jookh/wearables/piece-61-view-2.png,images/jookh/wearables/piece-61-view-1.png
+wear-60,Auburn Tweed,wearables,,,sold,ENTER PRICE HERE,wool/cotton tweed,images/jookh/wearables/piece-60-view-1.png,images/jookh/wearables/piece-60-view-2.png
+wear-61,Admiral Blazer,wearables,,,sold,ENTER PRICE HERE,wool,images/jookh/wearables/piece-61-view-1.png,images/jookh/wearables/piece-61-view-2.png
 wear-62,Lunar Duster,wearables,,,sold,ENTER PRICE HERE,hand-painted silk/wool,images/jookh/wearables/piece-62-view-2.png,images/jookh/wearables/piece-62-view-1.png
 wear-63,Eclipse Robe,wearables,,,sold,ENTER PRICE HERE,hand-painted silk/wool,images/jookh/wearables/piece-63-view-2.png,images/jookh/wearables/piece-63-view-1.png
 wear-64,Scarlet Poppy Duster,wearables,,,sold,ENTER PRICE HERE,hand-painted wool,images/jookh/wearables/piece-64-view-2.png,images/jookh/wearables/piece-64-view-1.png
@@ -80,10 +80,10 @@ wear-71,Sage Poppy Oxford,wearables,Oxford,,available,380,linen,images/jookh/wea
 wear-72,Camel Garden Oxford,wearables,Oxford,,available,380,linen,images/jookh/wearables/piece-72-view-2.jpg,images/jookh/wearables/piece-72-view-1.jpg
 wear-73,Oxford Sphère Blazer,wearables,Oxford,,available,320,linen,images/jookh/wearables/piece-73-view-2.jpg,images/jookh/wearables/piece-73-view-1.jpg
 wear-74,Cercle d'Or Coat,wearables,Jaipur,,available,380,hand-painted silk,images/jookh/wearables/piece-74-view-2.jpg,images/jookh/wearables/piece-74-view-1.jpg
-wear-75,Aurora Tie-Dye Coat,wearables,Bretagne,,available,320,hand-dyed silk,images/jookh/wearables/piece-75-view-2.jpg,images/jookh/wearables/piece-75-view-1.jpg
-wear-76,Pré en Fleur Coat,wearables,Bretagne,,available,320,hand-dyed silk,images/jookh/wearables/piece-76-view-2.jpg,images/jookh/wearables/piece-76-view-1.jpg
+wear-75,Aurora Tie-Dye Coat,wearables,Bretagne,,available,320,hand-dyed silk,images/jookh/wearables/piece-75-view-1.jpg,images/jookh/wearables/piece-75-view-2.jpg
+wear-76,Pré en Fleur Coat,wearables,Bretagne,,available,320,hand-dyed silk,images/jookh/wearables/piece-76-view-1.jpg,images/jookh/wearables/piece-76-view-2.jpg
 wear-77,Encre Silk Robe,wearables,Bretagne,,available,320,hand-painted silk,images/jookh/wearables/piece-77-view-2.jpg,images/jookh/wearables/piece-77-view-1.jpg
-wear-78,Voile Doré Coat,wearables,Atelier,,available,550,silk tulle with gold leaf,images/jookh/wearables/piece-78-view-2.jpg,images/jookh/wearables/piece-78-view-1.jpg
+wear-78,Voile Doré Coat,wearables,Atelier,,available,550,silk tulle with gold leaf,images/jookh/wearables/piece-78-view-1.jpg,images/jookh/wearables/piece-78-view-2.jpg
 plo-01,Pomegranate I,pillows,,,available,ENTER PRICE HERE,Hand-painted · Hand-embroidered linen,images/plo/piece-1-view-2.jpeg,images/plo/piece-1-view-1.jpeg
 plo-02,Pomegranate II,pillows,,,available,ENTER PRICE HERE,Hand-painted · Hand-embroidered linen,images/plo/piece-2-view-2.jpeg,images/plo/piece-2-view-1.jpeg
 plo-03,Fig & Honey,pillows,,,available,ENTER PRICE HERE,Hand-painted · Hand-embroidered linen,images/plo/piece-3-view-2.jpeg,images/plo/piece-3-view-1.jpeg
