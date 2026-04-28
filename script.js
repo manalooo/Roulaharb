@@ -308,6 +308,9 @@
   sections.forEach(function (section) { sectionObserver.observe(section); });
 
   // ─── LIGHTBOX ────────────────────────────────────
+  // Couture-grade: warm dusk-plum overlay with blur, elegant chevrons,
+  // product caption in Cormorant italic + Inter caps, dot pagination,
+  // smooth scale-zoom entrance.
   var lbImages = [], lbIndex = 0;
 
   var lb = document.createElement('div');
@@ -316,38 +319,45 @@
   lb.setAttribute('aria-modal', 'true');
   lb.setAttribute('aria-label', 'Image viewer');
   lb.innerHTML =
-    '<button class="lb-btn lb-close" aria-label="Close">\u00d7</button>' +
-    '<button class="lb-btn lb-prev"  aria-label="Previous">\u2190</button>' +
-    '<div class="lb-img-wrap"><img class="lb-img" src="" alt="" /></div>' +
-    '<button class="lb-btn lb-next"  aria-label="Next">\u2192</button>' +
-    '<div class="lb-footer"><div class="lb-thumbs"></div><p class="lb-counter"></p></div>';
+    '<button class="lb-close" aria-label="Close">×</button>' +
+    '<button class="lb-nav lb-prev" aria-label="Previous">‹</button>' +
+    '<div class="lb-stage">' +
+      '<div class="lb-img-wrap"><img class="lb-img" src="" alt="" /></div>' +
+      '<div class="lb-caption">' +
+        '<p class="lb-name"></p>' +
+        '<p class="lb-meta"></p>' +
+        '<div class="lb-dots"></div>' +
+      '</div>' +
+    '</div>' +
+    '<button class="lb-nav lb-next" aria-label="Next">›</button>';
   document.body.appendChild(lb);
 
-  var lbImg    = lb.querySelector('.lb-img');
-  var lbThumbs = lb.querySelector('.lb-thumbs');
-  var lbCount  = lb.querySelector('.lb-counter');
+  var lbImg  = lb.querySelector('.lb-img');
+  var lbName = lb.querySelector('.lb-name');
+  var lbMeta = lb.querySelector('.lb-meta');
+  var lbDots = lb.querySelector('.lb-dots');
 
   function lbShow(idx) {
     lbIndex = (idx + lbImages.length) % lbImages.length;
-    lbImg.style.opacity = '0';
+    lbImg.classList.add('is-changing');
     setTimeout(function () {
       lbImg.src = lbImages[lbIndex];
-      lbImg.style.opacity = '1';
-    }, 200);
-    lbThumbs.querySelectorAll('.lb-thumb').forEach(function (t, i) {
-      t.classList.toggle('active', i === lbIndex);
+      lbImg.classList.remove('is-changing');
+    }, 180);
+    lbDots.querySelectorAll('.lb-dot').forEach(function (d, i) {
+      d.classList.toggle('active', i === lbIndex);
     });
-    lbCount.textContent = (lbIndex + 1) + '\u2002/\u2002' + lbImages.length;
   }
 
-  function lbOpen(images, startIdx) {
+  function lbOpen(images, startIdx, name, material) {
     lbImages = images;
-    lbThumbs.innerHTML = images.map(function (src, i) {
-      return '<img class="lb-thumb' + (i === startIdx ? ' active' : '') +
-             '" src="' + src + '" alt="" data-idx="' + i + '" />';
+    lbDots.innerHTML = images.map(function (_, i) {
+      return '<button class="lb-dot' + (i === startIdx ? ' active' : '') +
+             '" aria-label="Image ' + (i + 1) + '" data-idx="' + i + '"></button>';
     }).join('');
     lbImg.src = images[startIdx];
-    lbCount.textContent = (startIdx + 1) + '\u2002/\u2002' + images.length;
+    lbName.textContent = name || '';
+    lbMeta.textContent = material || '';
     lbIndex = startIdx;
     lb.classList.add('open');
     document.body.style.overflow = 'hidden';
@@ -359,13 +369,15 @@
   }
 
   lb.querySelector('.lb-close').addEventListener('click', lbClose);
-  lb.querySelector('.lb-prev').addEventListener('click', function () { lbShow(lbIndex - 1); });
-  lb.querySelector('.lb-next').addEventListener('click', function () { lbShow(lbIndex + 1); });
-  lb.querySelector('.lb-thumbs').addEventListener('click', function (e) {
-    var t = e.target.closest('.lb-thumb');
-    if (t) lbShow(+t.dataset.idx);
+  lb.querySelector('.lb-prev').addEventListener('click', function (e) { e.stopPropagation(); lbShow(lbIndex - 1); });
+  lb.querySelector('.lb-next').addEventListener('click', function (e) { e.stopPropagation(); lbShow(lbIndex + 1); });
+  lbDots.addEventListener('click', function (e) {
+    var d = e.target.closest('.lb-dot');
+    if (d) { e.stopPropagation(); lbShow(+d.dataset.idx); }
   });
-  lb.addEventListener('click', function (e) { if (e.target === lb) lbClose(); });
+  lb.addEventListener('click', function (e) {
+    if (e.target === lb || e.target.classList.contains('lb-stage')) lbClose();
+  });
   document.addEventListener('keydown', function (e) {
     if (!lb.classList.contains('open')) return;
     if (e.key === 'Escape')     lbClose();
@@ -375,7 +387,6 @@
 
   // Event delegation — works for dynamically rendered cards
   document.addEventListener('click', function (e) {
-    // Don't open lightbox from Inquire button or basket trigger
     if (e.target.closest('.btn-inquire') || e.target.closest('.basket-widget')) return;
 
     var wrap = e.target.closest('.card-img-wrap');
@@ -385,7 +396,11 @@
 
     try {
       var images = JSON.parse(card.dataset.lightbox);
-      lbOpen(images, 0);
+      var nameEl = card.querySelector('.card-piece-num');
+      var medEl  = card.querySelector('.card-medium');
+      var name   = nameEl ? nameEl.textContent.trim() : '';
+      var medium = medEl  ? medEl.textContent.trim()  : '';
+      lbOpen(images, 0, name, medium);
     } catch (err) { /* ignore */ }
   });
 
