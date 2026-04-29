@@ -91,6 +91,7 @@
             '<div class="archive-divider-center">' +
               '<span class="archive-divider-label">The Archive</span>' +
               '<p class="archive-divider-sub">Each piece below has found its collector — shown here as a testament to the work.</p>' +
+              '<p class="archive-divider-cta"><em>Drawn to a piece? Roula reproduces select archive styles on commission — <a href="#contact">write to her</a> to inquire.</em></p>' +
             '</div>' +
             '<div class="archive-divider-rule"></div>';
           container.appendChild(divider);

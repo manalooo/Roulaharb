@@ -507,13 +507,13 @@ a   { text-decoration: none; color: inherit; }
   position: absolute;
   inset: 0;
   z-index: 1;
+  /* Image is fully high-quality through the top + middle.
+     A soft fade only at the very bottom blends into brands-intro's blush. */
   background:
     linear-gradient(to bottom,
-      rgba(244, 237, 228, 1.00)  0%,      /* lemon — matches nav, no seam */
-      rgba(244, 237, 228, 0.55)  10%,
-      rgba(244, 237, 228, 0.00)  28%,
-      rgba(251, 228, 216, 0.00)  65%,    /* image breathes through middle */
-      rgba(251, 228, 216, 0.80)  88%,    /* sorbet pink bottom → brands-intro */
+      rgba(251, 228, 216, 0.00)  0%,
+      rgba(251, 228, 216, 0.00)  78%,
+      rgba(251, 228, 216, 0.55)  92%,
       rgba(251, 228, 216, 1.00) 100%
     );
   pointer-events: none;
@@ -2581,4 +2581,27 @@ a   { text-decoration: none; color: inherit; }
   .jookh-grid, .jookh-grid-4 { grid-template-columns: 1fr; }
   .contact-grid { grid-template-columns: 1fr; }
   .brands-intro-inner { grid-template-columns: 1fr; }
+}
+
+/* Archive commission CTA — small italic line under the "found its collector" sub */
+.archive-divider-cta {
+  margin-top: 0.6rem;
+  font-family: var(--font-serif);
+  font-size: 0.95rem;
+  font-style: italic;
+  font-weight: 300;
+  color: rgba(43, 18, 32, 0.78);
+  letter-spacing: 0.005em;
+  max-width: 580px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.archive-divider-cta a {
+  color: #C94A5A;
+  border-bottom: 1px solid rgba(201, 74, 90, 0.4);
+  transition: color 0.3s, border-color 0.3s;
+}
+.archive-divider-cta a:hover {
+  color: #6B1F2E;
+  border-bottom-color: rgba(107, 31, 46, 0.7);
 }
