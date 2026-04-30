@@ -10,7 +10,6 @@ CREATE TABLE products (
   subcollection TEXT,                       -- 'KUMBAKONAM' | 'OSAKA' | 'Roma' | etc.
   era           TEXT,
   status        TEXT NOT NULL DEFAULT 'available',  -- 'available' | 'sold'
-  section       TEXT NOT NULL DEFAULT 'current',    -- 'current' | 'archive'
   price         TEXT,                       -- stored as text so 'ENTER PRICE HERE' or '320' both work
   material      TEXT,
   main_image    TEXT,                       -- relative path, e.g. 'jookh/bags/piece-18.png'
@@ -20,5 +19,3 @@ CREATE TABLE products (
 
 -- Index for the most common query (filter by category, ordered by sort)
 CREATE INDEX idx_products_category_order ON products(category, sort_order);
--- Index for section filtering
-CREATE INDEX idx_products_section ON products(section);
