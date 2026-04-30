@@ -8,9 +8,11 @@
 </head>
 <body>
   <main class="admin-shell">
+
+    <!-- LOGIN -->
     <section id="login-card" class="card">
       <h1>Admin Login</h1>
-      <p class="muted">Enter the shared password to add products.</p>
+      <p class="muted">Enter the shared password to manage products.</p>
       <form id="login-form">
         <label>
           Password
@@ -21,86 +23,130 @@
       <p id="login-msg" class="msg"></p>
     </section>
 
+    <!-- MAIN APP -->
     <section id="app-card" class="card hidden">
       <div class="row between">
-        <h1>Add Product</h1>
+        <h1>Roula Harb Admin</h1>
         <button id="logout-btn" class="btn-secondary" type="button">Log out</button>
       </div>
-      <p class="muted">Uses the same fields as your inventory CSV, with ID generated automatically.</p>
 
-      <form id="product-form">
-        <div class="grid two">
-          <label>
-            Name
-            <input id="name" required />
-          </label>
-          <label>
-            Category
-            <select id="category" required>
-              <option value="scarves">scarves</option>
-              <option value="bags">bags</option>
-              <option value="wearables">wearables</option>
-              <option value="pillows">pillows</option>
-            </select>
-          </label>
-          <label>
-            Auto ID
-            <input id="id-preview" disabled />
-          </label>
-          <label>
-            Status
-            <select id="status" required>
-              <option value="available">available</option>
-              <option value="sold">sold</option>
-            </select>
-          </label>
-          <label>
-            Subcollection
-            <input id="subcollection" />
-          </label>
-          <label>
-            Era
-            <input id="era" />
-          </label>
-          <label>
-            Price
-            <input id="price" placeholder="e.g. 380 or ENTER PRICE HERE" />
-          </label>
-          <label>
-            Material
-            <input id="material" placeholder="e.g. cotton" />
-          </label>
+      <!-- Tabs -->
+      <div class="tabs">
+        <button class="tab active" data-tab="products">All Products</button>
+        <button class="tab" data-tab="add">Add Product</button>
+      </div>
+
+      <!-- ALL PRODUCTS TAB -->
+      <div id="tab-products" class="tab-panel">
+        <div class="row between tab-toolbar">
+          <p class="muted">Edit name, status, or section. Click Save on each row.</p>
+          <button id="refresh-products-btn" class="btn-secondary" type="button">Refresh</button>
         </div>
-
-        <div class="grid two">
-          <label>
-            Main image (required)
-            <input id="main-image" type="file" accept="image/jpeg,image/png,image/webp,image/gif" required />
-          </label>
-          <label>
-            Hover image (optional)
-            <input id="hover-image" type="file" accept="image/jpeg,image/png,image/webp,image/gif" />
-          </label>
+        <div id="products-table-wrap">
+          <p id="products-loading" class="muted">Loading…</p>
+          <table id="products-table" class="products-table hidden">
+            <thead>
+              <tr>
+                <th>Image</th>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Category</th>
+                <th>Status</th>
+                <th>Section</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody id="products-tbody"></tbody>
+          </table>
+          <p id="products-empty" class="muted hidden">No products found.</p>
         </div>
+        <p id="products-msg" class="msg"></p>
+      </div>
 
-        <div class="grid two">
-          <div>
-            <p class="preview-title">Main preview</p>
-            <img id="main-preview" class="preview" alt="" />
+      <!-- ADD PRODUCT TAB -->
+      <div id="tab-add" class="tab-panel hidden">
+        <p class="muted">Uses the same fields as your inventory CSV, with ID generated automatically.</p>
+
+        <form id="product-form">
+          <div class="grid two">
+            <label>
+              Name
+              <input id="name" required />
+            </label>
+            <label>
+              Category
+              <select id="category" required>
+                <option value="scarves">scarves</option>
+                <option value="bags">bags</option>
+                <option value="wearables">wearables</option>
+                <option value="pillows">pillows</option>
+              </select>
+            </label>
+            <label>
+              Auto ID
+              <input id="id-preview" disabled />
+            </label>
+            <label>
+              Status
+              <select id="status" required>
+                <option value="available">available</option>
+                <option value="sold">sold</option>
+              </select>
+            </label>
+            <label>
+              Section
+              <select id="section">
+                <option value="current">current</option>
+                <option value="archive">archive</option>
+              </select>
+            </label>
+            <label>
+              Subcollection
+              <input id="subcollection" />
+            </label>
+            <label>
+              Era
+              <input id="era" />
+            </label>
+            <label>
+              Price
+              <input id="price" placeholder="e.g. 380" />
+            </label>
+            <label>
+              Material
+              <input id="material" placeholder="e.g. cotton" />
+            </label>
           </div>
-          <div>
-            <p class="preview-title">Hover preview</p>
-            <img id="hover-preview" class="preview" alt="" />
-          </div>
-        </div>
 
-        <button id="submit-btn" type="submit">Save and Publish</button>
-      </form>
-      <p id="form-msg" class="msg"></p>
+          <div class="grid two">
+            <label>
+              Main image (required)
+              <input id="main-image" type="file" accept="image/jpeg,image/png,image/webp,image/gif" required />
+            </label>
+            <label>
+              Hover image (optional)
+              <input id="hover-image" type="file" accept="image/jpeg,image/png,image/webp,image/gif" />
+            </label>
+          </div>
+
+          <div class="grid two">
+            <div>
+              <p class="preview-title">Main preview</p>
+              <img id="main-preview" class="preview" alt="" />
+            </div>
+            <div>
+              <p class="preview-title">Hover preview</p>
+              <img id="hover-preview" class="preview" alt="" />
+            </div>
+          </div>
+
+          <button id="submit-btn" type="submit">Save and Publish</button>
+        </form>
+        <p id="form-msg" class="msg"></p>
+      </div>
+
     </section>
   </main>
-
   <script src="./script.js"></script>
 </body>
 </html>
-

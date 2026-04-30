@@ -7,7 +7,8 @@ const CATEGORY_PREFIX = {
   pillows: 'plo',
 };
 
-const VALID_STATUS = new Set(['available', 'sold']);
+const VALID_STATUS  = new Set(['available', 'sold']);
+const VALID_SECTION = new Set(['current', 'archive']);
 
 function requiredString(value, field) {
   const out = String(value || '').trim();
@@ -36,38 +37,56 @@ async function nextSortOrder(env) {
   return Number(row && row.value != null ? row.value : 0);
 }
 
+export async function onRequestGet({ request, env }) {
+  try {
+    if (!(await isAuthorized(request, env))) return unauthorizedResponse();
+
+    const { results } = await env.DB
+      .prepare('SELECT id, name, category, subcollection, era, status, section, price, material, main_image, hover_image, sort_order FROM products ORDER BY sort_order ASC, id ASC')
+      .all();
+
+    return new Response(JSON.stringify(results || []), {
+      headers: { 'Content-Type': 'application/json' },
+    });
+  } catch (err) {
+    return new Response(JSON.stringify({ error: err.message }), {
+      status: 500,
+      headers: { 'Content-Type': 'application/json' },
+    });
+  }
+}
+
 export async function onRequestPost({ request, env }) {
   try {
     if (!(await isAuthorized(request, env))) return unauthorizedResponse();
 
     const body = await request.json();
-    const name = requiredString(body.name, 'Name');
+    const name     = requiredString(body.name, 'Name');
     const category = requiredString(body.category, 'Category');
-    const status = String(body.status || 'available').trim().toLowerCase();
+    const status   = String(body.status  || 'available').trim().toLowerCase();
+    const section  = String(body.section || 'current').trim().toLowerCase();
     const mainImage = requiredString(body.main_image, 'Main image');
-    if (!CATEGORY_PREFIX[category]) throw new Error('Invalid category');
-    if (!VALID_STATUS.has(status)) throw new Error('Invalid status');
 
-    const id = await nextId(env, category);
+    if (!CATEGORY_PREFIX[category]) throw new Error('Invalid category');
+    if (!VALID_STATUS.has(status))  throw new Error('Invalid status');
+    if (!VALID_SECTION.has(section)) throw new Error('Invalid section');
+
+    const id        = await nextId(env, category);
     const sortOrder = await nextSortOrder(env);
 
     await env.DB.prepare(
-      'INSERT INTO products (id, name, category, subcollection, era, status, price, material, main_image, hover_image, sort_order) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)'
-    )
-      .bind(
-        id,
-        name,
-        category,
-        String(body.subcollection || '').trim() || null,
-        String(body.era || '').trim() || null,
-        status,
-        String(body.price || '').trim() || null,
-        String(body.material || '').trim() || null,
-        mainImage,
-        String(body.hover_image || '').trim() || null,
-        sortOrder
-      )
-      .run();
+      'INSERT INTO products (id, name, category, subcollection, era, status, section, price, material, main_image, hover_image, sort_order) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)'
+    ).bind(
+      id, name, category,
+      String(body.subcollection || '').trim() || null,
+      String(body.era           || '').trim() || null,
+      status, section,
+      String(body.price    || '').trim() || null,
+      String(body.material || '').trim() || null,
+      mainImage,
+      String(body.hover_image || '').trim() || null,
+      sortOrder
+    ).run();
 
     return new Response(JSON.stringify({ ok: true, id, sort_order: sortOrder }), {
       headers: { 'Content-Type': 'application/json' },
@@ -79,4 +98,3 @@ export async function onRequestPost({ request, env }) {
     });
   }
 }
-
