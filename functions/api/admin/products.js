@@ -10,6 +10,15 @@ const CATEGORY_PREFIX = {
 const VALID_STATUS  = new Set(['available', 'sold']);
 const VALID_SECTION = new Set(['current', 'archive']);
 
+// Adds the section column if it doesn't exist yet — safe to call repeatedly.
+async function ensureSection(env) {
+  try {
+    await env.DB.prepare("ALTER TABLE products ADD COLUMN section TEXT NOT NULL DEFAULT 'current'").run();
+  } catch (_) {
+    // Already exists — ignore.
+  }
+}
+
 function requiredString(value, field) {
   const out = String(value || '').trim();
   if (!out) throw new Error(`${field} is required`);
@@ -21,7 +30,6 @@ async function nextId(env, category) {
   if (!prefix) throw new Error('Invalid category');
   const likePattern = `${prefix}-%`;
   const { results } = await env.DB.prepare('SELECT id FROM products WHERE id LIKE ?').bind(likePattern).all();
-
   let maxNum = 0;
   for (const row of results || []) {
     const match = String(row.id || '').match(new RegExp(`^${prefix}-(\\d+)$`));
@@ -40,6 +48,7 @@ async function nextSortOrder(env) {
 export async function onRequestGet({ request, env }) {
   try {
     if (!(await isAuthorized(request, env))) return unauthorizedResponse();
+    await ensureSection(env);
 
     const { results } = await env.DB
       .prepare('SELECT id, name, category, subcollection, era, status, section, price, material, main_image, hover_image, sort_order FROM products ORDER BY sort_order ASC, id ASC')
@@ -59,8 +68,9 @@ export async function onRequestGet({ request, env }) {
 export async function onRequestPost({ request, env }) {
   try {
     if (!(await isAuthorized(request, env))) return unauthorizedResponse();
+    await ensureSection(env);
 
-    const body = await request.json();
+    const body     = await request.json();
     const name     = requiredString(body.name, 'Name');
     const category = requiredString(body.category, 'Category');
     const status   = String(body.status  || 'available').trim().toLowerCase();
@@ -68,7 +78,7 @@ export async function onRequestPost({ request, env }) {
     const mainImage = requiredString(body.main_image, 'Main image');
 
     if (!CATEGORY_PREFIX[category]) throw new Error('Invalid category');
-    if (!VALID_STATUS.has(status))  throw new Error('Invalid status');
+    if (!VALID_STATUS.has(status))   throw new Error('Invalid status');
     if (!VALID_SECTION.has(section)) throw new Error('Invalid section');
 
     const id        = await nextId(env, category);

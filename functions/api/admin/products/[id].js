@@ -3,9 +3,16 @@ import { isAuthorized, unauthorizedResponse } from '../_auth.js';
 const VALID_STATUS  = new Set(['available', 'sold']);
 const VALID_SECTION = new Set(['current', 'archive']);
 
+async function ensureSection(env) {
+  try {
+    await env.DB.prepare("ALTER TABLE products ADD COLUMN section TEXT NOT NULL DEFAULT 'current'").run();
+  } catch (_) {}
+}
+
 export async function onRequestPut({ request, env, params }) {
   try {
     if (!(await isAuthorized(request, env))) return unauthorizedResponse();
+    await ensureSection(env);
 
     const id = params.id;
     if (!id) {

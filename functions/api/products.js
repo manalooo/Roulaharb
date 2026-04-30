@@ -1,8 +1,15 @@
-/* Cloudflare Pages Function — GET /api/products
-   Queries the D1 database, returns products as JSON with full image URLs
-   (prefixed with the IMAGE_BASE env var). */
+/* Cloudflare Pages Function — GET /api/products */
+
+async function ensureSection(env) {
+  try {
+    await env.DB.prepare("ALTER TABLE products ADD COLUMN section TEXT NOT NULL DEFAULT 'current'").run();
+  } catch (_) {}
+}
+
 export async function onRequestGet({ env }) {
   try {
+    await ensureSection(env);
+
     const { results } = await env.DB
       .prepare('SELECT id, name, category, subcollection, era, status, section, price, material, main_image, hover_image, sort_order FROM products ORDER BY sort_order')
       .all();
