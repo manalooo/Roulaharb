@@ -64,4 +64,3 @@ button {
 @media (max-width: 760px) {
   .grid.two { grid-template-columns: 1fr; }
 }
-

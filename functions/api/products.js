@@ -17,7 +17,6 @@ export async function onRequestGet({ env, request }) {
       status:        r.status,
       price:         r.price || '',
       material:      r.material || '',
-      // Render expects full paths in `images.main` / `images.hover`
       images: {
         main:  r.main_image  ? base + r.main_image  : '',
         hover: r.hover_image ? base + r.hover_image : '',
@@ -27,7 +26,7 @@ export async function onRequestGet({ env, request }) {
     return new Response(JSON.stringify(products), {
       headers: {
         'Content-Type': 'application/json',
-        'Cache-Control': 'public, max-age=60, s-maxage=300',  // 1min browser, 5min edge
+        'Cache-Control': 'public, max-age=60, s-maxage=300',
         'Access-Control-Allow-Origin': '*',
       },
     });
