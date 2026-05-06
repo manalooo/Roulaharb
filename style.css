@@ -525,6 +525,28 @@ a   { text-decoration: none; color: inherit; }
   margin-bottom: 1.5rem;
 }
 
+/* ─── ARCHIVE ─── */
+#archive {
+  position: relative;
+  padding: 8rem 0;
+  background: var(--wine-dark);
+  border-top: 1px solid rgba(255,255,255,0.06);
+  overflow: hidden;
+}
+#archive .section-label { color: var(--gold); }
+#archive .section-title { color: #fff; }
+#archive .section-desc  { color: rgba(255,255,255,0.5); }
+#archive-grid:empty::after {
+  content: 'Past collection pieces will appear here.';
+  display: block;
+  text-align: center;
+  padding: 4rem 0;
+  font-size: 0.82rem;
+  font-style: italic;
+  color: rgba(255,255,255,0.25);
+  letter-spacing: 0.04em;
+}
+
 /* ─── P-LO ─── */
 #plo {
   position: relative;
