@@ -83,7 +83,9 @@
           });
         }
 
-        // Archive divider + collapsible grid
+        // Archive divider + collapsible grid — rendered into #archive-grid
+        // (separate container at the END of jookh, after scarves + bags).
+        var archiveContainer = document.getElementById('archive-grid') || container;
         if (archiveItems.length) {
           var divider = el('div', 'archive-divider reveal');
           divider.innerHTML =
@@ -94,7 +96,7 @@
               '<p class="archive-divider-cta"><em>Drawn to a piece? Roula reproduces select archive styles on commission — <a href="#contact">write to her</a> to inquire.</em></p>' +
             '</div>' +
             '<div class="archive-divider-rule"></div>';
-          container.appendChild(divider);
+          archiveContainer.appendChild(divider);
 
           // Group archive items by subcollection
           var archiveGroups = {};
@@ -133,7 +135,7 @@
             archiveWrap.appendChild(archiveGrid);
           });
 
-          container.appendChild(archiveWrap);
+          archiveContainer.appendChild(archiveWrap);
 
           // See More toggle button
           var toggleBtn = el('button', 'archive-toggle');
@@ -146,7 +148,7 @@
             toggleBtn.querySelector('.archive-toggle-label').textContent =
               expanded ? 'Show Less' : 'See More of the Archive';
           });
-          container.appendChild(toggleBtn);
+          archiveContainer.appendChild(toggleBtn);
         }
         return; // skip the generic logic below
       }
