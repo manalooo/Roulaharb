@@ -2605,3 +2605,51 @@ a   { text-decoration: none; color: inherit; }
   color: #6B1F2E;
   border-bottom-color: rgba(107, 31, 46, 0.7);
 }
+
+/* ═══════════════════════════════════════════════════════
+   PAINTINGS SECTION — soft sage-cream studio feel between P-Lo and About.
+   Gradient fades from P-Lo's blush at the top into About's blush at the bottom,
+   with a quiet ivory-cream middle to let canvas photography breathe.
+   ═══════════════════════════════════════════════════════ */
+#paintings {
+  position: relative;
+  padding: var(--space-2xl) 0 var(--space-3xl);
+  background: linear-gradient(
+    180deg,
+    #FBE4D8  0%,         /* dawn blush — bridge from P-Lo's bottom */
+    #F4EDE4  10%,        /* settle into ivory champagne — gallery wall */
+    #F4EDE4  90%,        /* hold ivory through the canvases */
+    #FBE4D8 100%         /* fade back into About's blush */
+  );
+  overflow: hidden;
+}
+
+#paintings .section-header { margin-bottom: var(--space-xl); }
+.paintings-label { color: #6B1F2E; }   /* deep madder — gallery kicker tone */
+
+/* Paintings grid uses the same .collection-grid look as P-Lo, but with a
+   slightly larger card crop because canvas photography deserves more room */
+#paintings-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.4rem;
+  margin-bottom: 3rem;
+}
+@media (max-width: 768px) { #paintings-grid { grid-template-columns: repeat(2, 1fr); gap: 1.2rem; } }
+@media (max-width: 480px) { #paintings-grid { grid-template-columns: 1fr; } }
+
+/* Inquire-about-a-painting button — quiet, museum-label feel */
+.btn-paintings {
+  background: transparent;
+  color: var(--text-body);
+  border: 1px solid rgba(107, 31, 46, 0.5);
+  border-radius: 0;
+  font-weight: 400;
+  letter-spacing: 0.22em;
+  padding: 1rem 2.4rem;
+}
+.btn-paintings:hover {
+  color: #fff;
+  background: #6B1F2E;
+  border-color: #6B1F2E;
+}
