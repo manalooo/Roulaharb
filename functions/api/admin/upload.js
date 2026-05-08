@@ -5,6 +5,7 @@ const CATEGORY_FOLDER = {
   bags: 'jookh/bags',
   wearables: 'jookh/wearables',
   pillows: 'plo',
+  paintings: 'paintings',
 };
 
 function sanitizeSegment(value) {

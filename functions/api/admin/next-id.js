@@ -5,6 +5,7 @@ const CATEGORY_PREFIX = {
   bags: 'bag',
   wearables: 'wear',
   pillows: 'plo',
+  paintings: 'paint',
 };
 
 function getPrefix(category) {
