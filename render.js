@@ -27,13 +27,16 @@
       return;
     }
 
-    // Accept both legacy static shape (`views`) and API shape (`images.main`/`images.hover`).
+    // Accept both legacy static shape (`views`) and API shape (`images.main`/`images.hover`/`images.extra[]`).
     var normalizedProducts = products.map(function (p) {
       var out = Object.assign({}, p);
       if (!Array.isArray(out.views) || !out.views.length) {
         var mappedViews = [];
-        if (out.images && out.images.main) mappedViews.push(out.images.main);
+        if (out.images && out.images.main)  mappedViews.push(out.images.main);
         if (out.images && out.images.hover) mappedViews.push(out.images.hover);
+        if (out.images && Array.isArray(out.images.extra)) {
+          out.images.extra.forEach(function (v) { if (v) mappedViews.push(v); });
+        }
         out.views = mappedViews;
       }
       if (!out.medium && out.material) {

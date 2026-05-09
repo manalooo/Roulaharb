@@ -4,24 +4,32 @@
 export async function onRequestGet({ env, request }) {
   try {
     const { results } = await env.DB
-      .prepare('SELECT id, name, category, subcollection, era, status, price, material, main_image, hover_image, sort_order FROM products ORDER BY sort_order')
+      .prepare('SELECT id, name, category, subcollection, era, status, price, material, main_image, hover_image, extra_views, sort_order FROM products ORDER BY sort_order')
       .all();
 
     const base = (env.IMAGE_BASE || '/images/').replace(/\/?$/, '/');
-    const products = results.map(r => ({
-      id:            r.id,
-      name:          r.name,
-      category:      r.category,
-      subcollection: r.subcollection || '',
-      era:           r.era || '',
-      status:        r.status,
-      price:         r.price || '',
-      material:      r.material || '',
-      images: {
-        main:  r.main_image  ? base + r.main_image  : '',
-        hover: r.hover_image ? base + r.hover_image : '',
-      },
-    }));
+    const products = results.map(r => {
+      // Parse extra_views JSON; tolerate malformed
+      let extras = [];
+      if (r.extra_views) {
+        try { const parsed = JSON.parse(r.extra_views); if (Array.isArray(parsed)) extras = parsed; } catch (_) {}
+      }
+      return {
+        id:            r.id,
+        name:          r.name,
+        category:      r.category,
+        subcollection: r.subcollection || '',
+        era:           r.era || '',
+        status:        r.status,
+        price:         r.price || '',
+        material:      r.material || '',
+        images: {
+          main:  r.main_image  ? base + r.main_image  : '',
+          hover: r.hover_image ? base + r.hover_image : '',
+          extra: extras.map(p => base + p),
+        },
+      };
+    });
 
     return new Response(JSON.stringify(products), {
       headers: {

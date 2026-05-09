@@ -14,6 +14,7 @@ CREATE TABLE products (
   material      TEXT,
   main_image    TEXT,                       -- relative path, e.g. 'jookh/bags/piece-18.png'
   hover_image   TEXT,                       -- optional, same format
+  extra_views   TEXT,                       -- optional JSON array of extra image paths for gallery/lightbox (paintings, etc.)
   sort_order    INTEGER                     -- preserves the row order from inventory.csv
 );
 

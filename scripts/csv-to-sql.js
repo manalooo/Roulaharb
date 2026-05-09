@@ -49,6 +49,13 @@ for (const line of lines) {
     material: obj.Material || null,
     main_image: stripImg(obj.Main_Image),
     hover_image: stripImg(obj.Hover_Image),
+    // Extra_Views: pipe-separated list of extra image paths (e.g. "images/paintings/piece-7.jpg|images/paintings/piece-8.jpg")
+    extra_views: (() => {
+      const raw = (obj.Extra_Views || '').trim();
+      if (!raw) return null;
+      const arr = raw.split('|').map(s => stripImg(s.trim())).filter(Boolean);
+      return arr.length ? JSON.stringify(arr) : null;
+    })(),
     sort_order: order++,
   });
 }
@@ -57,8 +64,8 @@ let sql = '-- Auto-generated from inventory.csv by scripts/csv-to-sql.js\n';
 sql += '-- Run with: wrangler d1 execute roulaharb-products --remote --file=db/seed.sql\n\n';
 sql += 'DELETE FROM products;\n\n';
 for (const r of rows) {
-  sql += `INSERT INTO products (id, name, category, subcollection, era, status, price, material, main_image, hover_image, sort_order) VALUES (`
-    + `${sqlQ(r.id)}, ${sqlQ(r.name)}, ${sqlQ(r.category)}, ${sqlQ(r.subcollection)}, ${sqlQ(r.era)}, ${sqlQ(r.status)}, ${sqlQ(r.price)}, ${sqlQ(r.material)}, ${sqlQ(r.main_image)}, ${sqlQ(r.hover_image)}, ${r.sort_order});\n`;
+  sql += `INSERT INTO products (id, name, category, subcollection, era, status, price, material, main_image, hover_image, extra_views, sort_order) VALUES (`
+    + `${sqlQ(r.id)}, ${sqlQ(r.name)}, ${sqlQ(r.category)}, ${sqlQ(r.subcollection)}, ${sqlQ(r.era)}, ${sqlQ(r.status)}, ${sqlQ(r.price)}, ${sqlQ(r.material)}, ${sqlQ(r.main_image)}, ${sqlQ(r.hover_image)}, ${sqlQ(r.extra_views)}, ${r.sort_order});\n`;
 }
 
 fs.writeFileSync(OUT, sql);
