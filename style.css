@@ -588,6 +588,28 @@ a   { text-decoration: none; color: inherit; }
 
 #plo .collection-note { border-color: rgba(224,123,10,0.2); }
 
+/* ─── PAINTINGS ─── */
+#paintings {
+  position: relative;
+  padding: 8rem 0;
+  background: var(--wine-dark);
+  border-top: 1px solid rgba(255,255,255,0.06);
+  overflow: hidden;
+}
+#paintings .section-label { color: var(--gold); }
+#paintings .section-title { color: #fff; }
+#paintings .section-desc  { color: rgba(255,255,255,0.6); }
+#paintings-grid:empty::after {
+  content: 'Paintings coming soon.';
+  display: block;
+  text-align: center;
+  padding: 4rem 0;
+  font-size: 0.82rem;
+  font-style: italic;
+  color: rgba(255,255,255,0.25);
+  letter-spacing: 0.04em;
+}
+
 /* ─── ABOUT ─── */
 #about {
   position: relative;

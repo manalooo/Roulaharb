@@ -16,8 +16,9 @@
     { category: 'wearables', id: 'wearables-grid',  classes: 'jookh-grid',               variant: 'tall' },
     { category: 'scarves',   id: 'scarves-grid',    classes: 'jookh-grid',               variant: 'tall' },
     { category: 'bags',      id: 'bags-grid',        classes: 'jookh-grid jookh-grid-4',  variant: ''     },
-    { category: 'archive',   id: 'archive-grid',    classes: 'jookh-grid',               variant: ''     },
-    { category: 'pillows',   id: 'plo-grid',         classes: 'collection-grid',           variant: ''     }
+    { category: 'archive',   id: 'archive-grid',     classes: 'jookh-grid',               variant: ''     },
+    { category: 'pillows',   id: 'plo-grid',         classes: 'collection-grid',           variant: ''     },
+    { category: 'paintings', id: 'paintings-grid',   classes: 'jookh-grid',               variant: ''     }
   ];
 
   // ─── RENDER ALL SECTIONS ─────────────────────────
