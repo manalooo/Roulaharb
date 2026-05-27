@@ -3156,3 +3156,94 @@ a   { text-decoration: none; color: inherit; }
   .closer-shot--accent:nth-of-type(3) { grid-column: 2; grid-row: 2; aspect-ratio: 1; }
   .closer-shot--accent:nth-of-type(4) { grid-column: 1 / span 2; grid-row: 3; aspect-ratio: 5/3; }
 }
+
+/* ═══════════════════════════════════════════════════════
+   LOOKBOOK PAGE — standalone /lookbook/ page styles.
+   Inherits .lookbook-* layout from main stylesheet.
+   ═══════════════════════════════════════════════════════ */
+body.page-lookbook {
+  background: linear-gradient(
+    180deg,
+    #FBE4D8 0%,
+    #F4EDE4 12%,
+    #F4EDE4 88%,
+    #FBE4D8 100%
+  );
+}
+body.page-lookbook #lookbook-page {
+  position: relative;
+  padding-top: calc(var(--space-2xl) + 4rem);   /* clear the fixed navbar */
+  padding-bottom: var(--space-3xl);
+  overflow: hidden;
+}
+
+/* Big editorial hero header */
+.lookbook-hero {
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto var(--space-2xl);
+  padding: 0 1.5rem;
+}
+.lookbook-hero .section-label { margin-bottom: 1.4rem; }
+.lookbook-hero-title {
+  font-family: var(--font-serif);
+  font-size: clamp(3rem, 7vw, 5.5rem);
+  font-weight: 300;
+  line-height: 1.06;
+  letter-spacing: -0.005em;
+  margin-bottom: 1.6rem;
+  color: var(--text-dark);
+}
+.lookbook-hero-title em {
+  font-style: italic;
+  font-weight: 300;
+  color: #C94A5A;
+}
+.lookbook-hero-sub {
+  font-family: var(--font-serif);
+  font-size: clamp(1.05rem, 1.6vw, 1.3rem);
+  font-style: italic;
+  font-weight: 300;
+  line-height: 1.6;
+  color: rgba(43, 18, 32, 0.78);
+  max-width: 620px;
+  margin: 0 auto 2rem;
+}
+.lookbook-hero-back {
+  display: inline-block;
+  font-family: var(--font-sans);
+  font-size: 0.64rem;
+  font-weight: 500;
+  letter-spacing: 0.26em;
+  text-transform: uppercase;
+  color: rgba(43, 18, 32, 0.6);
+  border-bottom: 1px solid rgba(43, 18, 32, 0.32);
+  padding-bottom: 4px;
+  transition: color 0.4s ease, border-color 0.4s ease;
+}
+.lookbook-hero-back:hover {
+  color: #C94A5A;
+  border-color: #C94A5A;
+}
+
+/* End-of-lookbook closer */
+.lookbook-end {
+  text-align: center;
+  margin-top: var(--space-2xl);
+  padding-top: var(--space-xl);
+  border-top: 1px solid rgba(184, 69, 48, 0.18);
+}
+.lookbook-end-line {
+  font-family: var(--font-serif);
+  font-size: 1rem;
+  font-style: italic;
+  font-weight: 300;
+  letter-spacing: 0.05em;
+  color: rgba(43, 18, 32, 0.55);
+  margin-bottom: 1.6rem;
+}
+
+/* Make sure nav's "current page" link has a subtle highlight */
+.nav-links a[aria-current="page"] {
+  color: #C94A5A;
+}
