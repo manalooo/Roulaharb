@@ -3110,18 +3110,20 @@ a   { text-decoration: none; color: inherit; }
 /* The pair — main 2/3, side 1/3 — editorial asymmetry */
 .lookbook-pair {
   display: grid;
-  grid-template-columns: 1.5fr 1fr;
+  grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr);
   gap: clamp(0.8rem, 2vw, 1.6rem);
   align-items: stretch;
+  width: 100%;
 }
 .lookbook-look--reverse .lookbook-pair {
-  grid-template-columns: 1fr 1.5fr;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.5fr);
 }
 .lookbook-look--reverse .lookbook-shot--main { order: 2; }
 .lookbook-look--reverse .lookbook-shot--side { order: 1; }
 
 .lookbook-pair .lookbook-shot {
   margin: 0;
+  min-width: 0;
   overflow: hidden;
   position: relative;
   background: #EFE6DA;
