@@ -288,6 +288,13 @@
 
   <script src="/script.js?v=20260606-001"></script>
   <script>
+    // Safety net: ensure all reveal elements become visible
+    // (IntersectionObserver fallback for rare edge cases)
+    setTimeout(function() {
+      document.querySelectorAll('.reveal:not(.visible)').forEach(function(el) {
+        el.classList.add('visible');
+      });
+    }, 800);
     if ('serviceWorker' in navigator) {
       navigator.serviceWorker.register('/sw.js').catch(function() {});
     }
