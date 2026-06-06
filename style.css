@@ -6,6 +6,58 @@
 /* ─── RESET ─── */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
+/* Performance: content-visibility for below-fold sections */
+@media (min-width: 769px) {
+  #jookh, #plo, #paintings, #about, #philosophy, #contact, #footer {
+    content-visibility: auto;
+    contain-intrinsic-size: 0 800px;
+  }
+}
+
+/* Accessibility: focus-visible for keyboard navigation */
+:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 3px;
+}
+
+/* Print styles */
+@media print {
+  .sticker, .cursor-dot, .hero-slides, .basket-widget, .petal-fall,
+  .hero-arrow, .grid-expand-btn, .archive-toggle {
+    display: none !important;
+  }
+  #navbar {
+    position: static;
+    background: #fff !important;
+    box-shadow: none !important;
+  }
+  .product-card {
+    break-inside: avoid;
+    box-shadow: none !important;
+    border: 1px solid #ddd;
+  }
+  body {
+    background: #fff !important;
+    color: #000 !important;
+  }
+  a {
+    text-decoration: underline;
+    color: #000 !important;
+  }
+  #hero {
+    min-height: auto;
+    background: #fff !important;
+  }
+  .hero-statement, .hero-tagline {
+    color: #000 !important;
+    text-shadow: none !important;
+  }
+  section, footer {
+    content-visibility: visible !important;
+    background: #fff !important;
+  }
+}
+
 :root {
   /* Core darks — never pure black */
   --wine:        #2D0A1E;
@@ -99,6 +151,26 @@ a   { text-decoration: none; color: inherit; }
 ::-webkit-scrollbar-thumb { background: var(--gold); border-radius: 0; }
 
 .container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
+
+/* ─── SKIP LINK ─── */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: var(--wine-dark);
+  color: #fff;
+  padding: 8px 16px;
+  z-index: 10000;
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: top 0.2s;
+}
+.skip-link:focus {
+  top: 0;
+}
 
 /* ─── REVEAL ─── */
 .reveal {

@@ -1,41 +1,38 @@
 /* ===================================================
-   ROULA HARB — script.js
+   ROULA HARB — script.js (v2)
    Handles: nav scroll, reveal animations, mobile menu,
-            lightbox, inquiry basket
+            lightbox, inquiry basket, custom cursor
    =================================================== */
 
 (function () {
   'use strict';
 
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
   // ─── HERO SLIDESHOW ──────────────────────────────
-  // Images are loaded from data/hero-slides.js (window.HERO_SLIDES).
-  // To change what shows: put images in images/hero/ then run:
-  //   node sync-hero.js
   (function () {
     var container = document.getElementById('hero-slides');
     if (!container) return;
 
-    // Load image list — fetch JSON over HTTP, fall back to window.HERO_SLIDES
     function buildSlideshow(paths) {
       if (!paths || !paths.length) return;
 
-      // Build slide DOM
       paths.forEach(function (src, i) {
         var div = document.createElement('div');
         div.className = 'hero-slide hero-slide--' + (i + 1);
         var img = document.createElement('img');
-        img.src          = src;
-        img.alt          = '';
-        img.draggable    = false;
-        img.loading      = i === 0 ? 'eager' : 'lazy';
+        img.src       = src;
+        img.alt       = '';
+        img.draggable = false;
+        img.loading   = i === 0 ? 'eager' : 'lazy';
+        img.decoding  = i === 0 ? 'sync' : 'async';
         div.appendChild(img);
         container.appendChild(div);
       });
 
-      // Start the cycle
       var slides   = Array.from(container.querySelectorAll('.hero-slide'));
-      var DURATION = 6000;  // each slide visible for 6s
-      var CLEANUP  = 2400;  // remove is-prev after crossfade completes (2.2s)
+      var DURATION = 6000;
+      var CLEANUP  = 2400;
       var current  = 0;
       var timer    = null;
 
@@ -62,7 +59,6 @@
       function resetAuto() { startAuto(); }
       startAuto();
 
-      // ── Arrow navigation ──
       if (slides.length > 1) {
         var hero = document.getElementById('hero');
         var btnPrev = document.createElement('button');
@@ -83,7 +79,6 @@
         hero.appendChild(btnPrev);
         hero.appendChild(btnNext);
 
-        // Pause auto-advance while hovering arrows so users aren't rushed
         [btnPrev, btnNext].forEach(function (b) {
           b.addEventListener('mouseenter', stopAuto);
           b.addEventListener('mouseleave', startAuto);
@@ -102,16 +97,18 @@
   })();
 
   // ─── GENTLE SMOOTH SCROLL ────────────────────────
-  // Intercepts all anchor links and scrolls softly over 900ms
   function gentleScrollTo(target) {
+    if (prefersReducedMotion) {
+      target.scrollIntoView({ behavior: 'auto', block: 'start' });
+      return;
+    }
     var start    = window.scrollY;
-    var end      = target.getBoundingClientRect().top + start - 80; // 80px nav offset
+    var end      = target.getBoundingClientRect().top + start - 80;
     var distance = end - start;
     var duration = 900;
     var startTime = null;
 
     function ease(t) {
-      // easeInOutCubic — slow start, smooth middle, gentle landing
       return t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
     }
 
@@ -128,7 +125,6 @@
   document.addEventListener('click', function (e) {
     var link = e.target.closest('a[href^="#"]');
     if (!link) return;
-    // Reserve-this-piece buttons add to the inquiry basket — never scroll.
     if (link.classList.contains('btn-inquire')) return;
     var id = link.getAttribute('href').slice(1);
     if (!id) return;
@@ -139,7 +135,6 @@
   });
 
   // ─── WHATSAPP NUMBER ─────────────────────────────
-  // International format, no + or spaces. Lebanon: 961 + 8-digit mobile.
   var WHATSAPP_NUMBER = '96181341586';
 
   // ─── NAVBAR SCROLL + HIDE ON SCROLL DOWN ────────
@@ -149,7 +144,6 @@
   function handleNavScroll() {
     var scrollY = window.scrollY;
 
-    // Scrolled state (background)
     if (scrollY > 60) {
       navbar.classList.add('scrolled');
     } else {
@@ -159,7 +153,6 @@
       return;
     }
 
-    // Hide on scroll down, reveal on scroll up
     if (scrollY > lastScrollY + 8) {
       navbar.classList.add('nav-hidden');
     } else if (scrollY < lastScrollY - 8) {
@@ -180,6 +173,10 @@
       const isOpen = hamburger.classList.toggle('open');
       navLinksAll.forEach(function (nl) { nl.classList.toggle('open', isOpen); });
       hamburger.setAttribute('aria-expanded', isOpen);
+      if (isOpen) {
+        var firstLink = navLinksAll[0].querySelector('a');
+        if (firstLink) firstLink.focus();
+      }
     });
 
     navLinksAll.forEach(function (nl) {
@@ -190,6 +187,16 @@
           hamburger.setAttribute('aria-expanded', 'false');
         });
       });
+    });
+
+    // Close menu on Escape
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && hamburger.classList.contains('open')) {
+        navLinksAll.forEach(function (nl) { nl.classList.remove('open'); });
+        hamburger.classList.remove('open');
+        hamburger.setAttribute('aria-expanded', 'false');
+        hamburger.focus();
+      }
     });
   }
 
@@ -222,10 +229,8 @@
     });
   }
 
-  // Expose globally so render.js can call it after async fetch resolves
   window.initReveal = initReveal;
 
-  // Run once immediately, then after a tick for dynamic cards
   initReveal();
   setTimeout(initReveal, 0);
 
@@ -245,10 +250,22 @@
 
   // ─── CUSTOM CURSOR ───────────────────────────────
   var cursorDot = document.getElementById('cursor-dot');
-  if (cursorDot && window.matchMedia('(pointer: fine)').matches) {
+  if (cursorDot && !prefersReducedMotion && window.matchMedia('(pointer: fine)').matches) {
+    var cursorX = 0, cursorY = 0, targetX = 0, targetY = 0;
+    var cursorRaf = null;
+
+    function updateCursor() {
+      cursorX += (targetX - cursorX) * 0.15;
+      cursorY += (targetY - cursorY) * 0.15;
+      cursorDot.style.left = cursorX + 'px';
+      cursorDot.style.top  = cursorY + 'px';
+      cursorRaf = requestAnimationFrame(updateCursor);
+    }
+
     document.addEventListener('mousemove', function (e) {
-      cursorDot.style.left = e.clientX + 'px';
-      cursorDot.style.top  = e.clientY + 'px';
+      targetX = e.clientX;
+      targetY = e.clientY;
+      if (!cursorRaf) cursorRaf = requestAnimationFrame(updateCursor);
     }, { passive: true });
 
     document.addEventListener('mouseover', function (e) {
@@ -266,20 +283,9 @@
         cursorDot.classList.remove('cursor-over-link');
       }
     });
+  } else if (cursorDot) {
+    cursorDot.style.display = 'none';
   }
-
-  // ─── SMOOTH SCROLL ───────────────────────────────
-  document.addEventListener('click', function (e) {
-    const anchor = e.target.closest('a[href^="#"]');
-    if (!anchor) return;
-    // Reserve-this-piece buttons add to the inquiry basket only — don't scroll.
-    if (anchor.classList.contains('btn-inquire')) return;
-    const target = document.querySelector(anchor.getAttribute('href'));
-    if (target) {
-      e.preventDefault();
-      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
-  });
 
   // ─── ACTIVE NAV LINK HIGHLIGHT ───────────────────
   const sections = document.querySelectorAll('section[id]');
@@ -295,7 +301,6 @@
           }
         });
 
-        // Toggle P-Lo body class for smooth background transition
         if (entry.target.id === 'plo') {
           document.body.classList.add('plo-active');
         } else {
@@ -308,19 +313,18 @@
   sections.forEach(function (section) { sectionObserver.observe(section); });
 
   // ─── LIGHTBOX ────────────────────────────────────
-  // Couture-grade: warm dusk-plum overlay with blur, elegant chevrons,
-  // product caption in Cormorant italic + Inter caps, dot pagination,
-  // smooth scale-zoom entrance.
   var lbImages = [], lbIndex = 0;
+  var lastFocusedElement = null;
 
   var lb = document.createElement('div');
   lb.className = 'lb-overlay';
   lb.setAttribute('role', 'dialog');
   lb.setAttribute('aria-modal', 'true');
   lb.setAttribute('aria-label', 'Image viewer');
+  lb.setAttribute('tabindex', '-1');
   lb.innerHTML =
-    '<button class="lb-close" aria-label="Close">×</button>' +
-    '<button class="lb-nav lb-prev" aria-label="Previous">‹</button>' +
+    '<button class="lb-close" aria-label="Close image viewer">×</button>' +
+    '<button class="lb-nav lb-prev" aria-label="Previous image">‹</button>' +
     '<div class="lb-stage">' +
       '<div class="lb-img-wrap"><img class="lb-img" src="" alt="" /></div>' +
       '<div class="lb-caption">' +
@@ -329,13 +333,36 @@
         '<div class="lb-dots"></div>' +
       '</div>' +
     '</div>' +
-    '<button class="lb-nav lb-next" aria-label="Next">›</button>';
+    '<button class="lb-nav lb-next" aria-label="Next image">›</button>';
   document.body.appendChild(lb);
 
   var lbImg  = lb.querySelector('.lb-img');
   var lbName = lb.querySelector('.lb-name');
   var lbMeta = lb.querySelector('.lb-meta');
   var lbDots = lb.querySelector('.lb-dots');
+
+  // Focus trap for lightbox
+  function trapFocus(element) {
+    var focusable = element.querySelectorAll('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])');
+    var first = focusable[0];
+    var last = focusable[focusable.length - 1];
+
+    element.addEventListener('keydown', function (e) {
+      if (e.key !== 'Tab') return;
+      if (e.shiftKey) {
+        if (document.activeElement === first) {
+          last.focus();
+          e.preventDefault();
+        }
+      } else {
+        if (document.activeElement === last) {
+          first.focus();
+          e.preventDefault();
+        }
+      }
+    });
+  }
+  trapFocus(lb);
 
   function lbShow(idx) {
     lbIndex = (idx + lbImages.length) % lbImages.length;
@@ -346,26 +373,34 @@
     }, 180);
     lbDots.querySelectorAll('.lb-dot').forEach(function (d, i) {
       d.classList.toggle('active', i === lbIndex);
+      d.setAttribute('aria-current', i === lbIndex ? 'true' : 'false');
     });
   }
 
   function lbOpen(images, startIdx, name, material) {
+    lastFocusedElement = document.activeElement;
     lbImages = images;
     lbDots.innerHTML = images.map(function (_, i) {
       return '<button class="lb-dot' + (i === startIdx ? ' active' : '') +
-             '" aria-label="Image ' + (i + 1) + '" data-idx="' + i + '"></button>';
+             '" aria-label="Image ' + (i + 1) + ' of ' + images.length + '"' +
+             (i === startIdx ? ' aria-current="true"' : '') +
+             ' data-idx="' + i + '"></button>';
     }).join('');
     lbImg.src = images[startIdx];
+    lbImg.alt = name || 'Artwork image';
     lbName.textContent = name || '';
     lbMeta.textContent = material || '';
     lbIndex = startIdx;
     lb.classList.add('open');
     document.body.style.overflow = 'hidden';
+    // Focus the lightbox itself first, then the close button
+    setTimeout(function () { lb.querySelector('.lb-close').focus(); }, 50);
   }
 
   function lbClose() {
     lb.classList.remove('open');
     document.body.style.overflow = '';
+    if (lastFocusedElement) lastFocusedElement.focus();
   }
 
   lb.querySelector('.lb-close').addEventListener('click', lbClose);
@@ -380,12 +415,12 @@
   });
   document.addEventListener('keydown', function (e) {
     if (!lb.classList.contains('open')) return;
-    if (e.key === 'Escape')     lbClose();
-    if (e.key === 'ArrowLeft')  lbShow(lbIndex - 1);
-    if (e.key === 'ArrowRight') lbShow(lbIndex + 1);
+    if (e.key === 'Escape')     { e.preventDefault(); lbClose(); }
+    if (e.key === 'ArrowLeft')  { e.preventDefault(); lbShow(lbIndex - 1); }
+    if (e.key === 'ArrowRight') { e.preventDefault(); lbShow(lbIndex + 1); }
   });
 
-  // Event delegation — works for dynamically rendered cards
+  // Event delegation for lightbox open
   document.addEventListener('click', function (e) {
     if (e.target.closest('.btn-inquire') || e.target.closest('.basket-widget')) return;
 
@@ -457,18 +492,18 @@
   basketWidget.className = 'basket-widget';
   basketWidget.setAttribute('aria-label', 'Inquiry basket');
   basketWidget.innerHTML =
-    '<button class="basket-trigger" id="basket-trigger" aria-label="Open inquiry basket">' +
+    '<button class="basket-trigger" id="basket-trigger" aria-label="Open inquiry basket (0 items)" aria-expanded="false" aria-controls="basket-panel">' +
       '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' +
         '<path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/>' +
         '<line x1="3" y1="6" x2="21" y2="6"/>' +
         '<path d="M16 10a4 4 0 01-8 0"/>' +
       '</svg>' +
-      '<span class="basket-count" id="basket-count">0</span>' +
+      '<span class="basket-count" id="basket-count" aria-hidden="true">0</span>' +
     '</button>' +
     '<div class="basket-panel" id="basket-panel" role="dialog" aria-label="Your inquiry list" hidden>' +
       '<div class="basket-panel-header">' +
         '<h4 class="basket-panel-title">Your Inquiry</h4>' +
-        '<button class="basket-panel-close" id="basket-close" aria-label="Close">&#215;</button>' +
+        '<button class="basket-panel-close" id="basket-close" aria-label="Close inquiry list">&#215;</button>' +
       '</div>' +
       '<div class="basket-panel-empty" id="basket-empty">No pieces selected yet.</div>' +
       '<ul class="basket-item-list" id="basket-item-list" aria-label="Selected pieces"></ul>' +
@@ -493,23 +528,23 @@
     var items = loadBasket();
     var count = items.length;
 
-    // Badge
     countBadge.textContent = count;
     trigger.classList.toggle('basket-has-items', count > 0);
+    trigger.setAttribute('aria-label', 'Open inquiry basket (' + count + ' item' + (count !== 1 ? 's' : '') + ')');
 
-    // Update Inquire buttons
     document.querySelectorAll('.btn-inquire').forEach(function (btn) {
       var id = btn.dataset.productId;
       if (basketContains(id)) {
         btn.classList.add('in-basket');
         btn.textContent = 'Added';
+        btn.setAttribute('aria-pressed', 'true');
       } else {
         btn.classList.remove('in-basket');
         btn.textContent = 'Request';
+        btn.setAttribute('aria-pressed', 'false');
       }
     });
 
-    // Panel list
     itemList.innerHTML = '';
     if (count === 0) {
       emptyNote.hidden = false;
@@ -521,7 +556,7 @@
         var li = document.createElement('li');
         li.className = 'basket-item';
         li.innerHTML =
-          '<img class="basket-thumb" src="' + p.thumb + '" alt="' + p.name + '" />' +
+          '<img class="basket-thumb" src="' + p.thumb + '" alt="" loading="lazy" />' +
           '<div class="basket-item-info">' +
             '<span class="basket-item-name">' + p.name + '</span>' +
             '<span class="basket-item-col">' + p.collection + '</span>' +
@@ -530,7 +565,6 @@
         itemList.appendChild(li);
       });
 
-      // WhatsApp link
       var msg = buildWhatsAppMessage();
       var wa  = WHATSAPP_NUMBER
         ? 'https://wa.me/' + WHATSAPP_NUMBER + '?text=' + msg
@@ -539,29 +573,31 @@
     }
   }
 
-  // Toggle panel
   trigger.addEventListener('click', function () {
     var isOpen = !panel.hidden;
     panel.hidden = isOpen;
     trigger.setAttribute('aria-expanded', !isOpen);
+    if (!isOpen) {
+      var firstFocusable = panel.querySelector('button, a');
+      if (firstFocusable) firstFocusable.focus();
+    }
   });
 
   closeBtn.addEventListener('click', function () {
     panel.hidden = true;
     trigger.setAttribute('aria-expanded', 'false');
+    trigger.focus();
   });
 
   clearBtn.addEventListener('click', function () {
     clearBasket();
   });
 
-  // Remove items via event delegation
   itemList.addEventListener('click', function (e) {
     var btn = e.target.closest('[data-remove-id]');
     if (btn) removeFromBasket(btn.dataset.removeId);
   });
 
-  // Close panel on outside click
   document.addEventListener('click', function (e) {
     if (!panel.hidden && !basketWidget.contains(e.target)) {
       panel.hidden = true;
@@ -569,7 +605,6 @@
     }
   });
 
-  // Inquire button click — event delegation
   document.addEventListener('click', function (e) {
     var btn = e.target.closest('.btn-inquire');
     if (!btn) return;
@@ -584,27 +619,17 @@
       removeFromBasket(id);
     } else {
       addToBasket({ id: id, name: name, collection: collection, thumb: thumb });
-      // Open panel briefly to confirm
       panel.hidden = false;
       trigger.setAttribute('aria-expanded', 'true');
     }
   });
 
-  // Initialise on load (restore any session state)
   updateBasketUI();
 
 })();
 
 /* ═══════════════════════════════════════════════════════
-   STICKERS — fresh adventure
-     1. Parallax drift (each sticker moves at its own speed
-        opposite to scroll, anchored to its parent section).
-     2. FAST SMOOTH scroll-rotation — accumulates rotation
-        from scroll distance × per-sticker speed, then lerps
-        toward target each frame for buttery smoothness.
-     3. Subtle viewport-progress breathing — petals scale up
-        gently when near the viewport center, shrink at edges.
-     4. Scroll-reveal fade-in via IntersectionObserver.
+   STICKERS — parallax drift with reduced motion support
    ═══════════════════════════════════════════════════════ */
 (function stickerAdventure() {
   'use strict';
@@ -613,19 +638,17 @@
 
   const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  // ── Cache per-sticker geometry & per-sticker animation state
   function cache() {
     stickers.forEach(s => {
       const parent = s.parentElement;
       const r = parent.getBoundingClientRect();
       s.__anchorTop = r.top + window.scrollY;
       s.__speed     = parseFloat(s.dataset.parallax) || 0.18;
-      s.__rotTarget = s.__rotTarget || 0;   // accumulating target rotation
-      s.__rotCur    = s.__rotCur    || 0;   // smoothed current rotation
+      s.__rotTarget = s.__rotTarget || 0;
+      s.__rotCur    = s.__rotCur    || 0;
     });
   }
 
-  // ── Fade-in when each sticker enters viewport
   const io = new IntersectionObserver((entries) => {
     entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
   }, { rootMargin: '0px 0px -8% 0px', threshold: 0.04 });
@@ -633,33 +656,24 @@
 
   if (prefersReduced) { cache(); return; }
 
-  // ── Main rAF loop: parallax + scroll-rotation + breathing
   let lastY = window.scrollY;
   let vh    = window.innerHeight;
 
   function frame() {
     const y  = window.scrollY;
-    const dy = y - lastY;            // signed scroll delta (px since last frame)
+    const dy = y - lastY;
     lastY = y;
 
-    // Rotation disabled — stickers stay at their fixed --rot only.
-    // (Was: accumulate rotation from scroll distance — felt too busy.)
-
-    // Per-frame smoothing + parallax + breathing
     stickers.forEach(s => {
-      // PARALLAX — drift opposite to scroll, anchored to section center
       const rel = (y + vh * 0.5) - s.__anchorTop;
       const py  = rel * s.__speed * -0.95;
       s.style.setProperty('--py', py.toFixed(1) + 'px');
-
-      // Rotation disabled — keep --scroll-rot at 0 so stickers stay still.
       s.style.setProperty('--scroll-rot', '0deg');
 
-      // BREATHING — viewport-progress scale (peak at 1.06× when sticker is centered)
       const r  = s.getBoundingClientRect();
       const cy = r.top + r.height * 0.5;
       const distNorm = Math.min(1, Math.abs(cy - vh * 0.5) / (vh * 0.7));
-      const breath   = 0.94 + (1 - distNorm) * 0.12;   // 0.94 at edge, 1.06 at center
+      const breath   = 0.94 + (1 - distNorm) * 0.12;
       s.style.setProperty('--breath', breath.toFixed(3));
     });
 
@@ -672,18 +686,14 @@
   window.addEventListener('resize', () => { vh = window.innerHeight; cache(); }, { passive: true });
   window.addEventListener('load',   () => { cache(); }, { passive: true });
 
-  // Expose so other code (grid expanders, etc.) can re-cache after DOM grows.
   window.__rerollStickers = cache;
 })();
 
 /* ═══════════════════════════════════════════════════════
-   GRID EXPANDERS — show first N cards in long grids,
-   reveal the rest behind a "+ see N more" button.
+   GRID EXPANDERS
    ═══════════════════════════════════════════════════════ */
 (function gridExpanders() {
   'use strict';
-  // One full row visible by default — desktop has 3 cols (4 for bags).
-  // Click the "+ N more" button to reveal the rest.
   const presets = {
     'scarves-grid':   { initial: 3, label: 'scarves'   },
     'bags-grid':      { initial: 4, label: 'bags'      },
@@ -695,15 +705,12 @@
     Object.keys(presets).forEach(gridId => {
       const container = document.getElementById(gridId);
       if (!container) return;
-      // skip if already wired
       if (container.dataset.expanderApplied) return;
 
-      // grids may be wrapped in .jookh-subgrid (or .collection-grid for pillows)
       const grids = container.querySelectorAll('.jookh-grid, .jookh-subgrid, .collection-grid');
       if (!grids.length) return;
 
       grids.forEach(grid => {
-        // Skip archive grids — they have their own toggle (.archive-wrap)
         if (grid.closest('.archive-wrap')) return;
         const cards = Array.from(grid.querySelectorAll('.product-card'));
         const { initial, label } = presets[gridId];
@@ -717,7 +724,7 @@
         btn.setAttribute('aria-expanded', 'false');
         btn.innerHTML =
           '<span class="btn-text">+ See ' + hidden.length + ' more ' + label + '</span>' +
-          '<span class="arrow">↓</span>';
+          '<span class="arrow" aria-hidden="true">↓</span>';
 
         btn.addEventListener('click', () => {
           const wasOpen = btn.getAttribute('aria-expanded') === 'true';
@@ -726,16 +733,12 @@
           btn.querySelector('.btn-text').textContent = wasOpen
             ? '+ See ' + hidden.length + ' more ' + label
             : '− Show fewer ' + label;
-          // Section just grew/shrank — re-cache sticker anchors so parallax stays aligned
-          // and stickers don't drift off-screen.
           if (typeof window.__rerollStickers === 'function') {
             window.__rerollStickers();
-            // and once more after layout settles
             setTimeout(window.__rerollStickers, 80);
           }
         });
 
-        // Insert after the grid (so it sits below the cards)
         grid.parentNode.insertBefore(btn, grid.nextSibling);
       });
 
@@ -743,7 +746,6 @@
     });
   }
 
-  // render.js builds grids on DOMContentLoaded; we run after it.
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', () => setTimeout(setupExpanders, 50));
   } else {
@@ -752,21 +754,16 @@
 })();
 
 /* ═══════════════════════════════════════════════════════
-   PETAL FALL — clicking any sticker scatters 6-9 petal
-   shapes from its center; petals drift with gravity + sway,
-   slowly rotate, and fade out.
+   PETAL FALL — reduced motion aware
    ═══════════════════════════════════════════════════════ */
 (function petalFall() {
   'use strict';
+  const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (prefersReduced) return;
+
   const PETAL_COLORS = [
-    '#C94A5A',  // rose madder
-    '#E88B6E',  // terracotta
-    '#F5B99C',  // peach sorbet
-    '#FBE4D8',  // dawn blush
-    '#6B1F2E',  // deep wine madder
-    '#B84530',  // painterly terracotta
-    '#F6D9A8',  // champagne gold
-    '#D48A3A',  // burnt amber
+    '#C94A5A', '#E88B6E', '#F5B99C', '#FBE4D8',
+    '#6B1F2E', '#B84530', '#F6D9A8', '#D48A3A',
   ];
   const GRAVITY  = 0.07;
   const DRAG     = 0.987;
@@ -777,14 +774,13 @@
       const p = document.createElement('div');
       p.className = 'petal-fall';
       p.style.background = PETAL_COLORS[Math.random() * PETAL_COLORS.length | 0];
-      // randomise size a touch
       const scale = 0.7 + Math.random() * 0.7;
       document.body.appendChild(p);
 
       let px = x + (Math.random() - 0.5) * 14;
       let py = y + (Math.random() - 0.5) * 14;
       let vx = (Math.random() - 0.5) * 5;
-      let vy = -Math.random() * 2.5 - 0.4;     // initial upward burst
+      let vy = -Math.random() * 2.5 - 0.4;
       let rot = Math.random() * 360;
       let rotV = (Math.random() - 0.5) * 5;
       const sway = 0.04 + Math.random() * 0.05;

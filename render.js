@@ -1,11 +1,7 @@
 /* =====================================================
-   ROULA HARB — render.js
-   Reads product data (from data/products.json via fetch,
-   or window.PRODUCTS as a file:// fallback) and builds
-   all product cards dynamically.
-
-   To update products: edit inventory.csv then run
-     node sync-products.js
+   ROULA HARB — render.js (v2)
+   Reads product data and builds all product cards dynamically.
+   Accessibility-first: proper alt text, ARIA labels, loading hints.
    ===================================================== */
 
 (function () {
@@ -27,7 +23,6 @@
       return;
     }
 
-    // Accept both legacy static shape (`views`) and API shape (`images.main`/`images.hover`/`images.extra[]`).
     var normalizedProducts = products.map(function (p) {
       var out = Object.assign({}, p);
       if (!Array.isArray(out.views) || !out.views.length) {
@@ -53,14 +48,11 @@
 
       // ── WEARABLES: new collection first, then archive ──
       if (section.category === 'wearables') {
-        // Named living subcollections stay in new collection (even if sold — shows "found its person").
-        // Unnamed/blank subcollection sold pieces go to The Archive.
         var NEW_SUBS = ['Roma', 'Atelier', 'Japan', 'Jaipur', 'Oxford', 'Bretagne'];
         var newItems     = items.filter(function (p) { return NEW_SUBS.indexOf(p.subcollection) !== -1 || p.status !== 'sold'; });
         var archiveItems = items.filter(function (p) { return NEW_SUBS.indexOf(p.subcollection) === -1 && p.status === 'sold'; });
         var cardIndex    = 0;
 
-        // New Collection — grouped by subcollection with headers
         if (newItems.length) {
           var newGroups = {};
           var newOrder  = [];
@@ -87,8 +79,6 @@
           });
         }
 
-        // Archive divider + collapsible grid — rendered into #archive-grid
-        // (separate container at the END of jookh, after scarves + bags).
         var archiveContainer = document.getElementById('archive-grid') || container;
         if (archiveItems.length) {
           var divider = el('div', 'archive-divider reveal');
@@ -102,7 +92,6 @@
             '<div class="archive-divider-rule"></div>';
           archiveContainer.appendChild(divider);
 
-          // Group archive items by subcollection
           var archiveGroups = {};
           var archiveOrder  = [];
           archiveItems.forEach(function (p) {
@@ -111,14 +100,12 @@
             archiveGroups[key].push(p);
           });
 
-          // Deduplicate order (named subcollections first, then ungrouped)
           var seenA = {}, orderedArchiveKeys = [];
           archiveOrder.forEach(function (k) {
             if (!seenA[k] && k !== '') { seenA[k] = true; orderedArchiveKeys.push(k); }
           });
           if (archiveGroups['']) orderedArchiveKeys.push('');
 
-          // Collapsible wrapper — only first 2 rows visible by default
           var archiveWrap = el('div', 'archive-wrap');
 
           orderedArchiveKeys.forEach(function (key) {
@@ -131,7 +118,6 @@
               aHeader.appendChild(aLine);
               archiveWrap.appendChild(aHeader);
             }
-            // Archive uses 4-column grid (denser, respectful of past work)
             var archiveGrid = el('div', 'jookh-grid jookh-grid-4 jookh-subgrid archive-grid');
             archiveGroups[key].forEach(function (product) {
               archiveGrid.appendChild(buildCard(product, '', cardIndex++, { isArchive: true }));
@@ -141,23 +127,24 @@
 
           archiveContainer.appendChild(archiveWrap);
 
-          // See More toggle button
           var toggleBtn = el('button', 'archive-toggle');
           toggleBtn.type = 'button';
+          toggleBtn.setAttribute('aria-expanded', 'false');
           toggleBtn.innerHTML = '<span class="archive-toggle-label">See More of the Archive</span>' +
-                                '<span class="archive-toggle-icon">↓</span>';
+                                '<span class="archive-toggle-icon" aria-hidden="true">↓</span>';
           toggleBtn.addEventListener('click', function () {
             var expanded = archiveWrap.classList.toggle('expanded');
             toggleBtn.classList.toggle('is-expanded', expanded);
+            toggleBtn.setAttribute('aria-expanded', String(expanded));
             toggleBtn.querySelector('.archive-toggle-label').textContent =
               expanded ? 'Show Less' : 'See More of the Archive';
           });
           archiveContainer.appendChild(toggleBtn);
         }
-        return; // skip the generic logic below
+        return;
       }
 
-      // ── All other categories (original logic) ────────
+      // ── All other categories ───────
       var hasSubcollections = items.some(function (p) { return p.subcollection; });
 
       if (hasSubcollections) {
@@ -205,17 +192,12 @@
       }
     });
 
-    // Initialise scroll-reveal on the newly created cards
     if (typeof window.initReveal === 'function') {
       window.initReveal();
     }
   }
 
   // ─── LOAD STRATEGY ───────────────────────────────
-  // 1. Try /api/products       — Cloudflare D1-backed (production)
-  // 2. Try data/products.json  — static fallback (dev server, GitHub Pages, etc.)
-  // 3. Fall back to window.PRODUCTS — works when opened as a local file://
-
   function tryFetch(url) {
     return fetch(url).then(function (r) {
       if (!r.ok) throw new Error('HTTP ' + r.status);
@@ -238,65 +220,69 @@
     opts = opts || {};
     var isPlo         = product.collection === 'P-Lo';
     var isSold        = product.status === 'sold';
-    var isArchive     = !!opts.isArchive;   // archive mode — no Claimed ribbon
-    var isNew         = !!opts.isNew;       // new collection badge
+    var isArchive     = !!opts.isArchive;
     var isWearable    = product.category === 'wearables';
     var hasSecondView = Array.isArray(product.views) && product.views.length >= 2;
+
+    // Determine alt text
+    var nameText = (product.name || 'Artwork').trim();
+    var altMain = nameText + (isPlo ? ' — hand-painted pillow' : ' — hand-painted wearable art');
+    var altHover = nameText + ' — alternate view';
 
     // ── Image container ──────────────────────────
     var wrapClass = 'card-img-wrap' + (isWearable && hasSecondView ? ' card-crossfade' : '');
     var imgWrap = el('div', wrapClass);
+    imgWrap.setAttribute('role', 'button');
+    imgWrap.setAttribute('tabindex', '0');
+    imgWrap.setAttribute('aria-label', 'View ' + nameText + ' in lightbox');
 
-    // Main image — cover fill, consistent ratio
+    // Main image
     var mainImg = el('img', 'main-img');
     mainImg.src     = (product.views && product.views[0]) || '';
-    mainImg.alt     = product.name || '';
-    mainImg.loading = 'lazy';
+    mainImg.alt     = altMain;
+    mainImg.loading = index < 6 ? 'eager' : 'lazy';
+    mainImg.decoding = index < 6 ? 'sync' : 'async';
     imgWrap.appendChild(mainImg);
 
     if (isWearable && hasSecondView) {
-      // Crossfade to second view on hover — art speaks alone
       var hoverImg = el('img', 'hover-img');
       hoverImg.src     = product.views[1];
-      hoverImg.alt     = (product.name || '') + ' \u2014 back view';
+      hoverImg.alt     = altHover;
       hoverImg.loading = 'lazy';
+      hoverImg.decoding = 'async';
       imgWrap.appendChild(hoverImg);
     }
-    // All other categories: no overlay — pure image, luxury depth shift on hover
 
-    // "Claimed" ribbon only on non-archive sold cards (scarves/bags/pillows)
     if (isSold && !isArchive) {
       var soldTag = el('div', 'card-sold-tag');
       soldTag.textContent = 'Claimed';
+      soldTag.setAttribute('aria-label', 'This piece has been sold');
       imgWrap.appendChild(soldTag);
     }
 
-    // ── Info row — centred under the image ───────
+    // ── Info row ───────
     var infoRow = el('div', 'card-info' + (isPlo ? ' card-info--plo' : ''));
 
     var nameEl = el('span', 'card-piece-num' + (isPlo ? ' card-piece-num--plo' : ''));
     nameEl.textContent = product.name || '';
     infoRow.appendChild(nameEl);
 
-    // Medium line (only if filled in)
     if (product.medium && product.medium.indexOf('ENTER') === -1 && product.medium.indexOf('[') === -1) {
       var medEl = el('span', 'card-medium');
       medEl.textContent = product.medium;
       infoRow.appendChild(medEl);
     }
 
-    // Price line (only if filled in — hide ENTER PRICE HERE placeholder)
     var priceRaw = product.price != null ? String(product.price) : '';
     if (priceRaw && priceRaw.indexOf('ENTER') === -1 && priceRaw.trim() !== '') {
       var priceEl = el('span', 'card-price' + (isPlo ? ' card-price--plo' : ''));
-      // If it's a number, prefix with $
       var priceNum = parseFloat(priceRaw);
       priceEl.textContent = isNaN(priceNum) ? priceRaw : '$' + priceNum.toLocaleString('en-US');
       infoRow.appendChild(priceEl);
     }
 
     if (isSold && isArchive) {
-      // Archive pieces: no CTA, no label — the section header tells the story
+      // Archive: no CTA
     } else if (isSold) {
       var soldLbl = el('span', 'card-sold-label');
       soldLbl.textContent = 'This piece found its person';
@@ -305,6 +291,8 @@
       var btn = el('a', 'btn-inquire' + (isPlo ? ' btn-inquire--plo' : ''));
       btn.href                      = '#contact';
       btn.textContent               = 'Reserve this piece';
+      btn.setAttribute('role', 'button');
+      btn.setAttribute('aria-pressed', 'false');
       btn.dataset.productId         = product.id;
       btn.dataset.productName       = product.name || '';
       btn.dataset.productCollection = product.collection || '';

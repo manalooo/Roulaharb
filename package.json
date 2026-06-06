@@ -1,5 +1,25 @@
 {
+  "name": "roulaharb",
+  "version": "2.0.0",
+  "description": "The Conceptual Art World of Roula Harb — website",
+  "scripts": {
+    "dev": "npx serve .",
+    "format": "npx prettier --write \"**/*.{html,css,js,json}\"",
+    "lint:css": "npx stylelint \"**/*.css\"",
+    "build": "echo 'Build complete — static files ready for deployment'",
+    "optimize:images": "node scripts/optimize-images.js",
+    "sync:products": "node sync-products.js",
+    "sync:hero": "node sync-hero.js"
+  },
+  "devDependencies": {
+    "prettier": "^3.3.0",
+    "stylelint": "^16.6.0",
+    "stylelint-config-standard": "^36.0.0"
+  },
   "dependencies": {
     "sharp": "^0.34.5"
+  },
+  "engines": {
+    "node": ">=18.0.0"
   }
 }

@@ -3,101 +3,108 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Roula Harb Admin</title>
+  <meta name="robots" content="noindex, nofollow" />
+  <title>Admin — Roula Harb</title>
   <link rel="stylesheet" href="./styles.css" />
 </head>
 <body>
-  <main class="admin-shell">
-    <section id="login-card" class="card">
-      <h1>Admin Login</h1>
+  <a href="#main-content" class="skip-link">Skip to content</a>
+
+  <main class="admin-shell" id="main-content">
+    <section id="login-card" class="card" aria-labelledby="login-heading">
+      <h1 id="login-heading">Admin Login</h1>
       <p class="muted">Enter the shared password to add products.</p>
-      <form id="login-form">
-        <label>
-          Password
-          <input id="password" type="password" autocomplete="current-password" required />
-        </label>
+      <form id="login-form" novalidate>
+        <label for="password">Password</label>
+        <input id="password" type="password" autocomplete="current-password" required aria-required="true" />
         <button type="submit">Sign in</button>
       </form>
-      <p id="login-msg" class="msg"></p>
+      <p id="login-msg" class="msg" role="status" aria-live="polite"></p>
     </section>
 
-    <section id="app-card" class="card hidden">
+    <section id="app-card" class="card hidden" aria-labelledby="add-product-heading">
       <div class="row between">
-        <h1>Add Product</h1>
+        <h1 id="add-product-heading">Add Product</h1>
         <button id="logout-btn" class="btn-secondary" type="button">Log out</button>
       </div>
       <p class="muted">Uses the same fields as your inventory CSV, with ID generated automatically.</p>
 
-      <form id="product-form">
-        <div class="grid two">
-          <label>
-            Name
-            <input id="name" required />
-          </label>
-          <label>
-            Category
-            <select id="category" required>
-              <option value="scarves">scarves</option>
-              <option value="bags">bags</option>
-              <option value="wearables">wearables</option>
-              <option value="pillows">pillows</option>
-              <option value="paintings">paintings</option>
-            </select>
-          </label>
-          <label>
-            Auto ID
-            <input id="id-preview" disabled />
-          </label>
-          <label>
-            Status
-            <select id="status" required>
-              <option value="available">available</option>
-              <option value="sold">sold</option>
-            </select>
-          </label>
-          <label>
-            Subcollection
-            <input id="subcollection" />
-          </label>
-          <label>
-            Era
-            <input id="era" />
-          </label>
-          <label>
-            Price
-            <input id="price" placeholder="e.g. 380 or ENTER PRICE HERE" />
-          </label>
-          <label>
-            Material
-            <input id="material" placeholder="e.g. cotton" />
-          </label>
-        </div>
+      <form id="product-form" novalidate>
+        <fieldset>
+          <legend class="visually-hidden">Product details</legend>
+          <div class="grid two">
+            <div>
+              <label for="name">Name <span aria-label="required">*</span></label>
+              <input id="name" required aria-required="true" />
+            </div>
+            <div>
+              <label for="category">Category <span aria-label="required">*</span></label>
+              <select id="category" required aria-required="true">
+                <option value="scarves">scarves</option>
+                <option value="bags">bags</option>
+                <option value="wearables">wearables</option>
+                <option value="pillows">pillows</option>
+                <option value="paintings">paintings</option>
+              </select>
+            </div>
+            <div>
+              <label for="id-preview">Auto ID</label>
+              <input id="id-preview" disabled aria-disabled="true" />
+            </div>
+            <div>
+              <label for="status">Status <span aria-label="required">*</span></label>
+              <select id="status" required aria-required="true">
+                <option value="available">available</option>
+                <option value="sold">sold</option>
+              </select>
+            </div>
+            <div>
+              <label for="subcollection">Subcollection</label>
+              <input id="subcollection" />
+            </div>
+            <div>
+              <label for="era">Era</label>
+              <input id="era" />
+            </div>
+            <div>
+              <label for="price">Price</label>
+              <input id="price" placeholder="e.g. 380 or ENTER PRICE HERE" inputmode="decimal" />
+            </div>
+            <div>
+              <label for="material">Material</label>
+              <input id="material" placeholder="e.g. cotton" />
+            </div>
+          </div>
+        </fieldset>
 
-        <div class="grid two">
-          <label>
-            Main image (required)
-            <input id="main-image" type="file" accept="image/jpeg,image/png,image/webp,image/gif" required />
-          </label>
-          <label>
-            Hover image (optional)
-            <input id="hover-image" type="file" accept="image/jpeg,image/png,image/webp,image/gif" />
-          </label>
-        </div>
+        <fieldset>
+          <legend class="visually-hidden">Product images</legend>
+          <div class="grid two">
+            <div>
+              <label for="main-image">Main image <span aria-label="required">*</span></label>
+              <input id="main-image" type="file" accept="image/jpeg,image/png,image/webp,image/gif" required aria-required="true" />
+            </div>
+            <div>
+              <label for="hover-image">Hover image <span class="optional">(optional)</span></label>
+              <input id="hover-image" type="file" accept="image/jpeg,image/png,image/webp,image/gif" />
+            </div>
+          </div>
+        </fieldset>
 
         <div class="grid two">
           <div>
             <p class="preview-title">Main preview</p>
-            <img id="main-preview" class="preview" alt="" />
+            <img id="main-preview" class="preview" alt="Main image preview" />
           </div>
           <div>
             <p class="preview-title">Hover preview</p>
-            <img id="hover-preview" class="preview" alt="" />
+            <img id="hover-preview" class="preview" alt="Hover image preview" />
           </div>
         </div>
 
         <button id="submit-btn" type="submit">Save and Publish</button>
       </form>
-      <p id="form-msg" class="msg"></p>
+      <p id="form-msg" class="msg" role="status" aria-live="polite"></p>
     </section>
   </main>
 

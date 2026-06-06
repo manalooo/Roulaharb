@@ -5,6 +5,42 @@ body {
   background: #f8f3ee;
   color: #2a1a1b;
 }
+
+/* Skip link for keyboard navigation */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: #2a1a1b;
+  color: #fff;
+  padding: 8px 16px;
+  z-index: 10000;
+  font-size: 0.72rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: top 0.2s;
+}
+.skip-link:focus { top: 0; }
+
+/* Visually hidden but accessible to screen readers */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Focus styles */
+:focus-visible {
+  outline: 2px solid #c9a87c;
+  outline-offset: 2px;
+}
 .admin-shell {
   max-width: 920px;
   margin: 2rem auto;
