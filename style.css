@@ -3076,8 +3076,8 @@ a   { text-decoration: none; color: inherit; }
   display: grid;
   grid-template-columns: minmax(0, 1fr);
   gap: 0.6rem;
-  margin: 0;
-  margin-bottom: 4.5rem;
+  margin: 0 auto 4.5rem;
+  max-width: 1000px;
 }
 .lookbook-look:last-child { margin-bottom: 0; }
 
