@@ -3219,8 +3219,8 @@ a   { text-decoration: none; color: inherit; }
   background: #EFE6DA;
   box-shadow: 0 12px 28px rgba(60, 20, 30, 0.12);
   cursor: zoom-in;
-  aspect-ratio: 3/4;
 }
+.lookbook-pair .lookbook-shot--main { aspect-ratio: 3/4; }
 .lookbook-pair .lookbook-shot img {
   width: 100%;
   height: 100%;
@@ -3236,7 +3236,7 @@ a   { text-decoration: none; color: inherit; }
     grid-template-columns: 1fr;
     gap: 0.6rem;
   }
-  .lookbook-pair .lookbook-shot { aspect-ratio: 3/4; }
+  .lookbook-pair .lookbook-shot--main { aspect-ratio: 3/4; }
   .lookbook-pair .lookbook-shot--side { aspect-ratio: 4/5; }
 }
 
