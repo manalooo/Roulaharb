@@ -420,7 +420,7 @@
     if (e.key === 'ArrowRight') { e.preventDefault(); lbShow(lbIndex + 1); }
   });
 
-  // Event delegation for lightbox open
+  // Event delegation for lightbox open — product cards
   document.addEventListener('click', function (e) {
     if (e.target.closest('.btn-inquire') || e.target.closest('.basket-widget')) return;
 
@@ -437,6 +437,35 @@
       var medium = medEl  ? medEl.textContent.trim()  : '';
       lbOpen(images, 0, name, medium);
     } catch (err) { /* ignore */ }
+  });
+
+  // Event delegation for lightbox open — lookbook shots
+  document.addEventListener('click', function (e) {
+    var shot = e.target.closest('.lookbook-shot');
+    if (!shot) return;
+    var gallery = shot.closest('.lookbook-gallery, .lookbook-pair');
+    if (!gallery) return;
+    var look = gallery.closest('.lookbook-look');
+    if (!look) return;
+
+    var shots = gallery.querySelectorAll('.lookbook-shot img');
+    var images = Array.from(shots).map(function (img) { return img.src; });
+    var clickedImg = shot.querySelector('img');
+    var clickedIdx = Array.from(shots).indexOf(clickedImg);
+    if (clickedIdx < 0) clickedIdx = 0;
+
+    var titleEl = look.querySelector('.lookbook-look-title');
+    var title = '';
+    if (titleEl) {
+      var textNodes = Array.from(titleEl.childNodes).filter(function(n) {
+        return n.nodeType === Node.TEXT_NODE;
+      });
+      title = textNodes[0] ? textNodes[0].textContent.trim() : '';
+    }
+    var metaEl = look.querySelector('.lookbook-look-meta');
+    var meta = metaEl ? metaEl.textContent.trim() : '';
+
+    lbOpen(images, clickedIdx, title, meta);
   });
 
   // ─── INQUIRY BASKET ──────────────────────────────
