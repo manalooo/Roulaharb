@@ -3073,13 +3073,12 @@ a   { text-decoration: none; color: inherit; }
    front+back or two poses, in an asymmetric editorial pairing).
    ═══════════════════════════════════════════════════════ */
 .lookbook-look {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr);
-  gap: 0.6rem;
-  margin: 0 auto 4.5rem;
+  display: block;
+  margin: 0 auto;
+  padding-bottom: 4.5rem;
   max-width: 1000px;
 }
-.lookbook-look:last-child { margin-bottom: 0; }
+.lookbook-look:last-child { padding-bottom: 0; }
 
 .lookbook-look-title {
   font-family: var(--font-serif);
@@ -3127,7 +3126,7 @@ a   { text-decoration: none; color: inherit; }
   overflow: hidden;
   position: relative;
   background: #EFE6DA;
-  box-shadow: 0 18px 44px rgba(60, 20, 30, 0.14);
+  box-shadow: 0 12px 28px rgba(60, 20, 30, 0.12);
 }
 .lookbook-pair .lookbook-shot img {
   width: 100%;
