@@ -3262,17 +3262,17 @@ a   { text-decoration: none; color: inherit; }
 }
 .lookbook-gallery .lookbook-shot:hover img { transform: scale(1.04); }
 
-/* 3-up triptych: tall hero left, two stacked right */
+/* 3-up triptych: tall hero left, two portrait stacked right */
 .lookbook-gallery--3 {
-  grid-template-columns: 1.4fr 1fr;
+  grid-template-columns: 2fr 1fr;
   grid-template-rows: 1fr 1fr;
   grid-template-areas:
     "a b"
     "a c";
 }
 .lookbook-gallery--3 .lookbook-shot--a { grid-area: a; aspect-ratio: 3/4; }
-.lookbook-gallery--3 .lookbook-shot--b { grid-area: b; aspect-ratio: 1/1; }
-.lookbook-gallery--3 .lookbook-shot--c { grid-area: c; aspect-ratio: 1/1; }
+.lookbook-gallery--3 .lookbook-shot--b { grid-area: b; }
+.lookbook-gallery--3 .lookbook-shot--c { grid-area: c; }
 
 /* 5-up mosaic: hero top-left, details around, wide bottom */
 .lookbook-gallery--5 {
