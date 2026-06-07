@@ -3218,6 +3218,36 @@ a   { text-decoration: none; color: inherit; }
     "e e d";
 }
 
+/* 4-up collage: clean 2×2 grid */
+.lookbook-gallery--4 {
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas:
+    "a b"
+    "c d";
+  gap: clamp(0.6rem, 1.4vw, 1.2rem);
+}
+.lookbook-gallery--4 .lookbook-shot--a { grid-area: a; aspect-ratio: 3/4; }
+.lookbook-gallery--4 .lookbook-shot--b { grid-area: b; aspect-ratio: 3/4; }
+.lookbook-gallery--4 .lookbook-shot--c { grid-area: c; aspect-ratio: 3/4; }
+.lookbook-gallery--4 .lookbook-shot--d { grid-area: d; aspect-ratio: 3/4; }
+
+@media (max-width: 700px) {
+  .lookbook-gallery--4 {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: none;
+  }
+  .lookbook-gallery--4 .lookbook-shot--a,
+  .lookbook-gallery--4 .lookbook-shot--b,
+  .lookbook-gallery--4 .lookbook-shot--c,
+  .lookbook-gallery--4 .lookbook-shot--d {
+    grid-column: auto;
+    grid-row: auto;
+    aspect-ratio: 3/4;
+  }
+}
+
 /* 6-up sequence: two rows of three */
 .lookbook-gallery--6 {
   grid-template-columns: 1fr 1fr 1fr;
