@@ -3198,16 +3198,18 @@ a   { text-decoration: none; color: inherit; }
   color: rgba(184, 69, 48, 0.75);
 }
 
-/* The pair — main 2/3, side 1/3 — editorial asymmetry */
+/* The pair — main 2/3, side 1/3 — editorial asymmetry (CSS Grid) */
 .lookbook-pair {
-  display: flex;
+  display: grid;
+  grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr);
   gap: clamp(0.8rem, 2vw, 1.6rem);
-  align-items: stretch;
   width: 100%;
 }
 .lookbook-look--reverse .lookbook-pair {
-  flex-direction: row-reverse;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.5fr);
 }
+.lookbook-look--reverse .lookbook-shot--main { order: 2; }
+.lookbook-look--reverse .lookbook-shot--side { order: 1; }
 
 .lookbook-pair .lookbook-shot {
   margin: 0;
@@ -3217,6 +3219,7 @@ a   { text-decoration: none; color: inherit; }
   background: #EFE6DA;
   box-shadow: 0 12px 28px rgba(60, 20, 30, 0.12);
   cursor: zoom-in;
+  aspect-ratio: 3/4;
 }
 .lookbook-pair .lookbook-shot img {
   width: 100%;
@@ -3227,26 +3230,13 @@ a   { text-decoration: none; color: inherit; }
 }
 .lookbook-pair .lookbook-shot:hover img { transform: scale(1.04); }
 
-.lookbook-pair .lookbook-shot--main {
-  width: 60%;
-  flex-shrink: 0;
-  aspect-ratio: 3/4;
-}
-.lookbook-pair .lookbook-shot--side {
-  width: 40%;
-  flex-shrink: 0;
-}
-
 @media (max-width: 700px) {
   .lookbook-pair,
   .lookbook-look--reverse .lookbook-pair {
-    flex-direction: column;
+    grid-template-columns: 1fr;
     gap: 0.6rem;
   }
-  .lookbook-pair .lookbook-shot--main,
-  .lookbook-pair .lookbook-shot--side {
-    width: 100%;
-  }
+  .lookbook-pair .lookbook-shot { aspect-ratio: 3/4; }
   .lookbook-pair .lookbook-shot--side { aspect-ratio: 4/5; }
 }
 
