@@ -3229,13 +3229,13 @@ a   { text-decoration: none; color: inherit; }
 /* 3-up alt: hero top + two below */
 .lookbook-gallery--3-alt {
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1.3fr 1fr;
+  grid-template-rows: auto auto;
   grid-template-areas:
     "a a"
     "b c";
   gap: clamp(0.6rem, 1.4vw, 1.2rem);
 }
-.lookbook-gallery--3-alt .lookbook-shot--a { grid-area: a; aspect-ratio: 16/9; }
+.lookbook-gallery--3-alt .lookbook-shot--a { grid-area: a; }
 .lookbook-gallery--3-alt .lookbook-shot--b { grid-area: b; aspect-ratio: 3/4; }
 .lookbook-gallery--3-alt .lookbook-shot--c { grid-area: c; aspect-ratio: 3/4; }
 
@@ -3300,12 +3300,7 @@ a   { text-decoration: none; color: inherit; }
 .lookbook-gallery--6 .lookbook-shot--e { grid-area: e; aspect-ratio: 3/4; }
 .lookbook-gallery--6 .lookbook-shot--f { grid-area: f; aspect-ratio: 3/4; }
 
-/* Hero shot highlight — lavender border like the collage */
-.lookbook-shot--hero {
-  outline: 3px solid #9B7ED9;
-  outline-offset: -3px;
-  z-index: 1;
-}
+
 
 @media (max-width: 700px) {
   .lookbook-gallery--3,
