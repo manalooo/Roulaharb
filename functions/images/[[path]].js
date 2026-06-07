@@ -23,7 +23,7 @@ function guessContentType(key) {
   }
 }
 
-export async function onRequestGet({ env, params }) {
+export async function onRequestGet({ env, params, request }) {
   const rawPath = Array.isArray(params.path) ? params.path.join('/') : String(params.path || '');
   const key = rawPath.replace(/^\/+/, '');
 
@@ -32,21 +32,28 @@ export async function onRequestGet({ env, params }) {
     return new Response('Not found', { status: 404 });
   }
 
-  if (!env.IMAGES) {
-    return new Response('R2 binding IMAGES is missing', { status: 500 });
+  // Try R2 bucket first (existing images live here).
+  if (env.IMAGES) {
+    const object = await env.IMAGES.get(key);
+    if (object) {
+      const headers = new Headers();
+      headers.set('Cache-Control', 'public, max-age=31536000, immutable');
+      headers.set('Content-Type', object.httpMetadata?.contentType || guessContentType(key));
+      if (object.httpEtag) {
+        headers.set('ETag', object.httpEtag);
+      }
+      return new Response(object.body, { headers });
+    }
   }
 
-  const object = await env.IMAGES.get(key);
-  if (!object) {
-    return new Response('Not found', { status: 404 });
+  // Fallback: serve from static assets (new images deployed via git).
+  if (env.ASSETS) {
+    const assetUrl = new URL(request.url);
+    const assetResponse = await env.ASSETS.fetch(assetUrl);
+    if (assetResponse.status === 200) {
+      return assetResponse;
+    }
   }
 
-  const headers = new Headers();
-  headers.set('Cache-Control', 'public, max-age=31536000, immutable');
-  headers.set('Content-Type', object.httpMetadata?.contentType || guessContentType(key));
-  if (object.httpEtag) {
-    headers.set('ETag', object.httpEtag);
-  }
-
-  return new Response(object.body, { headers });
+  return new Response('Not found', { status: 404 });
 }
