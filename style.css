@@ -3305,7 +3305,7 @@ a   { text-decoration: none; color: inherit; }
 }
 .lookbook-gallery--2 .lookbook-shot { aspect-ratio: 3/4; }
 
-/* 3-up alt: hero top + two below */
+/* 3-up alt: wide hero top + two square below */
 .lookbook-gallery--3-alt {
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto auto;
@@ -3314,9 +3314,9 @@ a   { text-decoration: none; color: inherit; }
     "b c";
   gap: clamp(0.6rem, 1.4vw, 1.2rem);
 }
-.lookbook-gallery--3-alt .lookbook-shot--a { grid-area: a; }
-.lookbook-gallery--3-alt .lookbook-shot--b { grid-area: b; aspect-ratio: 3/4; }
-.lookbook-gallery--3-alt .lookbook-shot--c { grid-area: c; aspect-ratio: 3/4; }
+.lookbook-gallery--3-alt .lookbook-shot--a { grid-area: a; aspect-ratio: 16/9; }
+.lookbook-gallery--3-alt .lookbook-shot--b { grid-area: b; aspect-ratio: 1/1; }
+.lookbook-gallery--3-alt .lookbook-shot--c { grid-area: c; aspect-ratio: 1/1; }
 
 @media (max-width: 700px) {
   .lookbook-gallery--2 {
@@ -3330,7 +3330,7 @@ a   { text-decoration: none; color: inherit; }
   }
   .lookbook-gallery--3-alt .lookbook-shot--a { grid-column: 1 / -1; aspect-ratio: 3/4; }
   .lookbook-gallery--3-alt .lookbook-shot--b,
-  .lookbook-gallery--3-alt .lookbook-shot--c { aspect-ratio: 3/4; }
+  .lookbook-gallery--3-alt .lookbook-shot--c { aspect-ratio: 1/1; }
 }
 
 /* 4-up collage: clean 2×2 grid */
