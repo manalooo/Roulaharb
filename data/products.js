@@ -1421,7 +1421,8 @@ window.PRODUCTS = [
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
       "images/jookh/wearables/wear-80-view-1.jpg",
-      "images/jookh/wearables/wear-80-view-2.jpg"
+      "images/jookh/wearables/wear-80-view-2.jpg",
+      "images/jookh/wearables/wear-80-view-3.jpg"
     ],
     "status": "sold",
     "collection_line": "Essential"
