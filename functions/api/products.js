@@ -4,7 +4,7 @@
 export async function onRequestGet({ env, request }) {
   try {
     const { results } = await env.DB
-      .prepare('SELECT id, name, category, subcollection, era, status, price, material, main_image, hover_image, extra_views, sort_order FROM products ORDER BY sort_order')
+      .prepare('SELECT id, name, category, subcollection, collection_line, era, status, price, material, main_image, hover_image, extra_views, sort_order FROM products ORDER BY sort_order')
       .all();
 
     const base = (env.IMAGE_BASE || '/images/').replace(/\/?$/, '/');
@@ -19,6 +19,7 @@ export async function onRequestGet({ env, request }) {
         name:          r.name,
         category:      r.category,
         subcollection: r.subcollection || '',
+        collection_line: r.collection_line || '',
         era:           r.era || '',
         status:        r.status,
         price:         r.price || '',

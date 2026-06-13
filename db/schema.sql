@@ -6,8 +6,9 @@ DROP TABLE IF EXISTS products;
 CREATE TABLE products (
   id            TEXT PRIMARY KEY,           -- e.g. "scarf-01", "wear-73", "bag-18"
   name          TEXT NOT NULL,
-  category      TEXT NOT NULL,              -- 'scarves' | 'bags' | 'wearables' | 'pillows'
-  subcollection TEXT,                       -- 'KUMBAKONAM' | 'OSAKA' | 'Roma' | etc.
+  category       TEXT NOT NULL,              -- 'scarves' | 'bags' | 'wearables' | 'pillows'
+  subcollection  TEXT,                       -- 'KUMBAKONAM' | 'OSAKA' | 'Roma' | etc.
+  collection_line TEXT,                      -- 'Canvas' | '24 Carats' | 'Luxurious' | 'Essential'
   era           TEXT,
   status        TEXT NOT NULL DEFAULT 'available',  -- 'available' | 'sold'
   price         TEXT,                       -- stored as text so 'ENTER PRICE HERE' or '320' both work

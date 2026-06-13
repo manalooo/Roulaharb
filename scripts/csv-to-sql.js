@@ -43,6 +43,7 @@ for (const line of lines) {
     name: obj.Name,
     category: obj.Category,
     subcollection: obj.Subcollection || null,
+    collection_line: obj.Collection_Line || null,
     era: obj.Era || null,
     status: obj.Status || 'available',
     price: obj.Price || null,
@@ -64,8 +65,8 @@ let sql = '-- Auto-generated from inventory.csv by scripts/csv-to-sql.js\n';
 sql += '-- Run with: wrangler d1 execute roulaharb-products --remote --file=db/seed.sql\n\n';
 sql += 'DELETE FROM products;\n\n';
 for (const r of rows) {
-  sql += `INSERT INTO products (id, name, category, subcollection, era, status, price, material, main_image, hover_image, extra_views, sort_order) VALUES (`
-    + `${sqlQ(r.id)}, ${sqlQ(r.name)}, ${sqlQ(r.category)}, ${sqlQ(r.subcollection)}, ${sqlQ(r.era)}, ${sqlQ(r.status)}, ${sqlQ(r.price)}, ${sqlQ(r.material)}, ${sqlQ(r.main_image)}, ${sqlQ(r.hover_image)}, ${sqlQ(r.extra_views)}, ${r.sort_order});\n`;
+  sql += `INSERT INTO products (id, name, category, subcollection, collection_line, era, status, price, material, main_image, hover_image, extra_views, sort_order) VALUES (`
+    + `${sqlQ(r.id)}, ${sqlQ(r.name)}, ${sqlQ(r.category)}, ${sqlQ(r.subcollection)}, ${sqlQ(r.collection_line)}, ${sqlQ(r.era)}, ${sqlQ(r.status)}, ${sqlQ(r.price)}, ${sqlQ(r.material)}, ${sqlQ(r.main_image)}, ${sqlQ(r.hover_image)}, ${sqlQ(r.extra_views)}, ${r.sort_order});\n`;
 }
 
 fs.writeFileSync(OUT, sql);

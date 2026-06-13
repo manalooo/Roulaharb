@@ -124,10 +124,11 @@ function collectionFor(category) {
 // ─── BUILD PRODUCT ───────────────────────────────────────────────────────────
 
 function buildProduct(row) {
-  var category      = (row.Category      || '').toLowerCase().trim();
-  var status        = (row.Status        || 'available').toLowerCase().trim();
-  var subcollection = (row.Subcollection || '').trim();
-  var era           = (row.Era           || '').trim().toLowerCase(); // 'new' | 'archive' | ''
+  var category        = (row.Category        || '').toLowerCase().trim();
+  var status          = (row.Status          || 'available').toLowerCase().trim();
+  var subcollection   = (row.Subcollection   || '').trim();
+  var collectionLine  = (row.Collection_Line || '').trim();
+  var era             = (row.Era             || '').trim().toLowerCase(); // 'new' | 'archive' | ''
   if (status !== 'sold') status = 'available';
 
   // Build views array: main → hover → any extra views auto-detected on disk
@@ -148,13 +149,14 @@ function buildProduct(row) {
     price:      row.Price,
     medium:     row.Material,
     edition:    'One-of-a-kind \u00b7 Signed by the artist',
-    views:      views,
-    status:     status
+    views:          views,
+    status:         status
   };
 
-  // Only include subcollection / era if filled in
-  if (subcollection) product.subcollection = subcollection;
-  if (era)           product.era           = era; // 'new' | 'archive'
+  // Only include subcollection / collection_line / era if filled in
+  if (subcollection)  product.subcollection  = subcollection;
+  if (collectionLine) product.collection_line = collectionLine;
+  if (era)            product.era            = era; // 'new' | 'archive'
 
   return product;
 }
