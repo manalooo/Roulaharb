@@ -2471,8 +2471,7 @@ window.PRODUCTS = [
     "medium": "ENTER MATERIAL HERE",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
-      "images/jookh/wearables/wear-147-view-1.jpg",
-      "images/jookh/wearables/wear-147-view-2.jpg"
+      "images/jookh/wearables/wear-147-view-1.jpg"
     ],
     "status": "available",
     "collection_line": "Levi's x Jookh"
@@ -2580,7 +2579,7 @@ window.PRODUCTS = [
     ],
     "status": "available",
     "subcollection": "Levi's x Jookh",
-    "collection_line": "Essential"
+    "collection_line": "Levi's x Jookh"
   },
   {
     "id": "wear-155",
@@ -2596,7 +2595,7 @@ window.PRODUCTS = [
     ],
     "status": "available",
     "subcollection": "Levi's x Jookh",
-    "collection_line": "Essential"
+    "collection_line": "Levi's x Jookh"
   },
   {
     "id": "wear-156",
@@ -2612,7 +2611,7 @@ window.PRODUCTS = [
     ],
     "status": "available",
     "subcollection": "Levi's x Jookh",
-    "collection_line": "Essential"
+    "collection_line": "Levi's x Jookh"
   },
   {
     "id": "wear-157",
@@ -2628,7 +2627,7 @@ window.PRODUCTS = [
     ],
     "status": "available",
     "subcollection": "Levi's x Jookh",
-    "collection_line": "Essential"
+    "collection_line": "Levi's x Jookh"
   },
   {
     "id": "wear-158",
@@ -2644,7 +2643,7 @@ window.PRODUCTS = [
     ],
     "status": "available",
     "subcollection": "Levi's x Jookh",
-    "collection_line": "Essential"
+    "collection_line": "Levi's x Jookh"
   },
   {
     "id": "wear-159",
@@ -2660,7 +2659,7 @@ window.PRODUCTS = [
     ],
     "status": "available",
     "subcollection": "Levi's x Jookh",
-    "collection_line": "Essential"
+    "collection_line": "Levi's x Jookh"
   },
   {
     "id": "wear-160",
@@ -2676,7 +2675,7 @@ window.PRODUCTS = [
     ],
     "status": "available",
     "subcollection": "Levi's x Jookh",
-    "collection_line": "Essential"
+    "collection_line": "Levi's x Jookh"
   },
   {
     "id": "wear-161",
@@ -2692,7 +2691,7 @@ window.PRODUCTS = [
     ],
     "status": "available",
     "subcollection": "Levi's x Jookh",
-    "collection_line": "Essential"
+    "collection_line": "Levi's x Jookh"
   },
   {
     "id": "wear-162",
@@ -2708,7 +2707,7 @@ window.PRODUCTS = [
     ],
     "status": "available",
     "subcollection": "Levi's x Jookh",
-    "collection_line": "Essential"
+    "collection_line": "Levi's x Jookh"
   },
   {
     "id": "wear-163",
@@ -2724,7 +2723,7 @@ window.PRODUCTS = [
     ],
     "status": "available",
     "subcollection": "Levi's x Jookh",
-    "collection_line": "Essential"
+    "collection_line": "Levi's x Jookh"
   },
   {
     "id": "wear-164",
@@ -2740,7 +2739,7 @@ window.PRODUCTS = [
     ],
     "status": "available",
     "subcollection": "Levi's x Jookh",
-    "collection_line": "Essential"
+    "collection_line": "Levi's x Jookh"
   },
   {
     "id": "wear-165",
@@ -2756,7 +2755,7 @@ window.PRODUCTS = [
     ],
     "status": "available",
     "subcollection": "Levi's x Jookh",
-    "collection_line": "Essential"
+    "collection_line": "Levi's x Jookh"
   },
   {
     "id": "wear-166",
@@ -2772,7 +2771,7 @@ window.PRODUCTS = [
     ],
     "status": "available",
     "subcollection": "Levi's x Jookh",
-    "collection_line": "Essential"
+    "collection_line": "Levi's x Jookh"
   },
   {
     "id": "wear-167",
@@ -2788,7 +2787,7 @@ window.PRODUCTS = [
     ],
     "status": "available",
     "subcollection": "Levi's x Jookh",
-    "collection_line": "Essential"
+    "collection_line": "Levi's x Jookh"
   },
   {
     "id": "wear-168",
@@ -2804,7 +2803,7 @@ window.PRODUCTS = [
     ],
     "status": "available",
     "subcollection": "Levi's x Jookh",
-    "collection_line": "Essential"
+    "collection_line": "Levi's x Jookh"
   },
   {
     "id": "wear-169",
@@ -2820,7 +2819,7 @@ window.PRODUCTS = [
     ],
     "status": "available",
     "subcollection": "Levi's x Jookh",
-    "collection_line": "Essential"
+    "collection_line": "Levi's x Jookh"
   },
   {
     "id": "wear-170",
@@ -2836,7 +2835,7 @@ window.PRODUCTS = [
     ],
     "status": "available",
     "subcollection": "Levi's x Jookh",
-    "collection_line": "Essential"
+    "collection_line": "Levi's x Jookh"
   },
   {
     "id": "wear-171",
@@ -2852,7 +2851,7 @@ window.PRODUCTS = [
     ],
     "status": "available",
     "subcollection": "Levi's x Jookh",
-    "collection_line": "Essential"
+    "collection_line": "Levi's x Jookh"
   },
   {
     "id": "wear-172",
@@ -2868,7 +2867,7 @@ window.PRODUCTS = [
     ],
     "status": "available",
     "subcollection": "Levi's x Jookh",
-    "collection_line": "Essential"
+    "collection_line": "Levi's x Jookh"
   },
   {
     "id": "wear-173",
@@ -2884,7 +2883,7 @@ window.PRODUCTS = [
     ],
     "status": "available",
     "subcollection": "Levi's x Jookh",
-    "collection_line": "Essential"
+    "collection_line": "Levi's x Jookh"
   },
   {
     "id": "wear-174",
@@ -2900,7 +2899,7 @@ window.PRODUCTS = [
     ],
     "status": "available",
     "subcollection": "Levi's x Jookh",
-    "collection_line": "Essential"
+    "collection_line": "Levi's x Jookh"
   },
   {
     "id": "wear-175",
@@ -2916,7 +2915,7 @@ window.PRODUCTS = [
     ],
     "status": "available",
     "subcollection": "Levi's x Jookh",
-    "collection_line": "Essential"
+    "collection_line": "Levi's x Jookh"
   },
   {
     "id": "wear-176",
@@ -2932,7 +2931,7 @@ window.PRODUCTS = [
     ],
     "status": "available",
     "subcollection": "Levi's x Jookh",
-    "collection_line": "Essential"
+    "collection_line": "Levi's x Jookh"
   },
   {
     "id": "wear-177",
@@ -2948,7 +2947,7 @@ window.PRODUCTS = [
     ],
     "status": "available",
     "subcollection": "Levi's x Jookh",
-    "collection_line": "Essential"
+    "collection_line": "Levi's x Jookh"
   },
   {
     "id": "wear-178",
@@ -2964,7 +2963,7 @@ window.PRODUCTS = [
     ],
     "status": "available",
     "subcollection": "Levi's x Jookh",
-    "collection_line": "Essential"
+    "collection_line": "Levi's x Jookh"
   },
   {
     "id": "wear-179",
@@ -2980,7 +2979,7 @@ window.PRODUCTS = [
     ],
     "status": "available",
     "subcollection": "Levi's x Jookh",
-    "collection_line": "Essential"
+    "collection_line": "Levi's x Jookh"
   },
   {
     "id": "wear-180",
@@ -2996,7 +2995,7 @@ window.PRODUCTS = [
     ],
     "status": "available",
     "subcollection": "Levi's x Jookh",
-    "collection_line": "Essential"
+    "collection_line": "Levi's x Jookh"
   },
   {
     "id": "wear-181",
@@ -3012,7 +3011,7 @@ window.PRODUCTS = [
     ],
     "status": "available",
     "subcollection": "Levi's x Jookh",
-    "collection_line": "Essential"
+    "collection_line": "Levi's x Jookh"
   },
   {
     "id": "wear-182",
@@ -3028,7 +3027,7 @@ window.PRODUCTS = [
     ],
     "status": "available",
     "subcollection": "Levi's x Jookh",
-    "collection_line": "Essential"
+    "collection_line": "Levi's x Jookh"
   },
   {
     "id": "wear-183",
@@ -3044,7 +3043,7 @@ window.PRODUCTS = [
     ],
     "status": "available",
     "subcollection": "Levi's x Jookh",
-    "collection_line": "Essential"
+    "collection_line": "Levi's x Jookh"
   },
   {
     "id": "wear-184",
@@ -3060,7 +3059,7 @@ window.PRODUCTS = [
     ],
     "status": "available",
     "subcollection": "Levi's x Jookh",
-    "collection_line": "Essential"
+    "collection_line": "Levi's x Jookh"
   },
   {
     "id": "wear-185",
@@ -3076,7 +3075,7 @@ window.PRODUCTS = [
     ],
     "status": "available",
     "subcollection": "Levi's x Jookh",
-    "collection_line": "Essential"
+    "collection_line": "Levi's x Jookh"
   },
   {
     "id": "wear-186",
@@ -3092,7 +3091,7 @@ window.PRODUCTS = [
     ],
     "status": "available",
     "subcollection": "Levi's x Jookh",
-    "collection_line": "Essential"
+    "collection_line": "Levi's x Jookh"
   },
   {
     "id": "wear-187",
@@ -3108,7 +3107,7 @@ window.PRODUCTS = [
     ],
     "status": "available",
     "subcollection": "Levi's x Jookh",
-    "collection_line": "Essential"
+    "collection_line": "Levi's x Jookh"
   },
   {
     "id": "wear-188",
@@ -3124,7 +3123,7 @@ window.PRODUCTS = [
     ],
     "status": "available",
     "subcollection": "Levi's x Jookh",
-    "collection_line": "Essential"
+    "collection_line": "Levi's x Jookh"
   },
   {
     "id": "wear-189",
@@ -3140,7 +3139,7 @@ window.PRODUCTS = [
     ],
     "status": "available",
     "subcollection": "Levi's x Jookh",
-    "collection_line": "Essential"
+    "collection_line": "Levi's x Jookh"
   },
   {
     "id": "wear-190",
@@ -3156,7 +3155,7 @@ window.PRODUCTS = [
     ],
     "status": "available",
     "subcollection": "Levi's x Jookh",
-    "collection_line": "Essential"
+    "collection_line": "Levi's x Jookh"
   },
   {
     "id": "wear-191",
@@ -3172,7 +3171,7 @@ window.PRODUCTS = [
     ],
     "status": "available",
     "subcollection": "Levi's x Jookh",
-    "collection_line": "Essential"
+    "collection_line": "Levi's x Jookh"
   },
   {
     "id": "wear-192",
@@ -3188,7 +3187,7 @@ window.PRODUCTS = [
     ],
     "status": "available",
     "subcollection": "Levi's x Jookh",
-    "collection_line": "Essential"
+    "collection_line": "Levi's x Jookh"
   },
   {
     "id": "wear-193",
@@ -3204,7 +3203,7 @@ window.PRODUCTS = [
     ],
     "status": "available",
     "subcollection": "Levi's x Jookh",
-    "collection_line": "Essential"
+    "collection_line": "Levi's x Jookh"
   },
   {
     "id": "wear-194",
@@ -3220,7 +3219,7 @@ window.PRODUCTS = [
     ],
     "status": "available",
     "subcollection": "Levi's x Jookh",
-    "collection_line": "Essential"
+    "collection_line": "Levi's x Jookh"
   },
   {
     "id": "wear-195",
@@ -3236,7 +3235,7 @@ window.PRODUCTS = [
     ],
     "status": "available",
     "subcollection": "Levi's x Jookh",
-    "collection_line": "Essential"
+    "collection_line": "Levi's x Jookh"
   },
   {
     "id": "wear-196",
@@ -3252,7 +3251,7 @@ window.PRODUCTS = [
     ],
     "status": "available",
     "subcollection": "Levi's x Jookh",
-    "collection_line": "Essential"
+    "collection_line": "Levi's x Jookh"
   },
   {
     "id": "wear-197",
@@ -3268,7 +3267,7 @@ window.PRODUCTS = [
     ],
     "status": "available",
     "subcollection": "Levi's x Jookh",
-    "collection_line": "Essential"
+    "collection_line": "Levi's x Jookh"
   },
   {
     "id": "wear-198",
@@ -3284,7 +3283,7 @@ window.PRODUCTS = [
     ],
     "status": "available",
     "subcollection": "Levi's x Jookh",
-    "collection_line": "Essential"
+    "collection_line": "Levi's x Jookh"
   },
   {
     "id": "wear-199",
@@ -3300,7 +3299,7 @@ window.PRODUCTS = [
     ],
     "status": "available",
     "subcollection": "Levi's x Jookh",
-    "collection_line": "Essential"
+    "collection_line": "Levi's x Jookh"
   },
   {
     "id": "wear-200",
@@ -3316,7 +3315,7 @@ window.PRODUCTS = [
     ],
     "status": "available",
     "subcollection": "Levi's x Jookh",
-    "collection_line": "Essential"
+    "collection_line": "Levi's x Jookh"
   },
   {
     "id": "wear-201",
@@ -3332,7 +3331,7 @@ window.PRODUCTS = [
     ],
     "status": "available",
     "subcollection": "Levi's x Jookh",
-    "collection_line": "Essential"
+    "collection_line": "Levi's x Jookh"
   },
   {
     "id": "wear-202",
@@ -3348,7 +3347,7 @@ window.PRODUCTS = [
     ],
     "status": "available",
     "subcollection": "Levi's x Jookh",
-    "collection_line": "Essential"
+    "collection_line": "Levi's x Jookh"
   },
   {
     "id": "wear-203",
@@ -3364,7 +3363,7 @@ window.PRODUCTS = [
     ],
     "status": "available",
     "subcollection": "Levi's x Jookh",
-    "collection_line": "Essential"
+    "collection_line": "Levi's x Jookh"
   },
   {
     "id": "wear-204",
@@ -3380,7 +3379,7 @@ window.PRODUCTS = [
     ],
     "status": "available",
     "subcollection": "Levi's x Jookh",
-    "collection_line": "Essential"
+    "collection_line": "Levi's x Jookh"
   },
   {
     "id": "wear-205",
@@ -3396,7 +3395,7 @@ window.PRODUCTS = [
     ],
     "status": "available",
     "subcollection": "Levi's x Jookh",
-    "collection_line": "Essential"
+    "collection_line": "Levi's x Jookh"
   },
   {
     "id": "wear-206",
@@ -3412,7 +3411,7 @@ window.PRODUCTS = [
     ],
     "status": "available",
     "subcollection": "Levi's x Jookh",
-    "collection_line": "Essential"
+    "collection_line": "Levi's x Jookh"
   },
   {
     "id": "wear-207",
@@ -3428,7 +3427,7 @@ window.PRODUCTS = [
     ],
     "status": "available",
     "subcollection": "Levi's x Jookh",
-    "collection_line": "Essential"
+    "collection_line": "Levi's x Jookh"
   },
   {
     "id": "wear-208",

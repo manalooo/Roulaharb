@@ -46,23 +46,19 @@
 
       var items = normalizedProducts.filter(function (p) { return p.category === section.category; });
 
-      // ── WEARABLES: new collection first, then archive ──
+      // ── WEARABLES: group by subcollection, sold + available together ──
       if (section.category === 'wearables') {
-        var NEW_SUBS = ['Roma', 'Atelier', 'Japan', 'Jaipur', 'Oxford', 'Bretagne'];
-        var newItems     = items.filter(function (p) { return NEW_SUBS.indexOf(p.subcollection) !== -1 || p.status !== 'sold'; });
-        var archiveItems = items.filter(function (p) { return NEW_SUBS.indexOf(p.subcollection) === -1 && p.status === 'sold'; });
-        var cardIndex    = 0;
-
-        if (newItems.length) {
-          var newGroups = {};
-          var newOrder  = [];
-          newItems.forEach(function (p) {
+        var cardIndex = 0;
+        if (items.length) {
+          var groups = {};
+          var order  = [];
+          items.forEach(function (p) {
             var key = p.subcollection || 'Atelier';
-            if (!newGroups[key]) { newGroups[key] = []; newOrder.push(key); }
-            newGroups[key].push(p);
+            if (!groups[key]) { groups[key] = []; order.push(key); }
+            groups[key].push(p);
           });
 
-          newOrder.forEach(function (key) {
+          order.forEach(function (key) {
             var subHeader = el('div', 'jookh-subcat-header reveal');
             var subTitle  = el('h4',  'jookh-subcat-title');
             subTitle.textContent = key;
@@ -72,74 +68,11 @@
             container.appendChild(subHeader);
 
             var grid = el('div', section.classes + ' jookh-subgrid');
-            newGroups[key].forEach(function (product) {
+            groups[key].forEach(function (product) {
               grid.appendChild(buildCard(product, section.variant, cardIndex++));
             });
             container.appendChild(grid);
           });
-        }
-
-        var archiveContainer = document.getElementById('archive-grid') || container;
-        if (archiveItems.length) {
-          var divider = el('div', 'archive-divider reveal');
-          divider.innerHTML =
-            '<div class="archive-divider-rule"></div>' +
-            '<div class="archive-divider-center">' +
-              '<span class="archive-divider-label">The Archive</span>' +
-              '<p class="archive-divider-sub">Each piece below has found its collector — shown here as a testament to the work.</p>' +
-              '<p class="archive-divider-cta"><em>Drawn to a piece? Roula reproduces select archive styles on commission — <a href="#contact">write to her</a> to inquire.</em></p>' +
-            '</div>' +
-            '<div class="archive-divider-rule"></div>';
-          archiveContainer.appendChild(divider);
-
-          var archiveGroups = {};
-          var archiveOrder  = [];
-          archiveItems.forEach(function (p) {
-            var key = p.subcollection || '';
-            if (!archiveGroups[key]) { archiveGroups[key] = []; archiveOrder.push(key); }
-            archiveGroups[key].push(p);
-          });
-
-          var seenA = {}, orderedArchiveKeys = [];
-          archiveOrder.forEach(function (k) {
-            if (!seenA[k] && k !== '') { seenA[k] = true; orderedArchiveKeys.push(k); }
-          });
-          if (archiveGroups['']) orderedArchiveKeys.push('');
-
-          var archiveWrap = el('div', 'archive-wrap');
-
-          orderedArchiveKeys.forEach(function (key) {
-            if (key) {
-              var aHeader = el('div', 'jookh-subcat-header archive-subcat-header reveal');
-              var aTitle  = el('h4',  'jookh-subcat-title');
-              aTitle.textContent = key;
-              var aLine   = el('div', 'jookh-subcat-line');
-              aHeader.appendChild(aTitle);
-              aHeader.appendChild(aLine);
-              archiveWrap.appendChild(aHeader);
-            }
-            var archiveGrid = el('div', 'jookh-grid jookh-grid-4 jookh-subgrid archive-grid');
-            archiveGroups[key].forEach(function (product) {
-              archiveGrid.appendChild(buildCard(product, '', cardIndex++, { isArchive: true }));
-            });
-            archiveWrap.appendChild(archiveGrid);
-          });
-
-          archiveContainer.appendChild(archiveWrap);
-
-          var toggleBtn = el('button', 'archive-toggle');
-          toggleBtn.type = 'button';
-          toggleBtn.setAttribute('aria-expanded', 'false');
-          toggleBtn.innerHTML = '<span class="archive-toggle-label">See More of the Archive</span>' +
-                                '<span class="archive-toggle-icon" aria-hidden="true">↓</span>';
-          toggleBtn.addEventListener('click', function () {
-            var expanded = archiveWrap.classList.toggle('expanded');
-            toggleBtn.classList.toggle('is-expanded', expanded);
-            toggleBtn.setAttribute('aria-expanded', String(expanded));
-            toggleBtn.querySelector('.archive-toggle-label').textContent =
-              expanded ? 'Show Less' : 'See More of the Archive';
-          });
-          archiveContainer.appendChild(toggleBtn);
         }
         return;
       }
@@ -219,11 +152,9 @@
 
 
   // ─── CARD BUILDER ────────────────────────────────
-  function buildCard(product, variant, index, opts) {
-    opts = opts || {};
+  function buildCard(product, variant, index) {
     var isPlo         = product.collection === 'P-Lo';
     var isSold        = product.status === 'sold';
-    var isArchive     = !!opts.isArchive;
     var isWearable    = product.category === 'wearables';
     var hasSecondView = Array.isArray(product.views) && product.views.length >= 2;
 
@@ -256,7 +187,7 @@
       imgWrap.appendChild(hoverImg);
     }
 
-    if (isSold && !isArchive) {
+    if (isSold) {
       var soldTag = el('div', 'card-sold-tag');
       soldTag.textContent = 'Claimed';
       soldTag.setAttribute('aria-label', 'This piece has been sold');
@@ -284,9 +215,7 @@
       infoRow.appendChild(priceEl);
     }
 
-    if (isSold && isArchive) {
-      // Archive: no CTA
-    } else if (isSold) {
+    if (isSold) {
       var soldLbl = el('span', 'card-sold-label');
       soldLbl.textContent = 'This piece found its person';
       infoRow.appendChild(soldLbl);
@@ -304,7 +233,7 @@
     }
 
     // ── Card wrapper ─────────────────────────────
-    var card = el('div', 'product-card reveal' + (isSold ? ' card--sold' : '') + (isArchive ? ' card--archive' : ''));
+    var card = el('div', 'product-card reveal' + (isSold ? ' card--sold' : ''));
     card.dataset.lightbox         = JSON.stringify(product.views || []);
     card.dataset.productId        = product.id;
     card.dataset.collectionLine   = product.collection_line || 'Essential';

@@ -740,7 +740,6 @@
       if (!grids.length) return;
 
       grids.forEach(grid => {
-        if (grid.closest('.archive-wrap')) return;
         const cards = Array.from(grid.querySelectorAll('.product-card'));
         const { initial, label } = presets[gridId];
         if (cards.length <= initial) return;
@@ -828,16 +827,6 @@
       header.classList.toggle(EMPTY_CLASS, !visible);
     });
 
-    // Archive divider visibility
-    var archiveWrap = jookh.querySelector('.archive-wrap');
-    if (archiveWrap) {
-      var archiveVisible = archiveWrap.querySelectorAll('.product-card:not(.' + HIDDEN_CLASS + ')').length;
-      archiveWrap.classList.toggle(EMPTY_CLASS, !archiveVisible);
-      var divider = jookh.querySelector('.archive-divider');
-      if (divider) divider.classList.toggle(EMPTY_CLASS, !archiveVisible);
-      var toggle = jookh.querySelector('.archive-toggle');
-      if (toggle) toggle.classList.toggle(EMPTY_CLASS, !archiveVisible);
-    }
   }
 
   function setActive(btn) {
