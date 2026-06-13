@@ -1873,7 +1873,7 @@ window.PRODUCTS = [
       "images/jookh/wearables/piece-110-view-1.png"
     ],
     "status": "sold",
-    "collection_line": "Essential"
+    "collection_line": "Levi's x Jookh"
   },
   {
     "id": "paint-02",
@@ -1958,8 +1958,7 @@ window.PRODUCTS = [
       "images/jookh/wearables/piece-111-view-2.jpg"
     ],
     "status": "available",
-    "subcollection": "Levi's x Jookh",
-    "collection_line": "Essential"
+    "collection_line": "Levi's x Jookh"
   },
   {
     "id": "wear-112",
@@ -1974,8 +1973,7 @@ window.PRODUCTS = [
       "images/jookh/wearables/piece-112-view-2.jpg"
     ],
     "status": "available",
-    "subcollection": "Levi's x Jookh",
-    "collection_line": "Essential"
+    "collection_line": "Levi's x Jookh"
   },
   {
     "id": "wear-113",
@@ -1990,8 +1988,7 @@ window.PRODUCTS = [
       "images/jookh/wearables/piece-113-view-2.jpg"
     ],
     "status": "available",
-    "subcollection": "Levi's x Jookh",
-    "collection_line": "Essential"
+    "collection_line": "Levi's x Jookh"
   },
   {
     "id": "wear-114",
@@ -2006,8 +2003,7 @@ window.PRODUCTS = [
       "images/jookh/wearables/piece-114-view-2.jpg"
     ],
     "status": "available",
-    "subcollection": "Levi's x Jookh",
-    "collection_line": "Essential"
+    "collection_line": "Levi's x Jookh"
   },
   {
     "id": "wear-115",
@@ -2022,8 +2018,7 @@ window.PRODUCTS = [
       "images/jookh/wearables/piece-115-view-2.jpg"
     ],
     "status": "available",
-    "subcollection": "Levi's x Jookh",
-    "collection_line": "Essential"
+    "collection_line": "Levi's x Jookh"
   },
   {
     "id": "wear-116",
@@ -2038,8 +2033,7 @@ window.PRODUCTS = [
       "images/jookh/wearables/piece-116-view-2.jpg"
     ],
     "status": "available",
-    "subcollection": "Levi's x Jookh",
-    "collection_line": "Essential"
+    "collection_line": "Levi's x Jookh"
   },
   {
     "id": "wear-117",
@@ -2054,8 +2048,7 @@ window.PRODUCTS = [
       "images/jookh/wearables/piece-117-view-2.jpg"
     ],
     "status": "available",
-    "subcollection": "Levi's x Jookh",
-    "collection_line": "Essential"
+    "collection_line": "Levi's x Jookh"
   },
   {
     "id": "wear-118",
@@ -2070,8 +2063,7 @@ window.PRODUCTS = [
       "images/jookh/wearables/piece-118-view-2.jpg"
     ],
     "status": "available",
-    "subcollection": "Levi's x Jookh",
-    "collection_line": "Essential"
+    "collection_line": "Levi's x Jookh"
   },
   {
     "id": "wear-119",
@@ -2086,8 +2078,7 @@ window.PRODUCTS = [
       "images/jookh/wearables/piece-119-view-2.jpg"
     ],
     "status": "available",
-    "subcollection": "Levi's x Jookh",
-    "collection_line": "Essential"
+    "collection_line": "Levi's x Jookh"
   },
   {
     "id": "wear-120",
@@ -2102,8 +2093,7 @@ window.PRODUCTS = [
       "images/jookh/wearables/piece-120-view-2.jpg"
     ],
     "status": "available",
-    "subcollection": "Levi's x Jookh",
-    "collection_line": "Essential"
+    "collection_line": "Levi's x Jookh"
   },
   {
     "id": "wear-121",
@@ -2118,8 +2108,7 @@ window.PRODUCTS = [
       "images/jookh/wearables/piece-121-view-2.jpg"
     ],
     "status": "available",
-    "subcollection": "Levi's x Jookh",
-    "collection_line": "Essential"
+    "collection_line": "Levi's x Jookh"
   },
   {
     "id": "wear-122",
@@ -2134,8 +2123,7 @@ window.PRODUCTS = [
       "images/jookh/wearables/piece-122-view-2.jpg"
     ],
     "status": "available",
-    "subcollection": "Levi's x Jookh",
-    "collection_line": "Essential"
+    "collection_line": "Levi's x Jookh"
   },
   {
     "id": "wear-123",
@@ -2150,8 +2138,7 @@ window.PRODUCTS = [
       "images/jookh/wearables/piece-123-view-2.jpg"
     ],
     "status": "available",
-    "subcollection": "Levi's x Jookh",
-    "collection_line": "Essential"
+    "collection_line": "Levi's x Jookh"
   },
   {
     "id": "wear-124",
@@ -2166,8 +2153,7 @@ window.PRODUCTS = [
       "images/jookh/wearables/piece-124-view-2.jpg"
     ],
     "status": "available",
-    "subcollection": "Levi's x Jookh",
-    "collection_line": "Essential"
+    "collection_line": "Levi's x Jookh"
   },
   {
     "id": "wear-125",
@@ -2182,8 +2168,7 @@ window.PRODUCTS = [
       "images/jookh/wearables/piece-125-view-2.jpg"
     ],
     "status": "available",
-    "subcollection": "Levi's x Jookh",
-    "collection_line": "Essential"
+    "collection_line": "Levi's x Jookh"
   },
   {
     "id": "wear-126",
@@ -2198,8 +2183,7 @@ window.PRODUCTS = [
       "images/jookh/wearables/piece-126-view-2.jpg"
     ],
     "status": "available",
-    "subcollection": "Levi's x Jookh",
-    "collection_line": "Essential"
+    "collection_line": "Levi's x Jookh"
   },
   {
     "id": "wear-127",
@@ -2214,8 +2198,7 @@ window.PRODUCTS = [
       "images/jookh/wearables/piece-127-view-2.jpg"
     ],
     "status": "available",
-    "subcollection": "Levi's x Jookh",
-    "collection_line": "Essential"
+    "collection_line": "Levi's x Jookh"
   },
   {
     "id": "wear-128",
@@ -2230,8 +2213,7 @@ window.PRODUCTS = [
       "images/jookh/wearables/piece-128-view-2.jpg"
     ],
     "status": "available",
-    "subcollection": "Levi's x Jookh",
-    "collection_line": "Essential"
+    "collection_line": "Levi's x Jookh"
   },
   {
     "id": "wear-129",
@@ -2246,8 +2228,7 @@ window.PRODUCTS = [
       "images/jookh/wearables/piece-129-view-2.jpg"
     ],
     "status": "available",
-    "subcollection": "Levi's x Jookh",
-    "collection_line": "Essential"
+    "collection_line": "Levi's x Jookh"
   },
   {
     "id": "wear-130",
@@ -2262,8 +2243,7 @@ window.PRODUCTS = [
       "images/jookh/wearables/piece-130-view-2.jpg"
     ],
     "status": "available",
-    "subcollection": "Levi's x Jookh",
-    "collection_line": "Essential"
+    "collection_line": "Levi's x Jookh"
   },
   {
     "id": "wear-131",
@@ -2278,8 +2258,7 @@ window.PRODUCTS = [
       "images/jookh/wearables/piece-131-view-2.jpg"
     ],
     "status": "available",
-    "subcollection": "Levi's x Jookh",
-    "collection_line": "Essential"
+    "collection_line": "Levi's x Jookh"
   },
   {
     "id": "wear-132",
@@ -2294,8 +2273,7 @@ window.PRODUCTS = [
       "images/jookh/wearables/piece-132-view-2.jpg"
     ],
     "status": "available",
-    "subcollection": "Levi's x Jookh",
-    "collection_line": "Essential"
+    "collection_line": "Levi's x Jookh"
   },
   {
     "id": "wear-133",
@@ -2310,8 +2288,7 @@ window.PRODUCTS = [
       "images/jookh/wearables/piece-133-view-2.jpg"
     ],
     "status": "available",
-    "subcollection": "Levi's x Jookh",
-    "collection_line": "Essential"
+    "collection_line": "Levi's x Jookh"
   },
   {
     "id": "wear-134",
@@ -2326,8 +2303,7 @@ window.PRODUCTS = [
       "images/jookh/wearables/piece-134-view-2.jpg"
     ],
     "status": "available",
-    "subcollection": "Levi's x Jookh",
-    "collection_line": "Essential"
+    "collection_line": "Levi's x Jookh"
   },
   {
     "id": "wear-135",
@@ -2342,8 +2318,7 @@ window.PRODUCTS = [
       "images/jookh/wearables/piece-135-view-2.jpg"
     ],
     "status": "available",
-    "subcollection": "Levi's x Jookh",
-    "collection_line": "Essential"
+    "collection_line": "Levi's x Jookh"
   },
   {
     "id": "wear-136",
@@ -2358,8 +2333,7 @@ window.PRODUCTS = [
       "images/jookh/wearables/piece-136-view-2.jpg"
     ],
     "status": "available",
-    "subcollection": "Levi's x Jookh",
-    "collection_line": "Essential"
+    "collection_line": "Levi's x Jookh"
   },
   {
     "id": "wear-137",
@@ -2374,8 +2348,7 @@ window.PRODUCTS = [
       "images/jookh/wearables/piece-137-view-2.jpg"
     ],
     "status": "available",
-    "subcollection": "Levi's x Jookh",
-    "collection_line": "Essential"
+    "collection_line": "Levi's x Jookh"
   },
   {
     "id": "wear-138",
@@ -2390,8 +2363,7 @@ window.PRODUCTS = [
       "images/jookh/wearables/piece-138-view-2.jpg"
     ],
     "status": "available",
-    "subcollection": "Levi's x Jookh",
-    "collection_line": "Essential"
+    "collection_line": "Levi's x Jookh"
   },
   {
     "id": "wear-139",
@@ -2406,8 +2378,7 @@ window.PRODUCTS = [
       "images/jookh/wearables/piece-139-view-2.jpg"
     ],
     "status": "available",
-    "subcollection": "Levi's x Jookh",
-    "collection_line": "Essential"
+    "collection_line": "Levi's x Jookh"
   },
   {
     "id": "wear-140",
@@ -2422,8 +2393,7 @@ window.PRODUCTS = [
       "images/jookh/wearables/piece-140-view-2.jpg"
     ],
     "status": "available",
-    "subcollection": "Levi's x Jookh",
-    "collection_line": "Essential"
+    "collection_line": "Levi's x Jookh"
   },
   {
     "id": "wear-141",
@@ -2438,8 +2408,7 @@ window.PRODUCTS = [
       "images/jookh/wearables/piece-141-view-2.jpg"
     ],
     "status": "available",
-    "subcollection": "Levi's x Jookh",
-    "collection_line": "Essential"
+    "collection_line": "Levi's x Jookh"
   },
   {
     "id": "wear-142",
@@ -2454,8 +2423,7 @@ window.PRODUCTS = [
       "images/jookh/wearables/piece-142-view-2.jpg"
     ],
     "status": "available",
-    "subcollection": "Levi's x Jookh",
-    "collection_line": "Essential"
+    "collection_line": "Levi's x Jookh"
   },
   {
     "id": "wear-143",
@@ -2470,8 +2438,7 @@ window.PRODUCTS = [
       "images/jookh/wearables/piece-143-view-2.jpg"
     ],
     "status": "available",
-    "subcollection": "Levi's x Jookh",
-    "collection_line": "Essential"
+    "collection_line": "Levi's x Jookh"
   },
   {
     "id": "wear-144",
@@ -2486,8 +2453,7 @@ window.PRODUCTS = [
       "images/jookh/wearables/piece-144-view-2.jpg"
     ],
     "status": "available",
-    "subcollection": "Levi's x Jookh",
-    "collection_line": "Essential"
+    "collection_line": "Levi's x Jookh"
   },
   {
     "id": "wear-145",
@@ -2502,8 +2468,7 @@ window.PRODUCTS = [
       "images/jookh/wearables/piece-145-view-2.jpg"
     ],
     "status": "available",
-    "subcollection": "Levi's x Jookh",
-    "collection_line": "Essential"
+    "collection_line": "Levi's x Jookh"
   },
   {
     "id": "wear-146",
@@ -2518,8 +2483,7 @@ window.PRODUCTS = [
       "images/jookh/wearables/piece-146-view-2.jpg"
     ],
     "status": "available",
-    "subcollection": "Levi's x Jookh",
-    "collection_line": "Essential"
+    "collection_line": "Levi's x Jookh"
   },
   {
     "id": "wear-147",
@@ -2534,8 +2498,7 @@ window.PRODUCTS = [
       "images/jookh/wearables/piece-147-view-2.jpg"
     ],
     "status": "available",
-    "subcollection": "Levi's x Jookh",
-    "collection_line": "Essential"
+    "collection_line": "Levi's x Jookh"
   },
   {
     "id": "wear-148",
@@ -2550,8 +2513,7 @@ window.PRODUCTS = [
       "images/jookh/wearables/piece-148-view-2.jpg"
     ],
     "status": "available",
-    "subcollection": "Levi's x Jookh",
-    "collection_line": "Essential"
+    "collection_line": "Levi's x Jookh"
   },
   {
     "id": "wear-149",
@@ -2566,8 +2528,7 @@ window.PRODUCTS = [
       "images/jookh/wearables/piece-149-view-2.jpg"
     ],
     "status": "available",
-    "subcollection": "Levi's x Jookh",
-    "collection_line": "Essential"
+    "collection_line": "Levi's x Jookh"
   },
   {
     "id": "wear-150",
@@ -2582,8 +2543,7 @@ window.PRODUCTS = [
       "images/jookh/wearables/piece-150-view-2.jpg"
     ],
     "status": "available",
-    "subcollection": "Levi's x Jookh",
-    "collection_line": "Essential"
+    "collection_line": "Levi's x Jookh"
   },
   {
     "id": "wear-151",
@@ -2598,8 +2558,7 @@ window.PRODUCTS = [
       "images/jookh/wearables/piece-151-view-2.jpg"
     ],
     "status": "available",
-    "subcollection": "Levi's x Jookh",
-    "collection_line": "Essential"
+    "collection_line": "Levi's x Jookh"
   },
   {
     "id": "wear-152",
@@ -2614,8 +2573,7 @@ window.PRODUCTS = [
       "images/jookh/wearables/piece-152-view-2.jpg"
     ],
     "status": "available",
-    "subcollection": "Levi's x Jookh",
-    "collection_line": "Essential"
+    "collection_line": "Levi's x Jookh"
   },
   {
     "id": "wear-153",
@@ -2630,7 +2588,6 @@ window.PRODUCTS = [
       "images/jookh/wearables/piece-153-view-2.jpg"
     ],
     "status": "available",
-    "subcollection": "Levi's x Jookh",
-    "collection_line": "Essential"
+    "collection_line": "Levi's x Jookh"
   }
 ];
