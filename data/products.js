@@ -1690,8 +1690,7 @@ window.PRODUCTS = [
     "medium": "ENTER MATERIAL HERE",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
-      "images/jookh/wearables/wear-98-view-1.png",
-      "images/jookh/wearables/wear-98-view-2.png"
+      "images/jookh/wearables/wear-98-view-1.png"
     ],
     "status": "sold",
     "collection_line": "Essential"
@@ -1841,7 +1840,8 @@ window.PRODUCTS = [
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
       "images/jookh/wearables/wear-108-view-1.png",
-      "images/jookh/wearables/wear-108-view-2.png"
+      "images/jookh/wearables/wear-108-view-2.png",
+      "images/jookh/wearables/wear-108-view-3.png"
     ],
     "status": "sold",
     "collection_line": "Essential"
