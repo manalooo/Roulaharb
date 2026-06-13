@@ -1999,8 +1999,7 @@ window.PRODUCTS = [
     "medium": "ENTER MATERIAL HERE",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
-      "images/jookh/wearables/wear-114-view-1.jpg",
-      "images/jookh/wearables/wear-114-view-2.jpg"
+      "images/jookh/wearables/wear-114-view-1.jpg"
     ],
     "status": "available",
     "collection_line": "Levi's x Jookh"
@@ -2014,8 +2013,7 @@ window.PRODUCTS = [
     "medium": "ENTER MATERIAL HERE",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
-      "images/jookh/wearables/wear-116-view-1.jpg",
-      "images/jookh/wearables/wear-116-view-2.jpg"
+      "images/jookh/wearables/wear-116-view-1.jpg"
     ],
     "status": "available",
     "collection_line": "Levi's x Jookh"
@@ -2029,8 +2027,7 @@ window.PRODUCTS = [
     "medium": "ENTER MATERIAL HERE",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
-      "images/jookh/wearables/wear-117-view-1.jpg",
-      "images/jookh/wearables/wear-117-view-2.jpg"
+      "images/jookh/wearables/wear-117-view-1.jpg"
     ],
     "status": "available",
     "collection_line": "Levi's x Jookh"
@@ -2194,8 +2191,7 @@ window.PRODUCTS = [
     "medium": "ENTER MATERIAL HERE",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
-      "images/jookh/wearables/wear-128-view-1.jpg",
-      "images/jookh/wearables/wear-128-view-2.jpg"
+      "images/jookh/wearables/wear-128-view-1.jpg"
     ],
     "status": "available",
     "collection_line": "Levi's x Jookh"
@@ -2254,8 +2250,7 @@ window.PRODUCTS = [
     "medium": "ENTER MATERIAL HERE",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
-      "images/jookh/wearables/wear-132-view-1.jpg",
-      "images/jookh/wearables/wear-132-view-2.jpg"
+      "images/jookh/wearables/wear-132-view-1.jpg"
     ],
     "status": "available",
     "collection_line": "Levi's x Jookh"
