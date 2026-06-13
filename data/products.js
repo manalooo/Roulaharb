@@ -10,7 +10,7 @@ window.PRODUCTS = [
     "medium": "cotton",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
-      "images/jookh/scarves/piece-1.jpeg"
+      "images/jookh/scarves/scarf-01-view-1.jpeg"
     ],
     "status": "available",
     "subcollection": "KUMBAKONAM",
@@ -25,7 +25,7 @@ window.PRODUCTS = [
     "medium": "cotton",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
-      "images/jookh/scarves/piece-2.jpeg"
+      "images/jookh/scarves/scarf-02-view-1.jpeg"
     ],
     "status": "available",
     "subcollection": "KUMBAKONAM",
@@ -40,7 +40,7 @@ window.PRODUCTS = [
     "medium": "cotton",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
-      "images/jookh/scarves/piece-3.jpeg"
+      "images/jookh/scarves/scarf-03-view-1.jpeg"
     ],
     "status": "available",
     "subcollection": "KUMBAKONAM",
@@ -55,7 +55,7 @@ window.PRODUCTS = [
     "medium": "cotton",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
-      "images/jookh/scarves/piece-4.jpeg"
+      "images/jookh/scarves/scarf-04-view-1.jpeg"
     ],
     "status": "available",
     "subcollection": "KUMBAKONAM",
@@ -70,7 +70,7 @@ window.PRODUCTS = [
     "medium": "cotton",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
-      "images/jookh/scarves/piece-5.jpeg"
+      "images/jookh/scarves/scarf-05-view-1.jpeg"
     ],
     "status": "available",
     "subcollection": "KUMBAKONAM",
@@ -85,7 +85,7 @@ window.PRODUCTS = [
     "medium": "cotton",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
-      "images/jookh/scarves/piece-6.jpeg"
+      "images/jookh/scarves/scarf-06-view-1.jpeg"
     ],
     "status": "available",
     "subcollection": "KUMBAKONAM",
@@ -100,7 +100,7 @@ window.PRODUCTS = [
     "medium": "cotton",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
-      "images/jookh/scarves/piece-7.jpeg"
+      "images/jookh/scarves/scarf-07-view-1.jpeg"
     ],
     "status": "available",
     "subcollection": "KUMBAKONAM",
@@ -115,7 +115,7 @@ window.PRODUCTS = [
     "medium": "cotton",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
-      "images/jookh/scarves/piece-8.jpeg"
+      "images/jookh/scarves/scarf-08-view-1.jpeg"
     ],
     "status": "available",
     "subcollection": "KUMBAKONAM",
@@ -130,7 +130,7 @@ window.PRODUCTS = [
     "medium": "cotton",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
-      "images/jookh/scarves/piece-9.jpeg"
+      "images/jookh/scarves/scarf-09-view-1.jpeg"
     ],
     "status": "available",
     "subcollection": "KUMBAKONAM",
@@ -145,7 +145,7 @@ window.PRODUCTS = [
     "medium": "cotton",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
-      "images/jookh/scarves/piece-10.jpeg"
+      "images/jookh/scarves/scarf-10-view-1.jpeg"
     ],
     "status": "available",
     "subcollection": "KUMBAKONAM",
@@ -160,7 +160,7 @@ window.PRODUCTS = [
     "medium": "Leather",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
-      "images/jookh/bags/piece-1.jpg"
+      "images/jookh/bags/bag-01-view-1.jpg"
     ],
     "status": "available",
     "subcollection": "OSAKA",
@@ -175,7 +175,7 @@ window.PRODUCTS = [
     "medium": "Leather",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
-      "images/jookh/bags/piece-2.jpg"
+      "images/jookh/bags/bag-02-view-1.jpg"
     ],
     "status": "available",
     "subcollection": "OSAKA",
@@ -190,7 +190,7 @@ window.PRODUCTS = [
     "medium": "Leather",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
-      "images/jookh/bags/piece-3.jpg"
+      "images/jookh/bags/bag-03-view-1.jpg"
     ],
     "status": "available",
     "subcollection": "OSAKA",
@@ -205,7 +205,7 @@ window.PRODUCTS = [
     "medium": "Leather",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
-      "images/jookh/bags/piece-4.jpeg"
+      "images/jookh/bags/bag-04-view-1.jpeg"
     ],
     "status": "available",
     "subcollection": "OSAKA",
@@ -220,7 +220,7 @@ window.PRODUCTS = [
     "medium": "Leather",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
-      "images/jookh/bags/piece-5.jpeg"
+      "images/jookh/bags/bag-05-view-1.jpeg"
     ],
     "status": "available",
     "subcollection": "OSAKA",
@@ -235,7 +235,7 @@ window.PRODUCTS = [
     "medium": "Leather",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
-      "images/jookh/bags/piece-6.jpeg"
+      "images/jookh/bags/bag-06-view-1.jpeg"
     ],
     "status": "available",
     "subcollection": "OSAKA",
@@ -250,7 +250,7 @@ window.PRODUCTS = [
     "medium": "Leather",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
-      "images/jookh/bags/piece-7.jpeg"
+      "images/jookh/bags/bag-07-view-1.jpeg"
     ],
     "status": "available",
     "subcollection": "OSAKA",
@@ -265,7 +265,7 @@ window.PRODUCTS = [
     "medium": "Leather",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
-      "images/jookh/bags/piece-8.jpeg"
+      "images/jookh/bags/bag-08-view-1.jpeg"
     ],
     "status": "available",
     "subcollection": "OSAKA",
@@ -280,7 +280,7 @@ window.PRODUCTS = [
     "medium": "Leather",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
-      "images/jookh/bags/piece-9.jpeg"
+      "images/jookh/bags/bag-09-view-1.jpeg"
     ],
     "status": "available",
     "subcollection": "OSAKA",
@@ -295,7 +295,7 @@ window.PRODUCTS = [
     "medium": "Leather",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
-      "images/jookh/bags/piece-10.jpeg"
+      "images/jookh/bags/bag-10-view-1.jpeg"
     ],
     "status": "available",
     "subcollection": "OSAKA",
@@ -310,7 +310,7 @@ window.PRODUCTS = [
     "medium": "Leather",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
-      "images/jookh/bags/piece-11.jpeg"
+      "images/jookh/bags/bag-11-view-1.jpeg"
     ],
     "status": "available",
     "subcollection": "OSAKA",
@@ -325,7 +325,7 @@ window.PRODUCTS = [
     "medium": "Leather",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
-      "images/jookh/bags/piece-12.jpeg"
+      "images/jookh/bags/bag-12-view-1.jpeg"
     ],
     "status": "available",
     "subcollection": "OSAKA",
@@ -340,7 +340,7 @@ window.PRODUCTS = [
     "medium": "Leather",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
-      "images/jookh/bags/piece-13.jpeg"
+      "images/jookh/bags/bag-13-view-1.jpeg"
     ],
     "status": "available",
     "subcollection": "OSAKA",
@@ -355,7 +355,7 @@ window.PRODUCTS = [
     "medium": "Leather",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
-      "images/jookh/bags/piece-14.jpeg"
+      "images/jookh/bags/bag-14-view-1.jpeg"
     ],
     "status": "available",
     "subcollection": "OSAKA",
@@ -370,7 +370,7 @@ window.PRODUCTS = [
     "medium": "Leather",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
-      "images/jookh/bags/piece-15.jpeg"
+      "images/jookh/bags/bag-15-view-1.jpeg"
     ],
     "status": "available",
     "subcollection": "OSAKA",
@@ -385,7 +385,7 @@ window.PRODUCTS = [
     "medium": "Leather",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
-      "images/jookh/bags/piece-16.jpeg"
+      "images/jookh/bags/bag-16-view-1.jpeg"
     ],
     "status": "available",
     "subcollection": "OSAKA",
@@ -400,7 +400,7 @@ window.PRODUCTS = [
     "medium": "Leather",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
-      "images/jookh/bags/piece-17.jpeg"
+      "images/jookh/bags/bag-17-view-1.jpeg"
     ],
     "status": "available",
     "subcollection": "OSAKA",
@@ -415,7 +415,7 @@ window.PRODUCTS = [
     "medium": "hand-painted canvas",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
-      "images/jookh/bags/piece-18.png"
+      "images/jookh/bags/bag-18-view-1.png"
     ],
     "status": "available",
     "subcollection": "OSAKA",
@@ -430,7 +430,7 @@ window.PRODUCTS = [
     "medium": "hand-painted canvas",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
-      "images/jookh/bags/piece-19.png"
+      "images/jookh/bags/bag-19-view-1.png"
     ],
     "status": "available",
     "subcollection": "OSAKA",
@@ -445,7 +445,7 @@ window.PRODUCTS = [
     "medium": "hand-painted canvas",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
-      "images/jookh/bags/piece-20.png"
+      "images/jookh/bags/bag-20-view-1.png"
     ],
     "status": "available",
     "subcollection": "OSAKA",
@@ -460,8 +460,8 @@ window.PRODUCTS = [
     "medium": "wool/silk",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
-      "images/jookh/wearables/piece-17-view-2.jpg",
-      "images/jookh/wearables/piece-17-view-1.jpg"
+      "images/jookh/wearables/wear-17-view-1.jpg",
+      "images/jookh/wearables/wear-17-view-2.jpg"
     ],
     "status": "sold",
     "subcollection": "Dusseldorf",
@@ -476,8 +476,8 @@ window.PRODUCTS = [
     "medium": "wool/silk",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
-      "images/jookh/wearables/piece-18-view-2.jpg",
-      "images/jookh/wearables/piece-18-view-1.jpg"
+      "images/jookh/wearables/wear-18-view-1.jpg",
+      "images/jookh/wearables/wear-18-view-2.jpg"
     ],
     "status": "sold",
     "subcollection": "Dusseldorf",
@@ -492,8 +492,8 @@ window.PRODUCTS = [
     "medium": "wool",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
-      "images/jookh/wearables/piece-19-view-2.jpg",
-      "images/jookh/wearables/piece-19-view-1.jpg"
+      "images/jookh/wearables/wear-19-view-1.jpg",
+      "images/jookh/wearables/wear-19-view-2.jpg"
     ],
     "status": "sold",
     "subcollection": "Vienna",
@@ -508,8 +508,8 @@ window.PRODUCTS = [
     "medium": "ENTER MATERIAL HERE",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
-      "images/jookh/wearables/piece-21-view-2.jpg",
-      "images/jookh/wearables/piece-21-view-1.jpg"
+      "images/jookh/wearables/wear-21-view-1.jpg",
+      "images/jookh/wearables/wear-21-view-2.jpg"
     ],
     "status": "sold",
     "collection_line": "Essential"
@@ -523,8 +523,8 @@ window.PRODUCTS = [
     "medium": "ENTER MATERIAL HERE",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
-      "images/jookh/wearables/piece-22-view-2.jpg",
-      "images/jookh/wearables/piece-22-view-1.jpg"
+      "images/jookh/wearables/wear-22-view-1.jpg",
+      "images/jookh/wearables/wear-22-view-2.jpg"
     ],
     "status": "sold",
     "collection_line": "Essential"
@@ -538,8 +538,8 @@ window.PRODUCTS = [
     "medium": "wool/silk",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
-      "images/jookh/wearables/piece-23-view-2.jpg",
-      "images/jookh/wearables/piece-23-view-1.jpg"
+      "images/jookh/wearables/wear-23-view-1.jpg",
+      "images/jookh/wearables/wear-23-view-2.jpg"
     ],
     "status": "sold",
     "subcollection": "Dusseldorf",
@@ -554,8 +554,8 @@ window.PRODUCTS = [
     "medium": "denim/cotton",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
-      "images/jookh/wearables/piece-24-view-2.jpg",
-      "images/jookh/wearables/piece-24-view-1.jpg"
+      "images/jookh/wearables/wear-24-view-1.jpg",
+      "images/jookh/wearables/wear-24-view-2.jpg"
     ],
     "status": "sold",
     "subcollection": "Kyoto Coat",
@@ -570,8 +570,8 @@ window.PRODUCTS = [
     "medium": "wool/cotton",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
-      "images/jookh/wearables/piece-25-view-2.jpg",
-      "images/jookh/wearables/piece-25-view-1.jpg"
+      "images/jookh/wearables/wear-25-view-1.jpg",
+      "images/jookh/wearables/wear-25-view-2.jpg"
     ],
     "status": "sold",
     "subcollection": "Kyoto Coat",
@@ -586,8 +586,8 @@ window.PRODUCTS = [
     "medium": "wool/cotton",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
-      "images/jookh/wearables/piece-26-view-2.jpg",
-      "images/jookh/wearables/piece-26-view-1.jpg"
+      "images/jookh/wearables/wear-26-view-1.jpg",
+      "images/jookh/wearables/wear-26-view-2.jpg"
     ],
     "status": "sold",
     "subcollection": "Kyoto Coat",
@@ -602,8 +602,8 @@ window.PRODUCTS = [
     "medium": "wool/silk",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
-      "images/jookh/wearables/piece-27-view-2.jpg",
-      "images/jookh/wearables/piece-27-view-1.jpg"
+      "images/jookh/wearables/wear-27-view-1.jpg",
+      "images/jookh/wearables/wear-27-view-2.jpg"
     ],
     "status": "sold",
     "subcollection": "Kyoto Coat",
@@ -618,8 +618,8 @@ window.PRODUCTS = [
     "medium": "wool/cotton",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
-      "images/jookh/wearables/piece-28-view-2.jpg",
-      "images/jookh/wearables/piece-28-view-1.jpg"
+      "images/jookh/wearables/wear-28-view-1.jpg",
+      "images/jookh/wearables/wear-28-view-2.jpg"
     ],
     "status": "sold",
     "subcollection": "Kyoto Coat",
@@ -634,8 +634,8 @@ window.PRODUCTS = [
     "medium": "ENTER MATERIAL HERE",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
-      "images/jookh/wearables/piece-30-view-2.jpg",
-      "images/jookh/wearables/piece-30-view-1.jpg"
+      "images/jookh/wearables/wear-30-view-1.jpg",
+      "images/jookh/wearables/wear-30-view-2.jpg"
     ],
     "status": "available",
     "subcollection": "Jaipur",
@@ -650,8 +650,8 @@ window.PRODUCTS = [
     "medium": "ENTER MATERIAL HERE",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
-      "images/jookh/wearables/piece-31-view-2.jpg",
-      "images/jookh/wearables/piece-31-view-1.jpg"
+      "images/jookh/wearables/wear-31-view-1.jpg",
+      "images/jookh/wearables/wear-31-view-2.jpg"
     ],
     "status": "available",
     "subcollection": "Jaipur",
@@ -666,8 +666,8 @@ window.PRODUCTS = [
     "medium": "cotton",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
-      "images/jookh/wearables/piece-33-view-2.jpg",
-      "images/jookh/wearables/piece-33-view-1.jpg"
+      "images/jookh/wearables/wear-33-view-1.jpg",
+      "images/jookh/wearables/wear-33-view-2.jpg"
     ],
     "status": "available",
     "subcollection": "Roma",
@@ -682,8 +682,8 @@ window.PRODUCTS = [
     "medium": "cotton",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
-      "images/jookh/wearables/piece-34-view-1.jpg",
-      "images/jookh/wearables/piece-34-view-2.jpg"
+      "images/jookh/wearables/wear-34-view-1.jpg",
+      "images/jookh/wearables/wear-34-view-2.jpg"
     ],
     "status": "available",
     "subcollection": "Japan",
@@ -698,8 +698,8 @@ window.PRODUCTS = [
     "medium": "cotton",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
-      "images/jookh/wearables/piece-35-view-2.jpg",
-      "images/jookh/wearables/piece-35-view-1.jpg"
+      "images/jookh/wearables/wear-35-view-1.jpg",
+      "images/jookh/wearables/wear-35-view-2.jpg"
     ],
     "status": "sold",
     "subcollection": "Roma",
@@ -714,8 +714,8 @@ window.PRODUCTS = [
     "medium": "cotton",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
-      "images/jookh/wearables/piece-36-view-2.jpg",
-      "images/jookh/wearables/piece-36-view-1.jpg"
+      "images/jookh/wearables/wear-36-view-1.jpg",
+      "images/jookh/wearables/wear-36-view-2.jpg"
     ],
     "status": "available",
     "subcollection": "Roma",
@@ -730,8 +730,8 @@ window.PRODUCTS = [
     "medium": "cotton",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
-      "images/jookh/wearables/piece-37-view-2.jpg",
-      "images/jookh/wearables/piece-37-view-1.jpg"
+      "images/jookh/wearables/wear-37-view-1.jpg",
+      "images/jookh/wearables/wear-37-view-2.jpg"
     ],
     "status": "available",
     "subcollection": "Roma",
@@ -746,8 +746,8 @@ window.PRODUCTS = [
     "medium": "cotton",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
-      "images/jookh/wearables/piece-38-view-2.jpg",
-      "images/jookh/wearables/piece-38-view-1.jpg"
+      "images/jookh/wearables/wear-38-view-1.jpg",
+      "images/jookh/wearables/wear-38-view-2.jpg"
     ],
     "status": "available",
     "subcollection": "Roma",
@@ -762,8 +762,8 @@ window.PRODUCTS = [
     "medium": "ENTER MATERIAL HERE",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
-      "images/jookh/wearables/piece-39-view-2.jpg",
-      "images/jookh/wearables/piece-39-view-1.jpg"
+      "images/jookh/wearables/wear-39-view-1.jpg",
+      "images/jookh/wearables/wear-39-view-2.jpg"
     ],
     "status": "sold",
     "collection_line": "Essential"
@@ -777,8 +777,8 @@ window.PRODUCTS = [
     "medium": "ENTER MATERIAL HERE",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
-      "images/jookh/wearables/piece-40-view-2.jpg",
-      "images/jookh/wearables/piece-40-view-1.jpg"
+      "images/jookh/wearables/wear-40-view-1.jpg",
+      "images/jookh/wearables/wear-40-view-2.jpg"
     ],
     "status": "sold",
     "collection_line": "Essential"
@@ -792,8 +792,8 @@ window.PRODUCTS = [
     "medium": "ENTER MATERIAL HERE",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
-      "images/jookh/wearables/piece-41-view-2.jpg",
-      "images/jookh/wearables/piece-41-view-1.jpg"
+      "images/jookh/wearables/wear-41-view-1.jpg",
+      "images/jookh/wearables/wear-41-view-2.jpg"
     ],
     "status": "sold",
     "collection_line": "Essential"
@@ -807,8 +807,8 @@ window.PRODUCTS = [
     "medium": "ENTER MATERIAL HERE",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
-      "images/jookh/wearables/piece-42-view-2.jpg",
-      "images/jookh/wearables/piece-42-view-1.jpg"
+      "images/jookh/wearables/wear-42-view-1.jpg",
+      "images/jookh/wearables/wear-42-view-2.jpg"
     ],
     "status": "sold",
     "collection_line": "Essential"
@@ -822,8 +822,8 @@ window.PRODUCTS = [
     "medium": "ENTER MATERIAL HERE",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
-      "images/jookh/wearables/piece-43-view-2.jpg",
-      "images/jookh/wearables/piece-43-view-1.jpg"
+      "images/jookh/wearables/wear-43-view-1.jpg",
+      "images/jookh/wearables/wear-43-view-2.jpg"
     ],
     "status": "sold",
     "collection_line": "Canvas"
@@ -837,8 +837,8 @@ window.PRODUCTS = [
     "medium": "ENTER MATERIAL HERE",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
-      "images/jookh/wearables/piece-44-view-1.jpg",
-      "images/jookh/wearables/piece-44-view-2.jpg"
+      "images/jookh/wearables/wear-44-view-1.jpg",
+      "images/jookh/wearables/wear-44-view-2.jpg"
     ],
     "status": "sold",
     "collection_line": "Essential"
@@ -852,8 +852,8 @@ window.PRODUCTS = [
     "medium": "ENTER MATERIAL HERE",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
-      "images/jookh/wearables/piece-45-view-1.jpg",
-      "images/jookh/wearables/piece-45-view-2.jpg"
+      "images/jookh/wearables/wear-45-view-1.jpg",
+      "images/jookh/wearables/wear-45-view-2.jpg"
     ],
     "status": "sold",
     "collection_line": "Essential"
@@ -867,8 +867,8 @@ window.PRODUCTS = [
     "medium": "ENTER MATERIAL HERE",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
-      "images/jookh/wearables/piece-46-view-2.jpg",
-      "images/jookh/wearables/piece-46-view-1.jpg"
+      "images/jookh/wearables/wear-46-view-1.jpg",
+      "images/jookh/wearables/wear-46-view-2.jpg"
     ],
     "status": "sold",
     "collection_line": "Essential"
@@ -882,8 +882,8 @@ window.PRODUCTS = [
     "medium": "ENTER MATERIAL HERE",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
-      "images/jookh/wearables/piece-49-view-2.jpg",
-      "images/jookh/wearables/piece-49-view-1.jpg"
+      "images/jookh/wearables/wear-49-view-1.jpg",
+      "images/jookh/wearables/wear-49-view-2.jpg"
     ],
     "status": "sold",
     "collection_line": "Essential"
@@ -897,8 +897,8 @@ window.PRODUCTS = [
     "medium": "ENTER MATERIAL HERE",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
-      "images/jookh/wearables/piece-50-view-2.jpg",
-      "images/jookh/wearables/piece-50-view-1.jpg"
+      "images/jookh/wearables/wear-50-view-1.jpg",
+      "images/jookh/wearables/wear-50-view-2.jpg"
     ],
     "status": "sold",
     "collection_line": "Essential"
@@ -912,8 +912,8 @@ window.PRODUCTS = [
     "medium": "ENTER MATERIAL HERE",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
-      "images/jookh/wearables/piece-51-view-1.jpg",
-      "images/jookh/wearables/piece-51-view-2.jpg"
+      "images/jookh/wearables/wear-51-view-1.jpg",
+      "images/jookh/wearables/wear-51-view-2.jpg"
     ],
     "status": "sold",
     "collection_line": "Essential"
@@ -927,8 +927,8 @@ window.PRODUCTS = [
     "medium": "ENTER MATERIAL HERE",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
-      "images/jookh/wearables/piece-52-view-1.jpg",
-      "images/jookh/wearables/piece-52-view-2.jpg"
+      "images/jookh/wearables/wear-52-view-1.jpg",
+      "images/jookh/wearables/wear-52-view-2.jpg"
     ],
     "status": "sold",
     "collection_line": "Essential"
@@ -942,8 +942,8 @@ window.PRODUCTS = [
     "medium": "ENTER MATERIAL HERE",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
-      "images/jookh/wearables/piece-57-view-2.jpg",
-      "images/jookh/wearables/piece-57-view-1.jpg"
+      "images/jookh/wearables/wear-57-view-1.jpg",
+      "images/jookh/wearables/wear-57-view-2.jpg"
     ],
     "status": "available",
     "subcollection": "Japan",
@@ -958,8 +958,8 @@ window.PRODUCTS = [
     "medium": "ENTER MATERIAL HERE",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
-      "images/jookh/wearables/piece-58-view-1.jpg",
-      "images/jookh/wearables/piece-58-view-2.jpg"
+      "images/jookh/wearables/wear-58-view-1.jpg",
+      "images/jookh/wearables/wear-58-view-2.jpg"
     ],
     "status": "available",
     "subcollection": "Japan",
@@ -974,8 +974,8 @@ window.PRODUCTS = [
     "medium": "ENTER MATERIAL HERE",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
-      "images/jookh/wearables/piece-59-view-1.jpg",
-      "images/jookh/wearables/piece-59-view-2.jpg"
+      "images/jookh/wearables/wear-59-view-1.jpg",
+      "images/jookh/wearables/wear-59-view-2.jpg"
     ],
     "status": "available",
     "subcollection": "Japan",
@@ -990,8 +990,8 @@ window.PRODUCTS = [
     "medium": "wool/cotton tweed",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
-      "images/jookh/wearables/piece-60-view-1.png",
-      "images/jookh/wearables/piece-60-view-2.png"
+      "images/jookh/wearables/wear-60-view-1.png",
+      "images/jookh/wearables/wear-60-view-2.png"
     ],
     "status": "sold",
     "collection_line": "Essential"
@@ -1005,8 +1005,8 @@ window.PRODUCTS = [
     "medium": "wool",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
-      "images/jookh/wearables/piece-61-view-1.png",
-      "images/jookh/wearables/piece-61-view-2.png"
+      "images/jookh/wearables/wear-61-view-1.png",
+      "images/jookh/wearables/wear-61-view-2.png"
     ],
     "status": "sold",
     "collection_line": "Essential"
@@ -1020,8 +1020,8 @@ window.PRODUCTS = [
     "medium": "hand-painted silk/wool",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
-      "images/jookh/wearables/piece-62-view-2.png",
-      "images/jookh/wearables/piece-62-view-1.png"
+      "images/jookh/wearables/wear-62-view-1.png",
+      "images/jookh/wearables/wear-62-view-2.png"
     ],
     "status": "sold",
     "collection_line": "Essential"
@@ -1035,8 +1035,8 @@ window.PRODUCTS = [
     "medium": "hand-painted silk/wool",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
-      "images/jookh/wearables/piece-63-view-2.png",
-      "images/jookh/wearables/piece-63-view-1.png"
+      "images/jookh/wearables/wear-63-view-1.png",
+      "images/jookh/wearables/wear-63-view-2.png"
     ],
     "status": "sold",
     "collection_line": "Essential"
@@ -1050,8 +1050,8 @@ window.PRODUCTS = [
     "medium": "hand-painted wool",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
-      "images/jookh/wearables/piece-64-view-2.png",
-      "images/jookh/wearables/piece-64-view-1.png"
+      "images/jookh/wearables/wear-64-view-1.png",
+      "images/jookh/wearables/wear-64-view-2.png"
     ],
     "status": "sold",
     "collection_line": "Essential"
@@ -1065,8 +1065,8 @@ window.PRODUCTS = [
     "medium": "hand-painted silk",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
-      "images/jookh/wearables/piece-65-view-2.png",
-      "images/jookh/wearables/piece-65-view-1.png"
+      "images/jookh/wearables/wear-65-view-1.png",
+      "images/jookh/wearables/wear-65-view-2.png"
     ],
     "status": "sold",
     "collection_line": "Essential"
@@ -1080,8 +1080,8 @@ window.PRODUCTS = [
     "medium": "hand-painted silk",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
-      "images/jookh/wearables/piece-66-view-2.png",
-      "images/jookh/wearables/piece-66-view-1.png"
+      "images/jookh/wearables/wear-66-view-1.png",
+      "images/jookh/wearables/wear-66-view-2.png"
     ],
     "status": "sold",
     "collection_line": "Essential"
@@ -1095,8 +1095,8 @@ window.PRODUCTS = [
     "medium": "hand-painted silk with gold trim",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
-      "images/jookh/wearables/piece-67-view-2.png",
-      "images/jookh/wearables/piece-67-view-1.png"
+      "images/jookh/wearables/wear-67-view-1.png",
+      "images/jookh/wearables/wear-67-view-2.png"
     ],
     "status": "sold",
     "collection_line": "24 Carats"
@@ -1110,8 +1110,8 @@ window.PRODUCTS = [
     "medium": "cotton",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
-      "images/jookh/wearables/piece-sold-olive-view-2.jpg",
-      "images/jookh/wearables/piece-sold-olive-view-1.jpg"
+      "images/jookh/wearables/wear-sold-olive-view-1.jpg",
+      "images/jookh/wearables/wear-sold-olive-view-2.jpg"
     ],
     "status": "sold",
     "subcollection": "Roma",
@@ -1126,8 +1126,8 @@ window.PRODUCTS = [
     "medium": "lace",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
-      "images/jookh/wearables/piece-68-view-2.jpg",
-      "images/jookh/wearables/piece-68-view-1.jpg"
+      "images/jookh/wearables/wear-68-view-1.jpg",
+      "images/jookh/wearables/wear-68-view-2.jpg"
     ],
     "status": "available",
     "subcollection": "Japan",
@@ -1142,8 +1142,8 @@ window.PRODUCTS = [
     "medium": "lace",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
-      "images/jookh/wearables/piece-69-view-2.jpg",
-      "images/jookh/wearables/piece-69-view-1.jpg"
+      "images/jookh/wearables/wear-69-view-1.jpg",
+      "images/jookh/wearables/wear-69-view-2.jpg"
     ],
     "status": "available",
     "subcollection": "Japan",
@@ -1158,8 +1158,8 @@ window.PRODUCTS = [
     "medium": "cotton",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
-      "images/jookh/wearables/piece-70-view-2.jpg",
-      "images/jookh/wearables/piece-70-view-1.jpg"
+      "images/jookh/wearables/wear-70-view-1.jpg",
+      "images/jookh/wearables/wear-70-view-2.jpg"
     ],
     "status": "available",
     "subcollection": "Roma",
@@ -1174,8 +1174,8 @@ window.PRODUCTS = [
     "medium": "linen",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
-      "images/jookh/wearables/piece-71-view-2.jpg",
-      "images/jookh/wearables/piece-71-view-1.jpg"
+      "images/jookh/wearables/wear-71-view-1.jpg",
+      "images/jookh/wearables/wear-71-view-2.jpg"
     ],
     "status": "available",
     "subcollection": "Oxford",
@@ -1190,8 +1190,8 @@ window.PRODUCTS = [
     "medium": "linen",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
-      "images/jookh/wearables/piece-72-view-2.jpg",
-      "images/jookh/wearables/piece-72-view-1.jpg"
+      "images/jookh/wearables/wear-72-view-1.jpg",
+      "images/jookh/wearables/wear-72-view-2.jpg"
     ],
     "status": "available",
     "subcollection": "Oxford",
@@ -1206,8 +1206,8 @@ window.PRODUCTS = [
     "medium": "linen",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
-      "images/jookh/wearables/piece-73-view-2.jpg",
-      "images/jookh/wearables/piece-73-view-1.jpg"
+      "images/jookh/wearables/wear-73-view-1.jpg",
+      "images/jookh/wearables/wear-73-view-2.jpg"
     ],
     "status": "available",
     "subcollection": "Oxford",
@@ -1222,8 +1222,8 @@ window.PRODUCTS = [
     "medium": "hand-painted silk",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
-      "images/jookh/wearables/piece-74-view-2.jpg",
-      "images/jookh/wearables/piece-74-view-1.jpg"
+      "images/jookh/wearables/wear-74-view-1.jpg",
+      "images/jookh/wearables/wear-74-view-2.jpg"
     ],
     "status": "available",
     "subcollection": "Jaipur",
@@ -1238,8 +1238,8 @@ window.PRODUCTS = [
     "medium": "hand-dyed silk",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
-      "images/jookh/wearables/piece-75-view-1.jpg",
-      "images/jookh/wearables/piece-75-view-2.jpg"
+      "images/jookh/wearables/wear-75-view-1.jpg",
+      "images/jookh/wearables/wear-75-view-2.jpg"
     ],
     "status": "available",
     "subcollection": "Bretagne",
@@ -1254,8 +1254,8 @@ window.PRODUCTS = [
     "medium": "hand-dyed silk",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
-      "images/jookh/wearables/piece-76-view-1.jpg",
-      "images/jookh/wearables/piece-76-view-2.jpg"
+      "images/jookh/wearables/wear-76-view-1.jpg",
+      "images/jookh/wearables/wear-76-view-2.jpg"
     ],
     "status": "available",
     "subcollection": "Bretagne",
@@ -1270,8 +1270,8 @@ window.PRODUCTS = [
     "medium": "hand-painted silk",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
-      "images/jookh/wearables/piece-77-view-2.jpg",
-      "images/jookh/wearables/piece-77-view-1.jpg"
+      "images/jookh/wearables/wear-77-view-1.jpg",
+      "images/jookh/wearables/wear-77-view-2.jpg"
     ],
     "status": "available",
     "subcollection": "Bretagne",
@@ -1286,8 +1286,8 @@ window.PRODUCTS = [
     "medium": "silk tulle with gold leaf",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
-      "images/jookh/wearables/piece-78-view-1.jpg",
-      "images/jookh/wearables/piece-78-view-2.jpg"
+      "images/jookh/wearables/wear-78-view-1.jpg",
+      "images/jookh/wearables/wear-78-view-2.jpg"
     ],
     "status": "available",
     "collection_line": "24 Carats"
@@ -1301,8 +1301,8 @@ window.PRODUCTS = [
     "medium": "Hand-painted · Hand-embroidered linen",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
-      "images/plo/piece-1-view-2.jpeg",
-      "images/plo/piece-1-view-1.jpeg"
+      "images/plo/plo-01-view-1.jpeg",
+      "images/plo/plo-01-view-2.jpeg"
     ],
     "status": "available",
     "collection_line": "Essential"
@@ -1316,8 +1316,8 @@ window.PRODUCTS = [
     "medium": "Hand-painted · Hand-embroidered linen",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
-      "images/plo/piece-2-view-2.jpeg",
-      "images/plo/piece-2-view-1.jpeg"
+      "images/plo/plo-02-view-1.jpeg",
+      "images/plo/plo-02-view-2.jpeg"
     ],
     "status": "available",
     "collection_line": "Essential"
@@ -1331,8 +1331,8 @@ window.PRODUCTS = [
     "medium": "Hand-painted · Hand-embroidered linen",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
-      "images/plo/piece-3-view-2.jpeg",
-      "images/plo/piece-3-view-1.jpeg"
+      "images/plo/plo-03-view-1.jpeg",
+      "images/plo/plo-03-view-2.jpeg"
     ],
     "status": "available",
     "collection_line": "Essential"
@@ -1346,8 +1346,8 @@ window.PRODUCTS = [
     "medium": "Hand-painted · Hand-embroidered linen",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
-      "images/plo/piece-4-view-2.jpeg",
-      "images/plo/piece-4-view-1.jpeg"
+      "images/plo/plo-04-view-1.jpeg",
+      "images/plo/plo-04-view-2.jpeg"
     ],
     "status": "available",
     "collection_line": "Essential"
@@ -1361,8 +1361,8 @@ window.PRODUCTS = [
     "medium": "Hand-painted · Hand-embroidered linen",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
-      "images/plo/piece-5-view-2.jpeg",
-      "images/plo/piece-5-view-1.jpeg"
+      "images/plo/plo-05-view-1.jpeg",
+      "images/plo/plo-05-view-2.jpeg"
     ],
     "status": "available",
     "collection_line": "Essential"
@@ -1376,8 +1376,8 @@ window.PRODUCTS = [
     "medium": "Hand-painted · Hand-embroidered linen",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
-      "images/plo/piece-6-view-2.jpeg",
-      "images/plo/piece-6-view-1.jpeg"
+      "images/plo/plo-06-view-1.jpeg",
+      "images/plo/plo-06-view-2.jpeg"
     ],
     "status": "available",
     "collection_line": "Essential"
@@ -1391,7 +1391,7 @@ window.PRODUCTS = [
     "medium": "Hand-painted · Hand-embroidered linen",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
-      "images/plo/piece-7-view-1.jpeg"
+      "images/plo/plo-07-view-1.jpeg"
     ],
     "status": "available",
     "collection_line": "Essential"
@@ -1405,8 +1405,8 @@ window.PRODUCTS = [
     "medium": "ENTER MATERIAL HERE",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
-      "images/jookh/wearables/piece-79-view-1.jpg",
-      "images/jookh/wearables/piece-79-view-2.jpg"
+      "images/jookh/wearables/wear-79-view-1.jpg",
+      "images/jookh/wearables/wear-79-view-2.jpg"
     ],
     "status": "sold",
     "collection_line": "Essential"
@@ -1420,8 +1420,8 @@ window.PRODUCTS = [
     "medium": "ENTER MATERIAL HERE",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
-      "images/jookh/wearables/piece-80-view-1.jpg",
-      "images/jookh/wearables/piece-80-view-2.jpg"
+      "images/jookh/wearables/wear-80-view-1.jpg",
+      "images/jookh/wearables/wear-80-view-2.jpg"
     ],
     "status": "sold",
     "collection_line": "Essential"
@@ -1435,8 +1435,8 @@ window.PRODUCTS = [
     "medium": "ENTER MATERIAL HERE",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
-      "images/jookh/wearables/piece-81-view-1.jpg",
-      "images/jookh/wearables/piece-81-view-2.jpg"
+      "images/jookh/wearables/wear-81-view-1.jpg",
+      "images/jookh/wearables/wear-81-view-2.jpg"
     ],
     "status": "sold",
     "collection_line": "Essential"
@@ -1450,8 +1450,8 @@ window.PRODUCTS = [
     "medium": "ENTER MATERIAL HERE",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
-      "images/jookh/wearables/piece-82-view-1.jpg",
-      "images/jookh/wearables/piece-82-view-2.jpg"
+      "images/jookh/wearables/wear-82-view-1.jpg",
+      "images/jookh/wearables/wear-82-view-2.jpg"
     ],
     "status": "sold",
     "collection_line": "Essential"
@@ -1465,8 +1465,8 @@ window.PRODUCTS = [
     "medium": "ENTER MATERIAL HERE",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
-      "images/jookh/wearables/piece-83-view-1.jpg",
-      "images/jookh/wearables/piece-83-view-2.png"
+      "images/jookh/wearables/wear-83-view-1.jpg",
+      "images/jookh/wearables/wear-83-view-2.png"
     ],
     "status": "sold",
     "collection_line": "Essential"
@@ -1480,8 +1480,8 @@ window.PRODUCTS = [
     "medium": "ENTER MATERIAL HERE",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
-      "images/jookh/wearables/piece-84-view-1.png",
-      "images/jookh/wearables/piece-84-view-2.png"
+      "images/jookh/wearables/wear-84-view-1.png",
+      "images/jookh/wearables/wear-84-view-2.png"
     ],
     "status": "sold",
     "collection_line": "Essential"
@@ -1495,8 +1495,8 @@ window.PRODUCTS = [
     "medium": "ENTER MATERIAL HERE",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
-      "images/jookh/wearables/piece-85-view-1.png",
-      "images/jookh/wearables/piece-85-view-2.png"
+      "images/jookh/wearables/wear-85-view-1.png",
+      "images/jookh/wearables/wear-85-view-2.png"
     ],
     "status": "sold",
     "collection_line": "Essential"
@@ -1510,8 +1510,8 @@ window.PRODUCTS = [
     "medium": "ENTER MATERIAL HERE",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
-      "images/jookh/wearables/piece-86-view-1.png",
-      "images/jookh/wearables/piece-86-view-2.png"
+      "images/jookh/wearables/wear-86-view-1.png",
+      "images/jookh/wearables/wear-86-view-2.png"
     ],
     "status": "sold",
     "collection_line": "Essential"
@@ -1525,8 +1525,8 @@ window.PRODUCTS = [
     "medium": "ENTER MATERIAL HERE",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
-      "images/jookh/wearables/piece-87-view-1.png",
-      "images/jookh/wearables/piece-87-view-2.png"
+      "images/jookh/wearables/wear-87-view-1.png",
+      "images/jookh/wearables/wear-87-view-2.png"
     ],
     "status": "sold",
     "collection_line": "Essential"
@@ -1540,8 +1540,8 @@ window.PRODUCTS = [
     "medium": "ENTER MATERIAL HERE",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
-      "images/jookh/wearables/piece-88-view-1.png",
-      "images/jookh/wearables/piece-88-view-2.png"
+      "images/jookh/wearables/wear-88-view-1.png",
+      "images/jookh/wearables/wear-88-view-2.png"
     ],
     "status": "sold",
     "collection_line": "Essential"
@@ -1555,8 +1555,8 @@ window.PRODUCTS = [
     "medium": "ENTER MATERIAL HERE",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
-      "images/jookh/wearables/piece-89-view-1.png",
-      "images/jookh/wearables/piece-89-view-2.png"
+      "images/jookh/wearables/wear-89-view-1.png",
+      "images/jookh/wearables/wear-89-view-2.png"
     ],
     "status": "sold",
     "collection_line": "Essential"
@@ -1570,8 +1570,8 @@ window.PRODUCTS = [
     "medium": "ENTER MATERIAL HERE",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
-      "images/jookh/wearables/piece-90-view-1.png",
-      "images/jookh/wearables/piece-90-view-2.png"
+      "images/jookh/wearables/wear-90-view-1.png",
+      "images/jookh/wearables/wear-90-view-2.png"
     ],
     "status": "sold",
     "collection_line": "Essential"
@@ -1585,8 +1585,8 @@ window.PRODUCTS = [
     "medium": "ENTER MATERIAL HERE",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
-      "images/jookh/wearables/piece-91-view-1.png",
-      "images/jookh/wearables/piece-91-view-2.png"
+      "images/jookh/wearables/wear-91-view-1.png",
+      "images/jookh/wearables/wear-91-view-2.png"
     ],
     "status": "sold",
     "collection_line": "Essential"
@@ -1600,8 +1600,8 @@ window.PRODUCTS = [
     "medium": "ENTER MATERIAL HERE",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
-      "images/jookh/wearables/piece-92-view-1.png",
-      "images/jookh/wearables/piece-92-view-2.png"
+      "images/jookh/wearables/wear-92-view-1.png",
+      "images/jookh/wearables/wear-92-view-2.png"
     ],
     "status": "sold",
     "collection_line": "Essential"
@@ -1615,8 +1615,8 @@ window.PRODUCTS = [
     "medium": "ENTER MATERIAL HERE",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
-      "images/jookh/wearables/piece-93-view-1.png",
-      "images/jookh/wearables/piece-93-view-2.png"
+      "images/jookh/wearables/wear-93-view-1.png",
+      "images/jookh/wearables/wear-93-view-2.png"
     ],
     "status": "sold",
     "collection_line": "Essential"
@@ -1630,8 +1630,8 @@ window.PRODUCTS = [
     "medium": "ENTER MATERIAL HERE",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
-      "images/jookh/wearables/piece-94-view-1.png",
-      "images/jookh/wearables/piece-94-view-2.png"
+      "images/jookh/wearables/wear-94-view-1.png",
+      "images/jookh/wearables/wear-94-view-2.png"
     ],
     "status": "sold",
     "collection_line": "Essential"
@@ -1645,8 +1645,8 @@ window.PRODUCTS = [
     "medium": "ENTER MATERIAL HERE",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
-      "images/jookh/wearables/piece-95-view-1.png",
-      "images/jookh/wearables/piece-95-view-2.png"
+      "images/jookh/wearables/wear-95-view-1.png",
+      "images/jookh/wearables/wear-95-view-2.png"
     ],
     "status": "sold",
     "collection_line": "Essential"
@@ -1660,8 +1660,8 @@ window.PRODUCTS = [
     "medium": "ENTER MATERIAL HERE",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
-      "images/jookh/wearables/piece-96-view-1.png",
-      "images/jookh/wearables/piece-96-view-2.png"
+      "images/jookh/wearables/wear-96-view-1.png",
+      "images/jookh/wearables/wear-96-view-2.png"
     ],
     "status": "sold",
     "collection_line": "24 Carats"
@@ -1675,8 +1675,8 @@ window.PRODUCTS = [
     "medium": "ENTER MATERIAL HERE",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
-      "images/jookh/wearables/piece-97-view-1.png",
-      "images/jookh/wearables/piece-97-view-2.png"
+      "images/jookh/wearables/wear-97-view-1.png",
+      "images/jookh/wearables/wear-97-view-2.png"
     ],
     "status": "sold",
     "collection_line": "Essential"
@@ -1690,8 +1690,8 @@ window.PRODUCTS = [
     "medium": "ENTER MATERIAL HERE",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
-      "images/jookh/wearables/piece-98-view-1.png",
-      "images/jookh/wearables/piece-98-view-2.png"
+      "images/jookh/wearables/wear-98-view-1.png",
+      "images/jookh/wearables/wear-98-view-2.png"
     ],
     "status": "sold",
     "collection_line": "Essential"
@@ -1705,8 +1705,8 @@ window.PRODUCTS = [
     "medium": "ENTER MATERIAL HERE",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
-      "images/jookh/wearables/piece-99-view-1.png",
-      "images/jookh/wearables/piece-99-view-2.png"
+      "images/jookh/wearables/wear-99-view-1.png",
+      "images/jookh/wearables/wear-99-view-2.png"
     ],
     "status": "sold",
     "collection_line": "Essential"
@@ -1720,8 +1720,8 @@ window.PRODUCTS = [
     "medium": "ENTER MATERIAL HERE",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
-      "images/jookh/wearables/piece-100-view-1.png",
-      "images/jookh/wearables/piece-100-view-2.png"
+      "images/jookh/wearables/wear-100-view-1.png",
+      "images/jookh/wearables/wear-100-view-2.png"
     ],
     "status": "sold",
     "collection_line": "Essential"
@@ -1735,8 +1735,8 @@ window.PRODUCTS = [
     "medium": "ENTER MATERIAL HERE",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
-      "images/jookh/wearables/piece-101-view-1.png",
-      "images/jookh/wearables/piece-101-view-2.png"
+      "images/jookh/wearables/wear-101-view-1.png",
+      "images/jookh/wearables/wear-101-view-2.png"
     ],
     "status": "sold",
     "collection_line": "Essential"
@@ -1750,8 +1750,8 @@ window.PRODUCTS = [
     "medium": "ENTER MATERIAL HERE",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
-      "images/jookh/wearables/piece-102-view-1.png",
-      "images/jookh/wearables/piece-102-view-2.png"
+      "images/jookh/wearables/wear-102-view-1.png",
+      "images/jookh/wearables/wear-102-view-2.png"
     ],
     "status": "sold",
     "collection_line": "Essential"
@@ -1765,8 +1765,8 @@ window.PRODUCTS = [
     "medium": "ENTER MATERIAL HERE",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
-      "images/jookh/wearables/piece-103-view-1.png",
-      "images/jookh/wearables/piece-103-view-2.png"
+      "images/jookh/wearables/wear-103-view-1.png",
+      "images/jookh/wearables/wear-103-view-2.png"
     ],
     "status": "sold",
     "collection_line": "Essential"
@@ -1780,8 +1780,8 @@ window.PRODUCTS = [
     "medium": "ENTER MATERIAL HERE",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
-      "images/jookh/wearables/piece-104-view-1.png",
-      "images/jookh/wearables/piece-104-view-2.png"
+      "images/jookh/wearables/wear-104-view-1.png",
+      "images/jookh/wearables/wear-104-view-2.png"
     ],
     "status": "sold",
     "collection_line": "Essential"
@@ -1795,8 +1795,8 @@ window.PRODUCTS = [
     "medium": "ENTER MATERIAL HERE",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
-      "images/jookh/wearables/piece-105-view-1.png",
-      "images/jookh/wearables/piece-105-view-2.png"
+      "images/jookh/wearables/wear-105-view-1.png",
+      "images/jookh/wearables/wear-105-view-2.png"
     ],
     "status": "sold",
     "collection_line": "Essential"
@@ -1810,8 +1810,8 @@ window.PRODUCTS = [
     "medium": "ENTER MATERIAL HERE",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
-      "images/jookh/wearables/piece-106-view-1.png",
-      "images/jookh/wearables/piece-106-view-2.png"
+      "images/jookh/wearables/wear-106-view-1.png",
+      "images/jookh/wearables/wear-106-view-2.png"
     ],
     "status": "sold",
     "collection_line": "Essential"
@@ -1825,8 +1825,8 @@ window.PRODUCTS = [
     "medium": "ENTER MATERIAL HERE",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
-      "images/jookh/wearables/piece-107-view-1.png",
-      "images/jookh/wearables/piece-107-view-2.png"
+      "images/jookh/wearables/wear-107-view-1.png",
+      "images/jookh/wearables/wear-107-view-2.png"
     ],
     "status": "sold",
     "collection_line": "Essential"
@@ -1840,8 +1840,8 @@ window.PRODUCTS = [
     "medium": "ENTER MATERIAL HERE",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
-      "images/jookh/wearables/piece-108-view-1.png",
-      "images/jookh/wearables/piece-108-view-2.png"
+      "images/jookh/wearables/wear-108-view-1.png",
+      "images/jookh/wearables/wear-108-view-2.png"
     ],
     "status": "sold",
     "collection_line": "Essential"
@@ -1855,8 +1855,8 @@ window.PRODUCTS = [
     "medium": "ENTER MATERIAL HERE",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
-      "images/jookh/wearables/piece-109-view-1.png",
-      "images/jookh/wearables/piece-109-view-2.png"
+      "images/jookh/wearables/wear-109-view-1.png",
+      "images/jookh/wearables/wear-109-view-2.png"
     ],
     "status": "sold",
     "collection_line": "Essential"
@@ -1870,7 +1870,7 @@ window.PRODUCTS = [
     "medium": "ENTER MATERIAL HERE",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
-      "images/jookh/wearables/piece-110-view-1.png"
+      "images/jookh/wearables/wear-110-view-1.png"
     ],
     "status": "sold",
     "collection_line": "Levi's x Jookh"
@@ -1884,7 +1884,7 @@ window.PRODUCTS = [
     "medium": "Mixed media on canvas",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
-      "images/paintings/piece-2.jpg"
+      "images/paintings/paint-02-view-1.jpg"
     ],
     "status": "available",
     "collection_line": "Essential"
@@ -1898,7 +1898,7 @@ window.PRODUCTS = [
     "medium": "Mixed media on canvas",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
-      "images/paintings/piece-3.jpg"
+      "images/paintings/paint-03-view-1.jpg"
     ],
     "status": "available",
     "collection_line": "Essential"
@@ -1912,7 +1912,7 @@ window.PRODUCTS = [
     "medium": "Mixed media on canvas",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
-      "images/paintings/piece-4.jpg"
+      "images/paintings/paint-04-view-1.jpg"
     ],
     "status": "available",
     "collection_line": "Essential"
@@ -1926,7 +1926,7 @@ window.PRODUCTS = [
     "medium": "Mixed media on canvas",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
-      "images/paintings/piece-9.jpg"
+      "images/paintings/paint-09-view-1.jpg"
     ],
     "status": "available",
     "collection_line": "Essential"
@@ -1940,7 +1940,7 @@ window.PRODUCTS = [
     "medium": "Mixed media on canvas",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
-      "images/paintings/piece-10.jpg"
+      "images/paintings/paint-10-view-1.jpg"
     ],
     "status": "available",
     "collection_line": "Essential"
@@ -1954,8 +1954,8 @@ window.PRODUCTS = [
     "medium": "ENTER MATERIAL HERE",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
-      "images/jookh/wearables/piece-111-view-1.jpg",
-      "images/jookh/wearables/piece-111-view-2.jpg"
+      "images/jookh/wearables/wear-111-view-1.jpg",
+      "images/jookh/wearables/wear-111-view-2.jpg"
     ],
     "status": "available",
     "collection_line": "Levi's x Jookh"
@@ -1969,8 +1969,8 @@ window.PRODUCTS = [
     "medium": "ENTER MATERIAL HERE",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
-      "images/jookh/wearables/piece-112-view-1.jpg",
-      "images/jookh/wearables/piece-112-view-2.jpg"
+      "images/jookh/wearables/wear-112-view-1.jpg",
+      "images/jookh/wearables/wear-112-view-2.jpg"
     ],
     "status": "available",
     "collection_line": "Levi's x Jookh"
@@ -1984,8 +1984,8 @@ window.PRODUCTS = [
     "medium": "ENTER MATERIAL HERE",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
-      "images/jookh/wearables/piece-113-view-1.jpg",
-      "images/jookh/wearables/piece-113-view-2.jpg"
+      "images/jookh/wearables/wear-113-view-1.jpg",
+      "images/jookh/wearables/wear-113-view-2.jpg"
     ],
     "status": "available",
     "collection_line": "Levi's x Jookh"
@@ -1999,23 +1999,8 @@ window.PRODUCTS = [
     "medium": "ENTER MATERIAL HERE",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
-      "images/jookh/wearables/piece-114-view-1.jpg",
-      "images/jookh/wearables/piece-114-view-2.jpg"
-    ],
-    "status": "available",
-    "collection_line": "Levi's x Jookh"
-  },
-  {
-    "id": "wear-115",
-    "name": "Levi's x Jookh 05",
-    "category": "wearables",
-    "collection": "Jookh Couture",
-    "price": "ENTER PRICE HERE",
-    "medium": "ENTER MATERIAL HERE",
-    "edition": "One-of-a-kind · Signed by the artist",
-    "views": [
-      "images/jookh/wearables/piece-115-view-1.jpg",
-      "images/jookh/wearables/piece-115-view-2.jpg"
+      "images/jookh/wearables/wear-114-view-1.jpg",
+      "images/jookh/wearables/wear-114-view-2.jpg"
     ],
     "status": "available",
     "collection_line": "Levi's x Jookh"
@@ -2029,8 +2014,8 @@ window.PRODUCTS = [
     "medium": "ENTER MATERIAL HERE",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
-      "images/jookh/wearables/piece-116-view-1.jpg",
-      "images/jookh/wearables/piece-116-view-2.jpg"
+      "images/jookh/wearables/wear-116-view-1.jpg",
+      "images/jookh/wearables/wear-116-view-2.jpg"
     ],
     "status": "available",
     "collection_line": "Levi's x Jookh"
@@ -2044,8 +2029,8 @@ window.PRODUCTS = [
     "medium": "ENTER MATERIAL HERE",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
-      "images/jookh/wearables/piece-117-view-1.jpg",
-      "images/jookh/wearables/piece-117-view-2.jpg"
+      "images/jookh/wearables/wear-117-view-1.jpg",
+      "images/jookh/wearables/wear-117-view-2.jpg"
     ],
     "status": "available",
     "collection_line": "Levi's x Jookh"
@@ -2059,8 +2044,8 @@ window.PRODUCTS = [
     "medium": "ENTER MATERIAL HERE",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
-      "images/jookh/wearables/piece-118-view-1.jpg",
-      "images/jookh/wearables/piece-118-view-2.jpg"
+      "images/jookh/wearables/wear-118-view-1.jpg",
+      "images/jookh/wearables/wear-118-view-2.jpg"
     ],
     "status": "available",
     "collection_line": "Levi's x Jookh"
@@ -2074,8 +2059,8 @@ window.PRODUCTS = [
     "medium": "ENTER MATERIAL HERE",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
-      "images/jookh/wearables/piece-119-view-1.jpg",
-      "images/jookh/wearables/piece-119-view-2.jpg"
+      "images/jookh/wearables/wear-119-view-1.jpg",
+      "images/jookh/wearables/wear-119-view-2.jpg"
     ],
     "status": "available",
     "collection_line": "Levi's x Jookh"
@@ -2089,8 +2074,8 @@ window.PRODUCTS = [
     "medium": "ENTER MATERIAL HERE",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
-      "images/jookh/wearables/piece-120-view-1.jpg",
-      "images/jookh/wearables/piece-120-view-2.jpg"
+      "images/jookh/wearables/wear-120-view-1.jpg",
+      "images/jookh/wearables/wear-120-view-2.jpg"
     ],
     "status": "available",
     "collection_line": "Levi's x Jookh"
@@ -2104,8 +2089,8 @@ window.PRODUCTS = [
     "medium": "ENTER MATERIAL HERE",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
-      "images/jookh/wearables/piece-121-view-1.jpg",
-      "images/jookh/wearables/piece-121-view-2.jpg"
+      "images/jookh/wearables/wear-121-view-1.jpg",
+      "images/jookh/wearables/wear-121-view-2.jpg"
     ],
     "status": "available",
     "collection_line": "Levi's x Jookh"
@@ -2119,8 +2104,8 @@ window.PRODUCTS = [
     "medium": "ENTER MATERIAL HERE",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
-      "images/jookh/wearables/piece-122-view-1.jpg",
-      "images/jookh/wearables/piece-122-view-2.jpg"
+      "images/jookh/wearables/wear-122-view-1.jpg",
+      "images/jookh/wearables/wear-122-view-2.jpg"
     ],
     "status": "available",
     "collection_line": "Levi's x Jookh"
@@ -2134,8 +2119,8 @@ window.PRODUCTS = [
     "medium": "ENTER MATERIAL HERE",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
-      "images/jookh/wearables/piece-123-view-1.jpg",
-      "images/jookh/wearables/piece-123-view-2.jpg"
+      "images/jookh/wearables/wear-123-view-1.jpg",
+      "images/jookh/wearables/wear-123-view-2.jpg"
     ],
     "status": "available",
     "collection_line": "Levi's x Jookh"
@@ -2149,8 +2134,8 @@ window.PRODUCTS = [
     "medium": "ENTER MATERIAL HERE",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
-      "images/jookh/wearables/piece-124-view-1.jpg",
-      "images/jookh/wearables/piece-124-view-2.jpg"
+      "images/jookh/wearables/wear-124-view-1.jpg",
+      "images/jookh/wearables/wear-124-view-2.jpg"
     ],
     "status": "available",
     "collection_line": "Levi's x Jookh"
@@ -2164,8 +2149,8 @@ window.PRODUCTS = [
     "medium": "ENTER MATERIAL HERE",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
-      "images/jookh/wearables/piece-125-view-1.jpg",
-      "images/jookh/wearables/piece-125-view-2.jpg"
+      "images/jookh/wearables/wear-125-view-1.jpg",
+      "images/jookh/wearables/wear-125-view-2.jpg"
     ],
     "status": "available",
     "collection_line": "Levi's x Jookh"
@@ -2179,8 +2164,8 @@ window.PRODUCTS = [
     "medium": "ENTER MATERIAL HERE",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
-      "images/jookh/wearables/piece-126-view-1.jpg",
-      "images/jookh/wearables/piece-126-view-2.jpg"
+      "images/jookh/wearables/wear-126-view-1.jpg",
+      "images/jookh/wearables/wear-126-view-2.jpg"
     ],
     "status": "available",
     "collection_line": "Levi's x Jookh"
@@ -2194,8 +2179,8 @@ window.PRODUCTS = [
     "medium": "ENTER MATERIAL HERE",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
-      "images/jookh/wearables/piece-127-view-1.jpg",
-      "images/jookh/wearables/piece-127-view-2.jpg"
+      "images/jookh/wearables/wear-127-view-1.jpg",
+      "images/jookh/wearables/wear-127-view-2.jpg"
     ],
     "status": "available",
     "collection_line": "Levi's x Jookh"
@@ -2209,8 +2194,8 @@ window.PRODUCTS = [
     "medium": "ENTER MATERIAL HERE",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
-      "images/jookh/wearables/piece-128-view-1.jpg",
-      "images/jookh/wearables/piece-128-view-2.jpg"
+      "images/jookh/wearables/wear-128-view-1.jpg",
+      "images/jookh/wearables/wear-128-view-2.jpg"
     ],
     "status": "available",
     "collection_line": "Levi's x Jookh"
@@ -2224,8 +2209,8 @@ window.PRODUCTS = [
     "medium": "ENTER MATERIAL HERE",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
-      "images/jookh/wearables/piece-129-view-1.jpg",
-      "images/jookh/wearables/piece-129-view-2.jpg"
+      "images/jookh/wearables/wear-129-view-1.jpg",
+      "images/jookh/wearables/wear-129-view-2.jpg"
     ],
     "status": "available",
     "collection_line": "Levi's x Jookh"
@@ -2239,8 +2224,8 @@ window.PRODUCTS = [
     "medium": "ENTER MATERIAL HERE",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
-      "images/jookh/wearables/piece-130-view-1.jpg",
-      "images/jookh/wearables/piece-130-view-2.jpg"
+      "images/jookh/wearables/wear-130-view-1.jpg",
+      "images/jookh/wearables/wear-130-view-2.jpg"
     ],
     "status": "available",
     "collection_line": "Levi's x Jookh"
@@ -2254,8 +2239,8 @@ window.PRODUCTS = [
     "medium": "ENTER MATERIAL HERE",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
-      "images/jookh/wearables/piece-131-view-1.jpg",
-      "images/jookh/wearables/piece-131-view-2.jpg"
+      "images/jookh/wearables/wear-131-view-1.jpg",
+      "images/jookh/wearables/wear-131-view-2.jpg"
     ],
     "status": "available",
     "collection_line": "Levi's x Jookh"
@@ -2269,8 +2254,8 @@ window.PRODUCTS = [
     "medium": "ENTER MATERIAL HERE",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
-      "images/jookh/wearables/piece-132-view-1.jpg",
-      "images/jookh/wearables/piece-132-view-2.jpg"
+      "images/jookh/wearables/wear-132-view-1.jpg",
+      "images/jookh/wearables/wear-132-view-2.jpg"
     ],
     "status": "available",
     "collection_line": "Levi's x Jookh"
@@ -2284,8 +2269,8 @@ window.PRODUCTS = [
     "medium": "ENTER MATERIAL HERE",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
-      "images/jookh/wearables/piece-133-view-1.jpg",
-      "images/jookh/wearables/piece-133-view-2.jpg"
+      "images/jookh/wearables/wear-133-view-1.jpg",
+      "images/jookh/wearables/wear-133-view-2.jpg"
     ],
     "status": "available",
     "collection_line": "Levi's x Jookh"
@@ -2299,8 +2284,8 @@ window.PRODUCTS = [
     "medium": "ENTER MATERIAL HERE",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
-      "images/jookh/wearables/piece-134-view-1.jpg",
-      "images/jookh/wearables/piece-134-view-2.jpg"
+      "images/jookh/wearables/wear-134-view-1.jpg",
+      "images/jookh/wearables/wear-134-view-2.jpg"
     ],
     "status": "available",
     "collection_line": "Levi's x Jookh"
@@ -2314,8 +2299,8 @@ window.PRODUCTS = [
     "medium": "ENTER MATERIAL HERE",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
-      "images/jookh/wearables/piece-135-view-1.jpg",
-      "images/jookh/wearables/piece-135-view-2.jpg"
+      "images/jookh/wearables/wear-135-view-1.jpg",
+      "images/jookh/wearables/wear-135-view-2.jpg"
     ],
     "status": "available",
     "collection_line": "Levi's x Jookh"
@@ -2329,8 +2314,8 @@ window.PRODUCTS = [
     "medium": "ENTER MATERIAL HERE",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
-      "images/jookh/wearables/piece-136-view-1.jpg",
-      "images/jookh/wearables/piece-136-view-2.jpg"
+      "images/jookh/wearables/wear-136-view-1.jpg",
+      "images/jookh/wearables/wear-136-view-2.jpg"
     ],
     "status": "available",
     "collection_line": "Levi's x Jookh"
@@ -2344,8 +2329,8 @@ window.PRODUCTS = [
     "medium": "ENTER MATERIAL HERE",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
-      "images/jookh/wearables/piece-137-view-1.jpg",
-      "images/jookh/wearables/piece-137-view-2.jpg"
+      "images/jookh/wearables/wear-137-view-1.jpg",
+      "images/jookh/wearables/wear-137-view-2.jpg"
     ],
     "status": "available",
     "collection_line": "Levi's x Jookh"
@@ -2359,8 +2344,8 @@ window.PRODUCTS = [
     "medium": "ENTER MATERIAL HERE",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
-      "images/jookh/wearables/piece-138-view-1.jpg",
-      "images/jookh/wearables/piece-138-view-2.jpg"
+      "images/jookh/wearables/wear-138-view-1.jpg",
+      "images/jookh/wearables/wear-138-view-2.jpg"
     ],
     "status": "available",
     "collection_line": "Levi's x Jookh"
@@ -2374,8 +2359,8 @@ window.PRODUCTS = [
     "medium": "ENTER MATERIAL HERE",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
-      "images/jookh/wearables/piece-139-view-1.jpg",
-      "images/jookh/wearables/piece-139-view-2.jpg"
+      "images/jookh/wearables/wear-139-view-1.jpg",
+      "images/jookh/wearables/wear-139-view-2.jpg"
     ],
     "status": "available",
     "collection_line": "Levi's x Jookh"
@@ -2389,8 +2374,8 @@ window.PRODUCTS = [
     "medium": "ENTER MATERIAL HERE",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
-      "images/jookh/wearables/piece-140-view-1.jpg",
-      "images/jookh/wearables/piece-140-view-2.jpg"
+      "images/jookh/wearables/wear-140-view-1.jpg",
+      "images/jookh/wearables/wear-140-view-2.jpg"
     ],
     "status": "available",
     "collection_line": "Levi's x Jookh"
@@ -2404,8 +2389,8 @@ window.PRODUCTS = [
     "medium": "ENTER MATERIAL HERE",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
-      "images/jookh/wearables/piece-141-view-1.jpg",
-      "images/jookh/wearables/piece-141-view-2.jpg"
+      "images/jookh/wearables/wear-141-view-1.jpg",
+      "images/jookh/wearables/wear-141-view-2.jpg"
     ],
     "status": "available",
     "collection_line": "Levi's x Jookh"
@@ -2419,8 +2404,8 @@ window.PRODUCTS = [
     "medium": "ENTER MATERIAL HERE",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
-      "images/jookh/wearables/piece-142-view-1.jpg",
-      "images/jookh/wearables/piece-142-view-2.jpg"
+      "images/jookh/wearables/wear-142-view-1.jpg",
+      "images/jookh/wearables/wear-142-view-2.jpg"
     ],
     "status": "available",
     "collection_line": "Levi's x Jookh"
@@ -2434,8 +2419,8 @@ window.PRODUCTS = [
     "medium": "ENTER MATERIAL HERE",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
-      "images/jookh/wearables/piece-143-view-1.jpg",
-      "images/jookh/wearables/piece-143-view-2.jpg"
+      "images/jookh/wearables/wear-143-view-1.jpg",
+      "images/jookh/wearables/wear-143-view-2.jpg"
     ],
     "status": "available",
     "collection_line": "Levi's x Jookh"
@@ -2449,8 +2434,8 @@ window.PRODUCTS = [
     "medium": "ENTER MATERIAL HERE",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
-      "images/jookh/wearables/piece-144-view-1.jpg",
-      "images/jookh/wearables/piece-144-view-2.jpg"
+      "images/jookh/wearables/wear-144-view-1.jpg",
+      "images/jookh/wearables/wear-144-view-2.jpg"
     ],
     "status": "available",
     "collection_line": "Levi's x Jookh"
@@ -2464,8 +2449,8 @@ window.PRODUCTS = [
     "medium": "ENTER MATERIAL HERE",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
-      "images/jookh/wearables/piece-145-view-1.jpg",
-      "images/jookh/wearables/piece-145-view-2.jpg"
+      "images/jookh/wearables/wear-145-view-1.jpg",
+      "images/jookh/wearables/wear-145-view-2.jpg"
     ],
     "status": "available",
     "collection_line": "Levi's x Jookh"
@@ -2479,8 +2464,8 @@ window.PRODUCTS = [
     "medium": "ENTER MATERIAL HERE",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
-      "images/jookh/wearables/piece-146-view-1.jpg",
-      "images/jookh/wearables/piece-146-view-2.jpg"
+      "images/jookh/wearables/wear-146-view-1.jpg",
+      "images/jookh/wearables/wear-146-view-2.jpg"
     ],
     "status": "available",
     "collection_line": "Levi's x Jookh"
@@ -2494,8 +2479,8 @@ window.PRODUCTS = [
     "medium": "ENTER MATERIAL HERE",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
-      "images/jookh/wearables/piece-147-view-1.jpg",
-      "images/jookh/wearables/piece-147-view-2.jpg"
+      "images/jookh/wearables/wear-147-view-1.jpg",
+      "images/jookh/wearables/wear-147-view-2.jpg"
     ],
     "status": "available",
     "collection_line": "Levi's x Jookh"
@@ -2509,8 +2494,8 @@ window.PRODUCTS = [
     "medium": "ENTER MATERIAL HERE",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
-      "images/jookh/wearables/piece-148-view-1.jpg",
-      "images/jookh/wearables/piece-148-view-2.jpg"
+      "images/jookh/wearables/wear-148-view-1.jpg",
+      "images/jookh/wearables/wear-148-view-2.jpg"
     ],
     "status": "available",
     "collection_line": "Levi's x Jookh"
@@ -2524,8 +2509,8 @@ window.PRODUCTS = [
     "medium": "ENTER MATERIAL HERE",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
-      "images/jookh/wearables/piece-149-view-1.jpg",
-      "images/jookh/wearables/piece-149-view-2.jpg"
+      "images/jookh/wearables/wear-149-view-1.jpg",
+      "images/jookh/wearables/wear-149-view-2.jpg"
     ],
     "status": "available",
     "collection_line": "Levi's x Jookh"
@@ -2539,8 +2524,8 @@ window.PRODUCTS = [
     "medium": "ENTER MATERIAL HERE",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
-      "images/jookh/wearables/piece-150-view-1.jpg",
-      "images/jookh/wearables/piece-150-view-2.jpg"
+      "images/jookh/wearables/wear-150-view-1.jpg",
+      "images/jookh/wearables/wear-150-view-2.jpg"
     ],
     "status": "available",
     "collection_line": "Levi's x Jookh"
@@ -2554,8 +2539,7 @@ window.PRODUCTS = [
     "medium": "ENTER MATERIAL HERE",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
-      "images/jookh/wearables/piece-151-view-1.jpg",
-      "images/jookh/wearables/piece-151-view-2.jpg"
+      "images/jookh/wearables/wear-151-view-1.jpg"
     ],
     "status": "available",
     "collection_line": "Levi's x Jookh"
@@ -2569,8 +2553,8 @@ window.PRODUCTS = [
     "medium": "ENTER MATERIAL HERE",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
-      "images/jookh/wearables/piece-152-view-1.jpg",
-      "images/jookh/wearables/piece-152-view-2.jpg"
+      "images/jookh/wearables/wear-152-view-1.jpg",
+      "images/jookh/wearables/wear-152-view-2.jpg"
     ],
     "status": "available",
     "collection_line": "Levi's x Jookh"
@@ -2584,8 +2568,8 @@ window.PRODUCTS = [
     "medium": "ENTER MATERIAL HERE",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
-      "images/jookh/wearables/piece-153-view-1.jpg",
-      "images/jookh/wearables/piece-153-view-2.jpg"
+      "images/jookh/wearables/wear-153-view-1.jpg",
+      "images/jookh/wearables/wear-153-view-2.jpg"
     ],
     "status": "available",
     "collection_line": "Levi's x Jookh"
