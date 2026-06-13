@@ -895,6 +895,45 @@ a   { text-decoration: none; color: inherit; }
 /* Jookh category blocks */
 .jookh-category { margin-bottom: 5rem; }
 .jookh-category:last-of-type { margin-bottom: 3rem; }
+.jookh-category.is-empty,
+.jookh-subcat-header.is-empty,
+.archive-divider.is-empty,
+.archive-wrap.is-empty,
+.archive-toggle.is-empty,
+.product-card.is-filtered-out { display: none !important; }
+
+/* Collection filter chips */
+.collection-filters {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.6rem;
+  margin: 2rem 0 3rem;
+}
+.collection-filter-btn {
+  font-family: var(--font-sans);
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--wine-dark);
+  background: transparent;
+  border: 1px solid rgba(30,7,19,0.25);
+  border-radius: 999px;
+  padding: 0.55rem 1.2rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.collection-filter-btn:hover,
+.collection-filter-btn:focus-visible {
+  border-color: var(--wine-dark);
+  background: rgba(30,7,19,0.06);
+  outline: none;
+}
+.collection-filter-btn.is-active {
+  background: var(--wine-dark);
+  border-color: var(--wine-dark);
+  color: #fff;
+}
 
 .jookh-cat-header {
   display: flex;

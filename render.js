@@ -195,6 +195,9 @@
     if (typeof window.initReveal === 'function') {
       window.initReveal();
     }
+    if (typeof window.initCollectionFilters === 'function') {
+      window.initCollectionFilters(normalizedProducts);
+    }
   }
 
   // ─── LOAD STRATEGY ───────────────────────────────
@@ -302,9 +305,10 @@
 
     // ── Card wrapper ─────────────────────────────
     var card = el('div', 'product-card reveal' + (isSold ? ' card--sold' : '') + (isArchive ? ' card--archive' : ''));
-    card.dataset.lightbox      = JSON.stringify(product.views || []);
-    card.dataset.productId     = product.id;
-    card.style.transitionDelay = (index % 6) * 80 + 'ms';
+    card.dataset.lightbox         = JSON.stringify(product.views || []);
+    card.dataset.productId        = product.id;
+    card.dataset.collectionLine   = product.collection_line || 'Essential';
+    card.style.transitionDelay    = (index % 6) * 80 + 'ms';
 
     card.appendChild(imgWrap);
     card.appendChild(infoRow);
