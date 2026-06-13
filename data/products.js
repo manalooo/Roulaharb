@@ -626,7 +626,7 @@ window.PRODUCTS = [
       "images/jookh/wearables/piece-33-view-1.jpg",
       "images/jookh/wearables/piece-33-view-2.jpg"
     ],
-    "status": "sold",
+    "status": "available",
     "subcollection": "Roma"
   },
   {
@@ -656,7 +656,7 @@ window.PRODUCTS = [
       "images/jookh/wearables/piece-35-view-1.jpg",
       "images/jookh/wearables/piece-35-view-2.jpg"
     ],
-    "status": "available",
+    "status": "sold",
     "subcollection": "Roma"
   },
   {
