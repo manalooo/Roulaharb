@@ -1398,7 +1398,7 @@ window.PRODUCTS = [
   },
   {
     "id": "wear-79",
-    "name": "Nuit Étoilée",
+    "name": "Émeraude Voile",
     "category": "wearables",
     "collection": "Jookh Couture",
     "price": "ENTER PRICE HERE",
@@ -1413,7 +1413,7 @@ window.PRODUCTS = [
   },
   {
     "id": "wear-80",
-    "name": "Émeraude Voile",
+    "name": "Nuit Étoilée",
     "category": "wearables",
     "collection": "Jookh Couture",
     "price": "ENTER PRICE HERE",
