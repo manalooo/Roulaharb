@@ -2235,8 +2235,7 @@ window.PRODUCTS = [
     "medium": "ENTER MATERIAL HERE",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
-      "images/jookh/wearables/wear-131-view-1.jpg",
-      "images/jookh/wearables/wear-131-view-2.jpg"
+      "images/jookh/wearables/wear-131-view-1.jpg"
     ],
     "status": "available",
     "collection_line": "Levi's x Jookh"
@@ -2279,8 +2278,7 @@ window.PRODUCTS = [
     "medium": "ENTER MATERIAL HERE",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
-      "images/jookh/wearables/wear-134-view-1.jpg",
-      "images/jookh/wearables/wear-134-view-2.jpg"
+      "images/jookh/wearables/wear-134-view-1.jpg"
     ],
     "status": "available",
     "collection_line": "Levi's x Jookh"
@@ -2294,8 +2292,7 @@ window.PRODUCTS = [
     "medium": "ENTER MATERIAL HERE",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
-      "images/jookh/wearables/wear-135-view-1.jpg",
-      "images/jookh/wearables/wear-135-view-2.jpg"
+      "images/jookh/wearables/wear-135-view-1.jpg"
     ],
     "status": "available",
     "collection_line": "Levi's x Jookh"
@@ -3432,5 +3429,19 @@ window.PRODUCTS = [
     "status": "available",
     "subcollection": "Levi's x Jookh",
     "collection_line": "Essential"
+  },
+  {
+    "id": "wear-208",
+    "name": "Levi's x Jookh 98",
+    "category": "wearables",
+    "collection": "Jookh Couture",
+    "price": "ENTER PRICE HERE",
+    "medium": "ENTER MATERIAL HERE",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/jookh/wearables/wear-208-view-1.jpg"
+    ],
+    "status": "available",
+    "collection_line": "Levi's x Jookh"
   }
 ];
