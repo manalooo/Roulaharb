@@ -1944,5 +1944,693 @@ window.PRODUCTS = [
     ],
     "status": "available",
     "collection_line": "Essential"
+  },
+  {
+    "id": "wear-111",
+    "name": "Levi's x Jookh 01",
+    "category": "wearables",
+    "collection": "Jookh Couture",
+    "price": "ENTER PRICE HERE",
+    "medium": "ENTER MATERIAL HERE",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/jookh/wearables/piece-111-view-1.jpg",
+      "images/jookh/wearables/piece-111-view-2.jpg"
+    ],
+    "status": "available",
+    "subcollection": "Levi's x Jookh",
+    "collection_line": "Essential"
+  },
+  {
+    "id": "wear-112",
+    "name": "Levi's x Jookh 02",
+    "category": "wearables",
+    "collection": "Jookh Couture",
+    "price": "ENTER PRICE HERE",
+    "medium": "ENTER MATERIAL HERE",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/jookh/wearables/piece-112-view-1.jpg",
+      "images/jookh/wearables/piece-112-view-2.jpg"
+    ],
+    "status": "available",
+    "subcollection": "Levi's x Jookh",
+    "collection_line": "Essential"
+  },
+  {
+    "id": "wear-113",
+    "name": "Levi's x Jookh 03",
+    "category": "wearables",
+    "collection": "Jookh Couture",
+    "price": "ENTER PRICE HERE",
+    "medium": "ENTER MATERIAL HERE",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/jookh/wearables/piece-113-view-1.jpg",
+      "images/jookh/wearables/piece-113-view-2.jpg"
+    ],
+    "status": "available",
+    "subcollection": "Levi's x Jookh",
+    "collection_line": "Essential"
+  },
+  {
+    "id": "wear-114",
+    "name": "Levi's x Jookh 04",
+    "category": "wearables",
+    "collection": "Jookh Couture",
+    "price": "ENTER PRICE HERE",
+    "medium": "ENTER MATERIAL HERE",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/jookh/wearables/piece-114-view-1.jpg",
+      "images/jookh/wearables/piece-114-view-2.jpg"
+    ],
+    "status": "available",
+    "subcollection": "Levi's x Jookh",
+    "collection_line": "Essential"
+  },
+  {
+    "id": "wear-115",
+    "name": "Levi's x Jookh 05",
+    "category": "wearables",
+    "collection": "Jookh Couture",
+    "price": "ENTER PRICE HERE",
+    "medium": "ENTER MATERIAL HERE",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/jookh/wearables/piece-115-view-1.jpg",
+      "images/jookh/wearables/piece-115-view-2.jpg"
+    ],
+    "status": "available",
+    "subcollection": "Levi's x Jookh",
+    "collection_line": "Essential"
+  },
+  {
+    "id": "wear-116",
+    "name": "Levi's x Jookh 06",
+    "category": "wearables",
+    "collection": "Jookh Couture",
+    "price": "ENTER PRICE HERE",
+    "medium": "ENTER MATERIAL HERE",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/jookh/wearables/piece-116-view-1.jpg",
+      "images/jookh/wearables/piece-116-view-2.jpg"
+    ],
+    "status": "available",
+    "subcollection": "Levi's x Jookh",
+    "collection_line": "Essential"
+  },
+  {
+    "id": "wear-117",
+    "name": "Levi's x Jookh 07",
+    "category": "wearables",
+    "collection": "Jookh Couture",
+    "price": "ENTER PRICE HERE",
+    "medium": "ENTER MATERIAL HERE",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/jookh/wearables/piece-117-view-1.jpg",
+      "images/jookh/wearables/piece-117-view-2.jpg"
+    ],
+    "status": "available",
+    "subcollection": "Levi's x Jookh",
+    "collection_line": "Essential"
+  },
+  {
+    "id": "wear-118",
+    "name": "Levi's x Jookh 08",
+    "category": "wearables",
+    "collection": "Jookh Couture",
+    "price": "ENTER PRICE HERE",
+    "medium": "ENTER MATERIAL HERE",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/jookh/wearables/piece-118-view-1.jpg",
+      "images/jookh/wearables/piece-118-view-2.jpg"
+    ],
+    "status": "available",
+    "subcollection": "Levi's x Jookh",
+    "collection_line": "Essential"
+  },
+  {
+    "id": "wear-119",
+    "name": "Levi's x Jookh 09",
+    "category": "wearables",
+    "collection": "Jookh Couture",
+    "price": "ENTER PRICE HERE",
+    "medium": "ENTER MATERIAL HERE",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/jookh/wearables/piece-119-view-1.jpg",
+      "images/jookh/wearables/piece-119-view-2.jpg"
+    ],
+    "status": "available",
+    "subcollection": "Levi's x Jookh",
+    "collection_line": "Essential"
+  },
+  {
+    "id": "wear-120",
+    "name": "Levi's x Jookh 10",
+    "category": "wearables",
+    "collection": "Jookh Couture",
+    "price": "ENTER PRICE HERE",
+    "medium": "ENTER MATERIAL HERE",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/jookh/wearables/piece-120-view-1.jpg",
+      "images/jookh/wearables/piece-120-view-2.jpg"
+    ],
+    "status": "available",
+    "subcollection": "Levi's x Jookh",
+    "collection_line": "Essential"
+  },
+  {
+    "id": "wear-121",
+    "name": "Levi's x Jookh 11",
+    "category": "wearables",
+    "collection": "Jookh Couture",
+    "price": "ENTER PRICE HERE",
+    "medium": "ENTER MATERIAL HERE",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/jookh/wearables/piece-121-view-1.jpg",
+      "images/jookh/wearables/piece-121-view-2.jpg"
+    ],
+    "status": "available",
+    "subcollection": "Levi's x Jookh",
+    "collection_line": "Essential"
+  },
+  {
+    "id": "wear-122",
+    "name": "Levi's x Jookh 12",
+    "category": "wearables",
+    "collection": "Jookh Couture",
+    "price": "ENTER PRICE HERE",
+    "medium": "ENTER MATERIAL HERE",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/jookh/wearables/piece-122-view-1.jpg",
+      "images/jookh/wearables/piece-122-view-2.jpg"
+    ],
+    "status": "available",
+    "subcollection": "Levi's x Jookh",
+    "collection_line": "Essential"
+  },
+  {
+    "id": "wear-123",
+    "name": "Levi's x Jookh 13",
+    "category": "wearables",
+    "collection": "Jookh Couture",
+    "price": "ENTER PRICE HERE",
+    "medium": "ENTER MATERIAL HERE",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/jookh/wearables/piece-123-view-1.jpg",
+      "images/jookh/wearables/piece-123-view-2.jpg"
+    ],
+    "status": "available",
+    "subcollection": "Levi's x Jookh",
+    "collection_line": "Essential"
+  },
+  {
+    "id": "wear-124",
+    "name": "Levi's x Jookh 14",
+    "category": "wearables",
+    "collection": "Jookh Couture",
+    "price": "ENTER PRICE HERE",
+    "medium": "ENTER MATERIAL HERE",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/jookh/wearables/piece-124-view-1.jpg",
+      "images/jookh/wearables/piece-124-view-2.jpg"
+    ],
+    "status": "available",
+    "subcollection": "Levi's x Jookh",
+    "collection_line": "Essential"
+  },
+  {
+    "id": "wear-125",
+    "name": "Levi's x Jookh 15",
+    "category": "wearables",
+    "collection": "Jookh Couture",
+    "price": "ENTER PRICE HERE",
+    "medium": "ENTER MATERIAL HERE",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/jookh/wearables/piece-125-view-1.jpg",
+      "images/jookh/wearables/piece-125-view-2.jpg"
+    ],
+    "status": "available",
+    "subcollection": "Levi's x Jookh",
+    "collection_line": "Essential"
+  },
+  {
+    "id": "wear-126",
+    "name": "Levi's x Jookh 16",
+    "category": "wearables",
+    "collection": "Jookh Couture",
+    "price": "ENTER PRICE HERE",
+    "medium": "ENTER MATERIAL HERE",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/jookh/wearables/piece-126-view-1.jpg",
+      "images/jookh/wearables/piece-126-view-2.jpg"
+    ],
+    "status": "available",
+    "subcollection": "Levi's x Jookh",
+    "collection_line": "Essential"
+  },
+  {
+    "id": "wear-127",
+    "name": "Levi's x Jookh 17",
+    "category": "wearables",
+    "collection": "Jookh Couture",
+    "price": "ENTER PRICE HERE",
+    "medium": "ENTER MATERIAL HERE",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/jookh/wearables/piece-127-view-1.jpg",
+      "images/jookh/wearables/piece-127-view-2.jpg"
+    ],
+    "status": "available",
+    "subcollection": "Levi's x Jookh",
+    "collection_line": "Essential"
+  },
+  {
+    "id": "wear-128",
+    "name": "Levi's x Jookh 18",
+    "category": "wearables",
+    "collection": "Jookh Couture",
+    "price": "ENTER PRICE HERE",
+    "medium": "ENTER MATERIAL HERE",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/jookh/wearables/piece-128-view-1.jpg",
+      "images/jookh/wearables/piece-128-view-2.jpg"
+    ],
+    "status": "available",
+    "subcollection": "Levi's x Jookh",
+    "collection_line": "Essential"
+  },
+  {
+    "id": "wear-129",
+    "name": "Levi's x Jookh 19",
+    "category": "wearables",
+    "collection": "Jookh Couture",
+    "price": "ENTER PRICE HERE",
+    "medium": "ENTER MATERIAL HERE",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/jookh/wearables/piece-129-view-1.jpg",
+      "images/jookh/wearables/piece-129-view-2.jpg"
+    ],
+    "status": "available",
+    "subcollection": "Levi's x Jookh",
+    "collection_line": "Essential"
+  },
+  {
+    "id": "wear-130",
+    "name": "Levi's x Jookh 20",
+    "category": "wearables",
+    "collection": "Jookh Couture",
+    "price": "ENTER PRICE HERE",
+    "medium": "ENTER MATERIAL HERE",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/jookh/wearables/piece-130-view-1.jpg",
+      "images/jookh/wearables/piece-130-view-2.jpg"
+    ],
+    "status": "available",
+    "subcollection": "Levi's x Jookh",
+    "collection_line": "Essential"
+  },
+  {
+    "id": "wear-131",
+    "name": "Levi's x Jookh 21",
+    "category": "wearables",
+    "collection": "Jookh Couture",
+    "price": "ENTER PRICE HERE",
+    "medium": "ENTER MATERIAL HERE",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/jookh/wearables/piece-131-view-1.jpg",
+      "images/jookh/wearables/piece-131-view-2.jpg"
+    ],
+    "status": "available",
+    "subcollection": "Levi's x Jookh",
+    "collection_line": "Essential"
+  },
+  {
+    "id": "wear-132",
+    "name": "Levi's x Jookh 22",
+    "category": "wearables",
+    "collection": "Jookh Couture",
+    "price": "ENTER PRICE HERE",
+    "medium": "ENTER MATERIAL HERE",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/jookh/wearables/piece-132-view-1.jpg",
+      "images/jookh/wearables/piece-132-view-2.jpg"
+    ],
+    "status": "available",
+    "subcollection": "Levi's x Jookh",
+    "collection_line": "Essential"
+  },
+  {
+    "id": "wear-133",
+    "name": "Levi's x Jookh 23",
+    "category": "wearables",
+    "collection": "Jookh Couture",
+    "price": "ENTER PRICE HERE",
+    "medium": "ENTER MATERIAL HERE",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/jookh/wearables/piece-133-view-1.jpg",
+      "images/jookh/wearables/piece-133-view-2.jpg"
+    ],
+    "status": "available",
+    "subcollection": "Levi's x Jookh",
+    "collection_line": "Essential"
+  },
+  {
+    "id": "wear-134",
+    "name": "Levi's x Jookh 24",
+    "category": "wearables",
+    "collection": "Jookh Couture",
+    "price": "ENTER PRICE HERE",
+    "medium": "ENTER MATERIAL HERE",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/jookh/wearables/piece-134-view-1.jpg",
+      "images/jookh/wearables/piece-134-view-2.jpg"
+    ],
+    "status": "available",
+    "subcollection": "Levi's x Jookh",
+    "collection_line": "Essential"
+  },
+  {
+    "id": "wear-135",
+    "name": "Levi's x Jookh 25",
+    "category": "wearables",
+    "collection": "Jookh Couture",
+    "price": "ENTER PRICE HERE",
+    "medium": "ENTER MATERIAL HERE",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/jookh/wearables/piece-135-view-1.jpg",
+      "images/jookh/wearables/piece-135-view-2.jpg"
+    ],
+    "status": "available",
+    "subcollection": "Levi's x Jookh",
+    "collection_line": "Essential"
+  },
+  {
+    "id": "wear-136",
+    "name": "Levi's x Jookh 26",
+    "category": "wearables",
+    "collection": "Jookh Couture",
+    "price": "ENTER PRICE HERE",
+    "medium": "ENTER MATERIAL HERE",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/jookh/wearables/piece-136-view-1.jpg",
+      "images/jookh/wearables/piece-136-view-2.jpg"
+    ],
+    "status": "available",
+    "subcollection": "Levi's x Jookh",
+    "collection_line": "Essential"
+  },
+  {
+    "id": "wear-137",
+    "name": "Levi's x Jookh 27",
+    "category": "wearables",
+    "collection": "Jookh Couture",
+    "price": "ENTER PRICE HERE",
+    "medium": "ENTER MATERIAL HERE",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/jookh/wearables/piece-137-view-1.jpg",
+      "images/jookh/wearables/piece-137-view-2.jpg"
+    ],
+    "status": "available",
+    "subcollection": "Levi's x Jookh",
+    "collection_line": "Essential"
+  },
+  {
+    "id": "wear-138",
+    "name": "Levi's x Jookh 28",
+    "category": "wearables",
+    "collection": "Jookh Couture",
+    "price": "ENTER PRICE HERE",
+    "medium": "ENTER MATERIAL HERE",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/jookh/wearables/piece-138-view-1.jpg",
+      "images/jookh/wearables/piece-138-view-2.jpg"
+    ],
+    "status": "available",
+    "subcollection": "Levi's x Jookh",
+    "collection_line": "Essential"
+  },
+  {
+    "id": "wear-139",
+    "name": "Levi's x Jookh 29",
+    "category": "wearables",
+    "collection": "Jookh Couture",
+    "price": "ENTER PRICE HERE",
+    "medium": "ENTER MATERIAL HERE",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/jookh/wearables/piece-139-view-1.jpg",
+      "images/jookh/wearables/piece-139-view-2.jpg"
+    ],
+    "status": "available",
+    "subcollection": "Levi's x Jookh",
+    "collection_line": "Essential"
+  },
+  {
+    "id": "wear-140",
+    "name": "Levi's x Jookh 30",
+    "category": "wearables",
+    "collection": "Jookh Couture",
+    "price": "ENTER PRICE HERE",
+    "medium": "ENTER MATERIAL HERE",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/jookh/wearables/piece-140-view-1.jpg",
+      "images/jookh/wearables/piece-140-view-2.jpg"
+    ],
+    "status": "available",
+    "subcollection": "Levi's x Jookh",
+    "collection_line": "Essential"
+  },
+  {
+    "id": "wear-141",
+    "name": "Levi's x Jookh 31",
+    "category": "wearables",
+    "collection": "Jookh Couture",
+    "price": "ENTER PRICE HERE",
+    "medium": "ENTER MATERIAL HERE",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/jookh/wearables/piece-141-view-1.jpg",
+      "images/jookh/wearables/piece-141-view-2.jpg"
+    ],
+    "status": "available",
+    "subcollection": "Levi's x Jookh",
+    "collection_line": "Essential"
+  },
+  {
+    "id": "wear-142",
+    "name": "Levi's x Jookh 32",
+    "category": "wearables",
+    "collection": "Jookh Couture",
+    "price": "ENTER PRICE HERE",
+    "medium": "ENTER MATERIAL HERE",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/jookh/wearables/piece-142-view-1.jpg",
+      "images/jookh/wearables/piece-142-view-2.jpg"
+    ],
+    "status": "available",
+    "subcollection": "Levi's x Jookh",
+    "collection_line": "Essential"
+  },
+  {
+    "id": "wear-143",
+    "name": "Levi's x Jookh 33",
+    "category": "wearables",
+    "collection": "Jookh Couture",
+    "price": "ENTER PRICE HERE",
+    "medium": "ENTER MATERIAL HERE",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/jookh/wearables/piece-143-view-1.jpg",
+      "images/jookh/wearables/piece-143-view-2.jpg"
+    ],
+    "status": "available",
+    "subcollection": "Levi's x Jookh",
+    "collection_line": "Essential"
+  },
+  {
+    "id": "wear-144",
+    "name": "Levi's x Jookh 34",
+    "category": "wearables",
+    "collection": "Jookh Couture",
+    "price": "ENTER PRICE HERE",
+    "medium": "ENTER MATERIAL HERE",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/jookh/wearables/piece-144-view-1.jpg",
+      "images/jookh/wearables/piece-144-view-2.jpg"
+    ],
+    "status": "available",
+    "subcollection": "Levi's x Jookh",
+    "collection_line": "Essential"
+  },
+  {
+    "id": "wear-145",
+    "name": "Levi's x Jookh 35",
+    "category": "wearables",
+    "collection": "Jookh Couture",
+    "price": "ENTER PRICE HERE",
+    "medium": "ENTER MATERIAL HERE",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/jookh/wearables/piece-145-view-1.jpg",
+      "images/jookh/wearables/piece-145-view-2.jpg"
+    ],
+    "status": "available",
+    "subcollection": "Levi's x Jookh",
+    "collection_line": "Essential"
+  },
+  {
+    "id": "wear-146",
+    "name": "Levi's x Jookh 36",
+    "category": "wearables",
+    "collection": "Jookh Couture",
+    "price": "ENTER PRICE HERE",
+    "medium": "ENTER MATERIAL HERE",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/jookh/wearables/piece-146-view-1.jpg",
+      "images/jookh/wearables/piece-146-view-2.jpg"
+    ],
+    "status": "available",
+    "subcollection": "Levi's x Jookh",
+    "collection_line": "Essential"
+  },
+  {
+    "id": "wear-147",
+    "name": "Levi's x Jookh 37",
+    "category": "wearables",
+    "collection": "Jookh Couture",
+    "price": "ENTER PRICE HERE",
+    "medium": "ENTER MATERIAL HERE",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/jookh/wearables/piece-147-view-1.jpg",
+      "images/jookh/wearables/piece-147-view-2.jpg"
+    ],
+    "status": "available",
+    "subcollection": "Levi's x Jookh",
+    "collection_line": "Essential"
+  },
+  {
+    "id": "wear-148",
+    "name": "Levi's x Jookh 38",
+    "category": "wearables",
+    "collection": "Jookh Couture",
+    "price": "ENTER PRICE HERE",
+    "medium": "ENTER MATERIAL HERE",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/jookh/wearables/piece-148-view-1.jpg",
+      "images/jookh/wearables/piece-148-view-2.jpg"
+    ],
+    "status": "available",
+    "subcollection": "Levi's x Jookh",
+    "collection_line": "Essential"
+  },
+  {
+    "id": "wear-149",
+    "name": "Levi's x Jookh 39",
+    "category": "wearables",
+    "collection": "Jookh Couture",
+    "price": "ENTER PRICE HERE",
+    "medium": "ENTER MATERIAL HERE",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/jookh/wearables/piece-149-view-1.jpg",
+      "images/jookh/wearables/piece-149-view-2.jpg"
+    ],
+    "status": "available",
+    "subcollection": "Levi's x Jookh",
+    "collection_line": "Essential"
+  },
+  {
+    "id": "wear-150",
+    "name": "Levi's x Jookh 40",
+    "category": "wearables",
+    "collection": "Jookh Couture",
+    "price": "ENTER PRICE HERE",
+    "medium": "ENTER MATERIAL HERE",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/jookh/wearables/piece-150-view-1.jpg",
+      "images/jookh/wearables/piece-150-view-2.jpg"
+    ],
+    "status": "available",
+    "subcollection": "Levi's x Jookh",
+    "collection_line": "Essential"
+  },
+  {
+    "id": "wear-151",
+    "name": "Levi's x Jookh 41",
+    "category": "wearables",
+    "collection": "Jookh Couture",
+    "price": "ENTER PRICE HERE",
+    "medium": "ENTER MATERIAL HERE",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/jookh/wearables/piece-151-view-1.jpg",
+      "images/jookh/wearables/piece-151-view-2.jpg"
+    ],
+    "status": "available",
+    "subcollection": "Levi's x Jookh",
+    "collection_line": "Essential"
+  },
+  {
+    "id": "wear-152",
+    "name": "Levi's x Jookh 42",
+    "category": "wearables",
+    "collection": "Jookh Couture",
+    "price": "ENTER PRICE HERE",
+    "medium": "ENTER MATERIAL HERE",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/jookh/wearables/piece-152-view-1.jpg",
+      "images/jookh/wearables/piece-152-view-2.jpg"
+    ],
+    "status": "available",
+    "subcollection": "Levi's x Jookh",
+    "collection_line": "Essential"
+  },
+  {
+    "id": "wear-153",
+    "name": "Levi's x Jookh 43",
+    "category": "wearables",
+    "collection": "Jookh Couture",
+    "price": "ENTER PRICE HERE",
+    "medium": "ENTER MATERIAL HERE",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/jookh/wearables/piece-153-view-1.jpg",
+      "images/jookh/wearables/piece-153-view-2.jpg"
+    ],
+    "status": "available",
+    "subcollection": "Levi's x Jookh",
+    "collection_line": "Essential"
   }
 ];
