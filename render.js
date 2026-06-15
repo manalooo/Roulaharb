@@ -240,13 +240,51 @@
         if (b === '__atelier__') return -1;
         return 0;
       });
+
+      // Filter chips so visitors can jump straight to a subcollection.
+      var subFilter = el('div', 'collection-nav arrivals-sub-filter reveal');
+      subFilter.setAttribute('role', 'tablist');
+      subFilter.setAttribute('aria-label', 'Filter wearables');
+      var allChip = el('button', 'collection-tab is-active');
+      allChip.type = 'button';
+      allChip.dataset.sub = '__all__';
+      allChip.innerHTML = '<span class="collection-tab-name">All</span><span class="collection-tab-count">' + items.length + '</span>';
+      subFilter.appendChild(allChip);
+
+      var subBlocks = el('div', 'arr-sub-blocks');
       arrOrder.forEach(function (key) {
         var g = arrSubs[key];
-        group.appendChild(buildSubcatHeader(displaySubName(g.name), false));
+        var chip = el('button', 'collection-tab');
+        chip.type = 'button';
+        chip.dataset.sub = key;
+        chip.innerHTML = '<span class="collection-tab-name">' + displaySubName(g.name) + '</span><span class="collection-tab-count">' + g.items.length + '</span>';
+        subFilter.appendChild(chip);
+
+        var block = el('div', 'arr-sub-block');
+        block.dataset.sub = key;
+        block.appendChild(buildSubcatHeader(displaySubName(g.name), false));
         var grid = el('div', 'jookh-grid jookh-subgrid');
         g.items.forEach(function (p) { grid.appendChild(buildCard(p, 'tall', cardIndex++)); });
-        group.appendChild(grid);
+        block.appendChild(grid);
+        subBlocks.appendChild(block);
       });
+
+      Array.from(subFilter.querySelectorAll('.collection-tab')).forEach(function (chip) {
+        chip.addEventListener('click', function () {
+          var sub = chip.dataset.sub;
+          Array.from(subFilter.querySelectorAll('.collection-tab')).forEach(function (c) {
+            var on = c === chip; c.classList.toggle('is-active', on); c.setAttribute('aria-selected', on ? 'true' : 'false');
+          });
+          Array.from(subBlocks.querySelectorAll('.arr-sub-block')).forEach(function (b) {
+            b.style.display = (sub === '__all__' || b.dataset.sub === sub) ? '' : 'none';
+          });
+          if (typeof window.initReveal === 'function') window.initReveal();
+          if (typeof window.__rerollStickers === 'function') { window.__rerollStickers(); setTimeout(window.__rerollStickers, 80); }
+        });
+      });
+
+      group.appendChild(subFilter);
+      group.appendChild(subBlocks);
     } else {
       var hasSub = items.some(function (p) { return p.subcollection; });
       if (hasSub) {
@@ -267,6 +305,7 @@
             grid.appendChild(buildCard(product, '', cardIndex++));
           });
           group.appendChild(grid);
+          appendSeeMore(group, grid, groups[key].length, section);
         });
       } else {
         var grid = el('div', gridClassesFor(category));
@@ -274,6 +313,7 @@
           grid.appendChild(buildCard(product, '', cardIndex++));
         });
         group.appendChild(grid);
+        appendSeeMore(group, grid, items.length, section);
       }
     }
 
@@ -306,6 +346,27 @@
     header.appendChild(h);
     header.appendChild(line);
     return header;
+  }
+
+  // Collapse a grid to a single row on Arrivals, with a See-more toggle.
+  var ARRIVALS_ROW = 4;
+  function appendSeeMore(parent, grid, count, section) {
+    if (section !== 'arrivals' || count <= ARRIVALS_ROW) return;
+    var cards = grid.querySelectorAll('.product-card');
+    for (var i = ARRIVALS_ROW; i < cards.length; i++) cards[i].classList.add('is-hidden');
+    var hidden = count - ARRIVALS_ROW;
+    var btn = el('button', 'grid-expand-btn');
+    btn.type = 'button';
+    btn.setAttribute('aria-expanded', 'false');
+    btn.innerHTML = '<span class="btn-text">+ See ' + hidden + ' more</span><span class="arrow" aria-hidden="true">↓</span>';
+    btn.addEventListener('click', function () {
+      var open = btn.getAttribute('aria-expanded') === 'true';
+      btn.setAttribute('aria-expanded', String(!open));
+      [].forEach.call(grid.querySelectorAll('.product-card'), function (c, idx) { if (idx >= ARRIVALS_ROW) c.classList.toggle('is-hidden', open); });
+      btn.querySelector('.btn-text').textContent = open ? '+ See ' + hidden + ' more' : '− Show fewer';
+      if (typeof window.__rerollStickers === 'function') { window.__rerollStickers(); setTimeout(window.__rerollStickers, 80); }
+    });
+    parent.appendChild(btn);
   }
 
   // ─── FILTER CHIPS ────────────────────────────────
