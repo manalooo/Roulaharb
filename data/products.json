@@ -1,155 +1,5 @@
 [
   {
-    "id": "scarf-01",
-    "name": "Kohl",
-    "category": "scarves",
-    "collection": "Jookh Couture",
-    "price": "160",
-    "medium": "cotton",
-    "edition": "One-of-a-kind · Signed by the artist",
-    "views": [
-      "images/jookh/scarves/scarf-01-view-1.jpeg"
-    ],
-    "status": "available",
-    "subcollection": "KUMBAKONAM",
-    "collection_line": "Essential"
-  },
-  {
-    "id": "scarf-02",
-    "name": "Turmeric",
-    "category": "scarves",
-    "collection": "Jookh Couture",
-    "price": "160",
-    "medium": "cotton",
-    "edition": "One-of-a-kind · Signed by the artist",
-    "views": [
-      "images/jookh/scarves/scarf-02-view-1.jpeg"
-    ],
-    "status": "available",
-    "subcollection": "KUMBAKONAM",
-    "collection_line": "Essential"
-  },
-  {
-    "id": "scarf-03",
-    "name": "Marigold",
-    "category": "scarves",
-    "collection": "Jookh Couture",
-    "price": "160",
-    "medium": "cotton",
-    "edition": "One-of-a-kind · Signed by the artist",
-    "views": [
-      "images/jookh/scarves/scarf-03-view-1.jpeg"
-    ],
-    "status": "available",
-    "subcollection": "KUMBAKONAM",
-    "collection_line": "Essential"
-  },
-  {
-    "id": "scarf-04",
-    "name": "Dune",
-    "category": "scarves",
-    "collection": "Jookh Couture",
-    "price": "160",
-    "medium": "cotton",
-    "edition": "One-of-a-kind · Signed by the artist",
-    "views": [
-      "images/jookh/scarves/scarf-04-view-1.jpeg"
-    ],
-    "status": "available",
-    "subcollection": "KUMBAKONAM",
-    "collection_line": "Essential"
-  },
-  {
-    "id": "scarf-05",
-    "name": "Sandalwood",
-    "category": "scarves",
-    "collection": "Jookh Couture",
-    "price": "160",
-    "medium": "cotton",
-    "edition": "One-of-a-kind · Signed by the artist",
-    "views": [
-      "images/jookh/scarves/scarf-05-view-1.jpeg"
-    ],
-    "status": "available",
-    "subcollection": "KUMBAKONAM",
-    "collection_line": "Essential"
-  },
-  {
-    "id": "scarf-06",
-    "name": "Vermillion",
-    "category": "scarves",
-    "collection": "Jookh Couture",
-    "price": "160",
-    "medium": "cotton",
-    "edition": "One-of-a-kind · Signed by the artist",
-    "views": [
-      "images/jookh/scarves/scarf-06-view-1.jpeg"
-    ],
-    "status": "available",
-    "subcollection": "KUMBAKONAM",
-    "collection_line": "Essential"
-  },
-  {
-    "id": "scarf-07",
-    "name": "Tulsi",
-    "category": "scarves",
-    "collection": "Jookh Couture",
-    "price": "160",
-    "medium": "cotton",
-    "edition": "One-of-a-kind · Signed by the artist",
-    "views": [
-      "images/jookh/scarves/scarf-07-view-1.jpeg"
-    ],
-    "status": "available",
-    "subcollection": "KUMBAKONAM",
-    "collection_line": "Essential"
-  },
-  {
-    "id": "scarf-08",
-    "name": "Saffron",
-    "category": "scarves",
-    "collection": "Jookh Couture",
-    "price": "160",
-    "medium": "cotton",
-    "edition": "One-of-a-kind · Signed by the artist",
-    "views": [
-      "images/jookh/scarves/scarf-08-view-1.jpeg"
-    ],
-    "status": "available",
-    "subcollection": "KUMBAKONAM",
-    "collection_line": "Essential"
-  },
-  {
-    "id": "scarf-09",
-    "name": "Sindoor",
-    "category": "scarves",
-    "collection": "Jookh Couture",
-    "price": "160",
-    "medium": "cotton",
-    "edition": "One-of-a-kind · Signed by the artist",
-    "views": [
-      "images/jookh/scarves/scarf-09-view-1.jpeg"
-    ],
-    "status": "available",
-    "subcollection": "KUMBAKONAM",
-    "collection_line": "Essential"
-  },
-  {
-    "id": "scarf-10",
-    "name": "Holi",
-    "category": "scarves",
-    "collection": "Jookh Couture",
-    "price": "160",
-    "medium": "cotton",
-    "edition": "One-of-a-kind · Signed by the artist",
-    "views": [
-      "images/jookh/scarves/scarf-10-view-1.jpeg"
-    ],
-    "status": "available",
-    "subcollection": "KUMBAKONAM",
-    "collection_line": "Essential"
-  },
-  {
     "id": "bag-01",
     "name": "Sakura",
     "category": "bags",
@@ -415,7 +265,7 @@
     "views": [
       "images/jookh/bags/bag-18-view-1.png"
     ],
-    "status": "available",
+    "status": "sold",
     "subcollection": "OSAKA",
     "collection_line": "Canvas"
   },
@@ -430,7 +280,7 @@
     "views": [
       "images/jookh/bags/bag-19-view-1.png"
     ],
-    "status": "available",
+    "status": "sold",
     "subcollection": "OSAKA",
     "collection_line": "Canvas"
   },
@@ -445,1434 +295,9 @@
     "views": [
       "images/jookh/bags/bag-20-view-1.png"
     ],
-    "status": "available",
+    "status": "sold",
     "subcollection": "OSAKA",
     "collection_line": "Canvas"
-  },
-  {
-    "id": "wear-17",
-    "name": "Noir Düsseldorf Duster",
-    "category": "wearables",
-    "collection": "Jookh Couture",
-    "price": "ENTER PRICE HERE",
-    "medium": "wool/silk",
-    "edition": "One-of-a-kind · Signed by the artist",
-    "views": [
-      "images/jookh/wearables/wear-17-view-1.jpg",
-      "images/jookh/wearables/wear-17-view-2.jpg"
-    ],
-    "status": "sold",
-    "subcollection": "Dusseldorf",
-    "collection_line": "Essential"
-  },
-  {
-    "id": "wear-18",
-    "name": "Rhine Patchwork Coat",
-    "category": "wearables",
-    "collection": "Jookh Couture",
-    "price": "ENTER PRICE HERE",
-    "medium": "wool/silk",
-    "edition": "One-of-a-kind · Signed by the artist",
-    "views": [
-      "images/jookh/wearables/wear-18-view-1.jpg",
-      "images/jookh/wearables/wear-18-view-2.jpg"
-    ],
-    "status": "sold",
-    "subcollection": "Dusseldorf",
-    "collection_line": "Essential"
-  },
-  {
-    "id": "wear-19",
-    "name": "Cobalt Vienna Coat",
-    "category": "wearables",
-    "collection": "Jookh Couture",
-    "price": "ENTER PRICE HERE",
-    "medium": "wool",
-    "edition": "One-of-a-kind · Signed by the artist",
-    "views": [
-      "images/jookh/wearables/wear-19-view-1.jpg",
-      "images/jookh/wearables/wear-19-view-2.jpg"
-    ],
-    "status": "sold",
-    "subcollection": "Vienna",
-    "collection_line": "Essential"
-  },
-  {
-    "id": "wear-21",
-    "name": "Midnight Poppy Coat",
-    "category": "wearables",
-    "collection": "Jookh Couture",
-    "price": "ENTER PRICE HERE",
-    "medium": "ENTER MATERIAL HERE",
-    "edition": "One-of-a-kind · Signed by the artist",
-    "views": [
-      "images/jookh/wearables/wear-21-view-1.jpg",
-      "images/jookh/wearables/wear-21-view-2.jpg"
-    ],
-    "status": "sold",
-    "collection_line": "Essential"
-  },
-  {
-    "id": "wear-22",
-    "name": "Carmine Stripe Noir",
-    "category": "wearables",
-    "collection": "Jookh Couture",
-    "price": "ENTER PRICE HERE",
-    "medium": "ENTER MATERIAL HERE",
-    "edition": "One-of-a-kind · Signed by the artist",
-    "views": [
-      "images/jookh/wearables/wear-22-view-1.jpg",
-      "images/jookh/wearables/wear-22-view-2.jpg"
-    ],
-    "status": "sold",
-    "collection_line": "Essential"
-  },
-  {
-    "id": "wear-23",
-    "name": "Obsidian Silk Trench",
-    "category": "wearables",
-    "collection": "Jookh Couture",
-    "price": "ENTER PRICE HERE",
-    "medium": "wool/silk",
-    "edition": "One-of-a-kind · Signed by the artist",
-    "views": [
-      "images/jookh/wearables/wear-23-view-1.jpg",
-      "images/jookh/wearables/wear-23-view-2.jpg"
-    ],
-    "status": "sold",
-    "subcollection": "Dusseldorf",
-    "collection_line": "Essential"
-  },
-  {
-    "id": "wear-24",
-    "name": "Indigo & Copper Kyoto",
-    "category": "wearables",
-    "collection": "Jookh Couture",
-    "price": "ENTER PRICE HERE",
-    "medium": "denim/cotton",
-    "edition": "One-of-a-kind · Signed by the artist",
-    "views": [
-      "images/jookh/wearables/wear-24-view-1.jpg",
-      "images/jookh/wearables/wear-24-view-2.jpg"
-    ],
-    "status": "sold",
-    "subcollection": "Kyoto Coat",
-    "collection_line": "Essential"
-  },
-  {
-    "id": "wear-25",
-    "name": "Slate Kyoto Trench",
-    "category": "wearables",
-    "collection": "Jookh Couture",
-    "price": "ENTER PRICE HERE",
-    "medium": "wool/cotton",
-    "edition": "One-of-a-kind · Signed by the artist",
-    "views": [
-      "images/jookh/wearables/wear-25-view-1.jpg",
-      "images/jookh/wearables/wear-25-view-2.jpg"
-    ],
-    "status": "sold",
-    "subcollection": "Kyoto Coat",
-    "collection_line": "Essential"
-  },
-  {
-    "id": "wear-26",
-    "name": "Noir & Gilt Kyoto",
-    "category": "wearables",
-    "collection": "Jookh Couture",
-    "price": "ENTER PRICE HERE",
-    "medium": "wool/cotton",
-    "edition": "One-of-a-kind · Signed by the artist",
-    "views": [
-      "images/jookh/wearables/wear-26-view-1.jpg",
-      "images/jookh/wearables/wear-26-view-2.jpg"
-    ],
-    "status": "sold",
-    "subcollection": "Kyoto Coat",
-    "collection_line": "Essential"
-  },
-  {
-    "id": "wear-27",
-    "name": "Kyoto Patchwork Longcoat",
-    "category": "wearables",
-    "collection": "Jookh Couture",
-    "price": "ENTER PRICE HERE",
-    "medium": "wool/silk",
-    "edition": "One-of-a-kind · Signed by the artist",
-    "views": [
-      "images/jookh/wearables/wear-27-view-1.jpg",
-      "images/jookh/wearables/wear-27-view-2.jpg"
-    ],
-    "status": "sold",
-    "subcollection": "Kyoto Coat",
-    "collection_line": "Essential"
-  },
-  {
-    "id": "wear-28",
-    "name": "Olive Kyoto Tweed",
-    "category": "wearables",
-    "collection": "Jookh Couture",
-    "price": "ENTER PRICE HERE",
-    "medium": "wool/cotton",
-    "edition": "One-of-a-kind · Signed by the artist",
-    "views": [
-      "images/jookh/wearables/wear-28-view-1.jpg",
-      "images/jookh/wearables/wear-28-view-2.jpg"
-    ],
-    "status": "sold",
-    "subcollection": "Kyoto Coat",
-    "collection_line": "Essential"
-  },
-  {
-    "id": "wear-30",
-    "name": "Jaipur Gilded Circle Robe",
-    "category": "wearables",
-    "collection": "Jookh Couture",
-    "price": "ENTER PRICE HERE",
-    "medium": "ENTER MATERIAL HERE",
-    "edition": "One-of-a-kind · Signed by the artist",
-    "views": [
-      "images/jookh/wearables/wear-30-view-1.jpg",
-      "images/jookh/wearables/wear-30-view-2.jpg"
-    ],
-    "status": "available",
-    "subcollection": "Jaipur",
-    "collection_line": "Essential"
-  },
-  {
-    "id": "wear-31",
-    "name": "Jaipur Noir & Gold Robe",
-    "category": "wearables",
-    "collection": "Jookh Couture",
-    "price": "ENTER PRICE HERE",
-    "medium": "ENTER MATERIAL HERE",
-    "edition": "One-of-a-kind · Signed by the artist",
-    "views": [
-      "images/jookh/wearables/wear-31-view-1.jpg",
-      "images/jookh/wearables/wear-31-view-2.jpg"
-    ],
-    "status": "available",
-    "subcollection": "Jaipur",
-    "collection_line": "24 Carats"
-  },
-  {
-    "id": "wear-33",
-    "name": "Roma Scarlet Blazer",
-    "category": "wearables",
-    "collection": "Jookh Couture",
-    "price": "380",
-    "medium": "cotton",
-    "edition": "One-of-a-kind · Signed by the artist",
-    "views": [
-      "images/jookh/wearables/wear-33-view-1.jpg",
-      "images/jookh/wearables/wear-33-view-2.jpg"
-    ],
-    "status": "available",
-    "subcollection": "Roma",
-    "collection_line": "Essential"
-  },
-  {
-    "id": "wear-34",
-    "name": "Ivory Ikebana Robe",
-    "category": "wearables",
-    "collection": "Jookh Couture",
-    "price": "550",
-    "medium": "cotton",
-    "edition": "One-of-a-kind · Signed by the artist",
-    "views": [
-      "images/jookh/wearables/wear-34-view-1.jpg",
-      "images/jookh/wearables/wear-34-view-2.jpg"
-    ],
-    "status": "available",
-    "subcollection": "Japan",
-    "collection_line": "Essential"
-  },
-  {
-    "id": "wear-35",
-    "name": "Coral Roma Blazer",
-    "category": "wearables",
-    "collection": "Jookh Couture",
-    "price": "420",
-    "medium": "cotton",
-    "edition": "One-of-a-kind · Signed by the artist",
-    "views": [
-      "images/jookh/wearables/wear-35-view-1.jpg",
-      "images/jookh/wearables/wear-35-view-2.jpg"
-    ],
-    "status": "sold",
-    "subcollection": "Roma",
-    "collection_line": "Essential"
-  },
-  {
-    "id": "wear-36",
-    "name": "Roma Nero Satin",
-    "category": "wearables",
-    "collection": "Jookh Couture",
-    "price": "380",
-    "medium": "cotton",
-    "edition": "One-of-a-kind · Signed by the artist",
-    "views": [
-      "images/jookh/wearables/wear-36-view-1.jpg",
-      "images/jookh/wearables/wear-36-view-2.jpg"
-    ],
-    "status": "available",
-    "subcollection": "Roma",
-    "collection_line": "Essential"
-  },
-  {
-    "id": "wear-37",
-    "name": "Prugna Blazer",
-    "category": "wearables",
-    "collection": "Jookh Couture",
-    "price": "420",
-    "medium": "cotton",
-    "edition": "One-of-a-kind · Signed by the artist",
-    "views": [
-      "images/jookh/wearables/wear-37-view-1.jpg",
-      "images/jookh/wearables/wear-37-view-2.jpg"
-    ],
-    "status": "available",
-    "subcollection": "Roma",
-    "collection_line": "Essential"
-  },
-  {
-    "id": "wear-38",
-    "name": "Burgundy Fiori Blazer",
-    "category": "wearables",
-    "collection": "Jookh Couture",
-    "price": "380",
-    "medium": "cotton",
-    "edition": "One-of-a-kind · Signed by the artist",
-    "views": [
-      "images/jookh/wearables/wear-38-view-1.jpg",
-      "images/jookh/wearables/wear-38-view-2.jpg"
-    ],
-    "status": "available",
-    "subcollection": "Roma",
-    "collection_line": "Essential"
-  },
-  {
-    "id": "wear-39",
-    "name": "Khaki Tartan Coat",
-    "category": "wearables",
-    "collection": "Jookh Couture",
-    "price": "ENTER PRICE HERE",
-    "medium": "ENTER MATERIAL HERE",
-    "edition": "One-of-a-kind · Signed by the artist",
-    "views": [
-      "images/jookh/wearables/wear-39-view-1.jpg",
-      "images/jookh/wearables/wear-39-view-2.jpg"
-    ],
-    "status": "sold",
-    "collection_line": "Essential"
-  },
-  {
-    "id": "wear-40",
-    "name": "Camel Tartan Trench",
-    "category": "wearables",
-    "collection": "Jookh Couture",
-    "price": "ENTER PRICE HERE",
-    "medium": "ENTER MATERIAL HERE",
-    "edition": "One-of-a-kind · Signed by the artist",
-    "views": [
-      "images/jookh/wearables/wear-40-view-1.jpg",
-      "images/jookh/wearables/wear-40-view-2.jpg"
-    ],
-    "status": "sold",
-    "collection_line": "Essential"
-  },
-  {
-    "id": "wear-41",
-    "name": "Terra Tweed Coat",
-    "category": "wearables",
-    "collection": "Jookh Couture",
-    "price": "ENTER PRICE HERE",
-    "medium": "ENTER MATERIAL HERE",
-    "edition": "One-of-a-kind · Signed by the artist",
-    "views": [
-      "images/jookh/wearables/wear-41-view-1.jpg",
-      "images/jookh/wearables/wear-41-view-2.jpg"
-    ],
-    "status": "sold",
-    "collection_line": "Essential"
-  },
-  {
-    "id": "wear-42",
-    "name": "Forest Tartan Coat",
-    "category": "wearables",
-    "collection": "Jookh Couture",
-    "price": "ENTER PRICE HERE",
-    "medium": "ENTER MATERIAL HERE",
-    "edition": "One-of-a-kind · Signed by the artist",
-    "views": [
-      "images/jookh/wearables/wear-42-view-1.jpg",
-      "images/jookh/wearables/wear-42-view-2.jpg"
-    ],
-    "status": "sold",
-    "collection_line": "Essential"
-  },
-  {
-    "id": "wear-43",
-    "name": "Canvas Rêverie Coat",
-    "category": "wearables",
-    "collection": "Jookh Couture",
-    "price": "ENTER PRICE HERE",
-    "medium": "ENTER MATERIAL HERE",
-    "edition": "One-of-a-kind · Signed by the artist",
-    "views": [
-      "images/jookh/wearables/wear-43-view-1.jpg",
-      "images/jookh/wearables/wear-43-view-2.jpg"
-    ],
-    "status": "sold",
-    "collection_line": "Canvas"
-  },
-  {
-    "id": "wear-44",
-    "name": "Silver Poppy Noir",
-    "category": "wearables",
-    "collection": "Jookh Couture",
-    "price": "ENTER PRICE HERE",
-    "medium": "ENTER MATERIAL HERE",
-    "edition": "One-of-a-kind · Signed by the artist",
-    "views": [
-      "images/jookh/wearables/wear-44-view-1.jpg",
-      "images/jookh/wearables/wear-44-view-2.jpg"
-    ],
-    "status": "sold",
-    "collection_line": "Essential"
-  },
-  {
-    "id": "wear-45",
-    "name": "Mosaïque Noir Blazer",
-    "category": "wearables",
-    "collection": "Jookh Couture",
-    "price": "ENTER PRICE HERE",
-    "medium": "ENTER MATERIAL HERE",
-    "edition": "One-of-a-kind · Signed by the artist",
-    "views": [
-      "images/jookh/wearables/wear-45-view-1.jpg",
-      "images/jookh/wearables/wear-45-view-2.jpg"
-    ],
-    "status": "sold",
-    "collection_line": "Essential"
-  },
-  {
-    "id": "wear-46",
-    "name": "Phoenix Gilded Robe",
-    "category": "wearables",
-    "collection": "Jookh Couture",
-    "price": "ENTER PRICE HERE",
-    "medium": "ENTER MATERIAL HERE",
-    "edition": "One-of-a-kind · Signed by the artist",
-    "views": [
-      "images/jookh/wearables/wear-46-view-1.jpg",
-      "images/jookh/wearables/wear-46-view-2.jpg"
-    ],
-    "status": "sold",
-    "collection_line": "Essential"
-  },
-  {
-    "id": "wear-49",
-    "name": "Rouge Noir Duster",
-    "category": "wearables",
-    "collection": "Jookh Couture",
-    "price": "ENTER PRICE HERE",
-    "medium": "ENTER MATERIAL HERE",
-    "edition": "One-of-a-kind · Signed by the artist",
-    "views": [
-      "images/jookh/wearables/wear-49-view-1.jpg",
-      "images/jookh/wearables/wear-49-view-2.jpg"
-    ],
-    "status": "sold",
-    "collection_line": "Essential"
-  },
-  {
-    "id": "wear-50",
-    "name": "Khaki Cercle Coat",
-    "category": "wearables",
-    "collection": "Jookh Couture",
-    "price": "ENTER PRICE HERE",
-    "medium": "ENTER MATERIAL HERE",
-    "edition": "One-of-a-kind · Signed by the artist",
-    "views": [
-      "images/jookh/wearables/wear-50-view-1.jpg",
-      "images/jookh/wearables/wear-50-view-2.jpg"
-    ],
-    "status": "sold",
-    "collection_line": "Essential"
-  },
-  {
-    "id": "wear-51",
-    "name": "Noir en Fleur Blazer",
-    "category": "wearables",
-    "collection": "Jookh Couture",
-    "price": "ENTER PRICE HERE",
-    "medium": "ENTER MATERIAL HERE",
-    "edition": "One-of-a-kind · Signed by the artist",
-    "views": [
-      "images/jookh/wearables/wear-51-view-1.jpg",
-      "images/jookh/wearables/wear-51-view-2.jpg"
-    ],
-    "status": "sold",
-    "collection_line": "Essential"
-  },
-  {
-    "id": "wear-52",
-    "name": "Cosmos Navy Blazer",
-    "category": "wearables",
-    "collection": "Jookh Couture",
-    "price": "ENTER PRICE HERE",
-    "medium": "ENTER MATERIAL HERE",
-    "edition": "One-of-a-kind · Signed by the artist",
-    "views": [
-      "images/jookh/wearables/wear-52-view-1.jpg",
-      "images/jookh/wearables/wear-52-view-2.jpg"
-    ],
-    "status": "sold",
-    "collection_line": "Essential"
-  },
-  {
-    "id": "wear-57",
-    "name": "Citrus Dentelle Robe",
-    "category": "wearables",
-    "collection": "Jookh Couture",
-    "price": "420",
-    "medium": "ENTER MATERIAL HERE",
-    "edition": "One-of-a-kind · Signed by the artist",
-    "views": [
-      "images/jookh/wearables/wear-57-view-1.jpg",
-      "images/jookh/wearables/wear-57-view-2.jpg"
-    ],
-    "status": "available",
-    "subcollection": "Japan",
-    "collection_line": "Essential"
-  },
-  {
-    "id": "wear-58",
-    "name": "Azure Garden Robe",
-    "category": "wearables",
-    "collection": "Jookh Couture",
-    "price": "550",
-    "medium": "ENTER MATERIAL HERE",
-    "edition": "One-of-a-kind · Signed by the artist",
-    "views": [
-      "images/jookh/wearables/wear-58-view-1.jpg",
-      "images/jookh/wearables/wear-58-view-2.jpg"
-    ],
-    "status": "available",
-    "subcollection": "Japan",
-    "collection_line": "Essential"
-  },
-  {
-    "id": "wear-59",
-    "name": "Ivory & Gold Dentelle",
-    "category": "wearables",
-    "collection": "Jookh Couture",
-    "price": "450",
-    "medium": "ENTER MATERIAL HERE",
-    "edition": "One-of-a-kind · Signed by the artist",
-    "views": [
-      "images/jookh/wearables/wear-59-view-1.jpg",
-      "images/jookh/wearables/wear-59-view-2.jpg"
-    ],
-    "status": "available",
-    "subcollection": "Japan",
-    "collection_line": "24 Carats"
-  },
-  {
-    "id": "wear-60",
-    "name": "Auburn Tweed",
-    "category": "wearables",
-    "collection": "Jookh Couture",
-    "price": "ENTER PRICE HERE",
-    "medium": "wool/cotton tweed",
-    "edition": "One-of-a-kind · Signed by the artist",
-    "views": [
-      "images/jookh/wearables/wear-60-view-1.png",
-      "images/jookh/wearables/wear-60-view-2.png"
-    ],
-    "status": "sold",
-    "collection_line": "Essential"
-  },
-  {
-    "id": "wear-61",
-    "name": "Admiral Blazer",
-    "category": "wearables",
-    "collection": "Jookh Couture",
-    "price": "ENTER PRICE HERE",
-    "medium": "wool",
-    "edition": "One-of-a-kind · Signed by the artist",
-    "views": [
-      "images/jookh/wearables/wear-61-view-1.png",
-      "images/jookh/wearables/wear-61-view-2.png"
-    ],
-    "status": "sold",
-    "collection_line": "Essential"
-  },
-  {
-    "id": "wear-62",
-    "name": "Lunar Duster",
-    "category": "wearables",
-    "collection": "Jookh Couture",
-    "price": "ENTER PRICE HERE",
-    "medium": "hand-painted silk/wool",
-    "edition": "One-of-a-kind · Signed by the artist",
-    "views": [
-      "images/jookh/wearables/wear-62-view-1.png",
-      "images/jookh/wearables/wear-62-view-2.png"
-    ],
-    "status": "sold",
-    "collection_line": "Essential"
-  },
-  {
-    "id": "wear-63",
-    "name": "Eclipse Robe",
-    "category": "wearables",
-    "collection": "Jookh Couture",
-    "price": "ENTER PRICE HERE",
-    "medium": "hand-painted silk/wool",
-    "edition": "One-of-a-kind · Signed by the artist",
-    "views": [
-      "images/jookh/wearables/wear-63-view-1.png",
-      "images/jookh/wearables/wear-63-view-2.png"
-    ],
-    "status": "sold",
-    "collection_line": "Essential"
-  },
-  {
-    "id": "wear-64",
-    "name": "Scarlet Poppy Duster",
-    "category": "wearables",
-    "collection": "Jookh Couture",
-    "price": "ENTER PRICE HERE",
-    "medium": "hand-painted wool",
-    "edition": "One-of-a-kind · Signed by the artist",
-    "views": [
-      "images/jookh/wearables/wear-64-view-1.png",
-      "images/jookh/wearables/wear-64-view-2.png"
-    ],
-    "status": "sold",
-    "collection_line": "Essential"
-  },
-  {
-    "id": "wear-65",
-    "name": "Gilded Cross Blazer",
-    "category": "wearables",
-    "collection": "Jookh Couture",
-    "price": "ENTER PRICE HERE",
-    "medium": "hand-painted silk",
-    "edition": "One-of-a-kind · Signed by the artist",
-    "views": [
-      "images/jookh/wearables/wear-65-view-1.png",
-      "images/jookh/wearables/wear-65-view-2.png"
-    ],
-    "status": "sold",
-    "collection_line": "Essential"
-  },
-  {
-    "id": "wear-66",
-    "name": "Rosé Note Jacket",
-    "category": "wearables",
-    "collection": "Jookh Couture",
-    "price": "ENTER PRICE HERE",
-    "medium": "hand-painted silk",
-    "edition": "One-of-a-kind · Signed by the artist",
-    "views": [
-      "images/jookh/wearables/wear-66-view-1.png",
-      "images/jookh/wearables/wear-66-view-2.png"
-    ],
-    "status": "sold",
-    "collection_line": "Essential"
-  },
-  {
-    "id": "wear-67",
-    "name": "Sanctus Robe",
-    "category": "wearables",
-    "collection": "Jookh Couture",
-    "price": "ENTER PRICE HERE",
-    "medium": "hand-painted silk with gold trim",
-    "edition": "One-of-a-kind · Signed by the artist",
-    "views": [
-      "images/jookh/wearables/wear-67-view-1.png",
-      "images/jookh/wearables/wear-67-view-2.png"
-    ],
-    "status": "sold",
-    "collection_line": "24 Carats"
-  },
-  {
-    "id": "wear-sold-olive",
-    "name": "Oliva Roma Blazer",
-    "category": "wearables",
-    "collection": "Jookh Couture",
-    "price": "380",
-    "medium": "cotton",
-    "edition": "One-of-a-kind · Signed by the artist",
-    "views": [
-      "images/jookh/wearables/wear-sold-olive-view-1.jpg",
-      "images/jookh/wearables/wear-sold-olive-view-2.jpg"
-    ],
-    "status": "sold",
-    "subcollection": "Roma",
-    "collection_line": "Essential"
-  },
-  {
-    "id": "wear-68",
-    "name": "Ivory Dentelle Robe",
-    "category": "wearables",
-    "collection": "Jookh Couture",
-    "price": "ENTER PRICE HERE",
-    "medium": "lace",
-    "edition": "One-of-a-kind · Signed by the artist",
-    "views": [
-      "images/jookh/wearables/wear-68-view-1.jpg",
-      "images/jookh/wearables/wear-68-view-2.jpg"
-    ],
-    "status": "available",
-    "subcollection": "Japan",
-    "collection_line": "Essential"
-  },
-  {
-    "id": "wear-69",
-    "name": "Noir Dentelle Robe",
-    "category": "wearables",
-    "collection": "Jookh Couture",
-    "price": "ENTER PRICE HERE",
-    "medium": "lace",
-    "edition": "One-of-a-kind · Signed by the artist",
-    "views": [
-      "images/jookh/wearables/wear-69-view-1.jpg",
-      "images/jookh/wearables/wear-69-view-2.jpg"
-    ],
-    "status": "available",
-    "subcollection": "Japan",
-    "collection_line": "Essential"
-  },
-  {
-    "id": "wear-70",
-    "name": "Pêche en Fleur Blazer",
-    "category": "wearables",
-    "collection": "Jookh Couture",
-    "price": "ENTER PRICE HERE",
-    "medium": "cotton",
-    "edition": "One-of-a-kind · Signed by the artist",
-    "views": [
-      "images/jookh/wearables/wear-70-view-1.jpg",
-      "images/jookh/wearables/wear-70-view-2.jpg"
-    ],
-    "status": "available",
-    "subcollection": "Roma",
-    "collection_line": "Essential"
-  },
-  {
-    "id": "wear-71",
-    "name": "Sage Poppy Oxford",
-    "category": "wearables",
-    "collection": "Jookh Couture",
-    "price": "380",
-    "medium": "linen",
-    "edition": "One-of-a-kind · Signed by the artist",
-    "views": [
-      "images/jookh/wearables/wear-71-view-1.jpg",
-      "images/jookh/wearables/wear-71-view-2.jpg"
-    ],
-    "status": "available",
-    "subcollection": "Oxford",
-    "collection_line": "Essential"
-  },
-  {
-    "id": "wear-72",
-    "name": "Camel Garden Oxford",
-    "category": "wearables",
-    "collection": "Jookh Couture",
-    "price": "380",
-    "medium": "linen",
-    "edition": "One-of-a-kind · Signed by the artist",
-    "views": [
-      "images/jookh/wearables/wear-72-view-1.jpg",
-      "images/jookh/wearables/wear-72-view-2.jpg"
-    ],
-    "status": "available",
-    "subcollection": "Oxford",
-    "collection_line": "Essential"
-  },
-  {
-    "id": "wear-73",
-    "name": "Oxford Sphère Blazer",
-    "category": "wearables",
-    "collection": "Jookh Couture",
-    "price": "320",
-    "medium": "linen",
-    "edition": "One-of-a-kind · Signed by the artist",
-    "views": [
-      "images/jookh/wearables/wear-73-view-1.jpg",
-      "images/jookh/wearables/wear-73-view-2.jpg"
-    ],
-    "status": "available",
-    "subcollection": "Oxford",
-    "collection_line": "Essential"
-  },
-  {
-    "id": "wear-74",
-    "name": "Cercle d'Or Coat",
-    "category": "wearables",
-    "collection": "Jookh Couture",
-    "price": "ENTER PRICE HERE",
-    "medium": "hand-painted silk",
-    "edition": "One-of-a-kind · Signed by the artist",
-    "views": [
-      "images/jookh/wearables/wear-74-view-1.jpg",
-      "images/jookh/wearables/wear-74-view-2.jpg"
-    ],
-    "status": "available",
-    "subcollection": "Jaipur",
-    "collection_line": "Essential"
-  },
-  {
-    "id": "wear-75",
-    "name": "Aurora Tie-Dye Coat",
-    "category": "wearables",
-    "collection": "Jookh Couture",
-    "price": "ENTER PRICE HERE",
-    "medium": "hand-dyed silk",
-    "edition": "One-of-a-kind · Signed by the artist",
-    "views": [
-      "images/jookh/wearables/wear-75-view-1.jpg",
-      "images/jookh/wearables/wear-75-view-2.jpg"
-    ],
-    "status": "available",
-    "subcollection": "Bretagne",
-    "collection_line": "Essential"
-  },
-  {
-    "id": "wear-76",
-    "name": "Pré en Fleur Coat",
-    "category": "wearables",
-    "collection": "Jookh Couture",
-    "price": "ENTER PRICE HERE",
-    "medium": "hand-dyed silk",
-    "edition": "One-of-a-kind · Signed by the artist",
-    "views": [
-      "images/jookh/wearables/wear-76-view-1.jpg",
-      "images/jookh/wearables/wear-76-view-2.jpg"
-    ],
-    "status": "available",
-    "subcollection": "Bretagne",
-    "collection_line": "Essential"
-  },
-  {
-    "id": "wear-77",
-    "name": "Encre Silk Robe",
-    "category": "wearables",
-    "collection": "Jookh Couture",
-    "price": "ENTER PRICE HERE",
-    "medium": "hand-painted silk",
-    "edition": "One-of-a-kind · Signed by the artist",
-    "views": [
-      "images/jookh/wearables/wear-77-view-1.jpg",
-      "images/jookh/wearables/wear-77-view-2.jpg"
-    ],
-    "status": "available",
-    "subcollection": "Bretagne",
-    "collection_line": "Essential"
-  },
-  {
-    "id": "wear-78",
-    "name": "Voile Doré Coat",
-    "category": "wearables",
-    "collection": "Jookh Couture",
-    "price": "ENTER PRICE HERE",
-    "medium": "silk tulle with gold leaf",
-    "edition": "One-of-a-kind · Signed by the artist",
-    "views": [
-      "images/jookh/wearables/wear-78-view-1.jpg",
-      "images/jookh/wearables/wear-78-view-2.jpg"
-    ],
-    "status": "available",
-    "collection_line": "24 Carats"
-  },
-  {
-    "id": "plo-01",
-    "name": "Pomegranate I",
-    "category": "pillows",
-    "collection": "P-Lo",
-    "price": "ENTER PRICE HERE",
-    "medium": "Hand-painted · Hand-embroidered linen",
-    "edition": "One-of-a-kind · Signed by the artist",
-    "views": [
-      "images/plo/plo-01-view-1.jpeg",
-      "images/plo/plo-01-view-2.jpeg"
-    ],
-    "status": "available",
-    "collection_line": "Essential"
-  },
-  {
-    "id": "plo-02",
-    "name": "Pomegranate II",
-    "category": "pillows",
-    "collection": "P-Lo",
-    "price": "ENTER PRICE HERE",
-    "medium": "Hand-painted · Hand-embroidered linen",
-    "edition": "One-of-a-kind · Signed by the artist",
-    "views": [
-      "images/plo/plo-02-view-1.jpeg",
-      "images/plo/plo-02-view-2.jpeg"
-    ],
-    "status": "available",
-    "collection_line": "Essential"
-  },
-  {
-    "id": "plo-03",
-    "name": "Fig & Honey",
-    "category": "pillows",
-    "collection": "P-Lo",
-    "price": "ENTER PRICE HERE",
-    "medium": "Hand-painted · Hand-embroidered linen",
-    "edition": "One-of-a-kind · Signed by the artist",
-    "views": [
-      "images/plo/plo-03-view-1.jpeg",
-      "images/plo/plo-03-view-2.jpeg"
-    ],
-    "status": "available",
-    "collection_line": "Essential"
-  },
-  {
-    "id": "plo-04",
-    "name": "Quince",
-    "category": "pillows",
-    "collection": "P-Lo",
-    "price": "ENTER PRICE HERE",
-    "medium": "Hand-painted · Hand-embroidered linen",
-    "edition": "One-of-a-kind · Signed by the artist",
-    "views": [
-      "images/plo/plo-04-view-1.jpeg",
-      "images/plo/plo-04-view-2.jpeg"
-    ],
-    "status": "available",
-    "collection_line": "Essential"
-  },
-  {
-    "id": "plo-05",
-    "name": "Persimmon",
-    "category": "pillows",
-    "collection": "P-Lo",
-    "price": "ENTER PRICE HERE",
-    "medium": "Hand-painted · Hand-embroidered linen",
-    "edition": "One-of-a-kind · Signed by the artist",
-    "views": [
-      "images/plo/plo-05-view-1.jpeg",
-      "images/plo/plo-05-view-2.jpeg"
-    ],
-    "status": "available",
-    "collection_line": "Essential"
-  },
-  {
-    "id": "plo-06",
-    "name": "Apricot Moon",
-    "category": "pillows",
-    "collection": "P-Lo",
-    "price": "ENTER PRICE HERE",
-    "medium": "Hand-painted · Hand-embroidered linen",
-    "edition": "One-of-a-kind · Signed by the artist",
-    "views": [
-      "images/plo/plo-06-view-1.jpeg",
-      "images/plo/plo-06-view-2.jpeg"
-    ],
-    "status": "available",
-    "collection_line": "Essential"
-  },
-  {
-    "id": "plo-07",
-    "name": "Mulberry",
-    "category": "pillows",
-    "collection": "P-Lo",
-    "price": "ENTER PRICE HERE",
-    "medium": "Hand-painted · Hand-embroidered linen",
-    "edition": "One-of-a-kind · Signed by the artist",
-    "views": [
-      "images/plo/plo-07-view-1.jpeg"
-    ],
-    "status": "available",
-    "collection_line": "Essential"
-  },
-  {
-    "id": "wear-79",
-    "name": "Émeraude Voile",
-    "category": "wearables",
-    "collection": "Jookh Couture",
-    "price": "ENTER PRICE HERE",
-    "medium": "ENTER MATERIAL HERE",
-    "edition": "One-of-a-kind · Signed by the artist",
-    "views": [
-      "images/jookh/wearables/wear-79-view-1.jpg",
-      "images/jookh/wearables/wear-79-view-2.jpg"
-    ],
-    "status": "sold",
-    "collection_line": "Essential"
-  },
-  {
-    "id": "wear-80",
-    "name": "Nuit Étoilée",
-    "category": "wearables",
-    "collection": "Jookh Couture",
-    "price": "ENTER PRICE HERE",
-    "medium": "ENTER MATERIAL HERE",
-    "edition": "One-of-a-kind · Signed by the artist",
-    "views": [
-      "images/jookh/wearables/wear-80-view-1.jpg",
-      "images/jookh/wearables/wear-80-view-2.jpg",
-      "images/jookh/wearables/wear-80-view-3.jpg"
-    ],
-    "status": "sold",
-    "collection_line": "Essential"
-  },
-  {
-    "id": "wear-81",
-    "name": "Or Liquide",
-    "category": "wearables",
-    "collection": "Jookh Couture",
-    "price": "ENTER PRICE HERE",
-    "medium": "ENTER MATERIAL HERE",
-    "edition": "One-of-a-kind · Signed by the artist",
-    "views": [
-      "images/jookh/wearables/wear-81-view-1.jpg",
-      "images/jookh/wearables/wear-81-view-2.jpg"
-    ],
-    "status": "sold",
-    "collection_line": "Essential"
-  },
-  {
-    "id": "wear-82",
-    "name": "Manchettes d'Or",
-    "category": "wearables",
-    "collection": "Jookh Couture",
-    "price": "ENTER PRICE HERE",
-    "medium": "ENTER MATERIAL HERE",
-    "edition": "One-of-a-kind · Signed by the artist",
-    "views": [
-      "images/jookh/wearables/wear-82-view-1.jpg",
-      "images/jookh/wearables/wear-82-view-2.jpg"
-    ],
-    "status": "sold",
-    "collection_line": "Essential"
-  },
-  {
-    "id": "wear-83",
-    "name": "Cuivre Sauvage",
-    "category": "wearables",
-    "collection": "Jookh Couture",
-    "price": "ENTER PRICE HERE",
-    "medium": "ENTER MATERIAL HERE",
-    "edition": "One-of-a-kind · Signed by the artist",
-    "views": [
-      "images/jookh/wearables/wear-83-view-1.jpg",
-      "images/jookh/wearables/wear-83-view-2.png"
-    ],
-    "status": "sold",
-    "collection_line": "Essential"
-  },
-  {
-    "id": "wear-84",
-    "name": "Cèdre",
-    "category": "wearables",
-    "collection": "Jookh Couture",
-    "price": "ENTER PRICE HERE",
-    "medium": "ENTER MATERIAL HERE",
-    "edition": "One-of-a-kind · Signed by the artist",
-    "views": [
-      "images/jookh/wearables/wear-84-view-1.png",
-      "images/jookh/wearables/wear-84-view-2.png"
-    ],
-    "status": "sold",
-    "collection_line": "Essential"
-  },
-  {
-    "id": "wear-85",
-    "name": "Bleu Beirut",
-    "category": "wearables",
-    "collection": "Jookh Couture",
-    "price": "ENTER PRICE HERE",
-    "medium": "ENTER MATERIAL HERE",
-    "edition": "One-of-a-kind · Signed by the artist",
-    "views": [
-      "images/jookh/wearables/wear-85-view-1.png",
-      "images/jookh/wearables/wear-85-view-2.png"
-    ],
-    "status": "sold",
-    "collection_line": "Essential"
-  },
-  {
-    "id": "wear-86",
-    "name": "Rosée",
-    "category": "wearables",
-    "collection": "Jookh Couture",
-    "price": "ENTER PRICE HERE",
-    "medium": "ENTER MATERIAL HERE",
-    "edition": "One-of-a-kind · Signed by the artist",
-    "views": [
-      "images/jookh/wearables/wear-86-view-1.png",
-      "images/jookh/wearables/wear-86-view-2.png"
-    ],
-    "status": "sold",
-    "collection_line": "Essential"
-  },
-  {
-    "id": "wear-87",
-    "name": "Soleil Levant",
-    "category": "wearables",
-    "collection": "Jookh Couture",
-    "price": "ENTER PRICE HERE",
-    "medium": "ENTER MATERIAL HERE",
-    "edition": "One-of-a-kind · Signed by the artist",
-    "views": [
-      "images/jookh/wearables/wear-87-view-1.png",
-      "images/jookh/wearables/wear-87-view-2.png"
-    ],
-    "status": "sold",
-    "collection_line": "Essential"
-  },
-  {
-    "id": "wear-88",
-    "name": "Confetti Blanc",
-    "category": "wearables",
-    "collection": "Jookh Couture",
-    "price": "ENTER PRICE HERE",
-    "medium": "ENTER MATERIAL HERE",
-    "edition": "One-of-a-kind · Signed by the artist",
-    "views": [
-      "images/jookh/wearables/wear-88-view-1.png",
-      "images/jookh/wearables/wear-88-view-2.png"
-    ],
-    "status": "sold",
-    "collection_line": "Essential"
-  },
-  {
-    "id": "wear-89",
-    "name": "Charbon",
-    "category": "wearables",
-    "collection": "Jookh Couture",
-    "price": "ENTER PRICE HERE",
-    "medium": "ENTER MATERIAL HERE",
-    "edition": "One-of-a-kind · Signed by the artist",
-    "views": [
-      "images/jookh/wearables/wear-89-view-1.png",
-      "images/jookh/wearables/wear-89-view-2.png"
-    ],
-    "status": "sold",
-    "collection_line": "Essential"
-  },
-  {
-    "id": "wear-90",
-    "name": "Tournesol",
-    "category": "wearables",
-    "collection": "Jookh Couture",
-    "price": "ENTER PRICE HERE",
-    "medium": "ENTER MATERIAL HERE",
-    "edition": "One-of-a-kind · Signed by the artist",
-    "views": [
-      "images/jookh/wearables/wear-90-view-1.png",
-      "images/jookh/wearables/wear-90-view-2.png"
-    ],
-    "status": "sold",
-    "collection_line": "Essential"
-  },
-  {
-    "id": "wear-91",
-    "name": "Brume",
-    "category": "wearables",
-    "collection": "Jookh Couture",
-    "price": "ENTER PRICE HERE",
-    "medium": "ENTER MATERIAL HERE",
-    "edition": "One-of-a-kind · Signed by the artist",
-    "views": [
-      "images/jookh/wearables/wear-91-view-1.png",
-      "images/jookh/wearables/wear-91-view-2.png"
-    ],
-    "status": "sold",
-    "collection_line": "Essential"
-  },
-  {
-    "id": "wear-92",
-    "name": "Iris Sauvage",
-    "category": "wearables",
-    "collection": "Jookh Couture",
-    "price": "ENTER PRICE HERE",
-    "medium": "ENTER MATERIAL HERE",
-    "edition": "One-of-a-kind · Signed by the artist",
-    "views": [
-      "images/jookh/wearables/wear-92-view-1.png",
-      "images/jookh/wearables/wear-92-view-2.png"
-    ],
-    "status": "sold",
-    "collection_line": "Essential"
-  },
-  {
-    "id": "wear-93",
-    "name": "Marine",
-    "category": "wearables",
-    "collection": "Jookh Couture",
-    "price": "ENTER PRICE HERE",
-    "medium": "ENTER MATERIAL HERE",
-    "edition": "One-of-a-kind · Signed by the artist",
-    "views": [
-      "images/jookh/wearables/wear-93-view-1.png",
-      "images/jookh/wearables/wear-93-view-2.png"
-    ],
-    "status": "sold",
-    "collection_line": "Essential"
-  },
-  {
-    "id": "wear-94",
-    "name": "Coquelicot",
-    "category": "wearables",
-    "collection": "Jookh Couture",
-    "price": "ENTER PRICE HERE",
-    "medium": "ENTER MATERIAL HERE",
-    "edition": "One-of-a-kind · Signed by the artist",
-    "views": [
-      "images/jookh/wearables/wear-94-view-1.png",
-      "images/jookh/wearables/wear-94-view-2.png"
-    ],
-    "status": "sold",
-    "collection_line": "Essential"
-  },
-  {
-    "id": "wear-95",
-    "name": "Pluie d'Argent",
-    "category": "wearables",
-    "collection": "Jookh Couture",
-    "price": "ENTER PRICE HERE",
-    "medium": "ENTER MATERIAL HERE",
-    "edition": "One-of-a-kind · Signed by the artist",
-    "views": [
-      "images/jookh/wearables/wear-95-view-1.png",
-      "images/jookh/wearables/wear-95-view-2.png"
-    ],
-    "status": "sold",
-    "collection_line": "Essential"
-  },
-  {
-    "id": "wear-96",
-    "name": "Sable Doré",
-    "category": "wearables",
-    "collection": "Jookh Couture",
-    "price": "ENTER PRICE HERE",
-    "medium": "ENTER MATERIAL HERE",
-    "edition": "One-of-a-kind · Signed by the artist",
-    "views": [
-      "images/jookh/wearables/wear-96-view-1.png",
-      "images/jookh/wearables/wear-96-view-2.png"
-    ],
-    "status": "sold",
-    "collection_line": "24 Carats"
-  },
-  {
-    "id": "wear-97",
-    "name": "Aurore Pêche",
-    "category": "wearables",
-    "collection": "Jookh Couture",
-    "price": "ENTER PRICE HERE",
-    "medium": "ENTER MATERIAL HERE",
-    "edition": "One-of-a-kind · Signed by the artist",
-    "views": [
-      "images/jookh/wearables/wear-97-view-1.png",
-      "images/jookh/wearables/wear-97-view-2.png"
-    ],
-    "status": "sold",
-    "collection_line": "Essential"
-  },
-  {
-    "id": "wear-98",
-    "name": "Coucher de Soleil",
-    "category": "wearables",
-    "collection": "Jookh Couture",
-    "price": "ENTER PRICE HERE",
-    "medium": "ENTER MATERIAL HERE",
-    "edition": "One-of-a-kind · Signed by the artist",
-    "views": [
-      "images/jookh/wearables/wear-98-view-1.png"
-    ],
-    "status": "sold",
-    "collection_line": "Essential"
-  },
-  {
-    "id": "wear-99",
-    "name": "Bulles Bleues",
-    "category": "wearables",
-    "collection": "Jookh Couture",
-    "price": "ENTER PRICE HERE",
-    "medium": "ENTER MATERIAL HERE",
-    "edition": "One-of-a-kind · Signed by the artist",
-    "views": [
-      "images/jookh/wearables/wear-99-view-1.png",
-      "images/jookh/wearables/wear-99-view-2.png"
-    ],
-    "status": "sold",
-    "collection_line": "Essential"
-  },
-  {
-    "id": "wear-100",
-    "name": "Sumi",
-    "category": "wearables",
-    "collection": "Jookh Couture",
-    "price": "ENTER PRICE HERE",
-    "medium": "ENTER MATERIAL HERE",
-    "edition": "One-of-a-kind · Signed by the artist",
-    "views": [
-      "images/jookh/wearables/wear-100-view-1.png",
-      "images/jookh/wearables/wear-100-view-2.png"
-    ],
-    "status": "sold",
-    "collection_line": "Essential"
-  },
-  {
-    "id": "wear-101",
-    "name": "Marbre",
-    "category": "wearables",
-    "collection": "Jookh Couture",
-    "price": "ENTER PRICE HERE",
-    "medium": "ENTER MATERIAL HERE",
-    "edition": "One-of-a-kind · Signed by the artist",
-    "views": [
-      "images/jookh/wearables/wear-101-view-1.png",
-      "images/jookh/wearables/wear-101-view-2.png"
-    ],
-    "status": "sold",
-    "collection_line": "Essential"
-  },
-  {
-    "id": "wear-102",
-    "name": "Lavande",
-    "category": "wearables",
-    "collection": "Jookh Couture",
-    "price": "ENTER PRICE HERE",
-    "medium": "ENTER MATERIAL HERE",
-    "edition": "One-of-a-kind · Signed by the artist",
-    "views": [
-      "images/jookh/wearables/wear-102-view-1.png",
-      "images/jookh/wearables/wear-102-view-2.png"
-    ],
-    "status": "sold",
-    "collection_line": "Essential"
-  },
-  {
-    "id": "wear-103",
-    "name": "Vert Pré",
-    "category": "wearables",
-    "collection": "Jookh Couture",
-    "price": "ENTER PRICE HERE",
-    "medium": "ENTER MATERIAL HERE",
-    "edition": "One-of-a-kind · Signed by the artist",
-    "views": [
-      "images/jookh/wearables/wear-103-view-1.png",
-      "images/jookh/wearables/wear-103-view-2.png"
-    ],
-    "status": "sold",
-    "collection_line": "Essential"
-  },
-  {
-    "id": "wear-104",
-    "name": "Mimosa",
-    "category": "wearables",
-    "collection": "Jookh Couture",
-    "price": "ENTER PRICE HERE",
-    "medium": "ENTER MATERIAL HERE",
-    "edition": "One-of-a-kind · Signed by the artist",
-    "views": [
-      "images/jookh/wearables/wear-104-view-1.png",
-      "images/jookh/wearables/wear-104-view-2.png"
-    ],
-    "status": "sold",
-    "collection_line": "Essential"
-  },
-  {
-    "id": "wear-105",
-    "name": "Pierre",
-    "category": "wearables",
-    "collection": "Jookh Couture",
-    "price": "ENTER PRICE HERE",
-    "medium": "ENTER MATERIAL HERE",
-    "edition": "One-of-a-kind · Signed by the artist",
-    "views": [
-      "images/jookh/wearables/wear-105-view-1.png",
-      "images/jookh/wearables/wear-105-view-2.png"
-    ],
-    "status": "sold",
-    "collection_line": "Essential"
-  },
-  {
-    "id": "wear-106",
-    "name": "Cendres",
-    "category": "wearables",
-    "collection": "Jookh Couture",
-    "price": "ENTER PRICE HERE",
-    "medium": "ENTER MATERIAL HERE",
-    "edition": "One-of-a-kind · Signed by the artist",
-    "views": [
-      "images/jookh/wearables/wear-106-view-1.png",
-      "images/jookh/wearables/wear-106-view-2.png"
-    ],
-    "status": "sold",
-    "collection_line": "Essential"
-  },
-  {
-    "id": "wear-107",
-    "name": "Trait Bleu",
-    "category": "wearables",
-    "collection": "Jookh Couture",
-    "price": "ENTER PRICE HERE",
-    "medium": "ENTER MATERIAL HERE",
-    "edition": "One-of-a-kind · Signed by the artist",
-    "views": [
-      "images/jookh/wearables/wear-107-view-1.png",
-      "images/jookh/wearables/wear-107-view-2.png"
-    ],
-    "status": "sold",
-    "collection_line": "Essential"
-  },
-  {
-    "id": "wear-108",
-    "name": "Trait Encre",
-    "category": "wearables",
-    "collection": "Jookh Couture",
-    "price": "ENTER PRICE HERE",
-    "medium": "ENTER MATERIAL HERE",
-    "edition": "One-of-a-kind · Signed by the artist",
-    "views": [
-      "images/jookh/wearables/wear-108-view-1.png",
-      "images/jookh/wearables/wear-108-view-2.png",
-      "images/jookh/wearables/wear-108-view-3.png"
-    ],
-    "status": "sold",
-    "collection_line": "Essential"
-  },
-  {
-    "id": "wear-109",
-    "name": "Phénix",
-    "category": "wearables",
-    "collection": "Jookh Couture",
-    "price": "ENTER PRICE HERE",
-    "medium": "ENTER MATERIAL HERE",
-    "edition": "One-of-a-kind · Signed by the artist",
-    "views": [
-      "images/jookh/wearables/wear-109-view-1.png",
-      "images/jookh/wearables/wear-109-view-2.png"
-    ],
-    "status": "sold",
-    "collection_line": "Essential"
-  },
-  {
-    "id": "wear-110",
-    "name": "Or Noir",
-    "category": "wearables",
-    "collection": "Jookh Couture",
-    "price": "ENTER PRICE HERE",
-    "medium": "ENTER MATERIAL HERE",
-    "edition": "One-of-a-kind · Signed by the artist",
-    "views": [
-      "images/jookh/wearables/wear-110-view-1.png"
-    ],
-    "status": "sold",
-    "collection_line": "Levi's x Jookh"
   },
   {
     "id": "paint-02",
@@ -1945,53 +370,509 @@
     "collection_line": "Essential"
   },
   {
-    "id": "wear-111",
-    "name": "Levi's x Jookh 01",
+    "id": "plo-01",
+    "name": "Pomegranate I",
+    "category": "pillows",
+    "collection": "P-Lo",
+    "price": "ENTER PRICE HERE",
+    "medium": "Hand-painted · Hand-embroidered linen",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/plo/plo-01-view-1.jpeg",
+      "images/plo/plo-01-view-2.jpeg",
+      "images/plo/plo-01-view-3.jpeg"
+    ],
+    "status": "available",
+    "collection_line": "Essential"
+  },
+  {
+    "id": "plo-03",
+    "name": "Fig & Honey",
+    "category": "pillows",
+    "collection": "P-Lo",
+    "price": "ENTER PRICE HERE",
+    "medium": "Hand-painted · Hand-embroidered linen",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/plo/plo-03-view-1.jpeg",
+      "images/plo/plo-03-view-2.jpeg",
+      "images/plo/plo-03-view-3.jpeg"
+    ],
+    "status": "available",
+    "collection_line": "Essential"
+  },
+  {
+    "id": "plo-04",
+    "name": "Quince",
+    "category": "pillows",
+    "collection": "P-Lo",
+    "price": "ENTER PRICE HERE",
+    "medium": "Hand-painted · Hand-embroidered linen",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/plo/plo-04-view-1.jpeg"
+    ],
+    "status": "available",
+    "collection_line": "Essential"
+  },
+  {
+    "id": "plo-05",
+    "name": "Persimmon",
+    "category": "pillows",
+    "collection": "P-Lo",
+    "price": "ENTER PRICE HERE",
+    "medium": "Hand-painted · Hand-embroidered linen",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/plo/plo-05-view-1.jpeg"
+    ],
+    "status": "available",
+    "collection_line": "Essential"
+  },
+  {
+    "id": "plo-06",
+    "name": "Apricot Moon",
+    "category": "pillows",
+    "collection": "P-Lo",
+    "price": "ENTER PRICE HERE",
+    "medium": "Hand-painted · Hand-embroidered linen",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/plo/plo-06-view-1.jpeg"
+    ],
+    "status": "available",
+    "collection_line": "Essential"
+  },
+  {
+    "id": "plo-07",
+    "name": "Mulberry",
+    "category": "pillows",
+    "collection": "P-Lo",
+    "price": "ENTER PRICE HERE",
+    "medium": "Hand-painted · Hand-embroidered linen",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/plo/plo-07-view-1.jpeg"
+    ],
+    "status": "available",
+    "collection_line": "Essential"
+  },
+  {
+    "id": "plo-08",
+    "name": "Orbit",
+    "category": "pillows",
+    "collection": "P-Lo",
+    "price": "ENTER PRICE HERE",
+    "medium": "Hand-painted",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/plo/plo-08-view-1.jpeg"
+    ],
+    "status": "available",
+    "collection_line": "Essential"
+  },
+  {
+    "id": "plo-09",
+    "name": "Regard Bleu",
+    "category": "pillows",
+    "collection": "P-Lo",
+    "price": "ENTER PRICE HERE",
+    "medium": "Hand-painted",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/plo/plo-09-view-1.jpeg"
+    ],
+    "status": "available",
+    "collection_line": "Essential"
+  },
+  {
+    "id": "plo-10",
+    "name": "Terracotta",
+    "category": "pillows",
+    "collection": "P-Lo",
+    "price": "ENTER PRICE HERE",
+    "medium": "Hand-painted",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/plo/plo-10-view-1.jpeg"
+    ],
+    "status": "available",
+    "collection_line": "Essential"
+  },
+  {
+    "id": "scarf-01",
+    "name": "Kohl",
+    "category": "scarves",
+    "collection": "Jookh Couture",
+    "price": "160",
+    "medium": "cotton",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/jookh/scarves/scarf-01-view-1.jpeg"
+    ],
+    "status": "available",
+    "subcollection": "KUMBAKONAM",
+    "collection_line": "Essential"
+  },
+  {
+    "id": "scarf-02",
+    "name": "Turmeric",
+    "category": "scarves",
+    "collection": "Jookh Couture",
+    "price": "160",
+    "medium": "cotton",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/jookh/scarves/scarf-02-view-1.jpeg"
+    ],
+    "status": "available",
+    "subcollection": "KUMBAKONAM",
+    "collection_line": "Essential"
+  },
+  {
+    "id": "scarf-03",
+    "name": "Marigold",
+    "category": "scarves",
+    "collection": "Jookh Couture",
+    "price": "160",
+    "medium": "cotton",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/jookh/scarves/scarf-03-view-1.jpeg"
+    ],
+    "status": "available",
+    "subcollection": "KUMBAKONAM",
+    "collection_line": "Essential"
+  },
+  {
+    "id": "scarf-04",
+    "name": "Dune",
+    "category": "scarves",
+    "collection": "Jookh Couture",
+    "price": "160",
+    "medium": "cotton",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/jookh/scarves/scarf-04-view-1.jpeg"
+    ],
+    "status": "available",
+    "subcollection": "KUMBAKONAM",
+    "collection_line": "Essential"
+  },
+  {
+    "id": "scarf-05",
+    "name": "Sandalwood",
+    "category": "scarves",
+    "collection": "Jookh Couture",
+    "price": "160",
+    "medium": "cotton",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/jookh/scarves/scarf-05-view-1.jpeg"
+    ],
+    "status": "available",
+    "subcollection": "KUMBAKONAM",
+    "collection_line": "Essential"
+  },
+  {
+    "id": "scarf-06",
+    "name": "Vermillion",
+    "category": "scarves",
+    "collection": "Jookh Couture",
+    "price": "160",
+    "medium": "cotton",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/jookh/scarves/scarf-06-view-1.jpeg"
+    ],
+    "status": "available",
+    "subcollection": "KUMBAKONAM",
+    "collection_line": "Essential"
+  },
+  {
+    "id": "scarf-07",
+    "name": "Tulsi",
+    "category": "scarves",
+    "collection": "Jookh Couture",
+    "price": "160",
+    "medium": "cotton",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/jookh/scarves/scarf-07-view-1.jpeg"
+    ],
+    "status": "available",
+    "subcollection": "KUMBAKONAM",
+    "collection_line": "Essential"
+  },
+  {
+    "id": "scarf-08",
+    "name": "Saffron",
+    "category": "scarves",
+    "collection": "Jookh Couture",
+    "price": "160",
+    "medium": "cotton",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/jookh/scarves/scarf-08-view-1.jpeg"
+    ],
+    "status": "available",
+    "subcollection": "KUMBAKONAM",
+    "collection_line": "Essential"
+  },
+  {
+    "id": "scarf-09",
+    "name": "Sindoor",
+    "category": "scarves",
+    "collection": "Jookh Couture",
+    "price": "160",
+    "medium": "cotton",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/jookh/scarves/scarf-09-view-1.jpeg"
+    ],
+    "status": "available",
+    "subcollection": "KUMBAKONAM",
+    "collection_line": "Essential"
+  },
+  {
+    "id": "scarf-10",
+    "name": "Holi",
+    "category": "scarves",
+    "collection": "Jookh Couture",
+    "price": "160",
+    "medium": "cotton",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/jookh/scarves/scarf-10-view-1.jpeg"
+    ],
+    "status": "available",
+    "subcollection": "KUMBAKONAM",
+    "collection_line": "Essential"
+  },
+  {
+    "id": "wear-100",
+    "name": "Sumi",
     "category": "wearables",
     "collection": "Jookh Couture",
     "price": "ENTER PRICE HERE",
     "medium": "ENTER MATERIAL HERE",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/jookh/wearables/wear-100-view-1.png",
+      "images/jookh/wearables/wear-100-view-2.png"
+    ],
+    "status": "sold",
+    "subcollection": "No sleeve",
+    "collection_line": "Essential"
+  },
+  {
+    "id": "wear-101",
+    "name": "Marbre",
+    "category": "wearables",
+    "collection": "Jookh Couture",
+    "price": "ENTER PRICE HERE",
+    "medium": "ENTER MATERIAL HERE",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/jookh/wearables/wear-101-view-1.png",
+      "images/jookh/wearables/wear-101-view-2.png"
+    ],
+    "status": "sold",
+    "subcollection": "No sleeve",
+    "collection_line": "Essential"
+  },
+  {
+    "id": "wear-102",
+    "name": "Lavande",
+    "category": "wearables",
+    "collection": "Jookh Couture",
+    "price": "ENTER PRICE HERE",
+    "medium": "ENTER MATERIAL HERE",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/jookh/wearables/wear-102-view-1.png",
+      "images/jookh/wearables/wear-102-view-2.png"
+    ],
+    "status": "sold",
+    "subcollection": "Bretagne",
+    "collection_line": "Essential"
+  },
+  {
+    "id": "wear-103",
+    "name": "Vert Pré",
+    "category": "wearables",
+    "collection": "Jookh Couture",
+    "price": "ENTER PRICE HERE",
+    "medium": "ENTER MATERIAL HERE",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/jookh/wearables/wear-103-view-1.png",
+      "images/jookh/wearables/wear-103-view-2.png"
+    ],
+    "status": "sold",
+    "subcollection": "Bretagne",
+    "collection_line": "Essential"
+  },
+  {
+    "id": "wear-104",
+    "name": "Mimosa",
+    "category": "wearables",
+    "collection": "Jookh Couture",
+    "price": "ENTER PRICE HERE",
+    "medium": "ENTER MATERIAL HERE",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/jookh/wearables/wear-104-view-1.png",
+      "images/jookh/wearables/wear-104-view-2.png"
+    ],
+    "status": "sold",
+    "subcollection": "Bretagne",
+    "collection_line": "Essential"
+  },
+  {
+    "id": "wear-105",
+    "name": "Pierre",
+    "category": "wearables",
+    "collection": "Jookh Couture",
+    "price": "ENTER PRICE HERE",
+    "medium": "ENTER MATERIAL HERE",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/jookh/wearables/wear-105-view-1.png",
+      "images/jookh/wearables/wear-105-view-2.png"
+    ],
+    "status": "sold",
+    "subcollection": "Bretagne",
+    "collection_line": "Essential"
+  },
+  {
+    "id": "wear-106",
+    "name": "Cendres",
+    "category": "wearables",
+    "collection": "Jookh Couture",
+    "price": "ENTER PRICE HERE",
+    "medium": "ENTER MATERIAL HERE",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/jookh/wearables/wear-106-view-1.png",
+      "images/jookh/wearables/wear-106-view-2.png"
+    ],
+    "status": "sold",
+    "subcollection": "Bretagne",
+    "collection_line": "Essential"
+  },
+  {
+    "id": "wear-107",
+    "name": "Trait Bleu",
+    "category": "wearables",
+    "collection": "Jookh Couture",
+    "price": "ENTER PRICE HERE",
+    "medium": "cotton",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/jookh/wearables/wear-107-view-1.png",
+      "images/jookh/wearables/wear-107-view-2.png"
+    ],
+    "status": "sold",
+    "subcollection": "HAKONE",
+    "collection_line": "Essential"
+  },
+  {
+    "id": "wear-108",
+    "name": "Trait Encre",
+    "category": "wearables",
+    "collection": "Jookh Couture",
+    "price": "ENTER PRICE HERE",
+    "medium": "cotton",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/jookh/wearables/wear-108-view-1.png",
+      "images/jookh/wearables/wear-108-view-2.png"
+    ],
+    "status": "sold",
+    "subcollection": "HAKONE",
+    "collection_line": "Essential"
+  },
+  {
+    "id": "wear-109",
+    "name": "Phénix",
+    "category": "wearables",
+    "collection": "Jookh Couture",
+    "price": "ENTER PRICE HERE",
+    "medium": "ENTER MATERIAL HERE",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/jookh/wearables/wear-109-view-2.png"
+    ],
+    "status": "sold",
+    "collection_line": "Essential"
+  },
+  {
+    "id": "wear-110",
+    "name": "Or Noir",
+    "category": "wearables",
+    "collection": "Jookh Couture",
+    "price": "ENTER PRICE HERE",
+    "medium": "ENTER MATERIAL HERE",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/jookh/wearables/wear-110-view-1.png"
+    ],
+    "status": "sold",
+    "subcollection": "Jaipur",
+    "collection_line": "24 Carats"
+  },
+  {
+    "id": "wear-111",
+    "name": "Patchwork Visage",
+    "category": "wearables",
+    "collection": "Jookh Couture",
+    "price": "ENTER PRICE HERE",
+    "medium": "canvas/silk",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
       "images/jookh/wearables/wear-111-view-1.jpg",
-      "images/jookh/wearables/wear-111-view-2.jpg"
+      "images/jookh/wearables/wear-111-view-2.png"
     ],
-    "status": "available",
-    "collection_line": "Levi's x Jookh"
+    "status": "sold",
+    "subcollection": "Berlin",
+    "collection_line": "Canvas"
   },
   {
     "id": "wear-112",
-    "name": "Levi's x Jookh 02",
+    "name": "Citron Vert",
     "category": "wearables",
     "collection": "Jookh Couture",
     "price": "ENTER PRICE HERE",
-    "medium": "ENTER MATERIAL HERE",
+    "medium": "canvas/silk",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
       "images/jookh/wearables/wear-112-view-1.jpg",
-      "images/jookh/wearables/wear-112-view-2.jpg"
+      "images/jookh/wearables/wear-112-view-2.png"
     ],
-    "status": "available",
-    "collection_line": "Levi's x Jookh"
+    "status": "sold",
+    "subcollection": "Berlin",
+    "collection_line": "Canvas"
   },
   {
     "id": "wear-113",
-    "name": "Levi's x Jookh 03",
+    "name": "Vert Océan",
     "category": "wearables",
     "collection": "Jookh Couture",
     "price": "ENTER PRICE HERE",
-    "medium": "ENTER MATERIAL HERE",
+    "medium": "canvas/silk",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
       "images/jookh/wearables/wear-113-view-1.jpg",
-      "images/jookh/wearables/wear-113-view-2.jpg"
+      "images/jookh/wearables/wear-113-view-2.png"
     ],
-    "status": "available",
-    "collection_line": "Levi's x Jookh"
+    "status": "sold",
+    "subcollection": "Kyoto",
+    "collection_line": "Canvas"
   },
   {
     "id": "wear-114",
-    "name": "Levi's x Jookh 04",
+    "name": "Géométrie Rouge",
     "category": "wearables",
     "collection": "Jookh Couture",
     "price": "ENTER PRICE HERE",
@@ -2000,12 +881,13 @@
     "views": [
       "images/jookh/wearables/wear-114-view-1.jpg"
     ],
-    "status": "available",
-    "collection_line": "Levi's x Jookh"
+    "status": "sold",
+    "subcollection": "Vienna",
+    "collection_line": "Canvas"
   },
   {
     "id": "wear-116",
-    "name": "Levi's x Jookh 06",
+    "name": "Rename",
     "category": "wearables",
     "collection": "Jookh Couture",
     "price": "ENTER PRICE HERE",
@@ -2014,12 +896,13 @@
     "views": [
       "images/jookh/wearables/wear-116-view-1.jpg"
     ],
-    "status": "available",
-    "collection_line": "Levi's x Jookh"
+    "status": "sold",
+    "subcollection": "Hakone",
+    "collection_line": "Dresses"
   },
   {
     "id": "wear-117",
-    "name": "Levi's x Jookh 07",
+    "name": "Rename",
     "category": "wearables",
     "collection": "Jookh Couture",
     "price": "ENTER PRICE HERE",
@@ -2028,12 +911,13 @@
     "views": [
       "images/jookh/wearables/wear-117-view-1.jpg"
     ],
-    "status": "available",
-    "collection_line": "Levi's x Jookh"
+    "status": "sold",
+    "subcollection": "Hakone",
+    "collection_line": "Dresses"
   },
   {
     "id": "wear-118",
-    "name": "Levi's x Jookh 08",
+    "name": "Abstraction Colorée",
     "category": "wearables",
     "collection": "Jookh Couture",
     "price": "ENTER PRICE HERE",
@@ -2041,134 +925,123 @@
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
       "images/jookh/wearables/wear-118-view-1.jpg",
-      "images/jookh/wearables/wear-118-view-2.jpg"
+      "images/jookh/wearables/wear-118-view-2.png"
     ],
-    "status": "available",
-    "collection_line": "Levi's x Jookh"
+    "status": "sold",
+    "subcollection": "Bogota",
+    "collection_line": "Canvas"
   },
   {
     "id": "wear-119",
-    "name": "Levi's x Jookh 09",
+    "name": "Rose Flamboyant",
     "category": "wearables",
     "collection": "Jookh Couture",
     "price": "ENTER PRICE HERE",
-    "medium": "ENTER MATERIAL HERE",
+    "medium": "cotton/silk",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
       "images/jookh/wearables/wear-119-view-1.jpg",
       "images/jookh/wearables/wear-119-view-2.jpg"
     ],
-    "status": "available",
-    "collection_line": "Levi's x Jookh"
+    "status": "sold",
+    "subcollection": "Bogota",
+    "collection_line": "Canvas"
   },
   {
     "id": "wear-120",
-    "name": "Levi's x Jookh 10",
+    "name": "Jaune Citron",
     "category": "wearables",
     "collection": "Jookh Couture",
     "price": "ENTER PRICE HERE",
-    "medium": "ENTER MATERIAL HERE",
+    "medium": "canvas/silk",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
       "images/jookh/wearables/wear-120-view-1.jpg",
       "images/jookh/wearables/wear-120-view-2.jpg"
     ],
-    "status": "available",
-    "collection_line": "Levi's x Jookh"
+    "status": "sold",
+    "subcollection": "Bogota",
+    "collection_line": "Canvas"
   },
   {
     "id": "wear-121",
-    "name": "Levi's x Jookh 11",
+    "name": "Orange Brûlé",
     "category": "wearables",
     "collection": "Jookh Couture",
     "price": "ENTER PRICE HERE",
-    "medium": "ENTER MATERIAL HERE",
+    "medium": "cotton/silk",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
-      "images/jookh/wearables/wear-121-view-1.jpg",
       "images/jookh/wearables/wear-121-view-2.jpg"
     ],
-    "status": "available",
-    "collection_line": "Levi's x Jookh"
+    "status": "sold",
+    "subcollection": "Bogota",
+    "collection_line": "Canvas"
   },
   {
     "id": "wear-122",
-    "name": "Levi's x Jookh 12",
+    "name": "Soleil Flamboyant",
     "category": "wearables",
     "collection": "Jookh Couture",
     "price": "ENTER PRICE HERE",
-    "medium": "ENTER MATERIAL HERE",
+    "medium": "cotton/silk",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
       "images/jookh/wearables/wear-122-view-1.jpg",
       "images/jookh/wearables/wear-122-view-2.jpg"
     ],
-    "status": "available",
-    "collection_line": "Levi's x Jookh"
-  },
-  {
-    "id": "wear-123",
-    "name": "Levi's x Jookh 13",
-    "category": "wearables",
-    "collection": "Jookh Couture",
-    "price": "ENTER PRICE HERE",
-    "medium": "ENTER MATERIAL HERE",
-    "edition": "One-of-a-kind · Signed by the artist",
-    "views": [
-      "images/jookh/wearables/wear-123-view-1.jpg",
-      "images/jookh/wearables/wear-123-view-2.jpg"
-    ],
-    "status": "available",
-    "collection_line": "Levi's x Jookh"
+    "status": "sold",
+    "subcollection": "Bogota",
+    "collection_line": "Canvas"
   },
   {
     "id": "wear-124",
-    "name": "Levi's x Jookh 14",
+    "name": "Broderie Noire",
     "category": "wearables",
     "collection": "Jookh Couture",
     "price": "ENTER PRICE HERE",
     "medium": "ENTER MATERIAL HERE",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
-      "images/jookh/wearables/wear-124-view-1.jpg",
-      "images/jookh/wearables/wear-124-view-2.jpg"
+      "images/jookh/wearables/wear-124-view-1.jpg"
     ],
-    "status": "available",
-    "collection_line": "Levi's x Jookh"
+    "status": "sold",
+    "subcollection": "Bali",
+    "collection_line": "Essential"
   },
   {
     "id": "wear-125",
-    "name": "Levi's x Jookh 15",
+    "name": "Visage Doré",
     "category": "wearables",
     "collection": "Jookh Couture",
     "price": "ENTER PRICE HERE",
     "medium": "ENTER MATERIAL HERE",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
-      "images/jookh/wearables/wear-125-view-1.jpg",
-      "images/jookh/wearables/wear-125-view-2.jpg"
+      "images/jookh/wearables/wear-125-view-1.jpg"
     ],
-    "status": "available",
-    "collection_line": "Levi's x Jookh"
+    "status": "sold",
+    "subcollection": "Bali",
+    "collection_line": "Essential"
   },
   {
     "id": "wear-126",
-    "name": "Levi's x Jookh 16",
+    "name": "Mandala Doré",
     "category": "wearables",
     "collection": "Jookh Couture",
     "price": "ENTER PRICE HERE",
     "medium": "ENTER MATERIAL HERE",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
-      "images/jookh/wearables/wear-126-view-1.jpg",
-      "images/jookh/wearables/wear-126-view-2.jpg"
+      "images/jookh/wearables/wear-126-view-1.jpg"
     ],
-    "status": "available",
-    "collection_line": "Levi's x Jookh"
+    "status": "sold",
+    "subcollection": "Bali",
+    "collection_line": "Essential"
   },
   {
     "id": "wear-127",
-    "name": "Levi's x Jookh 17",
+    "name": "Rose Brodée",
     "category": "wearables",
     "collection": "Jookh Couture",
     "price": "ENTER PRICE HERE",
@@ -2178,12 +1051,13 @@
       "images/jookh/wearables/wear-127-view-1.jpg",
       "images/jookh/wearables/wear-127-view-2.jpg"
     ],
-    "status": "available",
-    "collection_line": "Levi's x Jookh"
+    "status": "sold",
+    "subcollection": "Bali",
+    "collection_line": "Essential"
   },
   {
     "id": "wear-128",
-    "name": "Levi's x Jookh 18",
+    "name": "Rouge Obscur",
     "category": "wearables",
     "collection": "Jookh Couture",
     "price": "ENTER PRICE HERE",
@@ -2192,27 +1066,28 @@
     "views": [
       "images/jookh/wearables/wear-128-view-1.jpg"
     ],
-    "status": "available",
-    "collection_line": "Levi's x Jookh"
+    "status": "sold",
+    "subcollection": "Bali",
+    "collection_line": "Essential"
   },
   {
     "id": "wear-129",
-    "name": "Levi's x Jookh 19",
+    "name": "Filigrane Noir",
     "category": "wearables",
     "collection": "Jookh Couture",
     "price": "ENTER PRICE HERE",
     "medium": "ENTER MATERIAL HERE",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
-      "images/jookh/wearables/wear-129-view-1.jpg",
-      "images/jookh/wearables/wear-129-view-2.jpg"
+      "images/jookh/wearables/wear-129-view-1.jpg"
     ],
-    "status": "available",
-    "collection_line": "Levi's x Jookh"
+    "status": "sold",
+    "subcollection": "Bali",
+    "collection_line": "Essential"
   },
   {
     "id": "wear-130",
-    "name": "Levi's x Jookh 20",
+    "name": "Rouge Aquarelle",
     "category": "wearables",
     "collection": "Jookh Couture",
     "price": "ENTER PRICE HERE",
@@ -2222,36 +1097,9 @@
       "images/jookh/wearables/wear-130-view-1.jpg",
       "images/jookh/wearables/wear-130-view-2.jpg"
     ],
-    "status": "available",
-    "collection_line": "Levi's x Jookh"
-  },
-  {
-    "id": "wear-131",
-    "name": "Levi's x Jookh 21",
-    "category": "wearables",
-    "collection": "Jookh Couture",
-    "price": "ENTER PRICE HERE",
-    "medium": "ENTER MATERIAL HERE",
-    "edition": "One-of-a-kind · Signed by the artist",
-    "views": [
-      "images/jookh/wearables/wear-131-view-1.jpg"
-    ],
-    "status": "available",
-    "collection_line": "Levi's x Jookh"
-  },
-  {
-    "id": "wear-132",
-    "name": "Levi's x Jookh 22",
-    "category": "wearables",
-    "collection": "Jookh Couture",
-    "price": "ENTER PRICE HERE",
-    "medium": "ENTER MATERIAL HERE",
-    "edition": "One-of-a-kind · Signed by the artist",
-    "views": [
-      "images/jookh/wearables/wear-132-view-1.jpg"
-    ],
-    "status": "available",
-    "collection_line": "Levi's x Jookh"
+    "status": "sold",
+    "subcollection": "Vienna",
+    "collection_line": "Canvas"
   },
   {
     "id": "wear-133",
@@ -2259,13 +1107,14 @@
     "category": "wearables",
     "collection": "Jookh Couture",
     "price": "ENTER PRICE HERE",
-    "medium": "ENTER MATERIAL HERE",
+    "medium": "denim",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
       "images/jookh/wearables/wear-133-view-1.jpg",
       "images/jookh/wearables/wear-133-view-2.jpg"
     ],
-    "status": "available",
+    "status": "sold",
+    "subcollection": "Jacket",
     "collection_line": "Levi's x Jookh"
   },
   {
@@ -2274,12 +1123,13 @@
     "category": "wearables",
     "collection": "Jookh Couture",
     "price": "ENTER PRICE HERE",
-    "medium": "ENTER MATERIAL HERE",
+    "medium": "denim",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
       "images/jookh/wearables/wear-134-view-1.jpg"
     ],
-    "status": "available",
+    "status": "sold",
+    "subcollection": "Jacket",
     "collection_line": "Levi's x Jookh"
   },
   {
@@ -2288,12 +1138,13 @@
     "category": "wearables",
     "collection": "Jookh Couture",
     "price": "ENTER PRICE HERE",
-    "medium": "ENTER MATERIAL HERE",
+    "medium": "denim",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
       "images/jookh/wearables/wear-135-view-1.jpg"
     ],
-    "status": "available",
+    "status": "sold",
+    "subcollection": "Jacket",
     "collection_line": "Levi's x Jookh"
   },
   {
@@ -2302,13 +1153,14 @@
     "category": "wearables",
     "collection": "Jookh Couture",
     "price": "ENTER PRICE HERE",
-    "medium": "ENTER MATERIAL HERE",
+    "medium": "denim",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
       "images/jookh/wearables/wear-136-view-1.jpg",
       "images/jookh/wearables/wear-136-view-2.jpg"
     ],
-    "status": "available",
+    "status": "sold",
+    "subcollection": "Jacket",
     "collection_line": "Levi's x Jookh"
   },
   {
@@ -2317,13 +1169,14 @@
     "category": "wearables",
     "collection": "Jookh Couture",
     "price": "ENTER PRICE HERE",
-    "medium": "ENTER MATERIAL HERE",
+    "medium": "denim",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
       "images/jookh/wearables/wear-137-view-1.jpg",
       "images/jookh/wearables/wear-137-view-2.jpg"
     ],
-    "status": "available",
+    "status": "sold",
+    "subcollection": "Jacket",
     "collection_line": "Levi's x Jookh"
   },
   {
@@ -2332,182 +1185,163 @@
     "category": "wearables",
     "collection": "Jookh Couture",
     "price": "ENTER PRICE HERE",
-    "medium": "ENTER MATERIAL HERE",
+    "medium": "denim",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
       "images/jookh/wearables/wear-138-view-1.jpg",
       "images/jookh/wearables/wear-138-view-2.jpg"
     ],
-    "status": "available",
+    "status": "sold",
+    "subcollection": "Jacket",
     "collection_line": "Levi's x Jookh"
   },
   {
     "id": "wear-139",
-    "name": "Levi's x Jookh 29",
+    "name": "Bogota Patchwork Coat",
     "category": "wearables",
     "collection": "Jookh Couture",
     "price": "ENTER PRICE HERE",
-    "medium": "ENTER MATERIAL HERE",
+    "medium": "silk/cotton",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
       "images/jookh/wearables/wear-139-view-1.jpg",
       "images/jookh/wearables/wear-139-view-2.jpg"
     ],
-    "status": "available",
-    "collection_line": "Levi's x Jookh"
+    "status": "sold",
+    "subcollection": "Bogota",
+    "collection_line": "Canvas"
   },
   {
     "id": "wear-140",
-    "name": "Levi's x Jookh 30",
+    "name": "Patchwork Abstrait",
     "category": "wearables",
     "collection": "Jookh Couture",
     "price": "ENTER PRICE HERE",
-    "medium": "ENTER MATERIAL HERE",
+    "medium": "cotton/silk",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
       "images/jookh/wearables/wear-140-view-1.jpg",
       "images/jookh/wearables/wear-140-view-2.jpg"
     ],
-    "status": "available",
-    "collection_line": "Levi's x Jookh"
+    "status": "sold",
+    "subcollection": "Japan",
+    "collection_line": "Canvas"
   },
   {
     "id": "wear-141",
-    "name": "Levi's x Jookh 31",
+    "name": "Ciel Doré Robe",
     "category": "wearables",
     "collection": "Jookh Couture",
     "price": "ENTER PRICE HERE",
-    "medium": "ENTER MATERIAL HERE",
+    "medium": "silk/silk",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
       "images/jookh/wearables/wear-141-view-1.jpg",
       "images/jookh/wearables/wear-141-view-2.jpg"
     ],
-    "status": "available",
-    "collection_line": "Levi's x Jookh"
-  },
-  {
-    "id": "wear-142",
-    "name": "Levi's x Jookh 32",
-    "category": "wearables",
-    "collection": "Jookh Couture",
-    "price": "ENTER PRICE HERE",
-    "medium": "ENTER MATERIAL HERE",
-    "edition": "One-of-a-kind · Signed by the artist",
-    "views": [
-      "images/jookh/wearables/wear-142-view-1.jpg",
-      "images/jookh/wearables/wear-142-view-2.jpg"
-    ],
-    "status": "available",
-    "collection_line": "Levi's x Jookh"
+    "status": "sold",
+    "subcollection": "Japan",
+    "collection_line": "Luxurious"
   },
   {
     "id": "wear-143",
-    "name": "Levi's x Jookh 33",
+    "name": "Vert Absinthe",
     "category": "wearables",
     "collection": "Jookh Couture",
     "price": "ENTER PRICE HERE",
-    "medium": "ENTER MATERIAL HERE",
+    "medium": "canvas",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
       "images/jookh/wearables/wear-143-view-1.jpg",
       "images/jookh/wearables/wear-143-view-2.jpg"
     ],
-    "status": "available",
-    "collection_line": "Levi's x Jookh"
+    "status": "sold",
+    "subcollection": "Vienna",
+    "collection_line": "Canvas"
   },
   {
     "id": "wear-144",
-    "name": "Levi's x Jookh 34",
+    "name": "Citron Indigo",
     "category": "wearables",
     "collection": "Jookh Couture",
     "price": "ENTER PRICE HERE",
-    "medium": "ENTER MATERIAL HERE",
+    "medium": "canvas",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
       "images/jookh/wearables/wear-144-view-1.jpg",
       "images/jookh/wearables/wear-144-view-2.jpg"
     ],
-    "status": "available",
-    "collection_line": "Levi's x Jookh"
+    "status": "sold",
+    "subcollection": "Kyoto",
+    "collection_line": "Canvas"
   },
   {
     "id": "wear-145",
-    "name": "Levi's x Jookh 35",
+    "name": "Fleur de Nuit",
     "category": "wearables",
     "collection": "Jookh Couture",
     "price": "ENTER PRICE HERE",
-    "medium": "ENTER MATERIAL HERE",
+    "medium": "velvet",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
-      "images/jookh/wearables/wear-145-view-1.jpg",
-      "images/jookh/wearables/wear-145-view-2.jpg"
+      "images/jookh/wearables/wear-145-view-2.jpg",
+      "images/jookh/wearables/wear-145-view-1.jpg"
     ],
-    "status": "available",
-    "collection_line": "Levi's x Jookh"
+    "status": "sold",
+    "subcollection": "Kitsuki",
+    "collection_line": "Luxurious"
   },
   {
     "id": "wear-146",
-    "name": "Levi's x Jookh 36",
+    "name": "Jardin Noir",
     "category": "wearables",
     "collection": "Jookh Couture",
     "price": "ENTER PRICE HERE",
-    "medium": "ENTER MATERIAL HERE",
+    "medium": "velvet",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
       "images/jookh/wearables/wear-146-view-1.jpg",
       "images/jookh/wearables/wear-146-view-2.jpg"
     ],
-    "status": "available",
-    "collection_line": "Levi's x Jookh"
-  },
-  {
-    "id": "wear-147",
-    "name": "Levi's x Jookh 37",
-    "category": "wearables",
-    "collection": "Jookh Couture",
-    "price": "ENTER PRICE HERE",
-    "medium": "ENTER MATERIAL HERE",
-    "edition": "One-of-a-kind · Signed by the artist",
-    "views": [
-      "images/jookh/wearables/wear-147-view-1.jpg"
-    ],
-    "status": "available",
-    "collection_line": "Levi's x Jookh"
+    "status": "sold",
+    "subcollection": "Scotland",
+    "collection_line": "Luxurious"
   },
   {
     "id": "wear-148",
-    "name": "Levi's x Jookh 38",
+    "name": "Painted Midnight",
     "category": "wearables",
     "collection": "Jookh Couture",
     "price": "ENTER PRICE HERE",
-    "medium": "ENTER MATERIAL HERE",
+    "medium": "wool/silk",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
       "images/jookh/wearables/wear-148-view-1.jpg",
       "images/jookh/wearables/wear-148-view-2.jpg"
     ],
-    "status": "available",
-    "collection_line": "Levi's x Jookh"
+    "status": "sold",
+    "subcollection": "New York",
+    "collection_line": "Essential"
   },
   {
     "id": "wear-149",
-    "name": "Levi's x Jookh 39",
+    "name": "Cité Blanche",
     "category": "wearables",
     "collection": "Jookh Couture",
     "price": "ENTER PRICE HERE",
-    "medium": "ENTER MATERIAL HERE",
+    "medium": "cotton/silk",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
       "images/jookh/wearables/wear-149-view-1.jpg",
       "images/jookh/wearables/wear-149-view-2.jpg"
     ],
-    "status": "available",
-    "collection_line": "Levi's x Jookh"
+    "status": "sold",
+    "subcollection": "Bogota",
+    "collection_line": "Canvas"
   },
   {
     "id": "wear-150",
-    "name": "Levi's x Jookh 40",
+    "name": "Blanc Graphique",
     "category": "wearables",
     "collection": "Jookh Couture",
     "price": "ENTER PRICE HERE",
@@ -2517,12 +1351,13 @@
       "images/jookh/wearables/wear-150-view-1.jpg",
       "images/jookh/wearables/wear-150-view-2.jpg"
     ],
-    "status": "available",
-    "collection_line": "Levi's x Jookh"
+    "status": "sold",
+    "subcollection": "Vienna",
+    "collection_line": "Canvas"
   },
   {
     "id": "wear-151",
-    "name": "Levi's x Jookh 41",
+    "name": "Abstract White",
     "category": "wearables",
     "collection": "Jookh Couture",
     "price": "ENTER PRICE HERE",
@@ -2531,12 +1366,13 @@
     "views": [
       "images/jookh/wearables/wear-151-view-1.jpg"
     ],
-    "status": "available",
-    "collection_line": "Levi's x Jookh"
+    "status": "sold",
+    "subcollection": "Berlin",
+    "collection_line": "Essential"
   },
   {
     "id": "wear-152",
-    "name": "Levi's x Jookh 42",
+    "name": "Rouge Flamme",
     "category": "wearables",
     "collection": "Jookh Couture",
     "price": "ENTER PRICE HERE",
@@ -2546,91 +1382,93 @@
       "images/jookh/wearables/wear-152-view-1.jpg",
       "images/jookh/wearables/wear-152-view-2.jpg"
     ],
-    "status": "available",
-    "collection_line": "Levi's x Jookh"
+    "status": "sold",
+    "subcollection": "Vienna",
+    "collection_line": "Canvas"
   },
   {
     "id": "wear-153",
-    "name": "Levi's x Jookh 43",
+    "name": "Jardin Coloré",
     "category": "wearables",
     "collection": "Jookh Couture",
     "price": "ENTER PRICE HERE",
-    "medium": "ENTER MATERIAL HERE",
+    "medium": "Cotton/Silk",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
       "images/jookh/wearables/wear-153-view-1.jpg",
       "images/jookh/wearables/wear-153-view-2.jpg"
     ],
-    "status": "available",
-    "collection_line": "Levi's x Jookh"
+    "status": "sold",
+    "subcollection": "Kyoto",
+    "collection_line": "Canvas"
   },
   {
     "id": "wear-154",
-    "name": "Levi's x Jookh 44",
+    "name": "Patchwork Solaire",
     "category": "wearables",
     "collection": "Jookh Couture",
     "price": "ENTER PRICE HERE",
-    "medium": "ENTER MATERIAL HERE",
+    "medium": "cotton/silk",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
       "images/jookh/wearables/wear-154-view-1.jpg",
       "images/jookh/wearables/wear-154-view-2.jpg"
     ],
-    "status": "available",
-    "subcollection": "Levi's x Jookh",
-    "collection_line": "Levi's x Jookh"
+    "status": "sold",
+    "subcollection": "SHIRAZ",
+    "collection_line": "Essential"
   },
   {
     "id": "wear-155",
-    "name": "Levi's x Jookh 45",
+    "name": "Encre Abstraite",
     "category": "wearables",
     "collection": "Jookh Couture",
     "price": "ENTER PRICE HERE",
-    "medium": "ENTER MATERIAL HERE",
+    "medium": "cotton/silk",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
       "images/jookh/wearables/wear-155-view-1.jpg",
       "images/jookh/wearables/wear-155-view-2.jpg"
     ],
-    "status": "available",
-    "subcollection": "Levi's x Jookh",
-    "collection_line": "Levi's x Jookh"
+    "status": "sold",
+    "subcollection": "SHIRAZ",
+    "collection_line": "Essential"
   },
   {
     "id": "wear-156",
-    "name": "Levi's x Jookh 46",
+    "name": "Blanc Abstrait",
     "category": "wearables",
     "collection": "Jookh Couture",
     "price": "ENTER PRICE HERE",
-    "medium": "ENTER MATERIAL HERE",
+    "medium": "Wool/Cotton",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
       "images/jookh/wearables/wear-156-view-1.jpg",
       "images/jookh/wearables/wear-156-view-2.jpg"
     ],
-    "status": "available",
-    "subcollection": "Levi's x Jookh",
-    "collection_line": "Levi's x Jookh"
+    "status": "sold",
+    "subcollection": "Scotland",
+    "collection_line": "Essential"
   },
   {
     "id": "wear-157",
-    "name": "Levi's x Jookh 47",
+    "name": "Gris Bleu",
     "category": "wearables",
     "collection": "Jookh Couture",
     "price": "ENTER PRICE HERE",
-    "medium": "ENTER MATERIAL HERE",
+    "medium": "Wool/Cotton",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
       "images/jookh/wearables/wear-157-view-1.jpg",
       "images/jookh/wearables/wear-157-view-2.jpg"
     ],
-    "status": "available",
-    "subcollection": "Levi's x Jookh",
-    "collection_line": "Levi's x Jookh"
+    "status": "sold",
+    "subcollection": "Scotland",
+    "collection_line": "Essential"
   },
   {
     "id": "wear-158",
-    "name": "Levi's x Jookh 48",
+    "name": "Rose Poudré",
     "category": "wearables",
     "collection": "Jookh Couture",
     "price": "ENTER PRICE HERE",
@@ -2640,13 +1478,13 @@
       "images/jookh/wearables/wear-158-view-1.jpg",
       "images/jookh/wearables/wear-158-view-2.jpg"
     ],
-    "status": "available",
-    "subcollection": "Levi's x Jookh",
-    "collection_line": "Levi's x Jookh"
+    "status": "sold",
+    "subcollection": "Kyoto",
+    "collection_line": "Essential"
   },
   {
     "id": "wear-159",
-    "name": "Levi's x Jookh 49",
+    "name": "Gris Doré",
     "category": "wearables",
     "collection": "Jookh Couture",
     "price": "ENTER PRICE HERE",
@@ -2656,13 +1494,13 @@
       "images/jookh/wearables/wear-159-view-1.jpg",
       "images/jookh/wearables/wear-159-view-2.jpg"
     ],
-    "status": "available",
-    "subcollection": "Levi's x Jookh",
-    "collection_line": "Levi's x Jookh"
+    "status": "sold",
+    "subcollection": "Kyoto",
+    "collection_line": "Essential"
   },
   {
     "id": "wear-160",
-    "name": "Levi's x Jookh 50",
+    "name": "Minuit",
     "category": "wearables",
     "collection": "Jookh Couture",
     "price": "ENTER PRICE HERE",
@@ -2672,13 +1510,13 @@
       "images/jookh/wearables/wear-160-view-1.jpg",
       "images/jookh/wearables/wear-160-view-2.jpg"
     ],
-    "status": "available",
-    "subcollection": "Levi's x Jookh",
-    "collection_line": "Levi's x Jookh"
+    "status": "sold",
+    "subcollection": "Kyoto",
+    "collection_line": "Essential"
   },
   {
     "id": "wear-161",
-    "name": "Levi's x Jookh 51",
+    "name": "Noir Ruban",
     "category": "wearables",
     "collection": "Jookh Couture",
     "price": "ENTER PRICE HERE",
@@ -2688,13 +1526,13 @@
       "images/jookh/wearables/wear-161-view-1.jpg",
       "images/jookh/wearables/wear-161-view-2.jpg"
     ],
-    "status": "available",
-    "subcollection": "Levi's x Jookh",
-    "collection_line": "Levi's x Jookh"
+    "status": "sold",
+    "subcollection": "Vienna",
+    "collection_line": "Essential"
   },
   {
     "id": "wear-162",
-    "name": "Levi's x Jookh 52",
+    "name": "Taupe Brodée",
     "category": "wearables",
     "collection": "Jookh Couture",
     "price": "ENTER PRICE HERE",
@@ -2704,13 +1542,13 @@
       "images/jookh/wearables/wear-162-view-1.jpg",
       "images/jookh/wearables/wear-162-view-2.jpg"
     ],
-    "status": "available",
-    "subcollection": "Levi's x Jookh",
-    "collection_line": "Levi's x Jookh"
+    "status": "sold",
+    "subcollection": "Vienna",
+    "collection_line": "Essential"
   },
   {
     "id": "wear-163",
-    "name": "Levi's x Jookh 53",
+    "name": "Brun Doré",
     "category": "wearables",
     "collection": "Jookh Couture",
     "price": "ENTER PRICE HERE",
@@ -2720,13 +1558,13 @@
       "images/jookh/wearables/wear-163-view-1.jpg",
       "images/jookh/wearables/wear-163-view-2.jpg"
     ],
-    "status": "available",
-    "subcollection": "Levi's x Jookh",
-    "collection_line": "Levi's x Jookh"
+    "status": "sold",
+    "subcollection": "Berlin",
+    "collection_line": "Essential"
   },
   {
     "id": "wear-164",
-    "name": "Levi's x Jookh 54",
+    "name": "Nocturne Doré",
     "category": "wearables",
     "collection": "Jookh Couture",
     "price": "ENTER PRICE HERE",
@@ -2736,125 +1574,141 @@
       "images/jookh/wearables/wear-164-view-1.jpg",
       "images/jookh/wearables/wear-164-view-2.jpg"
     ],
-    "status": "available",
-    "subcollection": "Levi's x Jookh",
-    "collection_line": "Levi's x Jookh"
+    "status": "sold",
+    "subcollection": "Moscow",
+    "collection_line": "24 Carats"
   },
   {
     "id": "wear-165",
-    "name": "Levi's x Jookh 55",
+    "name": "Tartan Turquoise",
     "category": "wearables",
     "collection": "Jookh Couture",
     "price": "ENTER PRICE HERE",
-    "medium": "ENTER MATERIAL HERE",
+    "medium": "Wool/Cotton",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
       "images/jookh/wearables/wear-165-view-1.jpg",
       "images/jookh/wearables/wear-165-view-2.jpg"
     ],
-    "status": "available",
-    "subcollection": "Levi's x Jookh",
-    "collection_line": "Levi's x Jookh"
+    "status": "sold",
+    "subcollection": "Scotland",
+    "collection_line": "Essential"
   },
   {
     "id": "wear-166",
-    "name": "Levi's x Jookh 56",
+    "name": "Vert Fleuri",
     "category": "wearables",
     "collection": "Jookh Couture",
     "price": "ENTER PRICE HERE",
-    "medium": "ENTER MATERIAL HERE",
+    "medium": "Wool/Cotton",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
       "images/jookh/wearables/wear-166-view-1.jpg",
       "images/jookh/wearables/wear-166-view-2.jpg"
     ],
-    "status": "available",
-    "subcollection": "Levi's x Jookh",
-    "collection_line": "Levi's x Jookh"
+    "status": "sold",
+    "subcollection": "Scotland",
+    "collection_line": "Essential"
   },
   {
     "id": "wear-167",
-    "name": "Levi's x Jookh 57",
+    "name": "Citron Tartan",
     "category": "wearables",
     "collection": "Jookh Couture",
     "price": "ENTER PRICE HERE",
-    "medium": "ENTER MATERIAL HERE",
+    "medium": "Wool/Cotton",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
       "images/jookh/wearables/wear-167-view-1.jpg",
       "images/jookh/wearables/wear-167-view-2.jpg"
     ],
-    "status": "available",
-    "subcollection": "Levi's x Jookh",
-    "collection_line": "Levi's x Jookh"
+    "status": "sold",
+    "subcollection": "Scotland",
+    "collection_line": "Essential"
   },
   {
     "id": "wear-168",
-    "name": "Levi's x Jookh 58",
+    "name": "Noir Rubis",
     "category": "wearables",
     "collection": "Jookh Couture",
     "price": "ENTER PRICE HERE",
-    "medium": "ENTER MATERIAL HERE",
+    "medium": "Wool/Cotton",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
       "images/jookh/wearables/wear-168-view-1.jpg",
       "images/jookh/wearables/wear-168-view-2.jpg"
     ],
-    "status": "available",
-    "subcollection": "Levi's x Jookh",
-    "collection_line": "Levi's x Jookh"
+    "status": "sold",
+    "subcollection": "Scotland",
+    "collection_line": "Essential"
   },
   {
     "id": "wear-169",
-    "name": "Levi's x Jookh 59",
+    "name": "Noir Saphir",
     "category": "wearables",
     "collection": "Jookh Couture",
     "price": "ENTER PRICE HERE",
-    "medium": "ENTER MATERIAL HERE",
+    "medium": "Wool/Cotton",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
       "images/jookh/wearables/wear-169-view-1.jpg",
       "images/jookh/wearables/wear-169-view-2.jpg"
     ],
-    "status": "available",
-    "subcollection": "Levi's x Jookh",
-    "collection_line": "Levi's x Jookh"
+    "status": "sold",
+    "subcollection": "Scotland",
+    "collection_line": "Essential"
   },
   {
-    "id": "wear-170",
-    "name": "Levi's x Jookh 60",
+    "id": "wear-17",
+    "name": "Noir Düsseldorf Duster",
     "category": "wearables",
     "collection": "Jookh Couture",
     "price": "ENTER PRICE HERE",
-    "medium": "ENTER MATERIAL HERE",
+    "medium": "wool/silk",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/jookh/wearables/wear-17-view-1.jpg",
+      "images/jookh/wearables/wear-17-view-2.jpg"
+    ],
+    "status": "sold",
+    "subcollection": "Dusseldorf",
+    "collection_line": "Essential"
+  },
+  {
+    "id": "wear-170",
+    "name": "Taupe Améthyste",
+    "category": "wearables",
+    "collection": "Jookh Couture",
+    "price": "ENTER PRICE HERE",
+    "medium": "Wool/Cotton",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
       "images/jookh/wearables/wear-170-view-1.jpg",
       "images/jookh/wearables/wear-170-view-2.jpg"
     ],
-    "status": "available",
-    "subcollection": "Levi's x Jookh",
-    "collection_line": "Levi's x Jookh"
+    "status": "sold",
+    "subcollection": "Scotland",
+    "collection_line": "Essential"
   },
   {
     "id": "wear-171",
-    "name": "Levi's x Jookh 61",
+    "name": "Rouge Tartan",
     "category": "wearables",
     "collection": "Jookh Couture",
     "price": "ENTER PRICE HERE",
-    "medium": "ENTER MATERIAL HERE",
+    "medium": "Wool/Cotton",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
       "images/jookh/wearables/wear-171-view-1.jpg",
       "images/jookh/wearables/wear-171-view-2.jpg"
     ],
-    "status": "available",
-    "subcollection": "Levi's x Jookh",
-    "collection_line": "Levi's x Jookh"
+    "status": "sold",
+    "subcollection": "Scotland",
+    "collection_line": "Essential"
   },
   {
     "id": "wear-172",
-    "name": "Levi's x Jookh 62",
+    "name": "Olive Noir",
     "category": "wearables",
     "collection": "Jookh Couture",
     "price": "ENTER PRICE HERE",
@@ -2864,253 +1718,269 @@
       "images/jookh/wearables/wear-172-view-1.jpg",
       "images/jookh/wearables/wear-172-view-2.jpg"
     ],
-    "status": "available",
-    "subcollection": "Levi's x Jookh",
-    "collection_line": "Levi's x Jookh"
+    "status": "sold",
+    "subcollection": "Madrid",
+    "collection_line": "Essential"
   },
   {
     "id": "wear-173",
-    "name": "Levi's x Jookh 63",
+    "name": "Gris Tweed",
     "category": "wearables",
     "collection": "Jookh Couture",
     "price": "ENTER PRICE HERE",
-    "medium": "ENTER MATERIAL HERE",
+    "medium": "wool/silk",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
       "images/jookh/wearables/wear-173-view-1.jpg",
       "images/jookh/wearables/wear-173-view-2.jpg"
     ],
-    "status": "available",
-    "subcollection": "Levi's x Jookh",
-    "collection_line": "Levi's x Jookh"
+    "status": "sold",
+    "subcollection": "Kyoto",
+    "collection_line": "Essential"
   },
   {
     "id": "wear-174",
-    "name": "Levi's x Jookh 64",
+    "name": "Soleil Noir",
     "category": "wearables",
     "collection": "Jookh Couture",
     "price": "ENTER PRICE HERE",
-    "medium": "ENTER MATERIAL HERE",
+    "medium": "cotton",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
       "images/jookh/wearables/wear-174-view-1.jpg",
       "images/jookh/wearables/wear-174-view-2.jpg"
     ],
-    "status": "available",
-    "subcollection": "Levi's x Jookh",
-    "collection_line": "Levi's x Jookh"
+    "status": "sold",
+    "subcollection": "Jaipur",
+    "collection_line": "24 Carats"
   },
   {
     "id": "wear-175",
-    "name": "Levi's x Jookh 65",
+    "name": "Frange Dorée",
     "category": "wearables",
     "collection": "Jookh Couture",
     "price": "ENTER PRICE HERE",
-    "medium": "ENTER MATERIAL HERE",
+    "medium": "cotton",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
       "images/jookh/wearables/wear-175-view-1.jpg",
       "images/jookh/wearables/wear-175-view-2.jpg"
     ],
-    "status": "available",
-    "subcollection": "Levi's x Jookh",
-    "collection_line": "Levi's x Jookh"
+    "status": "sold",
+    "subcollection": "Jaipur",
+    "collection_line": "24 Carats"
   },
   {
     "id": "wear-176",
-    "name": "Levi's x Jookh 66",
+    "name": "Ornement Noir",
     "category": "wearables",
     "collection": "Jookh Couture",
     "price": "ENTER PRICE HERE",
-    "medium": "ENTER MATERIAL HERE",
+    "medium": "silk",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
       "images/jookh/wearables/wear-176-view-1.jpg",
       "images/jookh/wearables/wear-176-view-2.jpg"
     ],
-    "status": "available",
-    "subcollection": "Levi's x Jookh",
-    "collection_line": "Levi's x Jookh"
+    "status": "sold",
+    "subcollection": "Jaipur",
+    "collection_line": "24 Carats"
   },
   {
     "id": "wear-177",
-    "name": "Levi's x Jookh 67",
+    "name": "Manches d'Or",
     "category": "wearables",
     "collection": "Jookh Couture",
     "price": "ENTER PRICE HERE",
-    "medium": "ENTER MATERIAL HERE",
+    "medium": "silk",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
       "images/jookh/wearables/wear-177-view-1.jpg",
       "images/jookh/wearables/wear-177-view-2.jpg"
     ],
-    "status": "available",
-    "subcollection": "Levi's x Jookh",
-    "collection_line": "Levi's x Jookh"
+    "status": "sold",
+    "subcollection": "Jaipur",
+    "collection_line": "24 Carats"
   },
   {
     "id": "wear-178",
-    "name": "Levi's x Jookh 68",
+    "name": "Étoile Noire",
     "category": "wearables",
     "collection": "Jookh Couture",
     "price": "ENTER PRICE HERE",
-    "medium": "ENTER MATERIAL HERE",
+    "medium": "crepe",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
       "images/jookh/wearables/wear-178-view-1.jpg",
       "images/jookh/wearables/wear-178-view-2.jpg"
     ],
-    "status": "available",
-    "subcollection": "Levi's x Jookh",
-    "collection_line": "Levi's x Jookh"
+    "status": "sold",
+    "subcollection": "Jaipur",
+    "collection_line": "24 Carats"
   },
   {
     "id": "wear-179",
-    "name": "Levi's x Jookh 69",
+    "name": "Baroque Noir",
     "category": "wearables",
     "collection": "Jookh Couture",
     "price": "ENTER PRICE HERE",
-    "medium": "ENTER MATERIAL HERE",
+    "medium": "crepe",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
       "images/jookh/wearables/wear-179-view-1.jpg",
       "images/jookh/wearables/wear-179-view-2.jpg"
     ],
-    "status": "available",
-    "subcollection": "Levi's x Jookh",
-    "collection_line": "Levi's x Jookh"
+    "status": "sold",
+    "subcollection": "Jaipur",
+    "collection_line": "24 Carats"
   },
   {
-    "id": "wear-180",
-    "name": "Levi's x Jookh 70",
+    "id": "wear-18",
+    "name": "Rhine Patchwork Coat",
     "category": "wearables",
     "collection": "Jookh Couture",
     "price": "ENTER PRICE HERE",
-    "medium": "ENTER MATERIAL HERE",
+    "medium": "wool/silk",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/jookh/wearables/wear-18-view-1.jpg",
+      "images/jookh/wearables/wear-18-view-2.jpg"
+    ],
+    "status": "sold",
+    "subcollection": "Dusseldorf",
+    "collection_line": "Essential"
+  },
+  {
+    "id": "wear-180",
+    "name": "Doré Voilé",
+    "category": "wearables",
+    "collection": "Jookh Couture",
+    "price": "ENTER PRICE HERE",
+    "medium": "cotton",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
       "images/jookh/wearables/wear-180-view-1.jpg",
       "images/jookh/wearables/wear-180-view-2.jpg"
     ],
-    "status": "available",
-    "subcollection": "Levi's x Jookh",
-    "collection_line": "Levi's x Jookh"
+    "status": "sold",
+    "subcollection": "Japan",
+    "collection_line": "24 Carats"
   },
   {
     "id": "wear-181",
-    "name": "Levi's x Jookh 71",
+    "name": "Or Antique",
     "category": "wearables",
     "collection": "Jookh Couture",
     "price": "ENTER PRICE HERE",
-    "medium": "ENTER MATERIAL HERE",
+    "medium": "cotton",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
       "images/jookh/wearables/wear-181-view-1.jpg",
       "images/jookh/wearables/wear-181-view-2.jpg"
     ],
-    "status": "available",
-    "subcollection": "Levi's x Jookh",
-    "collection_line": "Levi's x Jookh"
+    "status": "sold",
+    "subcollection": "Japan",
+    "collection_line": "24 Carats"
   },
   {
     "id": "wear-182",
-    "name": "Levi's x Jookh 72",
+    "name": "Feuilles d'Or",
     "category": "wearables",
     "collection": "Jookh Couture",
     "price": "ENTER PRICE HERE",
-    "medium": "ENTER MATERIAL HERE",
+    "medium": "crepe",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
       "images/jookh/wearables/wear-182-view-1.jpg",
       "images/jookh/wearables/wear-182-view-2.jpg"
     ],
-    "status": "available",
-    "subcollection": "Levi's x Jookh",
-    "collection_line": "Levi's x Jookh"
+    "status": "sold",
+    "subcollection": "Japan",
+    "collection_line": "24 Carats"
   },
   {
     "id": "wear-183",
-    "name": "Levi's x Jookh 73",
+    "name": "Damas Noir",
     "category": "wearables",
     "collection": "Jookh Couture",
     "price": "ENTER PRICE HERE",
-    "medium": "ENTER MATERIAL HERE",
+    "medium": "crepe",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
       "images/jookh/wearables/wear-183-view-1.jpg",
       "images/jookh/wearables/wear-183-view-2.jpg"
     ],
-    "status": "available",
-    "subcollection": "Levi's x Jookh",
-    "collection_line": "Levi's x Jookh"
+    "status": "sold",
+    "subcollection": "Japan",
+    "collection_line": "24 Carats"
   },
   {
     "id": "wear-184",
-    "name": "Levi's x Jookh 74",
+    "name": "Bleu Céleste",
     "category": "wearables",
     "collection": "Jookh Couture",
     "price": "ENTER PRICE HERE",
-    "medium": "ENTER MATERIAL HERE",
+    "medium": "silk/satin",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
       "images/jookh/wearables/wear-184-view-1.jpg",
       "images/jookh/wearables/wear-184-view-2.jpg"
     ],
-    "status": "available",
-    "subcollection": "Levi's x Jookh",
-    "collection_line": "Levi's x Jookh"
+    "status": "sold",
+    "subcollection": "Jaipur",
+    "collection_line": "Essential"
   },
   {
     "id": "wear-185",
-    "name": "Levi's x Jookh 75",
+    "name": "Indigo Nuit",
     "category": "wearables",
     "collection": "Jookh Couture",
     "price": "ENTER PRICE HERE",
-    "medium": "ENTER MATERIAL HERE",
+    "medium": "silk/satin",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
       "images/jookh/wearables/wear-185-view-1.jpg",
       "images/jookh/wearables/wear-185-view-2.jpg"
     ],
-    "status": "available",
-    "subcollection": "Levi's x Jookh",
-    "collection_line": "Levi's x Jookh"
+    "status": "sold",
+    "subcollection": "Jaipur",
+    "collection_line": "Essential"
   },
   {
     "id": "wear-186",
-    "name": "Levi's x Jookh 76",
+    "name": "Bronze Voilé",
     "category": "wearables",
     "collection": "Jookh Couture",
     "price": "ENTER PRICE HERE",
-    "medium": "ENTER MATERIAL HERE",
+    "medium": "cotton",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
       "images/jookh/wearables/wear-186-view-1.jpg",
       "images/jookh/wearables/wear-186-view-2.jpg"
     ],
-    "status": "available",
-    "subcollection": "Levi's x Jookh",
-    "collection_line": "Levi's x Jookh"
+    "status": "sold",
+    "subcollection": "Bali",
+    "collection_line": "Essential"
   },
   {
     "id": "wear-187",
-    "name": "Levi's x Jookh 77",
+    "name": "Taupe Aigue",
     "category": "wearables",
     "collection": "Jookh Couture",
     "price": "ENTER PRICE HERE",
-    "medium": "ENTER MATERIAL HERE",
+    "medium": "cotton",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
       "images/jookh/wearables/wear-187-view-1.jpg",
       "images/jookh/wearables/wear-187-view-2.jpg"
     ],
-    "status": "available",
-    "subcollection": "Levi's x Jookh",
-    "collection_line": "Levi's x Jookh"
+    "status": "sold",
+    "subcollection": "Bali",
+    "collection_line": "Essential"
   },
   {
     "id": "wear-188",
-    "name": "Levi's x Jookh 78",
+    "name": "Bronze Brodé",
     "category": "wearables",
     "collection": "Jookh Couture",
     "price": "ENTER PRICE HERE",
@@ -3120,29 +1990,45 @@
       "images/jookh/wearables/wear-188-view-1.jpg",
       "images/jookh/wearables/wear-188-view-2.jpg"
     ],
-    "status": "available",
-    "subcollection": "Levi's x Jookh",
-    "collection_line": "Levi's x Jookh"
+    "status": "sold",
+    "subcollection": "Japan",
+    "collection_line": "Luxurious"
   },
   {
     "id": "wear-189",
-    "name": "Levi's x Jookh 79",
+    "name": "Brocade Dorée",
     "category": "wearables",
     "collection": "Jookh Couture",
     "price": "ENTER PRICE HERE",
-    "medium": "ENTER MATERIAL HERE",
+    "medium": "silk/silk",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
       "images/jookh/wearables/wear-189-view-1.jpg",
       "images/jookh/wearables/wear-189-view-2.jpg"
     ],
-    "status": "available",
-    "subcollection": "Levi's x Jookh",
-    "collection_line": "Levi's x Jookh"
+    "status": "sold",
+    "subcollection": "Japan",
+    "collection_line": "Luxurious"
+  },
+  {
+    "id": "wear-19",
+    "name": "Cobalt Vienna Coat",
+    "category": "wearables",
+    "collection": "Jookh Couture",
+    "price": "ENTER PRICE HERE",
+    "medium": "wool",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/jookh/wearables/wear-19-view-1.jpg",
+      "images/jookh/wearables/wear-19-view-2.jpg"
+    ],
+    "status": "sold",
+    "subcollection": "Vienna",
+    "collection_line": "Essential"
   },
   {
     "id": "wear-190",
-    "name": "Levi's x Jookh 80",
+    "name": "Or Antique Robe",
     "category": "wearables",
     "collection": "Jookh Couture",
     "price": "ENTER PRICE HERE",
@@ -3152,93 +2038,77 @@
       "images/jookh/wearables/wear-190-view-1.jpg",
       "images/jookh/wearables/wear-190-view-2.jpg"
     ],
-    "status": "available",
-    "subcollection": "Levi's x Jookh",
-    "collection_line": "Levi's x Jookh"
+    "status": "sold",
+    "subcollection": "Japan",
+    "collection_line": "24 Carats"
   },
   {
     "id": "wear-191",
-    "name": "Levi's x Jookh 81",
+    "name": "Beige Doré Robe",
     "category": "wearables",
     "collection": "Jookh Couture",
     "price": "ENTER PRICE HERE",
-    "medium": "ENTER MATERIAL HERE",
+    "medium": "cotton",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
       "images/jookh/wearables/wear-191-view-1.jpg",
       "images/jookh/wearables/wear-191-view-2.jpg"
     ],
-    "status": "available",
-    "subcollection": "Levi's x Jookh",
-    "collection_line": "Levi's x Jookh"
+    "status": "sold",
+    "subcollection": "Japan",
+    "collection_line": "24 Carats"
   },
   {
     "id": "wear-192",
-    "name": "Levi's x Jookh 82",
+    "name": "Ciel d'Or",
     "category": "wearables",
     "collection": "Jookh Couture",
     "price": "ENTER PRICE HERE",
-    "medium": "ENTER MATERIAL HERE",
+    "medium": "cotton",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
       "images/jookh/wearables/wear-192-view-1.jpg",
       "images/jookh/wearables/wear-192-view-2.jpg"
     ],
-    "status": "available",
-    "subcollection": "Levi's x Jookh",
-    "collection_line": "Levi's x Jookh"
+    "status": "sold",
+    "subcollection": "Japan",
+    "collection_line": "24 Carats"
   },
   {
     "id": "wear-193",
-    "name": "Levi's x Jookh 83",
+    "name": "Bleu Azur",
     "category": "wearables",
     "collection": "Jookh Couture",
     "price": "ENTER PRICE HERE",
-    "medium": "ENTER MATERIAL HERE",
+    "medium": "cotton",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
       "images/jookh/wearables/wear-193-view-1.jpg",
       "images/jookh/wearables/wear-193-view-2.jpg"
     ],
-    "status": "available",
-    "subcollection": "Levi's x Jookh",
-    "collection_line": "Levi's x Jookh"
+    "status": "sold",
+    "subcollection": "Japan",
+    "collection_line": "24 Carats"
   },
   {
     "id": "wear-194",
-    "name": "Levi's x Jookh 84",
+    "name": "Sable Brodé",
     "category": "wearables",
     "collection": "Jookh Couture",
     "price": "ENTER PRICE HERE",
-    "medium": "ENTER MATERIAL HERE",
+    "medium": "silk/silk",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
       "images/jookh/wearables/wear-194-view-1.jpg",
       "images/jookh/wearables/wear-194-view-2.jpg"
     ],
-    "status": "available",
-    "subcollection": "Levi's x Jookh",
-    "collection_line": "Levi's x Jookh"
-  },
-  {
-    "id": "wear-195",
-    "name": "Levi's x Jookh 85",
-    "category": "wearables",
-    "collection": "Jookh Couture",
-    "price": "ENTER PRICE HERE",
-    "medium": "ENTER MATERIAL HERE",
-    "edition": "One-of-a-kind · Signed by the artist",
-    "views": [
-      "images/jookh/wearables/wear-195-view-1.jpg",
-      "images/jookh/wearables/wear-195-view-2.jpg"
-    ],
-    "status": "available",
-    "subcollection": "Levi's x Jookh",
-    "collection_line": "Levi's x Jookh"
+    "status": "sold",
+    "subcollection": "Japan",
+    "collection_line": "Luxurious"
   },
   {
     "id": "wear-196",
-    "name": "Levi's x Jookh 86",
+    "name": "Fleur Corail",
     "category": "wearables",
     "collection": "Jookh Couture",
     "price": "ENTER PRICE HERE",
@@ -3248,157 +2118,157 @@
       "images/jookh/wearables/wear-196-view-1.jpg",
       "images/jookh/wearables/wear-196-view-2.jpg"
     ],
-    "status": "available",
-    "subcollection": "Levi's x Jookh",
-    "collection_line": "Levi's x Jookh"
+    "status": "sold",
+    "subcollection": "Dusseldorf",
+    "collection_line": "Canvas"
   },
   {
     "id": "wear-197",
-    "name": "Levi's x Jookh 87",
+    "name": "Bleu Porcelaine",
     "category": "wearables",
     "collection": "Jookh Couture",
     "price": "ENTER PRICE HERE",
-    "medium": "ENTER MATERIAL HERE",
+    "medium": "cotton",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
       "images/jookh/wearables/wear-197-view-1.jpg",
       "images/jookh/wearables/wear-197-view-2.jpg"
     ],
-    "status": "available",
-    "subcollection": "Levi's x Jookh",
-    "collection_line": "Levi's x Jookh"
+    "status": "sold",
+    "subcollection": "Bali",
+    "collection_line": "Essential"
   },
   {
     "id": "wear-198",
-    "name": "Levi's x Jookh 88",
+    "name": "Bleu Toile",
     "category": "wearables",
     "collection": "Jookh Couture",
     "price": "ENTER PRICE HERE",
-    "medium": "ENTER MATERIAL HERE",
+    "medium": "cotton",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
       "images/jookh/wearables/wear-198-view-1.jpg",
       "images/jookh/wearables/wear-198-view-2.jpg"
     ],
-    "status": "available",
-    "subcollection": "Levi's x Jookh",
-    "collection_line": "Levi's x Jookh"
+    "status": "sold",
+    "subcollection": "Bali",
+    "collection_line": "Essential"
   },
   {
     "id": "wear-199",
-    "name": "Levi's x Jookh 89",
+    "name": "Ciel Pastel",
     "category": "wearables",
     "collection": "Jookh Couture",
     "price": "ENTER PRICE HERE",
-    "medium": "ENTER MATERIAL HERE",
+    "medium": "cotton",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
       "images/jookh/wearables/wear-199-view-1.jpg",
       "images/jookh/wearables/wear-199-view-2.jpg"
     ],
-    "status": "available",
-    "subcollection": "Levi's x Jookh",
-    "collection_line": "Levi's x Jookh"
+    "status": "sold",
+    "subcollection": "Bali",
+    "collection_line": "Essential"
   },
   {
     "id": "wear-200",
-    "name": "Levi's x Jookh 90",
+    "name": "Rose Vichy",
     "category": "wearables",
     "collection": "Jookh Couture",
     "price": "ENTER PRICE HERE",
-    "medium": "ENTER MATERIAL HERE",
+    "medium": "cotton",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
       "images/jookh/wearables/wear-200-view-1.jpg",
       "images/jookh/wearables/wear-200-view-2.jpg"
     ],
-    "status": "available",
-    "subcollection": "Levi's x Jookh",
-    "collection_line": "Levi's x Jookh"
+    "status": "sold",
+    "subcollection": "Bali",
+    "collection_line": "Essential"
   },
   {
     "id": "wear-201",
-    "name": "Levi's x Jookh 91",
+    "name": "Soleil Rose",
     "category": "wearables",
     "collection": "Jookh Couture",
     "price": "ENTER PRICE HERE",
-    "medium": "ENTER MATERIAL HERE",
+    "medium": "cotton",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
       "images/jookh/wearables/wear-201-view-1.jpg",
       "images/jookh/wearables/wear-201-view-2.jpg"
     ],
-    "status": "available",
-    "subcollection": "Levi's x Jookh",
-    "collection_line": "Levi's x Jookh"
+    "status": "sold",
+    "subcollection": "Bali",
+    "collection_line": "Essential"
   },
   {
     "id": "wear-202",
-    "name": "Levi's x Jookh 92",
+    "name": "Noir Rayé",
     "category": "wearables",
     "collection": "Jookh Couture",
     "price": "ENTER PRICE HERE",
-    "medium": "ENTER MATERIAL HERE",
+    "medium": "wool/silk",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
       "images/jookh/wearables/wear-202-view-1.jpg",
       "images/jookh/wearables/wear-202-view-2.jpg"
     ],
-    "status": "available",
-    "subcollection": "Levi's x Jookh",
-    "collection_line": "Levi's x Jookh"
+    "status": "sold",
+    "subcollection": "Beirut",
+    "collection_line": "Essential"
   },
   {
     "id": "wear-203",
-    "name": "Levi's x Jookh 93",
+    "name": "Ink Splash",
     "category": "wearables",
     "collection": "Jookh Couture",
     "price": "ENTER PRICE HERE",
-    "medium": "ENTER MATERIAL HERE",
+    "medium": "wool/silk",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
-      "images/jookh/wearables/wear-203-view-1.jpg",
-      "images/jookh/wearables/wear-203-view-2.jpg"
+      "images/jookh/wearables/wear-203-view-2.jpg",
+      "images/jookh/wearables/wear-203-view-1.jpg"
     ],
-    "status": "available",
-    "subcollection": "Levi's x Jookh",
-    "collection_line": "Levi's x Jookh"
+    "status": "sold",
+    "subcollection": "Beirut",
+    "collection_line": "Essential"
   },
   {
     "id": "wear-204",
-    "name": "Levi's x Jookh 94",
+    "name": "Graphite",
     "category": "wearables",
     "collection": "Jookh Couture",
     "price": "ENTER PRICE HERE",
-    "medium": "ENTER MATERIAL HERE",
+    "medium": "wool/silk",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
-      "images/jookh/wearables/wear-204-view-1.jpg",
-      "images/jookh/wearables/wear-204-view-2.jpg"
+      "images/jookh/wearables/wear-204-view-2.jpg",
+      "images/jookh/wearables/wear-204-view-1.jpg"
     ],
-    "status": "available",
-    "subcollection": "Levi's x Jookh",
-    "collection_line": "Levi's x Jookh"
+    "status": "sold",
+    "subcollection": "Beirut",
+    "collection_line": "Essential"
   },
   {
     "id": "wear-205",
-    "name": "Levi's x Jookh 95",
+    "name": "Sable Rayé",
     "category": "wearables",
     "collection": "Jookh Couture",
     "price": "ENTER PRICE HERE",
-    "medium": "ENTER MATERIAL HERE",
+    "medium": "wool/silk",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
       "images/jookh/wearables/wear-205-view-1.jpg",
       "images/jookh/wearables/wear-205-view-2.jpg"
     ],
-    "status": "available",
-    "subcollection": "Levi's x Jookh",
-    "collection_line": "Levi's x Jookh"
+    "status": "sold",
+    "subcollection": "Beirut",
+    "collection_line": "Essential"
   },
   {
     "id": "wear-206",
-    "name": "Levi's x Jookh 96",
+    "name": "Vert Émeraude",
     "category": "wearables",
     "collection": "Jookh Couture",
     "price": "ENTER PRICE HERE",
@@ -3408,38 +2278,2056 @@
       "images/jookh/wearables/wear-206-view-1.jpg",
       "images/jookh/wearables/wear-206-view-2.jpg"
     ],
-    "status": "available",
-    "subcollection": "Levi's x Jookh",
-    "collection_line": "Levi's x Jookh"
+    "status": "sold",
+    "subcollection": "Oxford",
+    "collection_line": "Essential"
   },
   {
     "id": "wear-207",
-    "name": "Levi's x Jookh 97",
+    "name": "Fleuri Noir",
     "category": "wearables",
     "collection": "Jookh Couture",
     "price": "ENTER PRICE HERE",
-    "medium": "ENTER MATERIAL HERE",
+    "medium": "velvet",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
       "images/jookh/wearables/wear-207-view-1.jpg",
       "images/jookh/wearables/wear-207-view-2.jpg"
     ],
-    "status": "available",
-    "subcollection": "Levi's x Jookh",
-    "collection_line": "Levi's x Jookh"
+    "status": "sold",
+    "subcollection": "Oxford",
+    "collection_line": "Luxurious"
   },
   {
     "id": "wear-208",
-    "name": "Levi's x Jookh 98",
+    "name": "Yayoi",
+    "category": "wearables",
+    "collection": "Jookh Couture",
+    "price": "ENTER PRICE HERE",
+    "medium": "denim",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/jookh/wearables/wear-208-view-1.jpg"
+    ],
+    "status": "sold",
+    "subcollection": "Jacket",
+    "collection_line": "Levi's x Jookh"
+  },
+  {
+    "id": "wear-209",
+    "name": "Vert Profond",
     "category": "wearables",
     "collection": "Jookh Couture",
     "price": "ENTER PRICE HERE",
     "medium": "ENTER MATERIAL HERE",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
-      "images/jookh/wearables/wear-208-view-1.jpg"
+      "images/jookh/wearables/wear-209-view-1.jpg",
+      "images/jookh/wearables/wear-209-view-2.jpg"
+    ],
+    "status": "sold",
+    "subcollection": "Jaipur",
+    "collection_line": "Essential"
+  },
+  {
+    "id": "wear-21",
+    "name": "Midnight Poppy Coat",
+    "category": "wearables",
+    "collection": "Jookh Couture",
+    "price": "ENTER PRICE HERE",
+    "medium": "ENTER MATERIAL HERE",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/jookh/wearables/wear-21-view-1.jpg",
+      "images/jookh/wearables/wear-21-view-2.jpg"
+    ],
+    "status": "sold",
+    "subcollection": "Vienna",
+    "collection_line": "Essential"
+  },
+  {
+    "id": "wear-210",
+    "name": "Manoush",
+    "category": "wearables",
+    "collection": "Jookh Couture",
+    "price": "ENTER PRICE HERE",
+    "medium": "denim",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/jookh/wearables/wear-210-view-1.jpg"
+    ],
+    "status": "sold",
+    "subcollection": "Jacket",
+    "collection_line": "Levi's x Jookh"
+  },
+  {
+    "id": "wear-211",
+    "name": "Emilie",
+    "category": "wearables",
+    "collection": "Jookh Couture",
+    "price": "",
+    "medium": "denim",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/jookh/wearables/wear-211-view-1.jpg"
+    ],
+    "status": "sold",
+    "subcollection": "Jacket",
+    "collection_line": "Levi's x Jookh"
+  },
+  {
+    "id": "wear-212",
+    "name": "Aquarelle Berlin",
+    "category": "wearables",
+    "collection": "Jookh Couture",
+    "price": "ENTER PRICE HERE",
+    "medium": "ENTER MATERIAL HERE",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/jookh/wearables/wear-212-view-1.jpg",
+      "images/jookh/wearables/wear-212-view-2.png"
+    ],
+    "status": "sold",
+    "subcollection": "Berlin",
+    "collection_line": "Canvas"
+  },
+  {
+    "id": "wear-213",
+    "name": "Rouge Berlin",
+    "category": "wearables",
+    "collection": "Jookh Couture",
+    "price": "ENTER PRICE HERE",
+    "medium": "ENTER MATERIAL HERE",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/jookh/wearables/wear-213-view-1.jpg"
+    ],
+    "status": "sold",
+    "subcollection": "Kyoto",
+    "collection_line": "Canvas"
+  },
+  {
+    "id": "wear-214",
+    "name": "Cercles Vifs",
+    "category": "wearables",
+    "collection": "Jookh Couture",
+    "price": "ENTER PRICE HERE",
+    "medium": "ENTER MATERIAL HERE",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/jookh/wearables/wear-214-view-1.png",
+      "images/jookh/wearables/wear-214-view-2.jpg"
+    ],
+    "status": "sold",
+    "subcollection": "Vienna",
+    "collection_line": "Canvas"
+  },
+  {
+    "id": "wear-215",
+    "name": "Patchwork Primaire",
+    "category": "wearables",
+    "collection": "Jookh Couture",
+    "price": "",
+    "medium": "cotton/cotton",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/jookh/wearables/wear-215-view-1.png",
+      "images/jookh/wearables/wear-215-view-2.png"
+    ],
+    "status": "sold",
+    "subcollection": "Kitsuki",
+    "collection_line": "Canvas"
+  },
+  {
+    "id": "wear-216",
+    "name": "Cercles Colorés",
+    "category": "wearables",
+    "collection": "Jookh Couture",
+    "price": "",
+    "medium": "cotton/cotton",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/jookh/wearables/wear-216-view-1.png",
+      "images/jookh/wearables/wear-216-view-2.png"
+    ],
+    "status": "sold",
+    "subcollection": "Bogota",
+    "collection_line": "Canvas"
+  },
+  {
+    "id": "wear-217",
+    "name": "Collage Urbain",
+    "category": "wearables",
+    "collection": "Jookh Couture",
+    "price": "ENTER PRICE HERE",
+    "medium": "cotton/silk",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/jookh/wearables/wear-217-view-1.png",
+      "images/jookh/wearables/wear-217-view-2.png"
+    ],
+    "status": "sold",
+    "subcollection": "Bogota",
+    "collection_line": "Canvas"
+  },
+  {
+    "id": "wear-218",
+    "name": "Portrait Denim",
+    "category": "wearables",
+    "collection": "Jookh Couture",
+    "price": "ENTER PRICE HERE",
+    "medium": "denim",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/jookh/wearables/wear-218-view-1.png"
+    ],
+    "status": "sold",
+    "subcollection": "Jacket",
+    "collection_line": "Levi's x Jookh"
+  },
+  {
+    "id": "wear-219",
+    "name": "Aquarelle Rose",
+    "category": "wearables",
+    "collection": "Jookh Couture",
+    "price": "420",
+    "medium": "cotton/cotton",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/jookh/wearables/wear-219-view-1.jpg",
+      "images/jookh/wearables/wear-219-view-2.jpg"
     ],
     "status": "available",
-    "collection_line": "Levi's x Jookh"
+    "subcollection": "Dusseldorf",
+    "collection_line": "Canvas"
+  },
+  {
+    "id": "wear-22",
+    "name": "Carmine Stripe Noir",
+    "category": "wearables",
+    "collection": "Jookh Couture",
+    "price": "ENTER PRICE HERE",
+    "medium": "ENTER MATERIAL HERE",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/jookh/wearables/wear-22-view-1.jpg",
+      "images/jookh/wearables/wear-22-view-2.jpg"
+    ],
+    "status": "sold",
+    "subcollection": "Vienna",
+    "collection_line": "Essential"
+  },
+  {
+    "id": "wear-220",
+    "name": "Corail Aquarelle",
+    "category": "wearables",
+    "collection": "Jookh Couture",
+    "price": "420",
+    "medium": "cotton/cotton",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/jookh/wearables/wear-220-view-1.jpg",
+      "images/jookh/wearables/wear-220-view-2.jpg"
+    ],
+    "status": "available",
+    "subcollection": "Dusseldorf",
+    "collection_line": "Canvas"
+  },
+  {
+    "id": "wear-221",
+    "name": "Noir Brodé",
+    "category": "wearables",
+    "collection": "Jookh Couture",
+    "price": "ENTER PRICE HERE",
+    "medium": "ENTER MATERIAL HERE",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/jookh/wearables/wear-221-view-1.jpg"
+    ],
+    "status": "sold",
+    "subcollection": "Bali",
+    "collection_line": "Essential"
+  },
+  {
+    "id": "wear-222",
+    "name": "Visage Blanc",
+    "category": "wearables",
+    "collection": "Jookh Couture",
+    "price": "ENTER PRICE HERE",
+    "medium": "ENTER MATERIAL HERE",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/jookh/wearables/wear-222-view-1.jpg"
+    ],
+    "status": "sold",
+    "subcollection": "Bali",
+    "collection_line": "Essential"
+  },
+  {
+    "id": "wear-223",
+    "name": "Noir Graphique",
+    "category": "wearables",
+    "collection": "Jookh Couture",
+    "price": "ENTER PRICE HERE",
+    "medium": "ENTER MATERIAL HERE",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/jookh/wearables/wear-223-view-1.jpg"
+    ],
+    "status": "sold",
+    "subcollection": "Bali",
+    "collection_line": "Essential"
+  },
+  {
+    "id": "wear-225",
+    "name": "Noir Tigre",
+    "category": "wearables",
+    "collection": "Jookh Couture",
+    "price": "ENTER PRICE HERE",
+    "medium": "ENTER MATERIAL HERE",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/jookh/wearables/wear-225-view-1.jpg"
+    ],
+    "status": "sold",
+    "subcollection": "Bali",
+    "collection_line": "Essential"
+  },
+  {
+    "id": "wear-226",
+    "name": "Patchwork Arc-en-ciel",
+    "category": "wearables",
+    "collection": "Jookh Couture",
+    "price": "ENTER PRICE HERE",
+    "medium": "ENTER MATERIAL HERE",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/jookh/wearables/wear-226-view-1.png",
+      "images/jookh/wearables/wear-226-view-2.png"
+    ],
+    "status": "sold",
+    "subcollection": "Vienna",
+    "collection_line": "Canvas"
+  },
+  {
+    "id": "wear-227",
+    "name": "Ciel Orange",
+    "category": "wearables",
+    "collection": "Jookh Couture",
+    "price": "ENTER PRICE HERE",
+    "medium": "ENTER MATERIAL HERE",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/jookh/wearables/wear-227-view-1.png",
+      "images/jookh/wearables/wear-227-view-2.png"
+    ],
+    "status": "sold",
+    "subcollection": "Vienna",
+    "collection_line": "Canvas"
+  },
+  {
+    "id": "wear-229",
+    "name": "Rose Graphique",
+    "category": "wearables",
+    "collection": "Jookh Couture",
+    "price": "ENTER PRICE HERE",
+    "medium": "ENTER MATERIAL HERE",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/jookh/wearables/wear-229-view-1.png"
+    ],
+    "status": "sold",
+    "subcollection": "Vienna",
+    "collection_line": "Canvas"
+  },
+  {
+    "id": "wear-23",
+    "name": "Obsidian Silk Trench",
+    "category": "wearables",
+    "collection": "Jookh Couture",
+    "price": "ENTER PRICE HERE",
+    "medium": "wool/silk",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/jookh/wearables/wear-23-view-1.jpg",
+      "images/jookh/wearables/wear-23-view-2.jpg"
+    ],
+    "status": "sold",
+    "subcollection": "Dusseldorf",
+    "collection_line": "Essential"
+  },
+  {
+    "id": "wear-230",
+    "name": "Rouge Impérial",
+    "category": "wearables",
+    "collection": "Jookh Couture",
+    "price": "ENTER PRICE HERE",
+    "medium": "ENTER MATERIAL HERE",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/jookh/wearables/wear-230-view-2.png",
+      "images/jookh/wearables/wear-230-view-1.png"
+    ],
+    "status": "sold",
+    "subcollection": "Cashmere Kimono",
+    "collection_line": "Essential"
+  },
+  {
+    "id": "wear-231",
+    "name": "Feu Baroque",
+    "category": "wearables",
+    "collection": "Jookh Couture",
+    "price": "ENTER PRICE HERE",
+    "medium": "ENTER MATERIAL HERE",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/jookh/wearables/wear-231-view-2.png",
+      "images/jookh/wearables/wear-231-view-1.png"
+    ],
+    "status": "sold",
+    "subcollection": "Cashmere Kimono",
+    "collection_line": "Essential"
+  },
+  {
+    "id": "wear-232",
+    "name": "Bleu Marbré",
+    "category": "wearables",
+    "collection": "Jookh Couture",
+    "price": "ENTER PRICE HERE",
+    "medium": "ENTER MATERIAL HERE",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/jookh/wearables/wear-232-view-2.png",
+      "images/jookh/wearables/wear-232-view-1.png"
+    ],
+    "status": "sold",
+    "subcollection": "Cashmere Kimono",
+    "collection_line": "Essential"
+  },
+  {
+    "id": "wear-233",
+    "name": "Encre Bleue",
+    "category": "wearables",
+    "collection": "Jookh Couture",
+    "price": "ENTER PRICE HERE",
+    "medium": "ENTER MATERIAL HERE",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/jookh/wearables/wear-233-view-2.png",
+      "images/jookh/wearables/wear-233-view-1.png"
+    ],
+    "status": "sold",
+    "subcollection": "Cashmere Kimono",
+    "collection_line": "Essential"
+  },
+  {
+    "id": "wear-234",
+    "name": "Rouge sur Blanc",
+    "category": "wearables",
+    "collection": "Jookh Couture",
+    "price": "ENTER PRICE HERE",
+    "medium": "ENTER MATERIAL HERE",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/jookh/wearables/wear-234-view-1.png",
+      "images/jookh/wearables/wear-234-view-2.png"
+    ],
+    "status": "sold",
+    "subcollection": "Bretagne",
+    "collection_line": "Essential"
+  },
+  {
+    "id": "wear-235",
+    "name": "Serpent Blanc",
+    "category": "wearables",
+    "collection": "Jookh Couture",
+    "price": "ENTER PRICE HERE",
+    "medium": "ENTER MATERIAL HERE",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/jookh/wearables/wear-235-view-1.png",
+      "images/jookh/wearables/wear-235-view-2.png"
+    ],
+    "status": "sold",
+    "subcollection": "Bretagne",
+    "collection_line": "Essential"
+  },
+  {
+    "id": "wear-236",
+    "name": "Ciel Calligraphié",
+    "category": "wearables",
+    "collection": "Jookh Couture",
+    "price": "ENTER PRICE HERE",
+    "medium": "ENTER MATERIAL HERE",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/jookh/wearables/wear-236-view-1.png",
+      "images/jookh/wearables/wear-236-view-2.png"
+    ],
+    "status": "sold",
+    "subcollection": "Bretagne",
+    "collection_line": "Essential"
+  },
+  {
+    "id": "wear-237",
+    "name": "Blanc Bleu",
+    "category": "wearables",
+    "collection": "Jookh Couture",
+    "price": "ENTER PRICE HERE",
+    "medium": "ENTER MATERIAL HERE",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/jookh/wearables/wear-237-view-1.png",
+      "images/jookh/wearables/wear-237-view-2.png"
+    ],
+    "status": "sold",
+    "subcollection": "Bretagne",
+    "collection_line": "Essential"
+  },
+  {
+    "id": "wear-238",
+    "name": "Bleu Aquarelle",
+    "category": "wearables",
+    "collection": "Jookh Couture",
+    "price": "ENTER PRICE HERE",
+    "medium": "ENTER MATERIAL HERE",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/jookh/wearables/wear-238-view-2.png",
+      "images/jookh/wearables/wear-238-view-1.png"
+    ],
+    "status": "sold",
+    "subcollection": "Chemise",
+    "collection_line": "Essential"
+  },
+  {
+    "id": "wear-239",
+    "name": "Azur Vague",
+    "category": "wearables",
+    "collection": "Jookh Couture",
+    "price": "ENTER PRICE HERE",
+    "medium": "ENTER MATERIAL HERE",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/jookh/wearables/wear-239-view-2.png",
+      "images/jookh/wearables/wear-239-view-1.png"
+    ],
+    "status": "sold",
+    "subcollection": "Chemise",
+    "collection_line": "Essential"
+  },
+  {
+    "id": "wear-24",
+    "name": "Indigo & Copper Kyoto",
+    "category": "wearables",
+    "collection": "Jookh Couture",
+    "price": "ENTER PRICE HERE",
+    "medium": "denim/cotton",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/jookh/wearables/wear-24-view-1.jpg",
+      "images/jookh/wearables/wear-24-view-2.jpg"
+    ],
+    "status": "sold",
+    "subcollection": "Kyoto",
+    "collection_line": "Essential"
+  },
+  {
+    "id": "wear-240",
+    "name": "Noir et Blanc",
+    "category": "wearables",
+    "collection": "Jookh Couture",
+    "price": "ENTER PRICE HERE",
+    "medium": "ENTER MATERIAL HERE",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/jookh/wearables/wear-240-view-2.png",
+      "images/jookh/wearables/wear-240-view-1.png"
+    ],
+    "status": "sold",
+    "subcollection": "Chemise",
+    "collection_line": "Essential"
+  },
+  {
+    "id": "wear-241",
+    "name": "Pêche Soleil",
+    "category": "wearables",
+    "collection": "Jookh Couture",
+    "price": "ENTER PRICE HERE",
+    "medium": "ENTER MATERIAL HERE",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/jookh/wearables/wear-241-view-2.png",
+      "images/jookh/wearables/wear-241-view-1.png"
+    ],
+    "status": "sold",
+    "subcollection": "Chemise",
+    "collection_line": "Essential"
+  },
+  {
+    "id": "wear-242",
+    "name": "Tweed Doré",
+    "category": "wearables",
+    "collection": "Jookh Couture",
+    "price": "ENTER PRICE HERE",
+    "medium": "ENTER MATERIAL HERE",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/jookh/wearables/wear-242-view-1.png",
+      "images/jookh/wearables/wear-242-view-2.png"
+    ],
+    "status": "sold",
+    "subcollection": "Kitsuki",
+    "collection_line": "Essential"
+  },
+  {
+    "id": "wear-243",
+    "name": "Bleu Nuit Étoilée",
+    "category": "wearables",
+    "collection": "Jookh Couture",
+    "price": "ENTER PRICE HERE",
+    "medium": "ENTER MATERIAL HERE",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/jookh/wearables/wear-243-view-1.png",
+      "images/jookh/wearables/wear-243-view-2.png"
+    ],
+    "status": "sold",
+    "subcollection": "Kitsuki",
+    "collection_line": "Essential"
+  },
+  {
+    "id": "wear-244",
+    "name": "Cuivre Vieilli",
+    "category": "wearables",
+    "collection": "Jookh Couture",
+    "price": "ENTER PRICE HERE",
+    "medium": "ENTER MATERIAL HERE",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/jookh/wearables/wear-244-view-1.png",
+      "images/jookh/wearables/wear-244-view-2.png"
+    ],
+    "status": "sold",
+    "subcollection": "Oxford",
+    "collection_line": "Essential"
+  },
+  {
+    "id": "wear-245",
+    "name": "Vert Mousse",
+    "category": "wearables",
+    "collection": "Jookh Couture",
+    "price": "ENTER PRICE HERE",
+    "medium": "ENTER MATERIAL HERE",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/jookh/wearables/wear-245-view-1.png",
+      "images/jookh/wearables/wear-245-view-2.png"
+    ],
+    "status": "sold",
+    "subcollection": "Oxford",
+    "collection_line": "Essential"
+  },
+  {
+    "id": "wear-246",
+    "name": "Rouge Intérieur",
+    "category": "wearables",
+    "collection": "Jookh Couture",
+    "price": "ENTER PRICE HERE",
+    "medium": "ENTER MATERIAL HERE",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/jookh/wearables/wear-246-view-1.png",
+      "images/jookh/wearables/wear-246-view-2.png"
+    ],
+    "status": "sold",
+    "subcollection": "Vienna",
+    "collection_line": "Essential"
+  },
+  {
+    "id": "wear-247",
+    "name": "Bleu Profond",
+    "category": "wearables",
+    "collection": "Jookh Couture",
+    "price": "ENTER PRICE HERE",
+    "medium": "ENTER MATERIAL HERE",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/jookh/wearables/wear-247-view-1.png",
+      "images/jookh/wearables/wear-247-view-2.png"
+    ],
+    "status": "sold",
+    "subcollection": "Vienna",
+    "collection_line": "Essential"
+  },
+  {
+    "id": "wear-248",
+    "name": "Noir Absolu",
+    "category": "wearables",
+    "collection": "Jookh Couture",
+    "price": "ENTER PRICE HERE",
+    "medium": "ENTER MATERIAL HERE",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/jookh/wearables/wear-248-view-1.png",
+      "images/jookh/wearables/wear-248-view-2.png"
+    ],
+    "status": "sold",
+    "subcollection": "Vienna",
+    "collection_line": "Essential"
+  },
+  {
+    "id": "wear-25",
+    "name": "Slate Kyoto Trench",
+    "category": "wearables",
+    "collection": "Jookh Couture",
+    "price": "ENTER PRICE HERE",
+    "medium": "wool/cotton",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/jookh/wearables/wear-25-view-1.jpg",
+      "images/jookh/wearables/wear-25-view-2.jpg"
+    ],
+    "status": "sold",
+    "subcollection": "Kyoto",
+    "collection_line": "Essential"
+  },
+  {
+    "id": "wear-250",
+    "name": "Bronze Ancien",
+    "category": "wearables",
+    "collection": "Jookh Couture",
+    "price": "ENTER PRICE HERE",
+    "medium": "ENTER MATERIAL HERE",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/jookh/wearables/wear-250-view-1.png",
+      "images/jookh/wearables/wear-250-view-2.png"
+    ],
+    "status": "sold",
+    "subcollection": "Japan",
+    "collection_line": "Luxurious"
+  },
+  {
+    "id": "wear-252",
+    "name": "Noir Poétique",
+    "category": "wearables",
+    "collection": "Jookh Couture",
+    "price": "ENTER PRICE HERE",
+    "medium": "cotton/silk",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/jookh/wearables/wear-252-view-1.png",
+      "images/jookh/wearables/wear-252-view-2.png"
+    ],
+    "status": "sold",
+    "subcollection": "Tera",
+    "collection_line": "Essential"
+  },
+  {
+    "id": "wear-253",
+    "name": "Fleur Nocturne",
+    "category": "wearables",
+    "collection": "Jookh Couture",
+    "price": "ENTER PRICE HERE",
+    "medium": "cotton/silk",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/jookh/wearables/wear-253-view-1.png",
+      "images/jookh/wearables/wear-253-view-2.png"
+    ],
+    "status": "sold",
+    "subcollection": "Tera",
+    "collection_line": "Essential"
+  },
+  {
+    "id": "wear-254",
+    "name": "Rouge Nuit",
+    "category": "wearables",
+    "collection": "Jookh Couture",
+    "price": "ENTER PRICE HERE",
+    "medium": "ENTER MATERIAL HERE",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/jookh/wearables/wear-254-view-2.png",
+      "images/jookh/wearables/wear-254-view-1.png"
+    ],
+    "status": "sold",
+    "subcollection": "Cashmere Kimono",
+    "collection_line": "24 Carats"
+  },
+  {
+    "id": "wear-255",
+    "name": "Or Noir Intense",
+    "category": "wearables",
+    "collection": "Jookh Couture",
+    "price": "ENTER PRICE HERE",
+    "medium": "ENTER MATERIAL HERE",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/jookh/wearables/wear-255-view-2.png",
+      "images/jookh/wearables/wear-255-view-1.png"
+    ],
+    "status": "sold",
+    "subcollection": "Cashmere Kimono",
+    "collection_line": "24 Carats"
+  },
+  {
+    "id": "wear-256",
+    "name": "Toile Éclaboussée",
+    "category": "wearables",
+    "collection": "Jookh Couture",
+    "price": "ENTER PRICE HERE",
+    "medium": "ENTER MATERIAL HERE",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/jookh/wearables/wear-256-view-1.png",
+      "images/jookh/wearables/wear-256-view-2.png"
+    ],
+    "status": "sold",
+    "subcollection": "BALOCHISTAN",
+    "collection_line": "Canvas"
+  },
+  {
+    "id": "wear-257",
+    "name": "Constellation",
+    "category": "wearables",
+    "collection": "Jookh Couture",
+    "price": "ENTER PRICE HERE",
+    "medium": "denim/cotton",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/jookh/wearables/wear-257-view-1.png",
+      "images/jookh/wearables/wear-257-view-2.png"
+    ],
+    "status": "sold",
+    "subcollection": "Dusseldorf",
+    "collection_line": "Canvas"
+  },
+  {
+    "id": "wear-258",
+    "name": "Certain Dark Things",
+    "category": "wearables",
+    "collection": "Jookh Couture",
+    "price": "200",
+    "medium": "cotton",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/jookh/wearables/wear-258-view-1.jpeg",
+      "images/jookh/wearables/wear-258-view-2.jpeg"
+    ],
+    "status": "available",
+    "subcollection": "Amour",
+    "collection_line": "Essential"
+  },
+  {
+    "id": "wear-259",
+    "name": "Without Knowing How",
+    "category": "wearables",
+    "collection": "Jookh Couture",
+    "price": "200",
+    "medium": "cotton",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/jookh/wearables/wear-259-view-1.jpeg",
+      "images/jookh/wearables/wear-259-view-2.jpeg"
+    ],
+    "status": "available",
+    "subcollection": "Amour",
+    "collection_line": "Essential"
+  },
+  {
+    "id": "wear-26",
+    "name": "Noir & Gilt Kyoto",
+    "category": "wearables",
+    "collection": "Jookh Couture",
+    "price": "ENTER PRICE HERE",
+    "medium": "wool/cotton",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/jookh/wearables/wear-26-view-1.jpg",
+      "images/jookh/wearables/wear-26-view-2.jpg"
+    ],
+    "status": "sold",
+    "subcollection": "Kyoto",
+    "collection_line": "Essential"
+  },
+  {
+    "id": "wear-260",
+    "name": "Adorable",
+    "category": "wearables",
+    "collection": "Jookh Couture",
+    "price": "200",
+    "medium": "cotton",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/jookh/wearables/wear-260-view-1.jpeg",
+      "images/jookh/wearables/wear-260-view-2.jpeg"
+    ],
+    "status": "available",
+    "subcollection": "Amour",
+    "collection_line": "Essential"
+  },
+  {
+    "id": "wear-261",
+    "name": "Amour",
+    "category": "wearables",
+    "collection": "Jookh Couture",
+    "price": "200",
+    "medium": "cotton",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/jookh/wearables/wear-261-view-1.jpeg",
+      "images/jookh/wearables/wear-261-view-2.jpeg"
+    ],
+    "status": "available",
+    "subcollection": "Amour",
+    "collection_line": "Essential"
+  },
+  {
+    "id": "wear-262",
+    "name": "Love",
+    "category": "wearables",
+    "collection": "Jookh Couture",
+    "price": "200",
+    "medium": "cotton",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/jookh/wearables/wear-262-view-1.jpeg",
+      "images/jookh/wearables/wear-262-view-2.jpeg"
+    ],
+    "status": "available",
+    "subcollection": "Amour",
+    "collection_line": "Essential"
+  },
+  {
+    "id": "wear-263",
+    "name": "Lovely",
+    "category": "wearables",
+    "collection": "Jookh Couture",
+    "price": "200",
+    "medium": "cotton",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/jookh/wearables/wear-263-view-1.jpeg",
+      "images/jookh/wearables/wear-263-view-2.jpeg"
+    ],
+    "status": "available",
+    "subcollection": "Amour",
+    "collection_line": "Essential"
+  },
+  {
+    "id": "wear-264",
+    "name": "Imparfait",
+    "category": "wearables",
+    "collection": "Jookh Couture",
+    "price": "200",
+    "medium": "cotton",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/jookh/wearables/wear-264-view-1.jpeg",
+      "images/jookh/wearables/wear-264-view-2.jpeg"
+    ],
+    "status": "available",
+    "subcollection": "Amour",
+    "collection_line": "Essential"
+  },
+  {
+    "id": "wear-27",
+    "name": "Kyoto Patchwork Longcoat",
+    "category": "wearables",
+    "collection": "Jookh Couture",
+    "price": "ENTER PRICE HERE",
+    "medium": "wool/silk",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/jookh/wearables/wear-27-view-1.jpg",
+      "images/jookh/wearables/wear-27-view-2.jpg"
+    ],
+    "status": "sold",
+    "subcollection": "Kyoto",
+    "collection_line": "Essential"
+  },
+  {
+    "id": "wear-28",
+    "name": "Olive Kyoto Tweed",
+    "category": "wearables",
+    "collection": "Jookh Couture",
+    "price": "ENTER PRICE HERE",
+    "medium": "wool/cotton",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/jookh/wearables/wear-28-view-1.jpg",
+      "images/jookh/wearables/wear-28-view-2.jpg"
+    ],
+    "status": "sold",
+    "subcollection": "Kyoto",
+    "collection_line": "Essential"
+  },
+  {
+    "id": "wear-30",
+    "name": "Jaipur Gilded Circle Robe",
+    "category": "wearables",
+    "collection": "Jookh Couture",
+    "price": "ENTER PRICE HERE",
+    "medium": "ENTER MATERIAL HERE",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/jookh/wearables/wear-30-view-1.jpg",
+      "images/jookh/wearables/wear-30-view-2.jpg"
+    ],
+    "status": "sold",
+    "subcollection": "Jaipur",
+    "collection_line": "24 Carats"
+  },
+  {
+    "id": "wear-31",
+    "name": "Jaipur Noir & Gold Robe",
+    "category": "wearables",
+    "collection": "Jookh Couture",
+    "price": "ENTER PRICE HERE",
+    "medium": "ENTER MATERIAL HERE",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/jookh/wearables/wear-31-view-1.jpg",
+      "images/jookh/wearables/wear-31-view-2.jpg"
+    ],
+    "status": "sold",
+    "subcollection": "Jaipur",
+    "collection_line": "24 Carats"
+  },
+  {
+    "id": "wear-33",
+    "name": "Roma Scarlet Blazer",
+    "category": "wearables",
+    "collection": "Jookh Couture",
+    "price": "380",
+    "medium": "cotton",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/jookh/wearables/wear-33-view-1.jpg",
+      "images/jookh/wearables/wear-33-view-2.jpg"
+    ],
+    "status": "available",
+    "subcollection": "Roma",
+    "collection_line": "Essential"
+  },
+  {
+    "id": "wear-34",
+    "name": "Ivory Ikebana Robe",
+    "category": "wearables",
+    "collection": "Jookh Couture",
+    "price": "550",
+    "medium": "cotton",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/jookh/wearables/wear-34-view-1.jpg",
+      "images/jookh/wearables/wear-34-view-2.jpg"
+    ],
+    "status": "available",
+    "subcollection": "Japan",
+    "collection_line": "Essential"
+  },
+  {
+    "id": "wear-35",
+    "name": "Coral Roma Blazer",
+    "category": "wearables",
+    "collection": "Jookh Couture",
+    "price": "420",
+    "medium": "cotton",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/jookh/wearables/wear-35-view-1.jpg",
+      "images/jookh/wearables/wear-35-view-2.jpg"
+    ],
+    "status": "available",
+    "subcollection": "Roma",
+    "collection_line": "Essential"
+  },
+  {
+    "id": "wear-36",
+    "name": "Roma Nero Satin",
+    "category": "wearables",
+    "collection": "Jookh Couture",
+    "price": "380",
+    "medium": "cotton",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/jookh/wearables/wear-36-view-1.jpg",
+      "images/jookh/wearables/wear-36-view-2.jpg"
+    ],
+    "status": "available",
+    "subcollection": "Roma",
+    "collection_line": "Essential"
+  },
+  {
+    "id": "wear-37",
+    "name": "Prugna Blazer",
+    "category": "wearables",
+    "collection": "Jookh Couture",
+    "price": "420",
+    "medium": "cotton",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/jookh/wearables/wear-37-view-1.jpg",
+      "images/jookh/wearables/wear-37-view-2.jpg"
+    ],
+    "status": "available",
+    "subcollection": "Roma",
+    "collection_line": "Essential"
+  },
+  {
+    "id": "wear-38",
+    "name": "Burgundy Fiori Blazer",
+    "category": "wearables",
+    "collection": "Jookh Couture",
+    "price": "380",
+    "medium": "cotton",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/jookh/wearables/wear-38-view-1.jpg",
+      "images/jookh/wearables/wear-38-view-2.jpg"
+    ],
+    "status": "available",
+    "subcollection": "Roma",
+    "collection_line": "Essential"
+  },
+  {
+    "id": "wear-39",
+    "name": "Khaki Tartan Coat",
+    "category": "wearables",
+    "collection": "Jookh Couture",
+    "price": "ENTER PRICE HERE",
+    "medium": "ENTER MATERIAL HERE",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/jookh/wearables/wear-39-view-1.jpg",
+      "images/jookh/wearables/wear-39-view-2.jpg"
+    ],
+    "status": "sold",
+    "subcollection": "Berlin",
+    "collection_line": "Essential"
+  },
+  {
+    "id": "wear-40",
+    "name": "Camel Tartan Trench",
+    "category": "wearables",
+    "collection": "Jookh Couture",
+    "price": "ENTER PRICE HERE",
+    "medium": "ENTER MATERIAL HERE",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/jookh/wearables/wear-40-view-1.jpg",
+      "images/jookh/wearables/wear-40-view-2.jpg"
+    ],
+    "status": "sold",
+    "subcollection": "Kyoto",
+    "collection_line": "Essential"
+  },
+  {
+    "id": "wear-41",
+    "name": "Terra Tweed Coat",
+    "category": "wearables",
+    "collection": "Jookh Couture",
+    "price": "ENTER PRICE HERE",
+    "medium": "ENTER MATERIAL HERE",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/jookh/wearables/wear-41-view-1.jpg",
+      "images/jookh/wearables/wear-41-view-2.jpg"
+    ],
+    "status": "sold",
+    "subcollection": "Kyoto",
+    "collection_line": "Essential"
+  },
+  {
+    "id": "wear-42",
+    "name": "Forest Tartan Coat",
+    "category": "wearables",
+    "collection": "Jookh Couture",
+    "price": "ENTER PRICE HERE",
+    "medium": "ENTER MATERIAL HERE",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/jookh/wearables/wear-42-view-1.jpg",
+      "images/jookh/wearables/wear-42-view-2.jpg"
+    ],
+    "status": "sold",
+    "subcollection": "Kyoto",
+    "collection_line": "Essential"
+  },
+  {
+    "id": "wear-43",
+    "name": "Canvas Rêverie Coat",
+    "category": "wearables",
+    "collection": "Jookh Couture",
+    "price": "ENTER PRICE HERE",
+    "medium": "ENTER MATERIAL HERE",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/jookh/wearables/wear-43-view-1.jpg",
+      "images/jookh/wearables/wear-43-view-2.jpg"
+    ],
+    "status": "sold",
+    "subcollection": "Berlin",
+    "collection_line": "Canvas"
+  },
+  {
+    "id": "wear-44",
+    "name": "Silver Poppy Noir",
+    "category": "wearables",
+    "collection": "Jookh Couture",
+    "price": "ENTER PRICE HERE",
+    "medium": "ENTER MATERIAL HERE",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/jookh/wearables/wear-44-view-1.jpg",
+      "images/jookh/wearables/wear-44-view-2.jpg"
+    ],
+    "status": "sold",
+    "subcollection": "Oxford",
+    "collection_line": "Essential"
+  },
+  {
+    "id": "wear-45",
+    "name": "Mosaïque Noir Blazer",
+    "category": "wearables",
+    "collection": "Jookh Couture",
+    "price": "ENTER PRICE HERE",
+    "medium": "ENTER MATERIAL HERE",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/jookh/wearables/wear-45-view-1.jpg",
+      "images/jookh/wearables/wear-45-view-2.jpg"
+    ],
+    "status": "sold",
+    "subcollection": "Oxford",
+    "collection_line": "Essential"
+  },
+  {
+    "id": "wear-46",
+    "name": "Phoenix Gilded Robe",
+    "category": "wearables",
+    "collection": "Jookh Couture",
+    "price": "ENTER PRICE HERE",
+    "medium": "ENTER MATERIAL HERE",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/jookh/wearables/wear-46-view-1.jpg",
+      "images/jookh/wearables/wear-46-view-2.jpg"
+    ],
+    "status": "sold",
+    "subcollection": "Vienna",
+    "collection_line": "Essential"
+  },
+  {
+    "id": "wear-49",
+    "name": "Rouge Noir Duster",
+    "category": "wearables",
+    "collection": "Jookh Couture",
+    "price": "ENTER PRICE HERE",
+    "medium": "ENTER MATERIAL HERE",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/jookh/wearables/wear-49-view-1.jpg",
+      "images/jookh/wearables/wear-49-view-2.jpg"
+    ],
+    "status": "sold",
+    "subcollection": "Vienna",
+    "collection_line": "Essential"
+  },
+  {
+    "id": "wear-50",
+    "name": "Khaki Cercle Coat",
+    "category": "wearables",
+    "collection": "Jookh Couture",
+    "price": "ENTER PRICE HERE",
+    "medium": "ENTER MATERIAL HERE",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/jookh/wearables/wear-50-view-1.jpg",
+      "images/jookh/wearables/wear-50-view-2.jpg"
+    ],
+    "status": "sold",
+    "subcollection": "Vienna",
+    "collection_line": "Essential"
+  },
+  {
+    "id": "wear-51",
+    "name": "Noir en Fleur Blazer",
+    "category": "wearables",
+    "collection": "Jookh Couture",
+    "price": "ENTER PRICE HERE",
+    "medium": "ENTER MATERIAL HERE",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/jookh/wearables/wear-51-view-1.jpg",
+      "images/jookh/wearables/wear-51-view-2.jpg"
+    ],
+    "status": "sold",
+    "subcollection": "Oxford",
+    "collection_line": "Essential"
+  },
+  {
+    "id": "wear-52",
+    "name": "Cosmos Navy Blazer",
+    "category": "wearables",
+    "collection": "Jookh Couture",
+    "price": "ENTER PRICE HERE",
+    "medium": "ENTER MATERIAL HERE",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/jookh/wearables/wear-52-view-1.jpg",
+      "images/jookh/wearables/wear-52-view-2.jpg"
+    ],
+    "status": "sold",
+    "subcollection": "Oxford",
+    "collection_line": "Essential"
+  },
+  {
+    "id": "wear-57",
+    "name": "Citrus Dentelle Robe",
+    "category": "wearables",
+    "collection": "Jookh Couture",
+    "price": "420",
+    "medium": "ENTER MATERIAL HERE",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/jookh/wearables/wear-57-view-1.jpg",
+      "images/jookh/wearables/wear-57-view-2.jpg"
+    ],
+    "status": "available",
+    "subcollection": "Japan",
+    "collection_line": "Essential"
+  },
+  {
+    "id": "wear-58",
+    "name": "Azure Garden Robe",
+    "category": "wearables",
+    "collection": "Jookh Couture",
+    "price": "550",
+    "medium": "ENTER MATERIAL HERE",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/jookh/wearables/wear-58-view-1.jpg",
+      "images/jookh/wearables/wear-58-view-2.jpg"
+    ],
+    "status": "available",
+    "subcollection": "Japan",
+    "collection_line": "Essential"
+  },
+  {
+    "id": "wear-59",
+    "name": "Ivory & Gold Dentelle",
+    "category": "wearables",
+    "collection": "Jookh Couture",
+    "price": "450",
+    "medium": "ENTER MATERIAL HERE",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/jookh/wearables/wear-59-view-1.jpg",
+      "images/jookh/wearables/wear-59-view-2.jpg"
+    ],
+    "status": "available",
+    "subcollection": "Japan",
+    "collection_line": "24 Carats"
+  },
+  {
+    "id": "wear-60",
+    "name": "Auburn Tweed",
+    "category": "wearables",
+    "collection": "Jookh Couture",
+    "price": "ENTER PRICE HERE",
+    "medium": "wool/cotton tweed",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/jookh/wearables/wear-60-view-1.png",
+      "images/jookh/wearables/wear-60-view-2.png"
+    ],
+    "status": "sold",
+    "subcollection": "Oxford",
+    "collection_line": "Essential"
+  },
+  {
+    "id": "wear-61",
+    "name": "Admiral Blazer",
+    "category": "wearables",
+    "collection": "Jookh Couture",
+    "price": "ENTER PRICE HERE",
+    "medium": "wool",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/jookh/wearables/wear-61-view-1.png",
+      "images/jookh/wearables/wear-61-view-2.png"
+    ],
+    "status": "sold",
+    "subcollection": "Oxford",
+    "collection_line": "Essential"
+  },
+  {
+    "id": "wear-62",
+    "name": "Lunar Duster",
+    "category": "wearables",
+    "collection": "Jookh Couture",
+    "price": "ENTER PRICE HERE",
+    "medium": "hand-painted silk/wool",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/jookh/wearables/wear-62-view-1.png",
+      "images/jookh/wearables/wear-62-view-2.png"
+    ],
+    "status": "sold",
+    "subcollection": "Dusseldorf",
+    "collection_line": "Essential"
+  },
+  {
+    "id": "wear-63",
+    "name": "Eclipse Robe",
+    "category": "wearables",
+    "collection": "Jookh Couture",
+    "price": "ENTER PRICE HERE",
+    "medium": "hand-painted silk/wool",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/jookh/wearables/wear-63-view-1.png",
+      "images/jookh/wearables/wear-63-view-2.png"
+    ],
+    "status": "sold",
+    "subcollection": "Dusseldorf",
+    "collection_line": "Essential"
+  },
+  {
+    "id": "wear-64",
+    "name": "Scarlet Poppy Duster",
+    "category": "wearables",
+    "collection": "Jookh Couture",
+    "price": "ENTER PRICE HERE",
+    "medium": "hand-painted wool",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/jookh/wearables/wear-64-view-1.png",
+      "images/jookh/wearables/wear-64-view-2.png"
+    ],
+    "status": "sold",
+    "subcollection": "Berlin",
+    "collection_line": "Essential"
+  },
+  {
+    "id": "wear-65",
+    "name": "Gilded Cross Blazer",
+    "category": "wearables",
+    "collection": "Jookh Couture",
+    "price": "ENTER PRICE HERE",
+    "medium": "hand-painted silk",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/jookh/wearables/wear-65-view-1.png",
+      "images/jookh/wearables/wear-65-view-2.png"
+    ],
+    "status": "sold",
+    "subcollection": "Oxford",
+    "collection_line": "Essential"
+  },
+  {
+    "id": "wear-66",
+    "name": "Rosé Note Jacket",
+    "category": "wearables",
+    "collection": "Jookh Couture",
+    "price": "ENTER PRICE HERE",
+    "medium": "hand-painted silk",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/jookh/wearables/wear-66-view-1.png",
+      "images/jookh/wearables/wear-66-view-2.png"
+    ],
+    "status": "sold",
+    "subcollection": "Oxford",
+    "collection_line": "Essential"
+  },
+  {
+    "id": "wear-67",
+    "name": "Sanctus Robe",
+    "category": "wearables",
+    "collection": "Jookh Couture",
+    "price": "ENTER PRICE HERE",
+    "medium": "hand-painted silk with gold trim",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/jookh/wearables/wear-67-view-1.png",
+      "images/jookh/wearables/wear-67-view-2.png"
+    ],
+    "status": "sold",
+    "subcollection": "Japan",
+    "collection_line": "24 Carats"
+  },
+  {
+    "id": "wear-68",
+    "name": "Ivory Dentelle Robe",
+    "category": "wearables",
+    "collection": "Jookh Couture",
+    "price": "ENTER PRICE HERE",
+    "medium": "lace",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/jookh/wearables/wear-68-view-1.jpg",
+      "images/jookh/wearables/wear-68-view-2.jpg"
+    ],
+    "status": "sold",
+    "subcollection": "Japan",
+    "collection_line": "24 Carats"
+  },
+  {
+    "id": "wear-69",
+    "name": "Noir Dentelle Robe",
+    "category": "wearables",
+    "collection": "Jookh Couture",
+    "price": "ENTER PRICE HERE",
+    "medium": "lace",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/jookh/wearables/wear-69-view-1.jpg",
+      "images/jookh/wearables/wear-69-view-2.jpg"
+    ],
+    "status": "sold",
+    "subcollection": "Japan",
+    "collection_line": "24 Carats"
+  },
+  {
+    "id": "wear-70",
+    "name": "Pêche en Fleur Blazer",
+    "category": "wearables",
+    "collection": "Jookh Couture",
+    "price": "ENTER PRICE HERE",
+    "medium": "cotton",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/jookh/wearables/wear-70-view-1.jpg",
+      "images/jookh/wearables/wear-70-view-2.jpg"
+    ],
+    "status": "sold",
+    "subcollection": "Roma",
+    "collection_line": "Essential"
+  },
+  {
+    "id": "wear-71",
+    "name": "Sage Poppy Oxford",
+    "category": "wearables",
+    "collection": "Jookh Couture",
+    "price": "380",
+    "medium": "linen",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/jookh/wearables/wear-71-view-1.jpg",
+      "images/jookh/wearables/wear-71-view-2.jpg"
+    ],
+    "status": "available",
+    "subcollection": "Oxford",
+    "collection_line": "Essential"
+  },
+  {
+    "id": "wear-72",
+    "name": "Camel Garden Oxford",
+    "category": "wearables",
+    "collection": "Jookh Couture",
+    "price": "380",
+    "medium": "linen",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/jookh/wearables/wear-72-view-1.jpg",
+      "images/jookh/wearables/wear-72-view-2.jpg"
+    ],
+    "status": "available",
+    "subcollection": "Oxford",
+    "collection_line": "Essential"
+  },
+  {
+    "id": "wear-73",
+    "name": "Oxford Sphère Blazer",
+    "category": "wearables",
+    "collection": "Jookh Couture",
+    "price": "320",
+    "medium": "linen",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/jookh/wearables/wear-73-view-1.jpg",
+      "images/jookh/wearables/wear-73-view-2.jpg"
+    ],
+    "status": "available",
+    "subcollection": "Oxford",
+    "collection_line": "Essential"
+  },
+  {
+    "id": "wear-74",
+    "name": "Cercle d'Or Coat",
+    "category": "wearables",
+    "collection": "Jookh Couture",
+    "price": "ENTER PRICE HERE",
+    "medium": "hand-painted silk",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/jookh/wearables/wear-74-view-1.jpg",
+      "images/jookh/wearables/wear-74-view-2.jpg"
+    ],
+    "status": "sold",
+    "subcollection": "Jaipur",
+    "collection_line": "24 Carats"
+  },
+  {
+    "id": "wear-75",
+    "name": "Aurora Tie-Dye Coat",
+    "category": "wearables",
+    "collection": "Jookh Couture",
+    "price": "ENTER PRICE HERE",
+    "medium": "linen",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/jookh/wearables/wear-75-view-1.jpg",
+      "images/jookh/wearables/wear-75-view-2.jpg"
+    ],
+    "status": "sold",
+    "subcollection": "Japan",
+    "collection_line": "Essential"
+  },
+  {
+    "id": "wear-76",
+    "name": "Pré en Fleur Coat",
+    "category": "wearables",
+    "collection": "Jookh Couture",
+    "price": "ENTER PRICE HERE",
+    "medium": "linen",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/jookh/wearables/wear-76-view-1.jpg",
+      "images/jookh/wearables/wear-76-view-2.jpg"
+    ],
+    "status": "sold",
+    "subcollection": "Japan",
+    "collection_line": "Essential"
+  },
+  {
+    "id": "wear-77",
+    "name": "Encre Silk Robe",
+    "category": "wearables",
+    "collection": "Jookh Couture",
+    "price": "ENTER PRICE HERE",
+    "medium": "hand-painted silk",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/jookh/wearables/wear-77-view-1.jpg",
+      "images/jookh/wearables/wear-77-view-2.jpg"
+    ],
+    "status": "sold",
+    "subcollection": "Japan",
+    "collection_line": "Essential"
+  },
+  {
+    "id": "wear-78",
+    "name": "Voile Doré Coat",
+    "category": "wearables",
+    "collection": "Jookh Couture",
+    "price": "ENTER PRICE HERE",
+    "medium": "tulle",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/jookh/wearables/wear-78-view-1.jpg",
+      "images/jookh/wearables/wear-78-view-2.jpg"
+    ],
+    "status": "sold",
+    "subcollection": "Tulle",
+    "collection_line": "24 Carats"
+  },
+  {
+    "id": "wear-79",
+    "name": "Émeraude Voile",
+    "category": "wearables",
+    "collection": "Jookh Couture",
+    "price": "ENTER PRICE HERE",
+    "medium": "ENTER MATERIAL HERE",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/jookh/wearables/wear-79-view-1.jpg",
+      "images/jookh/wearables/wear-79-view-2.jpg"
+    ],
+    "status": "sold",
+    "collection_line": "24 Carats"
+  },
+  {
+    "id": "wear-80",
+    "name": "Nuit Étoilée",
+    "category": "wearables",
+    "collection": "Jookh Couture",
+    "price": "ENTER PRICE HERE",
+    "medium": "ENTER MATERIAL HERE",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/jookh/wearables/wear-80-view-1.jpg",
+      "images/jookh/wearables/wear-80-view-2.jpg"
+    ],
+    "status": "sold",
+    "subcollection": "Japan",
+    "collection_line": "Essential"
+  },
+  {
+    "id": "wear-81",
+    "name": "Or Liquide",
+    "category": "wearables",
+    "collection": "Jookh Couture",
+    "price": "ENTER PRICE HERE",
+    "medium": "ENTER MATERIAL HERE",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/jookh/wearables/wear-81-view-1.jpg"
+    ],
+    "status": "sold",
+    "collection_line": "Essential"
+  },
+  {
+    "id": "wear-82",
+    "name": "Manchettes d'Or",
+    "category": "wearables",
+    "collection": "Jookh Couture",
+    "price": "ENTER PRICE HERE",
+    "medium": "ENTER MATERIAL HERE",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/jookh/wearables/wear-82-view-1.jpg",
+      "images/jookh/wearables/wear-82-view-2.jpg"
+    ],
+    "status": "sold",
+    "subcollection": "Oxford",
+    "collection_line": "Essential"
+  },
+  {
+    "id": "wear-83",
+    "name": "Cuivre Sauvage",
+    "category": "wearables",
+    "collection": "Jookh Couture",
+    "price": "ENTER PRICE HERE",
+    "medium": "ENTER MATERIAL HERE",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/jookh/wearables/wear-83-view-1.jpg",
+      "images/jookh/wearables/wear-83-view-2.jpg"
+    ],
+    "status": "sold",
+    "subcollection": "Oxford",
+    "collection_line": "Essential"
+  },
+  {
+    "id": "wear-84",
+    "name": "Cèdre",
+    "category": "wearables",
+    "collection": "Jookh Couture",
+    "price": "ENTER PRICE HERE",
+    "medium": "ENTER MATERIAL HERE",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/jookh/wearables/wear-84-view-1.png",
+      "images/jookh/wearables/wear-84-view-2.png"
+    ],
+    "status": "sold",
+    "subcollection": "Oxford",
+    "collection_line": "Essential"
+  },
+  {
+    "id": "wear-85",
+    "name": "Bleu Beirut",
+    "category": "wearables",
+    "collection": "Jookh Couture",
+    "price": "ENTER PRICE HERE",
+    "medium": "ENTER MATERIAL HERE",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/jookh/wearables/wear-85-view-1.png",
+      "images/jookh/wearables/wear-85-view-2.png"
+    ],
+    "status": "sold",
+    "subcollection": "Oxford",
+    "collection_line": "Essential"
+  },
+  {
+    "id": "wear-86",
+    "name": "Rosée",
+    "category": "wearables",
+    "collection": "Jookh Couture",
+    "price": "ENTER PRICE HERE",
+    "medium": "ENTER MATERIAL HERE",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/jookh/wearables/wear-86-view-1.png",
+      "images/jookh/wearables/wear-86-view-2.png"
+    ],
+    "status": "sold",
+    "subcollection": "Japan",
+    "collection_line": "24 Carats"
+  },
+  {
+    "id": "wear-87",
+    "name": "Soleil Levant",
+    "category": "wearables",
+    "collection": "Jookh Couture",
+    "price": "ENTER PRICE HERE",
+    "medium": "ENTER MATERIAL HERE",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/jookh/wearables/wear-87-view-1.png",
+      "images/jookh/wearables/wear-87-view-2.png"
+    ],
+    "status": "sold",
+    "subcollection": "Japan",
+    "collection_line": "24 Carats"
+  },
+  {
+    "id": "wear-88",
+    "name": "Confetti Blanc",
+    "category": "wearables",
+    "collection": "Jookh Couture",
+    "price": "ENTER PRICE HERE",
+    "medium": "ENTER MATERIAL HERE",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/jookh/wearables/wear-88-view-1.png",
+      "images/jookh/wearables/wear-88-view-2.png"
+    ],
+    "status": "sold",
+    "subcollection": "Oxford",
+    "collection_line": "Essential"
+  },
+  {
+    "id": "wear-89",
+    "name": "Charbon",
+    "category": "wearables",
+    "collection": "Jookh Couture",
+    "price": "ENTER PRICE HERE",
+    "medium": "ENTER MATERIAL HERE",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/jookh/wearables/wear-89-view-1.png",
+      "images/jookh/wearables/wear-89-view-2.png"
+    ],
+    "status": "sold",
+    "subcollection": "Oxford",
+    "collection_line": "Essential"
+  },
+  {
+    "id": "wear-90",
+    "name": "Tournesol",
+    "category": "wearables",
+    "collection": "Jookh Couture",
+    "price": "ENTER PRICE HERE",
+    "medium": "ENTER MATERIAL HERE",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/jookh/wearables/wear-90-view-1.png",
+      "images/jookh/wearables/wear-90-view-2.png"
+    ],
+    "status": "sold",
+    "subcollection": "Oxford",
+    "collection_line": "Essential"
+  },
+  {
+    "id": "wear-91",
+    "name": "Brume",
+    "category": "wearables",
+    "collection": "Jookh Couture",
+    "price": "ENTER PRICE HERE",
+    "medium": "ENTER MATERIAL HERE",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/jookh/wearables/wear-91-view-1.png",
+      "images/jookh/wearables/wear-91-view-2.png"
+    ],
+    "status": "sold",
+    "subcollection": "Andalusia",
+    "collection_line": "Essential"
+  },
+  {
+    "id": "wear-92",
+    "name": "Iris Sauvage",
+    "category": "wearables",
+    "collection": "Jookh Couture",
+    "price": "ENTER PRICE HERE",
+    "medium": "ENTER MATERIAL HERE",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/jookh/wearables/wear-92-view-1.png",
+      "images/jookh/wearables/wear-92-view-2.png"
+    ],
+    "status": "sold",
+    "subcollection": "Andalusia",
+    "collection_line": "Essential"
+  },
+  {
+    "id": "wear-93",
+    "name": "Marine",
+    "category": "wearables",
+    "collection": "Jookh Couture",
+    "price": "ENTER PRICE HERE",
+    "medium": "ENTER MATERIAL HERE",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/jookh/wearables/wear-93-view-1.png",
+      "images/jookh/wearables/wear-93-view-2.png"
+    ],
+    "status": "sold",
+    "subcollection": "Andalusia",
+    "collection_line": "Essential"
+  },
+  {
+    "id": "wear-94",
+    "name": "Coquelicot",
+    "category": "wearables",
+    "collection": "Jookh Couture",
+    "price": "ENTER PRICE HERE",
+    "medium": "ENTER MATERIAL HERE",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/jookh/wearables/wear-94-view-1.png",
+      "images/jookh/wearables/wear-94-view-2.png"
+    ],
+    "status": "sold",
+    "subcollection": "Andalusia",
+    "collection_line": "Essential"
+  },
+  {
+    "id": "wear-95",
+    "name": "Pluie d'Argent",
+    "category": "wearables",
+    "collection": "Jookh Couture",
+    "price": "ENTER PRICE HERE",
+    "medium": "ENTER MATERIAL HERE",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/jookh/wearables/wear-95-view-1.png",
+      "images/jookh/wearables/wear-95-view-2.png"
+    ],
+    "status": "sold",
+    "subcollection": "Andalusia",
+    "collection_line": "Essential"
+  },
+  {
+    "id": "wear-96",
+    "name": "Sable Doré",
+    "category": "wearables",
+    "collection": "Jookh Couture",
+    "price": "ENTER PRICE HERE",
+    "medium": "",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/jookh/wearables/wear-96-view-1.png",
+      "images/jookh/wearables/wear-96-view-2.png"
+    ],
+    "status": "sold",
+    "subcollection": "Andalusia",
+    "collection_line": "Essential"
+  },
+  {
+    "id": "wear-97",
+    "name": "Aurore Pêche",
+    "category": "wearables",
+    "collection": "Jookh Couture",
+    "price": "ENTER PRICE HERE",
+    "medium": "ENTER MATERIAL HERE",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/jookh/wearables/wear-97-view-1.png",
+      "images/jookh/wearables/wear-97-view-2.png"
+    ],
+    "status": "sold",
+    "subcollection": "No sleeve",
+    "collection_line": "Essential"
+  },
+  {
+    "id": "wear-98",
+    "name": "Coucher de Soleil",
+    "category": "wearables",
+    "collection": "Jookh Couture",
+    "price": "ENTER PRICE HERE",
+    "medium": "ENTER MATERIAL HERE",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/jookh/wearables/wear-98-view-1.png",
+      "images/jookh/wearables/wear-98-view-2.png"
+    ],
+    "status": "sold",
+    "subcollection": "No sleeve",
+    "collection_line": "Essential"
+  },
+  {
+    "id": "wear-99",
+    "name": "Bulles Bleues",
+    "category": "wearables",
+    "collection": "Jookh Couture",
+    "price": "ENTER PRICE HERE",
+    "medium": "ENTER MATERIAL HERE",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/jookh/wearables/wear-99-view-1.png",
+      "images/jookh/wearables/wear-99-view-2.png"
+    ],
+    "status": "sold",
+    "subcollection": "No sleeve",
+    "collection_line": "Essential"
+  },
+  {
+    "id": "wear-sold-olive",
+    "name": "Oliva Roma Blazer",
+    "category": "wearables",
+    "collection": "Jookh Couture",
+    "price": "380",
+    "medium": "cotton",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/jookh/wearables/wear-sold-olive-view-1.jpg",
+      "images/jookh/wearables/wear-sold-olive-view-2.jpg"
+    ],
+    "status": "available",
+    "subcollection": "Roma",
+    "collection_line": "Essential"
+  },
+  {
+    "id": "wear-265",
+    "name": "Sarouel Rayé",
+    "category": "wearables",
+    "collection": "Jookh Couture",
+    "price": "ENTER PRICE HERE",
+    "medium": "cotton",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/jookh/wearables/wear-265-view-1.png"
+    ],
+    "status": "sold",
+    "subcollection": "Zagros",
+    "collection_line": "Essential"
+  },
+  {
+    "id": "wear-266",
+    "name": "Nuit Dorée",
+    "category": "wearables",
+    "collection": "Jookh Couture",
+    "price": "200",
+    "medium": "tulle/silk",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/jookh/wearables/wear-266-view-1.png"
+    ],
+    "status": "available",
+    "subcollection": "Tulle",
+    "collection_line": "24 Carats"
+  },
+  {
+    "id": "wear-267",
+    "name": "Aquarelle Tulle",
+    "category": "wearables",
+    "collection": "Jookh Couture",
+    "price": "200",
+    "medium": "tulle",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/jookh/wearables/wear-267-view-1.png"
+    ],
+    "status": "available",
+    "subcollection": "Tulle",
+    "collection_line": "Essential"
   }
 ]

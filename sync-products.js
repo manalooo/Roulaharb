@@ -125,7 +125,7 @@ function collectionFor(category) {
 
 function buildProduct(row) {
   var category        = (row.Category        || '').toLowerCase().trim();
-  var status          = (row.Status          || 'available').toLowerCase().trim();
+  var status          = ((row.Status || row.sold) || 'available').toLowerCase().trim();
   var subcollection   = (row.Subcollection   || '').trim();
   var collectionLine  = (row.Collection_Line || '').trim();
   var era             = (row.Era             || '').trim().toLowerCase(); // 'new' | 'archive' | ''

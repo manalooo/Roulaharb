@@ -8,7 +8,7 @@
 
 /* Performance: content-visibility for below-fold sections */
 @media (min-width: 769px) {
-  #jookh, #plo, #paintings, #about, #philosophy, #contact, #footer {
+  #lookbook, #arrivals, #archive, #about, #philosophy, #contact, #footer {
     content-visibility: auto;
     contain-intrinsic-size: 0 800px;
   }
@@ -669,16 +669,8 @@ a   { text-decoration: none; color: inherit; }
 .hero-tagline::before { right: calc(100% + 1.2rem); }
 .hero-tagline::after  { left:  calc(100% + 0.8rem); }
 
-/* CTA logo buttons — refined with labels beneath */
-.hero-cta {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  gap: 0;
-  background: #FBE4D8;   /* pale rose-oyster — first Byzantine wash */
-  padding: 2.4rem 3rem;
-}
+/* (Legacy .hero-cta logo-button rule removed — it painted a stray rose box
+   behind the current CTA. The active .hero-cta rule lives further below.) */
 .hero-logo-btn {
   display: flex;
   flex-direction: column;
@@ -935,6 +927,69 @@ a   { text-decoration: none; color: inherit; }
   color: #fff;
 }
 
+/* ─── Watch-by-collection navigator ─── */
+.collection-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.6rem;
+  max-width: 920px;
+  margin: 1.6rem auto 2.6rem;
+}
+.collection-tab {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.5rem;
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--wine-dark);
+  background: transparent;
+  border: 1px solid rgba(30,7,19,0.22);
+  border-radius: 999px;
+  padding: 0.5rem 1.15rem;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+.collection-tab:hover,
+.collection-tab:focus-visible {
+  border-color: var(--wine-dark);
+  background: rgba(30,7,19,0.06);
+  outline: none;
+}
+.collection-tab.is-active {
+  background: var(--wine-dark);
+  border-color: var(--wine-dark);
+  color: #fff;
+}
+.collection-tab-count {
+  font-size: 0.62rem;
+  letter-spacing: 0.04em;
+  opacity: 0.6;
+}
+.collection-tab.is-active .collection-tab-count { opacity: 0.8; }
+
+/* Only the active collection's pieces are shown */
+.collection-panel { display: none; }
+.collection-panel.is-active { display: block; }
+
+/* Two-level navigation: main collection (line) → theme */
+.collection-nav--lines { margin: 1.4rem auto 0.4rem; }
+.collection-tab--line { font-size: 0.84rem; letter-spacing: 0.12em; }
+.collection-nav--themes {
+  margin: 0.7rem auto 2rem;
+  padding-top: 0.9rem;
+  border-top: 1px solid rgba(30,7,19,0.1);
+}
+.collection-nav--themes .collection-tab {
+  font-size: 0.68rem;
+  padding: 0.4rem 0.95rem;
+  letter-spacing: 0.08em;
+}
+.line-block { display: none; }
+.line-block.is-active { display: block; }
+
 .jookh-cat-header {
   display: flex;
   align-items: center;
@@ -975,30 +1030,57 @@ a   { text-decoration: none; color: inherit; }
 /* 4-col variant for bags */
 .jookh-grid-4 { grid-template-columns: repeat(4, 1fr); gap: 2.2rem 1.6rem; }
 
-/* ── Subcollection headers ── */
-.jookh-subcat-header {
+/* ── Collection-line headers ── */
+.jookh-line-header {
   display: flex;
   align-items: center;
   gap: 1.2rem;
-  margin: 2.5rem 0 1.5rem;
+  margin: 3rem 0 1.6rem;
 }
-.jookh-subcat-header:first-child { margin-top: 0; }
-.jookh-subcat-title {
+.jookh-line-header:first-child { margin-top: 0; }
+.jookh-line-title {
   font-family: var(--font-serif);
-  font-size: clamp(1.3rem, 2.5vw, 1.9rem);
+  font-size: clamp(1.4rem, 2.6vw, 2rem);
   font-weight: 300;
   font-style: italic;
   letter-spacing: 0.08em;
   color: var(--wine-dark);
   white-space: nowrap;
 }
-.jookh-subcat-line {
+.jookh-line-rule {
   flex: 1;
   height: 1px;
   background: linear-gradient(to right, rgba(30,7,19,0.22), transparent);
 }
+
+/* ── Subcollection headers ── */
+.jookh-subcat-header {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  margin: 1.6rem 0 1rem;
+}
+.jookh-subcat-header:first-child { margin-top: 0; }
+.jookh-subcat-title {
+  font-family: var(--font-sans);
+  font-size: clamp(0.82rem, 1.3vw, 0.95rem);
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(30, 7, 19, 0.64);
+  white-space: nowrap;
+}
+.jookh-subcat-line {
+  flex: 0 0 2rem;
+  height: 1px;
+  background: rgba(30, 7, 19, 0.12);
+}
+.jookh-subcat-header--under-line {
+  margin-top: 1rem;
+  margin-bottom: 0.8rem;
+}
 .jookh-subgrid {
-  margin-bottom: 2.5rem;
+  margin-bottom: 2rem;
 }
 
 /* Wearable organic photo strips */
@@ -3638,3 +3720,163 @@ body.page-lookbook #lookbook-page {
 .nav-links a[aria-current="page"] {
   color: #C94A5A;
 }
+
+
+/* ═══════════════════════════════════════════════════════
+   REDESIGN EXTRAS — Hero CTAs, Arrivals, Archive
+   ═══════════════════════════════════════════════════════ */
+
+/* Hero CTAs */
+.hero-cta {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2.4rem;
+}
+.hero-cta-primary,
+.hero-cta-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 1rem 2rem;
+  border-radius: 999px;
+  transition: transform 0.3s var(--ease), background 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+.hero-cta-primary {
+  background: var(--pg-frame);
+  color: var(--wine-dark);
+  box-shadow: 0 6px 22px rgba(30, 7, 19, 0.22);
+}
+.hero-cta-primary:hover,
+.hero-cta-primary:focus-visible {
+  transform: translateY(-3px);
+  background: #fff;
+  box-shadow: 0 10px 30px rgba(30, 7, 19, 0.28);
+}
+.hero-cta-secondary {
+  background: rgba(30, 7, 19, 0.28);
+  -webkit-backdrop-filter: blur(3px);
+  backdrop-filter: blur(3px);
+  color: #fff;
+  border: 1px solid rgba(244, 237, 228, 0.7);
+  text-shadow: 0 1px 6px rgba(30, 7, 19, 0.45);
+}
+.hero-cta-secondary:hover,
+.hero-cta-secondary:focus-visible {
+  background: rgba(244, 237, 228, 0.12);
+  border-color: var(--pg-frame);
+  transform: translateY(-3px);
+}
+
+@media (max-width: 480px) {
+  .hero-cta {
+    flex-direction: column;
+    align-items: center;
+  }
+  .hero-cta-primary,
+  .hero-cta-secondary {
+    width: min(100%, 260px);
+  }
+}
+
+/* Arrivals section — warm gallery wall */
+#arrivals {
+  position: relative;
+  padding: var(--space-2xl) 0 var(--space-3xl);
+  background: linear-gradient(
+    180deg,
+    #FBE4D8 0%,
+    #F4EDE4 10%,
+    #F4EDE4 90%,
+    #FBE4D8 100%
+  );
+  overflow: hidden;
+}
+.arrivals-label { color: #B84530; }
+
+/* Archive section — dusk-to-warm transition */
+#archive {
+  position: relative;
+  padding: var(--space-2xl) 0 var(--space-3xl);
+  background: linear-gradient(
+    180deg,
+    #FBE4D8 0%,
+    #F4EDE4 12%,
+    #F4EDE4 70%,
+    #E88B6E 100%
+  );
+  overflow: hidden;
+}
+.archive-label { color: #6B1F2E; }
+
+/* Archive wrap gradient must match archive section bottom */
+#archive .archive-wrap:not(.expanded)::after {
+  background: linear-gradient(to bottom,
+    rgba(232, 139, 110, 0) 0%,
+    rgba(232, 139, 110, 0.85) 55%,
+    #E88B6E 100%
+  );
+}
+
+/* Category groups inside arrivals/archive */
+.arrivals-category-group,
+.archive-category-group {
+  margin-bottom: 4rem;
+}
+.arrivals-category-group:last-child,
+.archive-category-group:last-child {
+  margin-bottom: 0;
+}
+
+/* Empty grid message */
+.empty-grid-note {
+  text-align: center;
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: clamp(1rem, 1.4vw, 1.25rem);
+  color: var(--text-muted);
+  padding: 3rem 1rem;
+}
+
+/* Centered CTA under lookbook teaser */
+.lookbook-teaser-cta {
+  text-align: center;
+  margin-top: var(--space-xl);
+  padding-top: var(--space-lg);
+  border-top: 1px solid rgba(184, 69, 48, 0.18);
+}
+
+/* Sold pieces: keep the image fully visible, only show the Claimed tag */
+.card--sold .card-img-wrap::after { display: none; }
+.product-card.card--sold .main-img,
+.product-card.card--sold .hover-img { filter: none; }
+
+/* Archive subcollection filter */
+.archive-subcollection-filter {
+  margin: 0 auto 2.5rem;
+  text-align: center;
+}
+.archive-subcollection-label {
+  display: block;
+  font-family: var(--font-sans);
+  font-size: 0.6rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 0.6rem;
+}
+.archive-subcollection-chips {
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Hide archive headers with no visible cards */
+.jookh-subcat-header.is-filtered-out,
+.jookh-line-header.is-filtered-out { display: none !important; }

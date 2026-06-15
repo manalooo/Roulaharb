@@ -4,10 +4,10 @@
             lightbox, inquiry basket, custom cursor
    =================================================== */
 
+var prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
 (function () {
   'use strict';
-
-  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   // ─── HERO SLIDESHOW ──────────────────────────────
   (function () {
@@ -724,10 +724,8 @@
 (function gridExpanders() {
   'use strict';
   const presets = {
-    'scarves-grid':   { initial: 3, label: 'scarves'   },
-    'bags-grid':      { initial: 4, label: 'bags'      },
-    'wearables-grid': { initial: 3, label: 'pieces'    },
-    'plo-grid':       { initial: 3, label: 'pillows'   },
+    // arrivals shows every available piece (no collapsing) — see-more only on archive
+    'archive-grid':  { initial: 6, label: 'pieces' }
   };
 
   function setupExpanders() {
@@ -782,94 +780,41 @@
 })();
 
 /* ═══════════════════════════════════════════════════════
-   COLLECTION FILTERS — Jookh collection line chips
+   ARCHIVE TOGGLE
    ═══════════════════════════════════════════════════════ */
-(function collectionFilters() {
+(function archiveToggle() {
   'use strict';
+  var wrap = document.getElementById('archive-wrap');
+  var btn  = document.getElementById('archive-toggle');
+  if (!wrap || !btn) return;
 
-  const FILTER_ORDER = ['Canvas', '24 Carats', 'Luxurious', "Levi's x Jookh", 'Essential'];
-  const ACTIVE_CLASS = 'is-active';
-  const HIDDEN_CLASS = 'is-filtered-out';
-  const EMPTY_CLASS  = 'is-empty';
+  btn.addEventListener('click', function () {
+    var isExpanded = wrap.classList.toggle('expanded');
+    btn.classList.toggle('is-expanded', isExpanded);
+    btn.setAttribute('aria-expanded', String(isExpanded));
+    btn.querySelector('.archive-toggle-text').textContent = isExpanded
+      ? 'Show fewer claimed pieces'
+      : 'Browse claimed pieces';
+    if (typeof window.__rerollStickers === 'function') {
+      window.__rerollStickers();
+      setTimeout(window.__rerollStickers, 80);
+    }
+  });
+})();
 
-  function sortLabels(labels) {
-    return labels.slice().sort(function (a, b) {
-      var ai = FILTER_ORDER.indexOf(a);
-      var bi = FILTER_ORDER.indexOf(b);
-      if (ai === -1) ai = 99;
-      if (bi === -1) bi = 99;
-      return ai - bi;
-    });
-  }
-
-  function applyFilter(filter) {
-    var jookh = document.getElementById('jookh');
-    if (!jookh) return;
-
-    var cards = jookh.querySelectorAll('.product-card');
-    cards.forEach(function (card) {
-      var line = card.dataset.collectionLine || 'Essential';
-      var show = filter === 'all' || line === filter;
-      card.classList.toggle(HIDDEN_CLASS, !show);
-    });
-
-    // Hide whole categories with no visible cards
-    jookh.querySelectorAll('.jookh-category').forEach(function (cat) {
-      var visible = cat.querySelectorAll('.product-card:not(.' + HIDDEN_CLASS + ')').length;
-      cat.classList.toggle(EMPTY_CLASS, !visible);
-    });
-
-    // Hide subcollection headers whose next grid has no visible cards
-    jookh.querySelectorAll('.jookh-subcat-header').forEach(function (header) {
-      var grid = header.nextElementSibling;
-      if (!grid || !grid.classList.contains('jookh-subgrid')) return;
-      var visible = grid.querySelectorAll('.product-card:not(.' + HIDDEN_CLASS + ')').length;
-      header.classList.toggle(EMPTY_CLASS, !visible);
-    });
-
-  }
-
-  function setActive(btn) {
-    var container = document.getElementById('collection-filters');
-    if (!container) return;
-    container.querySelectorAll('button').forEach(function (b) { b.classList.remove(ACTIVE_CLASS); });
-    btn.classList.add(ACTIVE_CLASS);
-  }
-
-  window.initCollectionFilters = function (products) {
-    var container = document.getElementById('collection-filters');
-    if (!container || container.dataset.filtersBuilt) return;
-
-    // Only Jookh products (not P-Lo)
-    var lines = {};
-    (products || []).forEach(function (p) {
-      if (!p || p.collection === 'P-Lo') return;
-      lines[p.collection_line || 'Essential'] = true;
-    });
-
-    var labels = sortLabels(Object.keys(lines));
-    if (labels.length < 2) return; // no need for a single filter
-
-    labels.unshift('All');
-
-    labels.forEach(function (label) {
-      var btn = document.createElement('button');
-      btn.type = 'button';
-      btn.className = 'collection-filter-btn';
-      btn.textContent = label;
-      btn.dataset.filter = label === 'All' ? 'all' : label;
-      if (label === 'All') btn.classList.add(ACTIVE_CLASS);
-
-      btn.addEventListener('click', function () {
-        applyFilter(btn.dataset.filter);
-        setActive(btn);
-      });
-
-      container.appendChild(btn);
-    });
-
-    container.dataset.filtersBuilt = '1';
-  };
+/* ═══════════════════════════════════════════════════════
+   BACK TO TOP
+   ═══════════════════════════════════════════════════════ */
+(function backToTop() {
+  'use strict';
+  var btn = document.getElementById('back-to-top');
+  if (!btn) return;
+  window.addEventListener('scroll', function () {
+    btn.classList.toggle('visible', window.scrollY > 600);
+  }, { passive: true });
+  btn.addEventListener('click', function () {
+    window.scrollTo({ top: 0, behavior: prefersReducedMotion ? 'auto' : 'smooth' });
+  });
 })();
 
 /* ═══════════════════════════════════════════════════════
