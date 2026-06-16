@@ -234,20 +234,6 @@ window.PRODUCTS = [
     "collection_line": "Essential"
   },
   {
-    "id": "paint-09",
-    "name": "Aurore",
-    "category": "paintings",
-    "collection": "Jookh Couture",
-    "price": "ENTER PRICE HERE",
-    "medium": "Mixed media on canvas",
-    "edition": "One-of-a-kind · Signed by the artist",
-    "views": [
-      "images/paintings/paint-09-view-1.jpg"
-    ],
-    "status": "available",
-    "collection_line": "Essential"
-  },
-  {
     "id": "wear-97",
     "name": "Aurore Pêche",
     "category": "wearables",
@@ -836,20 +822,6 @@ window.PRODUCTS = [
     ],
     "status": "available",
     "subcollection": "Amour",
-    "collection_line": "Essential"
-  },
-  {
-    "id": "paint-02",
-    "name": "Champ Fleuri",
-    "category": "paintings",
-    "collection": "Jookh Couture",
-    "price": "ENTER PRICE HERE",
-    "medium": "Mixed media on canvas",
-    "edition": "One-of-a-kind · Signed by the artist",
-    "views": [
-      "images/paintings/paint-02-view-1.jpg"
-    ],
-    "status": "available",
     "collection_line": "Essential"
   },
   {
@@ -3210,20 +3182,6 @@ window.PRODUCTS = [
     "collection_line": "Essential"
   },
   {
-    "id": "paint-10",
-    "name": "Rosa Mundi",
-    "category": "paintings",
-    "collection": "Jookh Couture",
-    "price": "ENTER PRICE HERE",
-    "medium": "Mixed media on canvas",
-    "edition": "One-of-a-kind · Signed by the artist",
-    "views": [
-      "images/paintings/paint-10-view-1.jpg"
-    ],
-    "status": "available",
-    "collection_line": "Essential"
-  },
-  {
     "id": "wear-127",
     "name": "Rose Brodée",
     "category": "wearables",
@@ -4316,6 +4274,48 @@ window.PRODUCTS = [
     ],
     "status": "available",
     "subcollection": "OSAKA",
+    "collection_line": "Essential"
+  },
+  {
+    "id": "paint-11",
+    "name": "Brasier",
+    "category": "paintings",
+    "collection": "Jookh Couture",
+    "price": "ENTER PRICE HERE",
+    "medium": "Mixed media on canvas",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/paintings/paint-11-view-1.jpg"
+    ],
+    "status": "available",
+    "collection_line": "Essential"
+  },
+  {
+    "id": "paint-12",
+    "name": "Jardin Émeraude",
+    "category": "paintings",
+    "collection": "Jookh Couture",
+    "price": "ENTER PRICE HERE",
+    "medium": "Mixed media on canvas",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/paintings/paint-12-view-1.jpg"
+    ],
+    "status": "available",
+    "collection_line": "Essential"
+  },
+  {
+    "id": "paint-13",
+    "name": "Roses Ambrées",
+    "category": "paintings",
+    "collection": "Jookh Couture",
+    "price": "ENTER PRICE HERE",
+    "medium": "Mixed media on canvas",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/paintings/paint-13-view-1.jpg"
+    ],
+    "status": "available",
     "collection_line": "Essential"
   }
 ];
