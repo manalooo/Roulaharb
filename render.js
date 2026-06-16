@@ -570,8 +570,9 @@
       infoRow.appendChild(medEl);
     }
 
+    // Sold/claimed pieces (the Archive) never show a price — the "Claimed" tag says it all.
     var priceRaw = product.price != null ? String(product.price) : '';
-    if (priceRaw && priceRaw.indexOf('ENTER') === -1 && priceRaw.trim() !== '') {
+    if (!isSold && priceRaw && priceRaw.indexOf('ENTER') === -1 && priceRaw.trim() !== '') {
       var priceEl = el('span', 'card-price' + (isPlo ? ' card-price--plo' : ''));
       var priceNum = parseFloat(priceRaw);
       priceEl.textContent = isNaN(priceNum) ? priceRaw : '$' + priceNum.toLocaleString('en-US');
