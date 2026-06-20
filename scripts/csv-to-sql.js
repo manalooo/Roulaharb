@@ -57,6 +57,12 @@ for (const line of lines) {
       const arr = raw.split('|').map(s => stripImg(s.trim())).filter(Boolean);
       return arr.length ? JSON.stringify(arr) : null;
     })(),
+    // Catalogue metadata — powers the Collection-page facet filters.
+    type:      obj.Type      || null,
+    color:     obj.Color     || null,
+    fit:       obj.Fit       || null,
+    motif:     obj.Motif     || null,
+    technique: obj.Technique || null,
     sort_order: order++,
   });
 }
@@ -65,8 +71,8 @@ let sql = '-- Auto-generated from inventory.csv by scripts/csv-to-sql.js\n';
 sql += '-- Run with: wrangler d1 execute roulaharb-products --remote --file=db/seed.sql\n\n';
 sql += 'DELETE FROM products;\n\n';
 for (const r of rows) {
-  sql += `INSERT INTO products (id, name, category, subcollection, collection_line, era, status, price, material, main_image, hover_image, extra_views, sort_order) VALUES (`
-    + `${sqlQ(r.id)}, ${sqlQ(r.name)}, ${sqlQ(r.category)}, ${sqlQ(r.subcollection)}, ${sqlQ(r.collection_line)}, ${sqlQ(r.era)}, ${sqlQ(r.status)}, ${sqlQ(r.price)}, ${sqlQ(r.material)}, ${sqlQ(r.main_image)}, ${sqlQ(r.hover_image)}, ${sqlQ(r.extra_views)}, ${r.sort_order});\n`;
+  sql += `INSERT INTO products (id, name, category, subcollection, collection_line, era, status, price, material, main_image, hover_image, extra_views, type, color, fit, motif, technique, sort_order) VALUES (`
+    + `${sqlQ(r.id)}, ${sqlQ(r.name)}, ${sqlQ(r.category)}, ${sqlQ(r.subcollection)}, ${sqlQ(r.collection_line)}, ${sqlQ(r.era)}, ${sqlQ(r.status)}, ${sqlQ(r.price)}, ${sqlQ(r.material)}, ${sqlQ(r.main_image)}, ${sqlQ(r.hover_image)}, ${sqlQ(r.extra_views)}, ${sqlQ(r.type)}, ${sqlQ(r.color)}, ${sqlQ(r.fit)}, ${sqlQ(r.motif)}, ${sqlQ(r.technique)}, ${r.sort_order});\n`;
 }
 
 fs.writeFileSync(OUT, sql);

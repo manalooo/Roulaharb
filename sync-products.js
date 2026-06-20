@@ -158,6 +158,17 @@ function buildProduct(row) {
   if (collectionLine) product.collection_line = collectionLine;
   if (era)            product.era            = era; // 'new' | 'archive'
 
+  // Catalogue metadata \u2014 only emitted when filled in. Powers the Collection-page
+  // refine filters (Type / Colour / Fit / Motif). Empty cells are simply omitted.
+  var meta = {
+    type:      (row.Type      || '').trim(),
+    color:     (row.Color     || '').trim(),
+    fit:       (row.Fit       || '').trim(),
+    motif:     (row.Motif     || '').trim(),
+    technique: (row.Technique || '').trim()
+  };
+  Object.keys(meta).forEach(function (k) { if (meta[k]) product[k] = meta[k]; });
+
   return product;
 }
 

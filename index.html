@@ -32,7 +32,7 @@
 
   <!-- Fonts with font-display=swap for faster text rendering -->
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css?v=20260616price-001" />
+  <link rel="stylesheet" href="style.css?v=20260618collection-026" />
   <script>document.documentElement.classList.add('js-enabled');</script>
 
   <!-- JSON-LD Structured Data -->
@@ -100,9 +100,9 @@
         <span class="nav-logo-name">Roula Harb</span>
       </a>
       <ul class="nav-links" id="nav-links" role="menubar">
+        <li role="none"><a href="#arrivals" role="menuitem">Shop</a></li>
+        <li role="none"><a href="/collection/" role="menuitem">Collection</a></li>
         <li role="none"><a href="lookbook/" role="menuitem">Lookbook</a></li>
-        <li role="none"><a href="#arrivals" role="menuitem">Arrivals</a></li>
-        <li role="none"><a href="#archive" role="menuitem">Archive</a></li>
         <li role="none"><a href="#about" role="menuitem">About</a></li>
         <li role="none"><a href="#contact" role="menuitem">Contact</a></li>
       </ul>
@@ -229,35 +229,19 @@
       <img class="sticker" src="images/stickers/poppy-painted.png" data-parallax="0.16" alt="" loading="lazy" decoding="async" style="bottom: 7%; left: 3%; --w: 130px; --rot: -8deg;" />
       <div class="container">
         <div class="section-header reveal">
-          <p class="section-label archive-label">The Archive</p>
-          <h2 class="section-title">Claimed<br /><em>Works that found their home.</em></h2>
+          <p class="section-label archive-label">The Complete Works</p>
+          <h2 class="section-title">The Collection<br /><em>Every piece, one of a kind.</em></h2>
           <p class="section-desc">
-            A record of sold pieces. Browse for inspiration, or reach out to commission something similar.
+            A glimpse of the full body of work — hundreds of one-of-a-kind pieces, hand-painted in Beirut.
           </p>
         </div>
 
-        <div class="collection-filters" id="archive-filters" aria-label="Filter archive by category">
-          <button class="collection-filter-btn is-active" data-filter="all" type="button">All</button>
-          <button class="collection-filter-btn" data-filter="wearables" type="button">Wearables</button>
-          <button class="collection-filter-btn" data-filter="scarves" type="button">Scarves</button>
-          <button class="collection-filter-btn" data-filter="bags" type="button">Bags</button>
-          <button class="collection-filter-btn" data-filter="pillows" type="button">Pillows</button>
-          <button class="collection-filter-btn" data-filter="paintings" type="button">Paintings</button>
-        </div>
+        <!-- Curated highlight; the full catalogue lives on /collection/ -->
+        <div id="collection-highlight" class="jookh-grid jookh-subgrid"></div>
 
-        <div class="archive-subcollection-filter" id="archive-subcollection-filter" aria-label="Filter archive by subcollection" hidden>
-          <p class="archive-subcollection-label">Choose a subcollection</p>
-          <div class="collection-filters archive-subcollection-chips" id="archive-subcollection-chips"></div>
+        <div class="lookbook-teaser-cta reveal">
+          <a href="/collection/" class="btn-paintings">Explore the full collection &rarr;</a>
         </div>
-
-        <div class="archive-wrap expanded" id="archive-wrap">
-          <div id="archive-grid"></div>
-        </div>
-
-        <button class="archive-toggle is-expanded" id="archive-toggle" type="button" aria-expanded="true">
-          <span class="archive-toggle-text">Show fewer claimed pieces</span>
-          <span class="archive-toggle-icon" aria-hidden="true">↓</span>
-        </button>
       </div>
     </section>
 
@@ -416,10 +400,10 @@
 
   <button class="back-to-top" id="back-to-top" aria-label="Back to top">↑</button>
 
-  <script src="data/hero-slides.js?v=20260616price-001"></script>
-  <script src="data/products.js?v=1781526248292-002"></script>
-  <script src="render.js?v=20260616price-001"></script>
-  <script src="script.js?v=20260616price-001"></script>
+  <script src="data/hero-slides.js?v=20260618collection-026"></script>
+  <script src="data/products.js?v=20260618collection-026"></script>
+  <script src="render.js?v=20260618collection-026"></script>
+  <script src="script.js?v=20260618collection-026"></script>
   
   <script>
     // Smooth scroll for lookbook year jump links (offset sticky nav)

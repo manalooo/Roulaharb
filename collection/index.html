@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Collection — Roula Harb</title>
+  <meta name="description" content="The complete works of Roula Harb — every hand-painted wearable, scarf, bag, pillow and painting. Browse the full collection by type and theme." />
+  <link rel="canonical" href="https://roulaharb.com/collection/" />
+  <meta name="theme-color" content="#3B1E3A" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://roulaharb.com/collection/" />
+  <meta property="og:site_name" content="Roula Harb" />
+  <meta property="og:title" content="The Collection — Roula Harb" />
+  <meta property="og:description" content="The complete works — every one-of-a-kind piece, hand-painted in Beirut." />
+  <meta property="og:image" content="https://roulaharb.com/images/about/IMG_20250718_231651_852.webp" />
+  <meta property="og:locale" content="en_US" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/style.css?v=20260618collection-026" />
+  <script>document.documentElement.classList.add('js-enabled');</script>
+</head>
+<body class="page-collection">
+
+  <!-- Custom cursor -->
+  <div class="cursor-dot" id="cursor-dot" aria-hidden="true"></div>
+
+  <!-- NAV -->
+  <nav id="navbar" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="/" class="nav-logo" aria-label="Roula Harb — Home">
+        <span class="nav-logo-name">Roula Harb</span>
+      </a>
+      <ul class="nav-links" id="nav-links" role="menubar">
+        <li role="none"><a href="/#shop" role="menuitem">Shop</a></li>
+        <li role="none"><a href="/collection/" role="menuitem" aria-current="page">Collection</a></li>
+        <li role="none"><a href="/lookbook/" role="menuitem">Lookbook</a></li>
+        <li role="none"><a href="/#about" role="menuitem">About</a></li>
+        <li role="none"><a href="/#contact" role="menuitem">Contact</a></li>
+      </ul>
+      <span class="nav-edition" aria-hidden="true">
+        <span class="nav-edition-dot"></span>
+        Est. Beirut
+      </span>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-links">
+        <span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span>
+      </button>
+    </div>
+  </nav>
+
+  <main id="main-content">
+
+    <!-- COLLECTION — the complete works -->
+    <section id="archive" aria-label="The complete collection">
+      <!-- Flower stickers (decorative, behind the grid) -->
+      <img class="sticker" src="/images/stickers/tulip-parrot-magenta.png" data-parallax="0.22" alt="" loading="lazy" decoding="async" style="top: 5%; right: -1%; --w: 120px; --rot: 12deg;" />
+      <img class="sticker" src="/images/stickers/zinnia-orange.png" data-parallax="0.3" alt="" loading="lazy" decoding="async" style="top: 22%; left: -1%; --w: 100px; --rot: -16deg;" />
+      <img class="sticker" src="/images/stickers/pansy-purple-face.png" data-parallax="0.26" alt="" loading="lazy" decoding="async" style="bottom: 30%; right: 2%; --w: 90px; --rot: 18deg;" />
+      <img class="sticker" src="/images/stickers/poppy-painted.png" data-parallax="0.16" alt="" loading="lazy" decoding="async" style="bottom: 8%; left: 3%; --w: 130px; --rot: -8deg;" />
+
+      <div class="container">
+        <div class="section-header reveal">
+          <p class="section-label archive-label">The Complete Works</p>
+          <h2 class="section-title">The Collection<br /><em>Every piece, one of a kind.</em></h2>
+          <p class="section-desc">
+            The full body of work — hand-painted in Beirut, each piece signed and unrepeatable.
+            Filter by type, theme, or availability to find your way through.
+          </p>
+        </div>
+
+        <!-- Live scale statement — the "permanent collection" moment -->
+        <div class="collection-stats reveal" id="collection-stats" aria-live="polite"></div>
+
+        <!-- Gallery rooms: a horizontal "wings" strip — enter a collection by name -->
+        <div class="rooms-strip-wrap">
+          <button type="button" class="rooms-arrow rooms-arrow-prev" id="rooms-arrow-prev" aria-label="Previous collections" hidden>‹</button>
+          <div class="collection-rooms rooms-strip" id="collection-rooms" aria-label="Browse by collection"></div>
+          <button type="button" class="rooms-arrow rooms-arrow-next" id="rooms-arrow-next" aria-label="More collections">›</button>
+        </div>
+
+        <!-- Sticky, toggleable filter toolbar -->
+        <div class="collection-toolbar" id="collection-toolbar">
+          <div class="toolbar-bar">
+            <button type="button" class="toolbar-toggle" id="toolbar-toggle" aria-expanded="false" aria-controls="toolbar-panel">
+              <svg class="toolbar-toggle-ico" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+                <circle cx="8.6" cy="8.6" r="4.3" fill="#e7c98a"/>
+                <circle cx="15.2" cy="9" r="4.3" fill="#dd8a68"/>
+                <circle cx="8.6" cy="15.2" r="4.3" fill="#7fa6cb"/>
+                <circle cx="15.2" cy="15.2" r="4.3" fill="#c79ac0"/>
+              </svg>
+              <span class="toolbar-toggle-txt">Filters</span>
+              <span class="toolbar-toggle-badge" id="toolbar-toggle-badge" hidden></span>
+              <span class="toolbar-toggle-caret" aria-hidden="true">▾</span>
+            </button>
+            <div class="toolbar-summary" id="toolbar-summary" aria-live="polite"></div>
+            <button type="button" class="toolbar-clear" id="toolbar-clear" hidden>
+              <span class="toolbar-clear-x" aria-hidden="true">×</span> Clear
+            </button>
+          </div>
+
+          <div class="toolbar-panel" id="toolbar-panel">
+            <div class="refine-row">
+              <span class="refine-label">Show</span>
+              <div class="collection-filters collection-status" id="collection-status" aria-label="Filter by availability">
+                <button class="collection-filter-btn is-active" data-status="all" type="button">All</button>
+                <button class="collection-filter-btn" data-status="available" type="button">Available</button>
+                <button class="collection-filter-btn" data-status="claimed" type="button">Claimed</button>
+              </div>
+            </div>
+            <div class="refine-row">
+              <span class="refine-label">Category</span>
+              <div class="collection-filters" id="archive-filters" aria-label="Filter collection by category">
+                <button class="collection-filter-btn is-active" data-filter="all" type="button">All</button>
+                <button class="collection-filter-btn" data-filter="wearables" type="button">Wearables</button>
+                <button class="collection-filter-btn" data-filter="scarves" type="button">Scarves</button>
+                <button class="collection-filter-btn" data-filter="bags" type="button">Bags</button>
+                <button class="collection-filter-btn" data-filter="pillows" type="button">Pillows</button>
+                <button class="collection-filter-btn" data-filter="paintings" type="button">Paintings</button>
+              </div>
+            </div>
+            <div class="refine-row"><span class="refine-label">Type</span><div class="refine-chips" id="refine-type"></div></div>
+            <div class="refine-row"><span class="refine-label">Colour</span><div class="refine-chips" id="refine-color"></div></div>
+            <div class="refine-row"><span class="refine-label">Fit</span><div class="refine-chips" id="refine-fit"></div></div>
+            <div class="refine-row"><span class="refine-label">Motif</span><div class="refine-chips" id="refine-motif"></div></div>
+          </div>
+        </div>
+
+        <div class="archive-wrap expanded" id="archive-wrap">
+          <div id="archive-grid"></div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer id="footer">
+    <div class="footer-gradient-bar" aria-hidden="true"></div>
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <p class="footer-logo">Roula Harb</p>
+        <p class="footer-tagline">The Conceptual Art World</p>
+      </div>
+      <div class="footer-links">
+        <a href="/#shop">Shop</a>
+        <a href="/collection/">Collection</a>
+        <a href="/lookbook/">Lookbook</a>
+        <a href="/#about">About</a>
+        <a href="/#contact">Contact</a>
+      </div>
+      <div class="footer-social">
+        <a href="https://www.instagram.com/jookhcouture" target="_blank" rel="noopener" aria-label="Jookh Instagram" class="footer-social-link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          <span class="footer-social-label">Jookh</span>
+        </a>
+        <a href="https://www.instagram.com/artonpillows/" target="_blank" rel="noopener" aria-label="P-Lo Instagram" class="footer-social-link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          <span class="footer-social-label">P-Lo</span>
+        </a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 The Conceptual Art World of Roula Harb. All rights reserved. Each piece is an original work of art.</p>
+    </div>
+  </footer>
+
+  <script src="/data/products.js?v=20260618collection-026"></script>
+  <script src="/render.js?v=20260618collection-026"></script>
+  <script src="/script.js?v=20260618collection-026"></script>
+</body>
+</html>

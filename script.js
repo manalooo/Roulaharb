@@ -729,6 +729,10 @@ var prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)')
   };
 
   function setupExpanders() {
+    // The Collection page is the full museum wall — navigation is the gallery rooms
+    // + faceted filters, so we never chop each collection down to a "see more" stub.
+    if (document.body.classList.contains('page-collection')) return;
+
     Object.keys(presets).forEach(gridId => {
       const container = document.getElementById(gridId);
       if (!container) return;

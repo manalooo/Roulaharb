@@ -21,7 +21,9 @@
     } catch (e) { return ''; }
   })();
   function withV(url) {
-    if (!url || !ASSET_V || /^https?:\/\//.test(url)) return url;   // skip absolute/CDN urls
+    if (!url || /^https?:\/\//.test(url)) return url;               // skip absolute/CDN urls
+    if (url.indexOf('images/') === 0) url = '/' + url;              // root-absolute so it works on sub-pages (/collection/, /lookbook/)
+    if (!ASSET_V) return url;
     return url + (url.indexOf('?') === -1 ? '?' : '&') + 'v=' + ASSET_V;
   }
 
@@ -59,9 +61,76 @@
 
     renderArrivals(normalizedProducts);
     renderArchive(normalizedProducts);
-    wireFilters();
+    renderHighlight(normalizedProducts);
+    renderCollectionStats(normalizedProducts);
+    wireFilters();   // availability is now folded into the faceted engine in wireArchiveFilters
 
     if (typeof window.initReveal === 'function') window.initReveal();
+  }
+
+  // ─── COLLECTION PAGE: scale statement + availability toggle ──
+  function renderCollectionStats(products) {
+    var el2 = document.getElementById('collection-stats');
+    if (!el2) return;
+    var subs = {};
+    products.forEach(function (p) { var s = (p.subcollection || '').trim().toLowerCase(); if (s) subs[s] = 1; });
+    var avail = products.filter(function (p) { return p.status !== 'sold'; }).length;
+    function stat(num, label) { return '<span class="stat"><span class="stat-num">' + num + '</span><span class="stat-label">' + label + '</span></span>'; }
+    el2.innerHTML =
+      stat(products.length, 'one-of-a-kind works') +
+      '<span class="stat-sep" aria-hidden="true">·</span>' +
+      stat(Object.keys(subs).length, 'collections') +
+      '<span class="stat-sep" aria-hidden="true">·</span>' +
+      stat(avail, 'available now');
+  }
+
+  function wireCollectionStatus() {
+    var bar = document.getElementById('collection-status');
+    var grid = document.getElementById('archive-grid');
+    if (!bar || !grid) return;
+    Array.from(bar.querySelectorAll('.collection-filter-btn')).forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var st = btn.dataset.status || 'all';
+        bar.querySelectorAll('.collection-filter-btn').forEach(function (b) { b.classList.toggle('is-active', b === btn); });
+        grid.classList.remove('show-available', 'show-claimed');
+        if (st === 'available') grid.classList.add('show-available');
+        else if (st === 'claimed') grid.classList.add('show-claimed');
+        if (typeof window.__rerollStickers === 'function') { window.__rerollStickers(); setTimeout(window.__rerollStickers, 80); }
+      });
+    });
+  }
+
+  // ─── HOME COLLECTION HIGHLIGHT ───────────────────
+  // Home page: a teaser of the gallery "rooms" — one cover-tile per collection.
+  // Each tile deep-links into that room on /collection/; "See more" opens the full page.
+  var HOME_ROOMS = 12;   // ~2 rows of collection covers
+  function renderHighlight(products) {
+    var container = document.getElementById('collection-highlight');
+    if (!container) return;
+    container.className = 'collection-rooms home-rooms';
+    container.innerHTML = '';
+
+    var info = {}, order = [];
+    products.forEach(function (p) {
+      if (p.category !== 'wearables') return;
+      var v = (p.subcollection || '').trim();
+      if (!v) return;
+      if (!info[v]) { info[v] = { count: 0, cover: (p.views && p.views[0]) || '' }; order.push(v); }
+      info[v].count++;
+    });
+
+    order.slice(0, HOME_ROOMS).forEach(function (v) {
+      var a = document.createElement('a');
+      a.className = 'room-tile';
+      a.href = '/collection/?c=' + encodeURIComponent(v);
+      a.innerHTML =
+        '<span class="room-img" style="background-image:url(\'' + withV(info[v].cover) + '\')"></span>' +
+        '<span class="room-meta">' +
+          '<span class="room-name">' + displaySubName(v) + '</span>' +
+          '<span class="room-count">' + info[v].count + ' pieces</span>' +
+        '</span>';
+      container.appendChild(a);
+    });
   }
 
   // ─── ARRIVALS ────────────────────────────────────
@@ -84,15 +153,18 @@
     });
   }
 
-  // ─── ARCHIVE ─────────────────────────────────────
+  // ─── ARCHIVE / COLLECTION ────────────────────────
+  // On the Collection page (body.page-collection) this shows EVERY piece;
+  // on the home page it shows only sold/claimed pieces.
   function renderArchive(products) {
     var container = document.getElementById('archive-grid');
     if (!container) return;
     container.innerHTML = '';
 
-    var sold = products.filter(function (p) { return p.status === 'sold'; });
+    var isCollection = document.body.classList.contains('page-collection');
+    var sold = isCollection ? products.slice() : products.filter(function (p) { return p.status === 'sold'; });
     if (!sold.length) {
-      container.innerHTML = '<p class="empty-grid-note">No claimed pieces yet.</p>';
+      container.innerHTML = '<p class="empty-grid-note">' + (isCollection ? 'No pieces yet.' : 'No claimed pieces yet.') + '</p>';
       return;
     }
 
@@ -119,113 +191,22 @@
     group.appendChild(catHeader);
 
     if (category === 'wearables' && section === 'archive') {
-      // ── Two-level navigation: Main Collection (line) → Theme (subcollection) → pieces ──
-      var refreshFx = function () {
-        if (typeof window.initReveal === 'function') window.initReveal();
-        if (typeof window.__rerollStickers === 'function') { window.__rerollStickers(); setTimeout(window.__rerollStickers, 80); }
-      };
-
-      // Group by line, then by theme within line (preserve CSV order for themes).
-      var lineMap = {}, linesSeen = [];
+      // Collection page: flat & all-visible — every collection on the wall, grouped by theme.
+      var cSubs = {}, cOrder = [];
       items.forEach(function (p) {
-        var line = (p.collection_line || 'Essential').trim() || 'Essential';
-        var rawTheme = (p.subcollection || '').trim();
-        var themeKey = rawTheme ? rawTheme.toLowerCase() : '__atelier__';
-        if (!lineMap[line]) { lineMap[line] = { themes: {}, themeOrder: [] }; linesSeen.push(line); }
-        var L = lineMap[line];
-        if (!L.themes[themeKey]) { L.themes[themeKey] = { name: rawTheme, items: [] }; L.themeOrder.push(themeKey); }
-        L.themes[themeKey].items.push(p);
+        var raw = (p.subcollection || '').trim();
+        var key = raw ? raw.toLowerCase() : '__atelier__';
+        if (!cSubs[key]) { cSubs[key] = { name: raw, items: [] }; cOrder.push(key); }
+        cSubs[key].items.push(p);
       });
-
-      linesSeen.sort(function (a, b) {
-        var ai = LINE_ORDER.indexOf(a), bi = LINE_ORDER.indexOf(b);
-        return ((ai === -1 ? 99 : ai) - (bi === -1 ? 99 : bi)) || a.localeCompare(b);
+      cOrder.sort(function (a, b) { if (a === '__atelier__') return 1; if (b === '__atelier__') return -1; return 0; });
+      cOrder.forEach(function (key) {
+        var g = cSubs[key];
+        group.appendChild(buildSubcatHeader(displaySubName(g.name), true));
+        var grid = el('div', 'jookh-grid jookh-subgrid');
+        g.items.forEach(function (product) { grid.appendChild(buildCard(product, 'tall', cardIndex++)); });
+        group.appendChild(grid);
       });
-
-      var lineNav    = el('div', 'collection-nav collection-nav--lines reveal');
-      lineNav.setAttribute('role', 'tablist');
-      lineNav.setAttribute('aria-label', 'Main collections');
-      var blocksWrap = el('div', 'line-blocks');
-
-      linesSeen.forEach(function (line, li) {
-        var L = lineMap[line];
-        var lineFirst = li === 0;
-        var lineTotal = L.themeOrder.reduce(function (n, tk) { return n + L.themes[tk].items.length; }, 0);
-
-        var lineTab = el('button', 'collection-tab collection-tab--line' + (lineFirst ? ' is-active' : ''));
-        lineTab.type = 'button';
-        lineTab.dataset.line = line;
-        lineTab.setAttribute('role', 'tab');
-        lineTab.setAttribute('aria-selected', lineFirst ? 'true' : 'false');
-        lineTab.innerHTML = '<span class="collection-tab-name">' + displaySubName(line) + '</span>' +
-                            '<span class="collection-tab-count">' + lineTotal + '</span>';
-        lineNav.appendChild(lineTab);
-
-        var block = el('div', 'line-block' + (lineFirst ? ' is-active' : ''));
-        block.dataset.line = line;
-
-        var multiTheme = L.themeOrder.length > 1;
-        var themeNav   = el('div', 'collection-nav collection-nav--themes');
-        themeNav.setAttribute('role', 'tablist');
-        var themePanels = el('div', 'collection-panels');
-
-        L.themeOrder.forEach(function (tk, ti) {
-          var T = L.themes[tk];
-          var themeFirst = ti === 0;
-
-          if (multiTheme) {
-            var themeTab = el('button', 'collection-tab' + (themeFirst ? ' is-active' : ''));
-            themeTab.type = 'button';
-            themeTab.dataset.theme = tk;
-            themeTab.setAttribute('role', 'tab');
-            themeTab.setAttribute('aria-selected', themeFirst ? 'true' : 'false');
-            themeTab.innerHTML = '<span class="collection-tab-name">' + displaySubName(T.name) + '</span>' +
-                                 '<span class="collection-tab-count">' + T.items.length + '</span>';
-            themeNav.appendChild(themeTab);
-          }
-
-          var panel = el('div', 'collection-panel' + (themeFirst ? ' is-active' : ''));
-          panel.dataset.theme = tk;
-          var grid = el('div', 'jookh-grid jookh-subgrid');
-          T.items.forEach(function (product) { grid.appendChild(buildCard(product, 'tall', cardIndex++)); });
-          panel.appendChild(grid);
-          themePanels.appendChild(panel);
-        });
-
-        if (multiTheme) block.appendChild(themeNav);
-        block.appendChild(themePanels);
-
-        Array.from(themeNav.querySelectorAll('.collection-tab')).forEach(function (tt) {
-          tt.addEventListener('click', function () {
-            var tk = tt.dataset.theme;
-            Array.from(themeNav.querySelectorAll('.collection-tab')).forEach(function (x) {
-              var on = x === tt; x.classList.toggle('is-active', on); x.setAttribute('aria-selected', on ? 'true' : 'false');
-            });
-            Array.from(themePanels.querySelectorAll('.collection-panel')).forEach(function (pnl) {
-              pnl.classList.toggle('is-active', pnl.dataset.theme === tk);
-            });
-            refreshFx();
-          });
-        });
-
-        blocksWrap.appendChild(block);
-      });
-
-      Array.from(lineNav.querySelectorAll('.collection-tab--line')).forEach(function (lt) {
-        lt.addEventListener('click', function () {
-          var line = lt.dataset.line;
-          Array.from(lineNav.querySelectorAll('.collection-tab--line')).forEach(function (x) {
-            var on = x === lt; x.classList.toggle('is-active', on); x.setAttribute('aria-selected', on ? 'true' : 'false');
-          });
-          Array.from(blocksWrap.querySelectorAll('.line-block')).forEach(function (blk) {
-            blk.classList.toggle('is-active', blk.dataset.line === line);
-          });
-          refreshFx();
-        });
-      });
-
-      group.appendChild(lineNav);
-      group.appendChild(blocksWrap);
     } else if (category === 'wearables') {
       // Arrivals: group by real CSV subcollection name, preserving CSV order ('(none)' → Atelier, last).
       var arrSubs = {}, arrOrder = [];
@@ -393,111 +374,391 @@
     });
   }
 
+  // Map a colour name to a CSS swatch (a small dot beside each colour chip).
+  function colorSwatch(name) {
+    var m = {
+      Black: '#1a1a1a', White: '#fafafa', Ivory: '#f3ece0', Beige: '#e3d6c0', Brown: '#6b4f3a',
+      Taupe: '#b8a894', Sand: '#d8c8a8', Camel: '#c19a6b', Bronze: '#8c6a3f', Copper: '#a8623b',
+      Gold: '#c9a24b', Grey: '#9a9a9a', Silver: '#cdd2d6', Navy: '#1f2a44', Blue: '#3a5da8',
+      Green: '#4a7a4a', Emerald: '#1f7a5a', Olive: '#6b6a34', Pink: '#e39ab4', Red: '#c0392b',
+      Burgundy: '#7a2638', Coral: '#f08060', Peach: '#f5c0a0', Orange: '#e08a3c', Yellow: '#e8c84a',
+      Lavender: '#b9a8d6', Purple: '#8a6fb0', Denim: '#3b5a7a',
+      Multicolor: 'linear-gradient(135deg,#e0556b,#e8a13c,#5aa75a,#3a6ea8)'
+    };
+    return m[name] || '#bbb';
+  }
+
+  // Collection page: faceted filtering.
+  //  · Top bar = Category (Wearables / Scarves / …) and Availability (All / Available / Claimed).
+  //  · Refine box = Collection (the place-themed names) + Type + Colour + Fit + Motif.
+  // Everything combines, and every chip's count is recomputed live against the current
+  // selection (a value that would yield 0 results is dimmed) — true faceted search.
   function wireArchiveFilters() {
     var catBar = document.getElementById('archive-filters');
-    var subBar = document.getElementById('archive-subcollection-filter');
-    var subChips = document.getElementById('archive-subcollection-chips');
     var grid   = document.getElementById('archive-grid');
-    if (!catBar || !subBar || !subChips || !grid) return;
+    if (!catBar || !grid) return;
 
-    // Collect subcollections per category from rendered cards
-    var subsByCat = {};
-    grid.querySelectorAll('.archive-category-group').forEach(function (group) {
-      var cat = group.dataset.category;
-      if (!subsByCat[cat]) subsByCat[cat] = {};
-      group.querySelectorAll('.product-card').forEach(function (card) {
-        var sub = card.dataset.subcollection;
-        if (sub) subsByCat[cat][sub] = true;
-      });
+    var refineBox  = document.getElementById('archive-refine');
+    var statusBar  = document.getElementById('collection-status');
+
+    // Facet definitions. wearableOnly = value only meaningful on wearables.
+    var FACETS = [
+      { key: 'subcollection', boxId: 'refine-collection', all: 'All collections', wearableOnly: true,  display: displaySubName },
+      { key: 'type',          boxId: 'refine-type',       all: 'All types',       wearableOnly: true },
+      { key: 'color',         boxId: 'refine-color',      all: 'All colours',     swatch: true },
+      { key: 'fit',           boxId: 'refine-fit',        all: 'All fits',        wearableOnly: true },
+      { key: 'motif',         boxId: 'refine-motif',      all: 'All motifs',      wearableOnly: true }
+    ];
+
+    var state = { cat: 'all', avail: 'all' };
+    FACETS.forEach(function (f) { state[f.key] = ''; });
+
+    var cards = Array.prototype.slice.call(grid.querySelectorAll('.product-card'));
+    cards.forEach(function (card) {
+      var g = card.closest('.archive-category-group');
+      card._cat  = g ? g.dataset.category : '';
+      card._sold = card.classList.contains('card--sold');
     });
 
-    function applyFilter(cat, sub) {
-      // Category groups
+    // Does a card satisfy the current state? `ignore` skips one dimension
+    // ('cat', 'avail', or a facet key) so we can compute faceted counts.
+    function matches(card, ignore) {
+      if (ignore !== 'cat' && !(state.cat === 'all' || card._cat === state.cat)) return false;
+      if (ignore !== 'avail') {
+        if (state.avail === 'available' && card._sold) return false;
+        if (state.avail === 'claimed'  && !card._sold) return false;
+      }
+      for (var i = 0; i < FACETS.length; i++) {
+        var k = FACETS[i].key;
+        if (k === ignore) continue;
+        if (state[k] && card.dataset[k] !== state[k]) return false;
+      }
+      return true;
+    }
+
+    function facetCount(f, val) {
+      var n = 0;
+      for (var i = 0; i < cards.length; i++) {
+        var c = cards[i];
+        if (f.wearableOnly && c._cat !== 'wearables') continue;
+        if (c.dataset[f.key] !== val) continue;
+        if (matches(c, f.key)) n++;
+      }
+      return n;
+    }
+    function facetAllCount(f) {
+      var n = 0;
+      for (var i = 0; i < cards.length; i++) {
+        var c = cards[i];
+        if (f.wearableOnly && c._cat !== 'wearables') continue;
+        if (!c.dataset[f.key]) continue;
+        if (matches(c, f.key)) n++;
+      }
+      return n;
+    }
+    function dimCount(kind, val) {   // kind: 'cat' | 'avail'
+      var n = 0;
+      for (var i = 0; i < cards.length; i++) {
+        var c = cards[i];
+        if (kind === 'cat'   && val !== 'all' && c._cat !== val) continue;
+        if (kind === 'avail' && val === 'available' && c._sold) continue;
+        if (kind === 'avail' && val === 'claimed'  && !c._sold) continue;
+        if (matches(c, kind)) n++;
+      }
+      return n;
+    }
+
+    var facetRec = {};   // key -> { allChip, chips:{val:el} }
+    var roomsBox = document.getElementById('collection-rooms');
+    var roomRec  = {};   // subcollection value -> tile element
+
+    function buildFacet(f) {
+      var box = document.getElementById(f.boxId);
+      if (!box) return;
+      var present = {};
+      cards.forEach(function (c) {
+        if (f.wearableOnly && c._cat !== 'wearables') return;
+        var v = c.dataset[f.key];
+        if (v) present[v] = (present[v] || 0) + 1;
+      });
+      var keys = Object.keys(present).sort(function (a, b) { return present[b] - present[a] || a.localeCompare(b); });
+      box.innerHTML = '';
+      if (!keys.length) { if (box.parentNode) box.parentNode.hidden = true; return; }
+
+      var rec = { chips: {} };
+      var allChip = el('button', 'refine-chip is-active');
+      allChip.type = 'button'; allChip.dataset.val = '';
+      allChip.innerHTML = '<span class="refine-lbl">' + f.all + '</span><span class="refine-n"></span>';
+      box.appendChild(allChip); rec.allChip = allChip;
+
+      keys.forEach(function (k) {
+        var b = el('button', 'refine-chip');
+        b.type = 'button'; b.dataset.val = k;
+        var sw = f.swatch ? '<span class="refine-sw" style="background:' + colorSwatch(k) + '"></span>' : '';
+        var label = f.display ? f.display(k) : k;
+        b.innerHTML = sw + '<span class="refine-lbl">' + label + '</span><span class="refine-n"></span>';
+        box.appendChild(b); rec.chips[k] = b;
+      });
+
+      box.addEventListener('click', function (e) {
+        var chip = e.target.closest('.refine-chip');
+        if (!chip || chip.classList.contains('is-empty')) return;
+        state[f.key] = chip.dataset.val;
+        update();
+      });
+      facetRec[f.key] = rec;
+    }
+
+    // The "gallery rooms" — one cover-tile per wearable collection (place name).
+    function buildRooms() {
+      if (!roomsBox) return;
+      var info = {}, order = [];
+      cards.forEach(function (c) {
+        if (c._cat !== 'wearables') return;
+        var v = c.dataset.subcollection;
+        if (!v) return;
+        if (!info[v]) {
+          var img = c.querySelector('.main-img');
+          info[v] = { count: 0, cover: img ? img.getAttribute('src') : '' };
+          order.push(v);
+        }
+        info[v].count++;
+      });
+      roomsBox.innerHTML = '';
+      order.forEach(function (v) {
+        var t = el('button', 'room-tile');
+        t.type = 'button'; t.dataset.room = v;
+        t.innerHTML =
+          '<span class="room-img" style="background-image:url(\'' + info[v].cover + '\')"></span>' +
+          '<span class="room-meta">' +
+            '<span class="room-name">' + displaySubName(v) + '</span>' +
+            '<span class="room-count"><span class="room-n">' + info[v].count + '</span> pieces</span>' +
+          '</span>';
+        roomsBox.appendChild(t);
+        roomRec[v] = t;
+      });
+      roomsBox.addEventListener('click', function (e) {
+        var tile = e.target.closest('.room-tile');
+        if (!tile || tile.classList.contains('is-empty')) return;
+        var v = tile.dataset.room;
+        state.subcollection = (state.subcollection === v ? '' : v);
+        state.cat = 'all';
+        update();
+        if (state.subcollection) {
+          var g = document.getElementById('archive-grid');
+          if (g) window.scrollTo({ top: g.getBoundingClientRect().top + window.pageYOffset - 90, behavior: 'smooth' });
+        }
+      });
+    }
+
+    function update() {
+      // 1 — card visibility
+      cards.forEach(function (c) { c.classList.toggle('is-filtered-out', !matches(c, null)); });
+
+      // 2 — category groups + section headers fold away when empty
       document.querySelectorAll('.archive-category-group').forEach(function (group) {
-        var showCat = cat === 'all' || group.dataset.category === cat;
-        group.classList.toggle('is-filtered-out', !showCat);
+        var catOk = (state.cat === 'all' || group.dataset.category === state.cat);
+        var hasVisible = group.querySelectorAll('.product-card:not(.is-filtered-out)').length > 0;
+        group.classList.toggle('is-filtered-out', !(catOk && hasVisible));
       });
-
-      // Cards
-      grid.querySelectorAll('.product-card').forEach(function (card) {
-        var cardCat = card.closest('.archive-category-group').dataset.category;
-        var cardSub = card.dataset.subcollection || '';
-        var show = (cat === 'all' || cardCat === cat) && (!sub || cardSub === sub);
-        card.classList.toggle('is-filtered-out', !show);
-      });
-
-      // Headers
       grid.querySelectorAll('.jookh-subcat-header, .jookh-line-header').forEach(function (header) {
-        var next = header.nextElementSibling;
-        var hasVisible = false;
+        var next = header.nextElementSibling, vis = false;
         while (next && !next.classList.contains('jookh-subcat-header') && !next.classList.contains('jookh-line-header') && !next.classList.contains('archive-category-group')) {
           if (next.classList.contains('jookh-grid') || next.classList.contains('jookh-subgrid') || next.classList.contains('collection-grid')) {
-            if (next.querySelectorAll('.product-card:not(.is-filtered-out)').length > 0) {
-              hasVisible = true;
-              break;
-            }
+            if (next.querySelectorAll('.product-card:not(.is-filtered-out)').length > 0) { vis = true; break; }
           }
           next = next.nextElementSibling;
         }
-        header.classList.toggle('is-filtered-out', !hasVisible);
-      });
-    }
-
-    function buildSubChips(category) {
-      // Subcollection browsing is now handled by the in-grid collection navigator
-      // (collection-nav tabs). Keep this legacy chip-bar hidden to avoid duplication.
-      subChips.innerHTML = '';
-      subBar.hidden = true;
-      return;
-      // eslint-disable-next-line no-unreachable
-      var subs = subsByCat[category] ? Object.keys(subsByCat[category]).sort(function (a, b) { return a.localeCompare(b); }) : [];
-      if (!subs.length) {
-        subBar.hidden = true;
-        return;
-      }
-
-      subBar.hidden = false;
-      var allBtn = document.createElement('button');
-      allBtn.className = 'collection-filter-btn is-active';
-      allBtn.type = 'button';
-      allBtn.dataset.sub = '';
-      allBtn.textContent = 'All ' + (CATEGORY_LABELS[category] || category);
-      subChips.appendChild(allBtn);
-
-      subs.forEach(function (sub) {
-        var btn = document.createElement('button');
-        btn.className = 'collection-filter-btn';
-        btn.type = 'button';
-        btn.dataset.sub = sub;
-        btn.textContent = sub;
-        subChips.appendChild(btn);
+        header.classList.toggle('is-filtered-out', !vis);
       });
 
-      Array.from(subChips.querySelectorAll('.collection-filter-btn')).forEach(function (btn) {
-        btn.addEventListener('click', function () {
-          var selectedSub = btn.dataset.sub;
-          subChips.querySelectorAll('.collection-filter-btn').forEach(function (b) {
-            b.classList.toggle('is-active', b === btn);
-          });
-          applyFilter(category, selectedSub);
+      // 3 — live facet counts (dim a value that would give zero) + active sync
+      FACETS.forEach(function (f) {
+        var rec = facetRec[f.key];
+        if (!rec) return;
+        if (rec.allChip) {
+          rec.allChip.querySelector('.refine-n').textContent = facetAllCount(f);
+          rec.allChip.classList.toggle('is-active', state[f.key] === '');
+        }
+        Object.keys(rec.chips).forEach(function (val) {
+          var chip = rec.chips[val], n = facetCount(f, val);
+          chip.querySelector('.refine-n').textContent = n;
+          chip.classList.toggle('is-empty', n === 0 && state[f.key] !== val);
+          chip.classList.toggle('is-active', state[f.key] === val);
         });
       });
+
+      // 3b — gallery rooms: counts (ignoring the collection axis), dim, active
+      Object.keys(roomRec).forEach(function (v) {
+        var tile = roomRec[v], n = 0;
+        for (var i = 0; i < cards.length; i++) {
+          var c = cards[i];
+          if (c._cat !== 'wearables' || c.dataset.subcollection !== v) continue;
+          if (matches(c, 'subcollection')) n++;
+        }
+        var nEl = tile.querySelector('.room-n');
+        if (nEl) nEl.textContent = n;
+        tile.classList.toggle('is-empty', n === 0 && state.subcollection !== v);
+        tile.classList.toggle('is-active', state.subcollection === v);
+      });
+
+      // 4 — category + availability counts + active sync
+      catButtons.forEach(function (btn) {
+        var s = btn.querySelector('.refine-n');
+        if (s) s.textContent = dimCount('cat', btn.dataset.filter || 'all');
+        btn.classList.toggle('is-active', (btn.dataset.filter || 'all') === state.cat);
+      });
+      statusButtons.forEach(function (btn) {
+        var s = btn.querySelector('.refine-n');
+        if (s) s.textContent = dimCount('avail', btn.dataset.status || 'all');
+        btn.classList.toggle('is-active', (btn.dataset.status || 'all') === state.avail);
+      });
+
+      // 5 — active-filter summary in the sticky toolbar
+      renderToolbarSummary(state, FACETS, cards, matches, update);
+
+      if (typeof window.initReveal === 'function') window.initReveal();
+      if (typeof window.__rerollStickers === 'function') { window.__rerollStickers(); setTimeout(window.__rerollStickers, 80); }
     }
 
-    // Category chip clicks
-    Array.from(catBar.querySelectorAll('.collection-filter-btn')).forEach(function (btn) {
+    // Category bar — add a live count to each button, wire clicks
+    var catButtons = Array.prototype.slice.call(catBar.querySelectorAll('.collection-filter-btn'));
+    catButtons.forEach(function (btn) {
+      if (!btn.querySelector('.refine-n')) { var s = el('span', 'refine-n'); btn.appendChild(s); }
       btn.addEventListener('click', function () {
-        var cat = btn.dataset.filter || 'all';
-        catBar.querySelectorAll('.collection-filter-btn').forEach(function (b) {
-          b.classList.toggle('is-active', b === btn);
-        });
-        buildSubChips(cat);
-        applyFilter(cat, '');
+        state.cat = btn.dataset.filter || 'all';
+        state.subcollection = '';   // category and rooms are alternate navigations
+        update();
       });
     });
 
-    // Start with All selected and no subcollection bar
-    subBar.hidden = true;
+    // Availability bar (folded into the same engine so its counts stay accurate)
+    var statusButtons = statusBar ? Array.prototype.slice.call(statusBar.querySelectorAll('.collection-filter-btn')) : [];
+    statusButtons.forEach(function (btn) {
+      if (!btn.querySelector('.refine-n')) { var s = el('span', 'refine-n'); btn.appendChild(s); }
+      btn.addEventListener('click', function () {
+        state.avail = btn.dataset.status || 'all';
+        statusButtons.forEach(function (b) { b.classList.toggle('is-active', b === btn); });
+        update();
+      });
+    });
+
+    FACETS.forEach(buildFacet);
+    buildRooms();
+    wireRoomsStrip();
+
+    // Sticky filter toolbar: toggle the dropdown panel
+    var toolbar = document.getElementById('collection-toolbar');
+    var toolToggle = document.getElementById('toolbar-toggle');
+    if (toolbar && toolToggle) {
+      toolToggle.addEventListener('click', function (e) {
+        e.stopPropagation();
+        var open = toolbar.classList.toggle('is-open');
+        toolToggle.setAttribute('aria-expanded', String(open));
+      });
+      // Close the panel when clicking outside it
+      document.addEventListener('click', function (e) {
+        if (toolbar.classList.contains('is-open') && !toolbar.contains(e.target)) {
+          toolbar.classList.remove('is-open');
+          toolToggle.setAttribute('aria-expanded', 'false');
+        }
+      });
+    }
+
+    // Clear-all
+    var clearBtn = document.getElementById('toolbar-clear');
+    if (clearBtn) {
+      clearBtn.addEventListener('click', function () {
+        state.cat = 'all'; state.avail = 'all';
+        FACETS.forEach(function (f) { state[f.key] = ''; });
+        update();
+      });
+    }
+
+    update();
+
+    // Deep-link from the home page: /collection/?c=<Collection> opens that room.
+    try {
+      var deepC = new URLSearchParams(location.search).get('c');
+      if (deepC && roomRec[deepC]) {
+        state.subcollection = deepC; state.cat = 'all';
+        update();
+        var g = document.getElementById('archive-grid');
+        if (g) setTimeout(function () {
+          window.scrollTo({ top: g.getBoundingClientRect().top + window.pageYOffset - 90, behavior: 'smooth' });
+        }, 350);
+      }
+    } catch (e) { /* no URLSearchParams — ignore */ }
+  }
+
+  // Horizontal "wings" strip: arrow controls + edge-aware visibility.
+  function wireRoomsStrip() {
+    var strip = document.getElementById('collection-rooms');
+    if (!strip || !strip.classList.contains('rooms-strip')) return;
+    var prev = document.getElementById('rooms-arrow-prev');
+    var next = document.getElementById('rooms-arrow-next');
+    function step() { return Math.max(220, Math.round(strip.clientWidth * 0.8)); }
+    function sync() {
+      var max = strip.scrollWidth - strip.clientWidth;
+      if (prev) prev.hidden = strip.scrollLeft <= 12;            // epsilon covers snap/padding
+      if (next) next.hidden = max <= 12 || strip.scrollLeft >= max - 12;
+    }
+    if (prev) prev.addEventListener('click', function () { strip.scrollBy({ left: -step(), behavior: 'smooth' }); });
+    if (next) next.addEventListener('click', function () { strip.scrollBy({ left: step(), behavior: 'smooth' }); });
+    strip.addEventListener('scroll', sync, { passive: true });
+    window.addEventListener('resize', sync);
+    sync();
+    setTimeout(sync, 200);   // re-check once covers/layout settle
+  }
+
+  // Active-filter summary shown in the sticky toolbar bar (with one-click removal).
+  function renderToolbarSummary(state, FACETS, cards, matches, update) {
+    var sum = document.getElementById('toolbar-summary');
+    var clearBtn = document.getElementById('toolbar-clear');
+    if (!sum) return;
+
+    var active = [];
+    if (state.subcollection) active.push({ k: 'subcollection', label: displaySubName(state.subcollection) });
+    if (state.cat !== 'all')  active.push({ k: 'cat',   label: CATEGORY_LABELS[state.cat] || state.cat });
+    if (state.avail !== 'all') active.push({ k: 'avail', label: state.avail.charAt(0).toUpperCase() + state.avail.slice(1) });
+    FACETS.forEach(function (f) {
+      if (f.key !== 'subcollection' && state[f.key]) active.push({ k: f.key, label: state[f.key] });
+    });
+
+    var count = 0;
+    for (var i = 0; i < cards.length; i++) { if (matches(cards[i], null)) count++; }
+
+    var html = '';
+    if (!active.length) {
+      // Idle: a small painted palette teases what's inside.
+      var dabs = ['#dd8a68', '#e7c98a', '#7fa6cb', '#9c7bb0', '#5f8f63', '#cf6f86'];
+      html += '<span class="sum-palette" aria-hidden="true">';
+      dabs.forEach(function (c) { html += '<i class="sum-dab" style="background:' + c + '"></i>'; });
+      html += '</span>';
+    }
+    active.forEach(function (a) {
+      html += '<button class="sum-chip" type="button" data-clear="' + a.k + '">' + a.label + '<span class="sum-x" aria-hidden="true">×</span></button>';
+    });
+    html += '<span class="sum-count"><span class="sum-num">' + count + '</span> piece' + (count === 1 ? '' : 's') + '</span>';
+    sum.innerHTML = html;
+    if (clearBtn) clearBtn.hidden = active.length === 0;
+
+    // Active-count badge on the Filters button
+    var badge = document.getElementById('toolbar-toggle-badge');
+    if (badge) {
+      if (active.length) { badge.textContent = active.length; badge.hidden = false; }
+      else badge.hidden = true;
+    }
+
+    Array.prototype.forEach.call(sum.querySelectorAll('.sum-chip'), function (ch) {
+      ch.addEventListener('click', function () {
+        var k = ch.dataset.clear;
+        if (k === 'cat') state.cat = 'all';
+        else if (k === 'avail') state.avail = 'all';
+        else state[k] = '';
+        update();
+      });
+    });
   }
 
   // ─── LOAD STRATEGY ───────────────────────────────
@@ -510,7 +771,7 @@
 
   if (typeof fetch !== 'undefined') {
     tryFetch('/api/products')
-      .catch(function () { return tryFetch('data/products.json?_=' + Date.now()); })
+      .catch(function () { return tryFetch('/data/products.json?_=' + Date.now()); })
       .then(renderAll)
       .catch(function () { renderAll(window.PRODUCTS || []); });
   } else {
@@ -541,6 +802,11 @@
     mainImg.loading  = index < 6 ? 'eager' : 'lazy';
     mainImg.decoding = index < 6 ? 'sync' : 'async';
     imgWrap.appendChild(mainImg);
+
+    // Blur-up: hold a shimmer placeholder until the art has loaded, then dissolve.
+    var markLoaded = function () { imgWrap.classList.add('img-loaded'); };
+    if (mainImg.complete && mainImg.naturalWidth > 0) markLoaded();
+    else { mainImg.addEventListener('load', markLoaded); mainImg.addEventListener('error', markLoaded); }
 
     if (isWearable && hasSecondView) {
       var hoverImg = el('img', 'hover-img');
@@ -602,6 +868,11 @@
     card.dataset.name           = product.name || '';
     card.dataset.subcollection  = product.subcollection || '';
     card.dataset.collectionLine = product.collection_line || 'Essential';
+    if (product.type)      card.dataset.type      = product.type;
+    if (product.color)     card.dataset.color     = product.color;
+    if (product.fit)       card.dataset.fit       = product.fit;
+    if (product.motif)     card.dataset.motif     = product.motif;
+    if (product.technique) card.dataset.technique = product.technique;
     card.style.transitionDelay  = (index % 6) * 80 + 'ms';
 
     card.appendChild(imgWrap);

@@ -4,7 +4,7 @@
 export async function onRequestGet({ env, request }) {
   try {
     const { results } = await env.DB
-      .prepare('SELECT id, name, category, subcollection, collection_line, era, status, price, material, main_image, hover_image, extra_views, sort_order FROM products ORDER BY sort_order')
+      .prepare('SELECT id, name, category, subcollection, collection_line, era, status, price, material, main_image, hover_image, extra_views, type, color, fit, motif, technique, sort_order FROM products ORDER BY sort_order')
       .all();
 
     const base = (env.IMAGE_BASE || '/images/').replace(/\/?$/, '/');
@@ -24,6 +24,11 @@ export async function onRequestGet({ env, request }) {
         status:        r.status,
         price:         r.price || '',
         material:      r.material || '',
+        type:          r.type || '',
+        color:         r.color || '',
+        fit:           r.fit || '',
+        motif:         r.motif || '',
+        technique:     r.technique || '',
         images: {
           main:  r.main_image  ? base + r.main_image  : '',
           hover: r.hover_image ? base + r.hover_image : '',
