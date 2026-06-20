@@ -1166,11 +1166,14 @@ body.page-collection #collection-rooms { opacity: 1 !important; transform: none 
 /* ─── Collection page: sticky, toggleable filter toolbar ─── */
 .collection-toolbar {
   position: sticky;
-  top: 0.5rem;
+  top: 3.9rem;                 /* sit just below the fixed top nav, never under it */
   z-index: 90;
   max-width: 1100px;
   margin: 0.4rem auto 2.4rem;
+  transition: top 0.3s var(--ease, ease);
 }
+/* when the nav auto-hides on scroll-down, let the bar glide up to the top edge */
+body:has(#navbar.nav-hidden) .collection-toolbar { top: 0.6rem; }
 .toolbar-bar {
   display: flex;
   align-items: center;
