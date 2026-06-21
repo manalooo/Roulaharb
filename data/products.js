@@ -5298,5 +5298,20 @@ window.PRODUCTS = [
     "collection_line": "KUMBAKONAM",
     "type": "Scarf",
     "color": "Black"
+  },
+  {
+    "id": "paint-14",
+    "name": "Mille Fleurs",
+    "category": "paintings",
+    "collection": "Jookh Couture",
+    "price": "",
+    "medium": "",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/paintings/paint-14-view-1.jpg"
+    ],
+    "status": "available",
+    "color": "Multicolor",
+    "motif": "Floral"
   }
 ];
