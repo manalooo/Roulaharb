@@ -5039,6 +5039,22 @@
     "type": "Bag"
   },
   {
+    "id": "scarf-01",
+    "name": "Kohl",
+    "category": "scarves",
+    "collection": "Jookh Couture",
+    "price": "160",
+    "medium": "cotton",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/jookh/scarves/scarf-01-view-1.jpeg"
+    ],
+    "status": "available",
+    "collection_line": "KUMBAKONAM",
+    "type": "Scarf",
+    "color": "Black"
+  },
+  {
     "id": "paint-03",
     "name": "Printemps Rose",
     "category": "paintings",
@@ -5282,22 +5298,6 @@
     "technique": "Hand-painted"
   },
   {
-    "id": "scarf-01",
-    "name": "Kohl",
-    "category": "scarves",
-    "collection": "Jookh Couture",
-    "price": "160",
-    "medium": "cotton",
-    "edition": "One-of-a-kind · Signed by the artist",
-    "views": [
-      "images/jookh/scarves/scarf-01-view-1.jpeg"
-    ],
-    "status": "available",
-    "collection_line": "KUMBAKONAM",
-    "type": "Scarf",
-    "color": "Black"
-  },
-  {
     "id": "paint-14",
     "name": "Mille Fleurs",
     "category": "paintings",
@@ -5310,6 +5310,1346 @@
     ],
     "status": "available",
     "color": "Multicolor",
+    "motif": "Floral"
+  },
+  {
+    "id": "plo-11",
+    "name": "Peony Sunset",
+    "category": "pillows",
+    "collection": "P-Lo",
+    "price": "ENTER PRICE HERE",
+    "medium": "Hand-painted",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/plo/plo-11-view-1.jpg",
+      "images/plo/plo-12-view-1.jpg",
+      "images/plo/plo-13-view-1.jpg"
+    ],
+    "status": "available",
+    "collection_line": "pillows",
+    "type": "Pillow",
+    "technique": "Hand-painted"
+  },
+  {
+    "id": "plo-14",
+    "name": "Cosmic Garden",
+    "category": "pillows",
+    "collection": "P-Lo",
+    "price": "ENTER PRICE HERE",
+    "medium": "Hand-painted",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/plo/plo-14-view-1.jpg",
+      "images/plo/plo-15-view-1.jpg",
+      "images/plo/plo-16-view-1.jpg"
+    ],
+    "status": "available",
+    "collection_line": "pillows",
+    "type": "Pillow",
+    "technique": "Hand-painted"
+  },
+  {
+    "id": "plo-17",
+    "name": "Pink Bloom",
+    "category": "pillows",
+    "collection": "P-Lo",
+    "price": "ENTER PRICE HERE",
+    "medium": "Hand-painted",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/plo/plo-17-view-1.jpg",
+      "images/plo/plo-18-view-1.jpg",
+      "images/plo/plo-19-view-1.jpg",
+      "images/plo/plo-20-view-1.jpg"
+    ],
+    "status": "available",
+    "collection_line": "pillows",
+    "type": "Pillow",
+    "technique": "Hand-painted"
+  },
+  {
+    "id": "plo-26",
+    "name": "Midnight Waves",
+    "category": "pillows",
+    "collection": "P-Lo",
+    "price": "ENTER PRICE HERE",
+    "medium": "Hand-painted",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/plo/plo-26-view-1.jpg",
+      "images/plo/plo-27-view-1.jpg",
+      "images/plo/plo-28-view-1.jpg"
+    ],
+    "status": "available",
+    "collection_line": "pillows",
+    "type": "Pillow",
+    "technique": "Hand-painted"
+  },
+  {
+    "id": "plo-29",
+    "name": "Pomegranate Gold",
+    "category": "pillows",
+    "collection": "P-Lo",
+    "price": "ENTER PRICE HERE",
+    "medium": "Hand-painted",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/plo/plo-29-view-1.jpg",
+      "images/plo/plo-30-view-1.jpg",
+      "images/plo/plo-31-view-1.jpg"
+    ],
+    "status": "available",
+    "collection_line": "pillows",
+    "type": "Pillow",
+    "technique": "Hand-painted"
+  },
+  {
+    "id": "plo-32",
+    "name": "Silver Spiral",
+    "category": "pillows",
+    "collection": "P-Lo",
+    "price": "ENTER PRICE HERE",
+    "medium": "Hand-painted",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/plo/plo-32-view-1.jpg"
+    ],
+    "status": "available",
+    "collection_line": "pillows",
+    "type": "Pillow",
+    "technique": "Hand-painted"
+  },
+  {
+    "id": "plo-33",
+    "name": "Earth Song",
+    "category": "pillows",
+    "collection": "P-Lo",
+    "price": "ENTER PRICE HERE",
+    "medium": "Hand-painted",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/plo/plo-33-view-1.jpg"
+    ],
+    "status": "available",
+    "collection_line": "pillows",
+    "type": "Pillow",
+    "technique": "Hand-painted"
+  },
+  {
+    "id": "plo-34",
+    "name": "Crimson Rings",
+    "category": "pillows",
+    "collection": "P-Lo",
+    "price": "ENTER PRICE HERE",
+    "medium": "Hand-painted",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/plo/plo-34-view-1.jpg"
+    ],
+    "status": "available",
+    "collection_line": "pillows",
+    "type": "Pillow",
+    "technique": "Hand-painted"
+  },
+  {
+    "id": "plo-35",
+    "name": "Nocturnal Blooms",
+    "category": "pillows",
+    "collection": "P-Lo",
+    "price": "ENTER PRICE HERE",
+    "medium": "Hand-painted",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/plo/plo-35-view-1.jpg"
+    ],
+    "status": "available",
+    "collection_line": "pillows",
+    "type": "Pillow",
+    "technique": "Hand-painted"
+  },
+  {
+    "id": "plo-36",
+    "name": "Monochrome Garden",
+    "category": "pillows",
+    "collection": "P-Lo",
+    "price": "ENTER PRICE HERE",
+    "medium": "Hand-painted",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/plo/plo-36-view-1.jpg"
+    ],
+    "status": "available",
+    "collection_line": "pillows",
+    "type": "Pillow",
+    "technique": "Hand-painted"
+  },
+  {
+    "id": "plo-37",
+    "name": "Blue Flame",
+    "category": "pillows",
+    "collection": "P-Lo",
+    "price": "ENTER PRICE HERE",
+    "medium": "Hand-painted",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/plo/plo-37-view-1.jpg"
+    ],
+    "status": "available",
+    "collection_line": "pillows",
+    "type": "Pillow",
+    "technique": "Hand-painted"
+  },
+  {
+    "id": "plo-38",
+    "name": "Indigo Orbit",
+    "category": "pillows",
+    "collection": "P-Lo",
+    "price": "ENTER PRICE HERE",
+    "medium": "Hand-painted",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/plo/plo-38-view-1.jpg"
+    ],
+    "status": "available",
+    "collection_line": "pillows",
+    "type": "Pillow",
+    "technique": "Hand-painted"
+  },
+  {
+    "id": "plo-39",
+    "name": "Golden Loops",
+    "category": "pillows",
+    "collection": "P-Lo",
+    "price": "ENTER PRICE HERE",
+    "medium": "Hand-painted",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/plo/plo-39-view-1.jpg"
+    ],
+    "status": "available",
+    "collection_line": "pillows",
+    "type": "Pillow",
+    "technique": "Hand-painted"
+  },
+  {
+    "id": "plo-40",
+    "name": "Cerulean Eye",
+    "category": "pillows",
+    "collection": "P-Lo",
+    "price": "ENTER PRICE HERE",
+    "medium": "Hand-painted",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/plo/plo-40-view-1.jpg"
+    ],
+    "status": "available",
+    "collection_line": "pillows",
+    "type": "Pillow",
+    "technique": "Hand-painted"
+  },
+  {
+    "id": "plo-41",
+    "name": "Winter Forest",
+    "category": "pillows",
+    "collection": "P-Lo",
+    "price": "ENTER PRICE HERE",
+    "medium": "Hand-painted",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/plo/plo-41-view-1.jpg"
+    ],
+    "status": "available",
+    "collection_line": "pillows",
+    "type": "Pillow",
+    "technique": "Hand-painted"
+  },
+  {
+    "id": "plo-42",
+    "name": "Winter Forest II",
+    "category": "pillows",
+    "collection": "P-Lo",
+    "price": "ENTER PRICE HERE",
+    "medium": "Hand-painted",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/plo/plo-42-view-1.jpg"
+    ],
+    "status": "available",
+    "collection_line": "pillows",
+    "type": "Pillow",
+    "technique": "Hand-painted"
+  },
+  {
+    "id": "plo-43",
+    "name": "Confetti Dots",
+    "category": "pillows",
+    "collection": "P-Lo",
+    "price": "ENTER PRICE HERE",
+    "medium": "Hand-painted",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/plo/plo-43-view-1.jpg"
+    ],
+    "status": "available",
+    "collection_line": "pillows",
+    "type": "Pillow",
+    "technique": "Hand-painted"
+  },
+  {
+    "id": "plo-44",
+    "name": "Abstract Eye",
+    "category": "pillows",
+    "collection": "P-Lo",
+    "price": "ENTER PRICE HERE",
+    "medium": "Hand-painted",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/plo/plo-44-view-1.jpg"
+    ],
+    "status": "available",
+    "collection_line": "pillows",
+    "type": "Pillow",
+    "technique": "Hand-painted"
+  },
+  {
+    "id": "plo-45",
+    "name": "Ink Strokes",
+    "category": "pillows",
+    "collection": "P-Lo",
+    "price": "ENTER PRICE HERE",
+    "medium": "Hand-painted",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/plo/plo-45-view-1.jpg"
+    ],
+    "status": "available",
+    "collection_line": "pillows",
+    "type": "Pillow",
+    "technique": "Hand-painted"
+  },
+  {
+    "id": "plo-46",
+    "name": "Watching Eye",
+    "category": "pillows",
+    "collection": "P-Lo",
+    "price": "ENTER PRICE HERE",
+    "medium": "Hand-painted",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/plo/plo-46-view-1.jpg"
+    ],
+    "status": "available",
+    "collection_line": "pillows",
+    "type": "Pillow",
+    "technique": "Hand-painted"
+  },
+  {
+    "id": "plo-47",
+    "name": "Lime Spiral",
+    "category": "pillows",
+    "collection": "P-Lo",
+    "price": "ENTER PRICE HERE",
+    "medium": "Hand-painted",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/plo/plo-47-view-1.jpg"
+    ],
+    "status": "available",
+    "collection_line": "pillows",
+    "type": "Pillow",
+    "technique": "Hand-painted"
+  },
+  {
+    "id": "plo-48",
+    "name": "Tangerine Target",
+    "category": "pillows",
+    "collection": "P-Lo",
+    "price": "ENTER PRICE HERE",
+    "medium": "Hand-painted",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/plo/plo-48-view-1.jpg"
+    ],
+    "status": "available",
+    "collection_line": "pillows",
+    "type": "Pillow",
+    "technique": "Hand-painted"
+  },
+  {
+    "id": "plo-49",
+    "name": "Ink Swirl",
+    "category": "pillows",
+    "collection": "P-Lo",
+    "price": "ENTER PRICE HERE",
+    "medium": "Hand-painted",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/plo/plo-49-view-1.jpg"
+    ],
+    "status": "available",
+    "collection_line": "pillows",
+    "type": "Pillow",
+    "technique": "Hand-painted"
+  },
+  {
+    "id": "plo-50",
+    "name": "White Spiral",
+    "category": "pillows",
+    "collection": "P-Lo",
+    "price": "ENTER PRICE HERE",
+    "medium": "Hand-painted",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/plo/plo-50-view-1.jpg"
+    ],
+    "status": "available",
+    "collection_line": "pillows",
+    "type": "Pillow",
+    "technique": "Hand-painted"
+  },
+  {
+    "id": "plo-51",
+    "name": "Rose Lines",
+    "category": "pillows",
+    "collection": "P-Lo",
+    "price": "ENTER PRICE HERE",
+    "medium": "Hand-painted",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/plo/plo-51-view-1.jpg"
+    ],
+    "status": "available",
+    "collection_line": "pillows",
+    "type": "Pillow",
+    "technique": "Hand-painted"
+  },
+  {
+    "id": "plo-52",
+    "name": "Crimson Circle",
+    "category": "pillows",
+    "collection": "P-Lo",
+    "price": "ENTER PRICE HERE",
+    "medium": "Hand-painted",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/plo/plo-52-view-1.jpg"
+    ],
+    "status": "available",
+    "collection_line": "pillows",
+    "type": "Pillow",
+    "technique": "Hand-painted"
+  },
+  {
+    "id": "plo-53",
+    "name": "Blue Glyph",
+    "category": "pillows",
+    "collection": "P-Lo",
+    "price": "ENTER PRICE HERE",
+    "medium": "Hand-painted",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/plo/plo-53-view-1.jpg"
+    ],
+    "status": "available",
+    "collection_line": "pillows",
+    "type": "Pillow",
+    "technique": "Hand-painted"
+  },
+  {
+    "id": "plo-54",
+    "name": "Charcoal Loop",
+    "category": "pillows",
+    "collection": "P-Lo",
+    "price": "ENTER PRICE HERE",
+    "medium": "Hand-painted",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/plo/plo-54-view-1.jpg"
+    ],
+    "status": "available",
+    "collection_line": "pillows",
+    "type": "Pillow",
+    "technique": "Hand-painted"
+  },
+  {
+    "id": "plo-55",
+    "name": "Grey Orbit",
+    "category": "pillows",
+    "collection": "P-Lo",
+    "price": "ENTER PRICE HERE",
+    "medium": "Hand-painted",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/plo/plo-55-view-1.jpg"
+    ],
+    "status": "available",
+    "collection_line": "pillows",
+    "type": "Pillow",
+    "technique": "Hand-painted"
+  },
+  {
+    "id": "plo-56",
+    "name": "Zen Circle",
+    "category": "pillows",
+    "collection": "P-Lo",
+    "price": "ENTER PRICE HERE",
+    "medium": "Hand-painted",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/plo/plo-56-view-1.jpg"
+    ],
+    "status": "available",
+    "collection_line": "pillows",
+    "type": "Pillow",
+    "technique": "Hand-painted"
+  },
+  {
+    "id": "plo-57",
+    "name": "Earth Spiral",
+    "category": "pillows",
+    "collection": "P-Lo",
+    "price": "ENTER PRICE HERE",
+    "medium": "Hand-painted",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/plo/plo-57-view-1.jpg"
+    ],
+    "status": "available",
+    "collection_line": "pillows",
+    "type": "Pillow",
+    "technique": "Hand-painted"
+  },
+  {
+    "id": "plo-58",
+    "name": "Sienna Marks",
+    "category": "pillows",
+    "collection": "P-Lo",
+    "price": "ENTER PRICE HERE",
+    "medium": "Hand-painted",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/plo/plo-58-view-1.jpg"
+    ],
+    "status": "available",
+    "collection_line": "pillows",
+    "type": "Pillow",
+    "technique": "Hand-painted"
+  },
+  {
+    "id": "plo-59",
+    "name": "Candy Dots",
+    "category": "pillows",
+    "collection": "P-Lo",
+    "price": "ENTER PRICE HERE",
+    "medium": "Hand-painted",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/plo/plo-59-view-1.jpg"
+    ],
+    "status": "available",
+    "collection_line": "pillows",
+    "type": "Pillow",
+    "technique": "Hand-painted"
+  },
+  {
+    "id": "plo-60",
+    "name": "Pastille Dots",
+    "category": "pillows",
+    "collection": "P-Lo",
+    "price": "ENTER PRICE HERE",
+    "medium": "Hand-painted",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/plo/plo-60-view-1.jpg"
+    ],
+    "status": "available",
+    "collection_line": "pillows",
+    "type": "Pillow",
+    "technique": "Hand-painted"
+  },
+  {
+    "id": "plo-61",
+    "name": "Fire Lines",
+    "category": "pillows",
+    "collection": "P-Lo",
+    "price": "ENTER PRICE HERE",
+    "medium": "Hand-painted",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/plo/plo-61-view-1.jpg"
+    ],
+    "status": "available",
+    "collection_line": "pillows",
+    "type": "Pillow",
+    "technique": "Hand-painted"
+  },
+  {
+    "id": "plo-62",
+    "name": "Solar Eclipse",
+    "category": "pillows",
+    "collection": "P-Lo",
+    "price": "ENTER PRICE HERE",
+    "medium": "Hand-painted",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/plo/plo-62-view-1.jpg"
+    ],
+    "status": "available",
+    "collection_line": "pillows",
+    "type": "Pillow",
+    "technique": "Hand-painted"
+  },
+  {
+    "id": "plo-63",
+    "name": "Tribal Marks",
+    "category": "pillows",
+    "collection": "P-Lo",
+    "price": "ENTER PRICE HERE",
+    "medium": "Hand-painted",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/plo/plo-63-view-1.jpg"
+    ],
+    "status": "available",
+    "collection_line": "pillows",
+    "type": "Pillow",
+    "technique": "Hand-painted"
+  },
+  {
+    "id": "plo-64",
+    "name": "Pink Entanglement",
+    "category": "pillows",
+    "collection": "P-Lo",
+    "price": "ENTER PRICE HERE",
+    "medium": "Hand-painted",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/plo/plo-64-view-1.jpg"
+    ],
+    "status": "available",
+    "collection_line": "pillows",
+    "type": "Pillow",
+    "technique": "Hand-painted"
+  },
+  {
+    "id": "plo-65",
+    "name": "Charcoal Weave",
+    "category": "pillows",
+    "collection": "P-Lo",
+    "price": "ENTER PRICE HERE",
+    "medium": "Hand-painted",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/plo/plo-65-view-1.jpg"
+    ],
+    "status": "available",
+    "collection_line": "pillows",
+    "type": "Pillow",
+    "technique": "Hand-painted"
+  },
+  {
+    "id": "plo-66",
+    "name": "Amber Dance",
+    "category": "pillows",
+    "collection": "P-Lo",
+    "price": "ENTER PRICE HERE",
+    "medium": "Hand-painted",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/plo/plo-66-view-1.jpg"
+    ],
+    "status": "available",
+    "collection_line": "pillows",
+    "type": "Pillow",
+    "technique": "Hand-painted"
+  },
+  {
+    "id": "plo-67",
+    "name": "Bubble Garden",
+    "category": "pillows",
+    "collection": "P-Lo",
+    "price": "ENTER PRICE HERE",
+    "medium": "Hand-painted",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/plo/plo-67-view-1.jpg"
+    ],
+    "status": "available",
+    "collection_line": "pillows",
+    "type": "Pillow",
+    "technique": "Hand-painted"
+  },
+  {
+    "id": "plo-68",
+    "name": "Olive Circles",
+    "category": "pillows",
+    "collection": "P-Lo",
+    "price": "ENTER PRICE HERE",
+    "medium": "Hand-painted",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/plo/plo-68-view-1.jpg"
+    ],
+    "status": "available",
+    "collection_line": "pillows",
+    "type": "Pillow",
+    "technique": "Hand-painted"
+  },
+  {
+    "id": "plo-69",
+    "name": "Crimson Bloom",
+    "category": "pillows",
+    "collection": "P-Lo",
+    "price": "ENTER PRICE HERE",
+    "medium": "Hand-painted",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/plo/plo-69-view-1.jpg"
+    ],
+    "status": "available",
+    "collection_line": "pillows",
+    "type": "Pillow",
+    "technique": "Hand-painted"
+  },
+  {
+    "id": "plo-70",
+    "name": "Citrus Burst",
+    "category": "pillows",
+    "collection": "P-Lo",
+    "price": "ENTER PRICE HERE",
+    "medium": "Hand-painted",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/plo/plo-70-view-1.jpg"
+    ],
+    "status": "available",
+    "collection_line": "pillows",
+    "type": "Pillow",
+    "technique": "Hand-painted"
+  },
+  {
+    "id": "plo-71",
+    "name": "Pomegranate Red",
+    "category": "pillows",
+    "collection": "P-Lo",
+    "price": "ENTER PRICE HERE",
+    "medium": "Hand-painted",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/plo/plo-71-view-1.jpg"
+    ],
+    "status": "available",
+    "collection_line": "pillows",
+    "type": "Pillow",
+    "technique": "Hand-painted"
+  },
+  {
+    "id": "plo-72",
+    "name": "Golden Fruit",
+    "category": "pillows",
+    "collection": "P-Lo",
+    "price": "ENTER PRICE HERE",
+    "medium": "Hand-painted",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/plo/plo-72-view-1.jpg"
+    ],
+    "status": "available",
+    "collection_line": "pillows",
+    "type": "Pillow",
+    "technique": "Hand-painted"
+  },
+  {
+    "id": "plo-73",
+    "name": "Amber Column",
+    "category": "pillows",
+    "collection": "P-Lo",
+    "price": "ENTER PRICE HERE",
+    "medium": "Hand-painted",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/plo/plo-73-view-1.jpg"
+    ],
+    "status": "available",
+    "collection_line": "pillows",
+    "type": "Pillow",
+    "technique": "Hand-painted"
+  },
+  {
+    "id": "plo-74",
+    "name": "Rainbow Flow",
+    "category": "pillows",
+    "collection": "P-Lo",
+    "price": "ENTER PRICE HERE",
+    "medium": "Hand-painted",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/plo/plo-74-view-1.jpg"
+    ],
+    "status": "available",
+    "collection_line": "pillows",
+    "type": "Pillow",
+    "technique": "Hand-painted"
+  },
+  {
+    "id": "plo-75",
+    "name": "Winter Branches",
+    "category": "pillows",
+    "collection": "P-Lo",
+    "price": "ENTER PRICE HERE",
+    "medium": "Hand-painted",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/plo/plo-75-view-1.jpg"
+    ],
+    "status": "available",
+    "collection_line": "pillows",
+    "type": "Pillow",
+    "technique": "Hand-painted"
+  },
+  {
+    "id": "plo-76",
+    "name": "Red Currents",
+    "category": "pillows",
+    "collection": "P-Lo",
+    "price": "ENTER PRICE HERE",
+    "medium": "Hand-painted",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/plo/plo-76-view-1.jpg"
+    ],
+    "status": "available",
+    "collection_line": "pillows",
+    "type": "Pillow",
+    "technique": "Hand-painted"
+  },
+  {
+    "id": "plo-77",
+    "name": "Confetti Garden",
+    "category": "pillows",
+    "collection": "P-Lo",
+    "price": "ENTER PRICE HERE",
+    "medium": "Hand-painted",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/plo/plo-77-view-1.jpg"
+    ],
+    "status": "available",
+    "collection_line": "pillows",
+    "type": "Pillow",
+    "technique": "Hand-painted"
+  },
+  {
+    "id": "plo-78",
+    "name": "Tulip Field",
+    "category": "pillows",
+    "collection": "P-Lo",
+    "price": "ENTER PRICE HERE",
+    "medium": "Hand-painted",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/plo/plo-78-view-1.jpg"
+    ],
+    "status": "available",
+    "collection_line": "pillows",
+    "type": "Pillow",
+    "technique": "Hand-painted"
+  },
+  {
+    "id": "plo-79",
+    "name": "Aqua Splash",
+    "category": "pillows",
+    "collection": "P-Lo",
+    "price": "ENTER PRICE HERE",
+    "medium": "Hand-painted",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/plo/plo-79-view-1.jpg"
+    ],
+    "status": "available",
+    "collection_line": "pillows",
+    "type": "Pillow",
+    "technique": "Hand-painted"
+  },
+  {
+    "id": "plo-80",
+    "name": "Blue Splash",
+    "category": "pillows",
+    "collection": "P-Lo",
+    "price": "ENTER PRICE HERE",
+    "medium": "Hand-painted",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/plo/plo-80-view-1.jpg"
+    ],
+    "status": "available",
+    "collection_line": "pillows",
+    "type": "Pillow",
+    "technique": "Hand-painted"
+  },
+  {
+    "id": "plo-81",
+    "name": "Sunbeam",
+    "category": "pillows",
+    "collection": "P-Lo",
+    "price": "ENTER PRICE HERE",
+    "medium": "Hand-painted",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/plo/plo-81-view-1.jpg"
+    ],
+    "status": "available",
+    "collection_line": "pillows",
+    "type": "Pillow",
+    "technique": "Hand-painted"
+  },
+  {
+    "id": "plo-82",
+    "name": "Pink Whisper",
+    "category": "pillows",
+    "collection": "P-Lo",
+    "price": "ENTER PRICE HERE",
+    "medium": "Hand-painted",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/plo/plo-82-view-1.jpg"
+    ],
+    "status": "available",
+    "collection_line": "pillows",
+    "type": "Pillow",
+    "technique": "Hand-painted"
+  },
+  {
+    "id": "plo-83",
+    "name": "Tulip Garden",
+    "category": "pillows",
+    "collection": "P-Lo",
+    "price": "ENTER PRICE HERE",
+    "medium": "Hand-painted",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/plo/plo-83-view-1.jpg"
+    ],
+    "status": "available",
+    "collection_line": "pillows",
+    "type": "Pillow",
+    "technique": "Hand-painted"
+  },
+  {
+    "id": "plo-84",
+    "name": "Spring Bouquet",
+    "category": "pillows",
+    "collection": "P-Lo",
+    "price": "ENTER PRICE HERE",
+    "medium": "Hand-painted",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/plo/plo-84-view-1.jpg"
+    ],
+    "status": "available",
+    "collection_line": "pillows",
+    "type": "Pillow",
+    "technique": "Hand-painted"
+  },
+  {
+    "id": "plo-85",
+    "name": "Red Fire",
+    "category": "pillows",
+    "collection": "P-Lo",
+    "price": "ENTER PRICE HERE",
+    "medium": "Hand-painted",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/plo/plo-85-view-1.jpg"
+    ],
+    "status": "available",
+    "collection_line": "pillows",
+    "type": "Pillow",
+    "technique": "Hand-painted"
+  },
+  {
+    "id": "plo-86",
+    "name": "Mosaic Garden",
+    "category": "pillows",
+    "collection": "P-Lo",
+    "price": "ENTER PRICE HERE",
+    "medium": "Hand-painted",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/plo/plo-86-view-1.jpg"
+    ],
+    "status": "available",
+    "collection_line": "pillows",
+    "type": "Pillow",
+    "technique": "Hand-painted"
+  },
+  {
+    "id": "plo-87",
+    "name": "Meadow",
+    "category": "pillows",
+    "collection": "P-Lo",
+    "price": "ENTER PRICE HERE",
+    "medium": "Hand-painted",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/plo/plo-87-view-1.jpg"
+    ],
+    "status": "available",
+    "collection_line": "pillows",
+    "type": "Pillow",
+    "technique": "Hand-painted"
+  },
+  {
+    "id": "plo-88",
+    "name": "Citrus Circles",
+    "category": "pillows",
+    "collection": "P-Lo",
+    "price": "ENTER PRICE HERE",
+    "medium": "Hand-painted",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/plo/plo-88-view-1.jpg"
+    ],
+    "status": "available",
+    "collection_line": "pillows",
+    "type": "Pillow",
+    "technique": "Hand-painted"
+  },
+  {
+    "id": "plo-89",
+    "name": "Polka Sun",
+    "category": "pillows",
+    "collection": "P-Lo",
+    "price": "ENTER PRICE HERE",
+    "medium": "Hand-painted",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/plo/plo-89-view-1.jpg"
+    ],
+    "status": "available",
+    "collection_line": "pillows",
+    "type": "Pillow",
+    "technique": "Hand-painted"
+  },
+  {
+    "id": "plo-90",
+    "name": "Orange Grid",
+    "category": "pillows",
+    "collection": "P-Lo",
+    "price": "ENTER PRICE HERE",
+    "medium": "Hand-painted",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/plo/plo-90-view-1.jpg"
+    ],
+    "status": "available",
+    "collection_line": "pillows",
+    "type": "Pillow",
+    "technique": "Hand-painted"
+  },
+  {
+    "id": "plo-91",
+    "name": "Autumn Weave",
+    "category": "pillows",
+    "collection": "P-Lo",
+    "price": "ENTER PRICE HERE",
+    "medium": "Hand-painted",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/plo/plo-91-view-1.jpg"
+    ],
+    "status": "available",
+    "collection_line": "pillows",
+    "type": "Pillow",
+    "technique": "Hand-painted"
+  },
+  {
+    "id": "plo-92",
+    "name": "Autumn Weave II",
+    "category": "pillows",
+    "collection": "P-Lo",
+    "price": "ENTER PRICE HERE",
+    "medium": "Hand-painted",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/plo/plo-92-view-1.jpg"
+    ],
+    "status": "available",
+    "collection_line": "pillows",
+    "type": "Pillow",
+    "technique": "Hand-painted"
+  },
+  {
+    "id": "plo-93",
+    "name": "Pastel Bloom",
+    "category": "pillows",
+    "collection": "P-Lo",
+    "price": "ENTER PRICE HERE",
+    "medium": "Hand-painted",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/plo/plo-93-view-1.jpg"
+    ],
+    "status": "available",
+    "collection_line": "pillows",
+    "type": "Pillow",
+    "technique": "Hand-painted"
+  },
+  {
+    "id": "plo-94",
+    "name": "Coral Bloom",
+    "category": "pillows",
+    "collection": "P-Lo",
+    "price": "ENTER PRICE HERE",
+    "medium": "Hand-painted",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/plo/plo-94-view-1.jpg"
+    ],
+    "status": "available",
+    "collection_line": "pillows",
+    "type": "Pillow",
+    "technique": "Hand-painted"
+  },
+  {
+    "id": "plo-95",
+    "name": "Ocean Mist",
+    "category": "pillows",
+    "collection": "P-Lo",
+    "price": "ENTER PRICE HERE",
+    "medium": "Hand-painted",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/plo/plo-95-view-1.jpg"
+    ],
+    "status": "available",
+    "collection_line": "pillows",
+    "type": "Pillow",
+    "technique": "Hand-painted"
+  },
+  {
+    "id": "plo-96",
+    "name": "Pink Marble",
+    "category": "pillows",
+    "collection": "P-Lo",
+    "price": "ENTER PRICE HERE",
+    "medium": "Hand-painted",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/plo/plo-96-view-1.jpg"
+    ],
+    "status": "available",
+    "collection_line": "pillows",
+    "type": "Pillow",
+    "technique": "Hand-painted"
+  },
+  {
+    "id": "plo-97",
+    "name": "Flower Patch",
+    "category": "pillows",
+    "collection": "P-Lo",
+    "price": "ENTER PRICE HERE",
+    "medium": "Hand-painted",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/plo/plo-97-view-1.jpg"
+    ],
+    "status": "available",
+    "collection_line": "pillows",
+    "type": "Pillow",
+    "technique": "Hand-painted"
+  },
+  {
+    "id": "plo-98",
+    "name": "Garden Party",
+    "category": "pillows",
+    "collection": "P-Lo",
+    "price": "ENTER PRICE HERE",
+    "medium": "Hand-painted",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/plo/plo-98-view-1.jpg"
+    ],
+    "status": "available",
+    "collection_line": "pillows",
+    "type": "Pillow",
+    "technique": "Hand-painted"
+  },
+  {
+    "id": "plo-99",
+    "name": "Persian Bloom",
+    "category": "pillows",
+    "collection": "P-Lo",
+    "price": "ENTER PRICE HERE",
+    "medium": "Hand-painted",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/plo/plo-99-view-1.jpg"
+    ],
+    "status": "available",
+    "collection_line": "pillows",
+    "type": "Pillow",
+    "technique": "Hand-painted"
+  },
+  {
+    "id": "plo-100",
+    "name": "Rose Mandala",
+    "category": "pillows",
+    "collection": "P-Lo",
+    "price": "ENTER PRICE HERE",
+    "medium": "Hand-painted",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/plo/plo-100-view-1.jpg"
+    ],
+    "status": "available",
+    "collection_line": "pillows",
+    "type": "Pillow",
+    "technique": "Hand-painted"
+  },
+  {
+    "id": "plo-101",
+    "name": "Abstract Bloom",
+    "category": "pillows",
+    "collection": "P-Lo",
+    "price": "ENTER PRICE HERE",
+    "medium": "Hand-painted",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/plo/plo-101-view-1.jpg"
+    ],
+    "status": "available",
+    "collection_line": "pillows",
+    "type": "Pillow",
+    "technique": "Hand-painted"
+  },
+  {
+    "id": "plo-102",
+    "name": "Wild Garden",
+    "category": "pillows",
+    "collection": "P-Lo",
+    "price": "ENTER PRICE HERE",
+    "medium": "Hand-painted",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/plo/plo-102-view-1.jpg"
+    ],
+    "status": "available",
+    "collection_line": "pillows",
+    "type": "Pillow",
+    "technique": "Hand-painted"
+  },
+  {
+    "id": "plo-103",
+    "name": "Spring Medley",
+    "category": "pillows",
+    "collection": "P-Lo",
+    "price": "ENTER PRICE HERE",
+    "medium": "Hand-painted",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/plo/plo-103-view-1.jpg"
+    ],
+    "status": "available",
+    "collection_line": "pillows",
+    "type": "Pillow",
+    "technique": "Hand-painted"
+  },
+  {
+    "id": "plo-104",
+    "name": "Pink Patchwork",
+    "category": "pillows",
+    "collection": "P-Lo",
+    "price": "ENTER PRICE HERE",
+    "medium": "Hand-painted",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/plo/plo-104-view-1.jpg"
+    ],
+    "status": "available",
+    "collection_line": "pillows",
+    "type": "Pillow",
+    "technique": "Hand-painted"
+  },
+  {
+    "id": "plo-105",
+    "name": "Green Wave",
+    "category": "pillows",
+    "collection": "P-Lo",
+    "price": "ENTER PRICE HERE",
+    "medium": "Hand-painted",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/plo/plo-105-view-1.jpg"
+    ],
+    "status": "available",
+    "collection_line": "pillows",
+    "type": "Pillow",
+    "technique": "Hand-painted"
+  },
+  {
+    "id": "plo-106",
+    "name": "Pink Galaxy",
+    "category": "pillows",
+    "collection": "P-Lo",
+    "price": "ENTER PRICE HERE",
+    "medium": "Hand-painted",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/plo/plo-106-view-1.jpg"
+    ],
+    "status": "available",
+    "collection_line": "pillows",
+    "type": "Pillow",
+    "technique": "Hand-painted"
+  },
+  {
+    "id": "plo-107",
+    "name": "Sunspot",
+    "category": "pillows",
+    "collection": "P-Lo",
+    "price": "ENTER PRICE HERE",
+    "medium": "Hand-painted",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/plo/plo-107-view-1.jpg"
+    ],
+    "status": "available",
+    "collection_line": "pillows",
+    "type": "Pillow",
+    "technique": "Hand-painted"
+  },
+  {
+    "id": "plo-108",
+    "name": "Pink Abstract",
+    "category": "pillows",
+    "collection": "P-Lo",
+    "price": "ENTER PRICE HERE",
+    "medium": "Hand-painted",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/plo/plo-108-view-1.jpg"
+    ],
+    "status": "available",
+    "collection_line": "pillows",
+    "type": "Pillow",
+    "technique": "Hand-painted"
+  },
+  {
+    "id": "plo-22",
+    "name": "Roses de Brume",
+    "category": "pillows",
+    "collection": "P-Lo",
+    "price": "",
+    "medium": "",
+    "edition": "One-of-a-kind · Signed by the artist",
+    "views": [
+      "images/plo/plo-22-view-1.jpg",
+      "images/plo/plo-23-view-1.jpg",
+      "images/plo/plo-25-view-1.jpg"
+    ],
+    "status": "available",
+    "color": "Blue",
     "motif": "Floral"
   }
 ]

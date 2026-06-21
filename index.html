@@ -32,7 +32,7 @@
 
   <!-- Fonts with font-display=swap for faster text rendering -->
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css?v=20260618collection-027" />
+  <link rel="stylesheet" href="style.css?v=20260618collection-032" />
   <script>document.documentElement.classList.add('js-enabled');</script>
 
   <!-- JSON-LD Structured Data -->
@@ -102,6 +102,7 @@
       <ul class="nav-links" id="nav-links" role="menubar">
         <li role="none"><a href="#arrivals" role="menuitem">Shop</a></li>
         <li role="none"><a href="/collection/" role="menuitem">Collection</a></li>
+        <li role="none"><a href="/p-lo/" role="menuitem">P&middot;Lo</a></li>
         <li role="none"><a href="lookbook/" role="menuitem">Lookbook</a></li>
         <li role="none"><a href="#about" role="menuitem">About</a></li>
         <li role="none"><a href="#contact" role="menuitem">Contact</a></li>
@@ -229,10 +230,13 @@
       <img class="sticker" src="images/stickers/poppy-painted.png" data-parallax="0.16" alt="" loading="lazy" decoding="async" style="bottom: 7%; left: 3%; --w: 130px; --rot: -8deg;" />
       <div class="container">
         <div class="section-header reveal">
-          <p class="section-label archive-label">The Complete Works</p>
+          <div class="brand-logo-wrap">
+            <img class="brand-logo brand-logo--jookh" src="images/logos/jookh-logo.png" alt="Jookh Couture" width="140" height="140" loading="lazy" decoding="async" />
+          </div>
+          <p class="section-label archive-label">Jookh Couture</p>
           <h2 class="section-title">The Collection<br /><em>Every piece, one of a kind.</em></h2>
           <p class="section-desc">
-            A glimpse of the full body of work — hundreds of one-of-a-kind pieces, hand-painted in Beirut.
+            A glimpse of the wearable art — hundreds of one-of-a-kind pieces, hand-painted in Beirut.
           </p>
         </div>
 
@@ -241,6 +245,28 @@
 
         <div class="lookbook-teaser-cta reveal">
           <a href="/collection/" class="btn-paintings">Explore the full collection &rarr;</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- P-LO — the sister brand: hand-painted pillows + paintings -->
+    <section id="plo" aria-label="P-Lo — Pillows and Paintings">
+      <div class="container">
+        <div class="section-header reveal">
+          <div class="brand-logo-wrap">
+            <img class="brand-logo" src="images/logos/plo-logo.png" alt="P-Lo" width="140" height="140" loading="lazy" decoding="async" />
+          </div>
+          <p class="section-label">Art on Pillows &amp; Canvas</p>
+          <h2 class="section-title">P&middot;Lo<br /><em>Pillows &amp; paintings.</em></h2>
+          <p class="section-desc">
+            From the same hand as the wearable art — hand-painted pillows and canvases, each a singular object of calm for the home.
+          </p>
+        </div>
+
+        <div id="plo-grid"></div>
+
+        <div class="lookbook-teaser-cta reveal">
+          <a href="/p-lo/" class="btn-paintings">Discover all P&middot;Lo &rarr;</a>
         </div>
       </div>
     </section>
@@ -400,10 +426,10 @@
 
   <button class="back-to-top" id="back-to-top" aria-label="Back to top">↑</button>
 
-  <script src="data/hero-slides.js?v=20260618collection-027"></script>
-  <script src="data/products.js?v=20260618collection-027"></script>
-  <script src="render.js?v=20260618collection-027"></script>
-  <script src="script.js?v=20260618collection-027"></script>
+  <script src="data/hero-slides.js?v=20260618collection-032"></script>
+  <script src="data/products.js?v=20260618collection-032"></script>
+  <script src="render.js?v=20260618collection-032"></script>
+  <script src="script.js?v=20260618collection-032"></script>
   
   <script>
     // Smooth scroll for lookbook year jump links (offset sticky nav)

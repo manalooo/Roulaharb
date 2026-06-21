@@ -28,6 +28,9 @@
   }
 
   var CATEGORY_ORDER = ['wearables', 'scarves', 'bags', 'pillows', 'paintings'];
+  // Two brand worlds: Jookh = wearable art; P·Lo = pillows + paintings.
+  var JOOKH_CATS = ['wearables', 'scarves', 'bags'];
+  var PLO_CATS = ['pillows', 'paintings'];
   var CATEGORY_LABELS = {
     wearables: 'Wearables',
     scarves: 'Scarves',
@@ -62,6 +65,8 @@
     renderArrivals(normalizedProducts);
     renderArchive(normalizedProducts);
     renderHighlight(normalizedProducts);
+    renderPlo(normalizedProducts);
+    renderPloPage(normalizedProducts);
     renderCollectionStats(normalizedProducts);
     wireFilters();   // availability is now folded into the faceted engine in wireArchiveFilters
 
@@ -133,6 +138,42 @@
     });
   }
 
+  // ─── P-LO (home): the sister brand — pillows + paintings ──
+  function renderPlo(products) {
+    var container = document.getElementById('plo-grid');
+    if (!container) return;
+    container.innerHTML = '';
+    // Home is a teaser — show a handful of each; the full set lives on /p-lo/.
+    var PLO_HOME_LIMIT = 6;
+    var idx = 0, any = false;
+    [['pillows', 'Pillows'], ['paintings', 'Paintings']].forEach(function (g) {
+      var items = products.filter(function (p) { return p.category === g[0]; });
+      if (!items.length) return;
+      any = true;
+      container.appendChild(buildSubcatHeader(g[1], false));
+      var grid = el('div', 'collection-grid plo-subgrid');
+      items.slice(0, PLO_HOME_LIMIT).forEach(function (p) { grid.appendChild(buildCard(p, '', idx++)); });
+      container.appendChild(grid);
+    });
+    if (!any) { var sec = document.getElementById('plo'); if (sec) sec.style.display = 'none'; }
+  }
+
+  // ─── P-LO PAGE (/p-lo/): the full pillows + paintings catalogue ──
+  function renderPloPage(products) {
+    var container = document.getElementById('plo-page-grid');
+    if (!container) return;
+    container.innerHTML = '';
+    var idx = 0;
+    [['pillows', 'Pillows'], ['paintings', 'Paintings']].forEach(function (g) {
+      var items = products.filter(function (p) { return p.category === g[0]; });
+      if (!items.length) return;
+      container.appendChild(buildSubcatHeader(g[1], false));
+      var grid = el('div', 'collection-grid plo-subgrid');
+      items.forEach(function (p) { grid.appendChild(buildCard(p, '', idx++)); });
+      container.appendChild(grid);
+    });
+  }
+
   // ─── ARRIVALS ────────────────────────────────────
   function renderArrivals(products) {
     var container = document.getElementById('arrivals-grid');
@@ -146,7 +187,7 @@
     }
 
     var cardIndex = 0;
-    CATEGORY_ORDER.forEach(function (category) {
+    JOOKH_CATS.forEach(function (category) {   // Shop = Jookh wearable art only; P·Lo has its own section
       var items = available.filter(function (p) { return p.category === category; });
       if (!items.length) return;
       cardIndex = renderCategoryGroup(container, items, category, 'arrivals', cardIndex);
@@ -169,7 +210,7 @@
     }
 
     var cardIndex = 0;
-    CATEGORY_ORDER.forEach(function (category) {
+    JOOKH_CATS.forEach(function (category) {   // The Collection = Jookh only; pillows + paintings live in the P·Lo section
       var items = sold.filter(function (p) { return p.category === category; });
       if (!items.length) return;
       cardIndex = renderCategoryGroup(container, items, category, 'archive', cardIndex);
@@ -677,11 +718,17 @@
 
     update();
 
-    // Deep-link from the home page: /collection/?c=<Collection> opens that room.
+    // Deep-link from the home page:
+    //   /collection/?c=<Collection>  opens that room (subcollection)
+    //   /collection/?cat=<category>  opens that category (e.g. pillows for P-Lo)
     try {
-      var deepC = new URLSearchParams(location.search).get('c');
-      if (deepC && roomRec[deepC]) {
-        state.subcollection = deepC; state.cat = 'all';
+      var qs = new URLSearchParams(location.search);
+      var deepC = qs.get('c');
+      var deepCat = (qs.get('cat') || '').toLowerCase();
+      var jumped = false;
+      if (deepC && roomRec[deepC]) { state.subcollection = deepC; state.cat = 'all'; jumped = true; }
+      else if (deepCat && CATEGORY_LABELS[deepCat]) { state.cat = deepCat; state.subcollection = ''; jumped = true; }
+      if (jumped) {
         update();
         var g = document.getElementById('archive-grid');
         if (g) setTimeout(function () {

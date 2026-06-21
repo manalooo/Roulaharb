@@ -11,6 +11,14 @@ const csv = fs.readFileSync(CSV, 'utf8').trim();
 const lines = csv.split(/\r?\n/);
 const header = lines.shift().split(',');
 
+// Append the P-Lo inventory (pillows + paintings) — same header, drop its header row.
+const CSV_PLO = path.join(__dirname, '..', 'inventory-plo.csv');
+if (fs.existsSync(CSV_PLO)) {
+  const ploLines = fs.readFileSync(CSV_PLO, 'utf8').trim().split(/\r?\n/);
+  ploLines.shift();
+  ploLines.forEach(l => { if (l.trim()) lines.push(l); });
+}
+
 function parseCsvLine(line) {
   const out = []; let cur = ''; let inQ = false;
   for (let i = 0; i < line.length; i++) {

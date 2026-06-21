@@ -131,9 +131,13 @@ function buildProduct(row) {
   var era             = (row.Era             || '').trim().toLowerCase(); // 'new' | 'archive' | ''
   if (status !== 'sold') status = 'available';
 
-  // Build views array: main → hover → any extra views auto-detected on disk
+  // Build views array: main → hover → explicit Extra_Views column → any auto-detected on disk
   var views = [row.Main_Image, row.Hover_Image].filter(function (v) {
     return v && v.trim() !== '';
+  });
+
+  (row.Extra_Views || '').split('|').map(function (s) { return s.trim(); }).filter(Boolean).forEach(function (v) {
+    if (views.indexOf(v) === -1) views.push(v);
   });
 
   var extras = detectExtraViews(row.Main_Image);
@@ -183,8 +187,11 @@ if (!fs.existsSync(CSV_FILE)) {
 var dataDir = path.join(__dirname, 'data');
 if (!fs.existsSync(dataDir)) fs.mkdirSync(dataDir);
 
-var csvText  = fs.readFileSync(CSV_FILE, 'utf8');
-var rows     = parseCSV(csvText);
+var rows     = parseCSV(fs.readFileSync(CSV_FILE, 'utf8'));   // Jookh
+var PLO_FILE = path.join(__dirname, 'inventory-plo.csv');     // P-Lo (pillows + paintings)
+if (fs.existsSync(PLO_FILE)) {
+  rows = rows.concat(parseCSV(fs.readFileSync(PLO_FILE, 'utf8')));
+}
 var products = rows.map(buildProduct);
 
 // Validate: warn if placeholder values remain

@@ -323,8 +323,10 @@ a   { text-decoration: none; color: inherit; }
   filter: drop-shadow(0 8px 24px rgba(0,0,0,0.45));
   transition: transform 0.5s var(--ease), filter 0.5s var(--ease);
 }
-#jookh .brand-logo { filter: drop-shadow(0 8px 24px rgba(227,30,36,0.3)); }
+#jookh .brand-logo,
+.brand-logo--jookh { filter: drop-shadow(0 8px 24px rgba(227,30,36,0.3)); }
 #plo   .brand-logo { filter: drop-shadow(0 8px 24px rgba(224,123,10,0.3)); }
+.brand-logo--jookh:hover { filter: drop-shadow(0 16px 40px rgba(227,30,36,0.4)); }
 .brand-logo:hover {
   transform: scale(1.07) rotate(-1deg);
   filter: drop-shadow(0 16px 40px rgba(0,0,0,0.5));
@@ -1437,6 +1439,11 @@ body:has(#navbar.nav-hidden) .collection-toolbar { top: 0.6rem; }
 body.page-collection .archive-wrap { max-height: none !important; overflow: visible !important; }
 body.page-collection .archive-wrap::after { display: none !important; }
 body.page-collection .product-card.reveal { opacity: 1; }
+/* P-Lo page: same — keep cards & headers visible (no reveal flash on the long grid) */
+body.page-plo .product-card.reveal,
+body.page-plo .jookh-subcat-header.reveal,
+body.page-plo .section-header.reveal { opacity: 1; transform: none; }
+body.page-plo #plo { overflow-x: clip; overflow-y: visible; }
 
 /* Availability quick-filter (uses :has — modern browsers) */
 #archive-grid.show-available .product-card:has(.card-sold-tag) { display: none; }
