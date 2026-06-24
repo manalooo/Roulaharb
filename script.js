@@ -510,7 +510,8 @@ var prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)')
     if (!items.length) return '';
     var lines = ['Hello Roula, I am interested in the following piece(s):'];
     items.forEach(function (p, i) {
-      lines.push((i + 1) + '. ' + p.name + ' (' + p.collection + ')');
+      var url = p.thumb ? (/^https?:/.test(p.thumb) ? p.thumb : 'https://roulaharb.com/' + String(p.thumb).replace(/^\//, '')) : '';
+      lines.push((i + 1) + '. ' + p.name + ' (' + p.collection + ')' + (url ? '\n   ' + url : ''));
     });
     lines.push('\nCould you please let me know about availability and pricing? Thank you.');
     return encodeURIComponent(lines.join('\n'));
