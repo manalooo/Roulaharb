@@ -5323,9 +5323,9 @@ window.PRODUCTS = [
     "medium": "Hand-painted",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
-      "images/plo/plo-11-view-1.jpg",
+      "images/plo/plo-13-view-1.jpg",
       "images/plo/plo-12-view-1.jpg",
-      "images/plo/plo-13-view-1.jpg"
+      "images/plo/plo-11-view-1.jpg"
     ],
     "status": "available",
     "collection_line": "pillows",
@@ -5341,8 +5341,9 @@ window.PRODUCTS = [
     "medium": "Hand-painted",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
-      "images/plo/plo-14-view-1.jpg",
       "images/plo/plo-15-view-1.jpg",
+      "images/plo/plo-15-view-1.jpg",
+      "images/plo/plo-14-view-1.jpg",
       "images/plo/plo-16-view-1.jpg"
     ],
     "status": "available",
@@ -5359,8 +5360,9 @@ window.PRODUCTS = [
     "medium": "Hand-painted",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
-      "images/plo/plo-17-view-1.jpg",
       "images/plo/plo-18-view-1.jpg",
+      "images/plo/plo-18-view-1.jpg",
+      "images/plo/plo-17-view-1.jpg",
       "images/plo/plo-19-view-1.jpg",
       "images/plo/plo-20-view-1.jpg"
     ],
@@ -5378,8 +5380,9 @@ window.PRODUCTS = [
     "medium": "Hand-painted",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
-      "images/plo/plo-26-view-1.jpg",
       "images/plo/plo-27-view-1.jpg",
+      "images/plo/plo-27-view-1.jpg",
+      "images/plo/plo-26-view-1.jpg",
       "images/plo/plo-28-view-1.jpg"
     ],
     "status": "available",
@@ -5558,22 +5561,7 @@ window.PRODUCTS = [
     "medium": "Hand-painted",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
-      "images/plo/plo-41-view-1.jpg"
-    ],
-    "status": "available",
-    "collection_line": "pillows",
-    "type": "Pillow",
-    "technique": "Hand-painted"
-  },
-  {
-    "id": "plo-42",
-    "name": "Winter Forest II",
-    "category": "pillows",
-    "collection": "P-Lo",
-    "price": "ENTER PRICE HERE",
-    "medium": "Hand-painted",
-    "edition": "One-of-a-kind · Signed by the artist",
-    "views": [
+      "images/plo/plo-41-view-1.jpg",
       "images/plo/plo-42-view-1.jpg"
     ],
     "status": "available",
@@ -6358,22 +6346,7 @@ window.PRODUCTS = [
     "medium": "Hand-painted",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
-      "images/plo/plo-91-view-1.jpg"
-    ],
-    "status": "available",
-    "collection_line": "pillows",
-    "type": "Pillow",
-    "technique": "Hand-painted"
-  },
-  {
-    "id": "plo-92",
-    "name": "Autumn Weave II",
-    "category": "pillows",
-    "collection": "P-Lo",
-    "price": "ENTER PRICE HERE",
-    "medium": "Hand-painted",
-    "edition": "One-of-a-kind · Signed by the artist",
-    "views": [
+      "images/plo/plo-91-view-1.jpg",
       "images/plo/plo-92-view-1.jpg"
     ],
     "status": "available",
