@@ -71,12 +71,15 @@
     wireFilters();   // availability is now folded into the faceted engine in wireArchiveFilters
 
     if (typeof window.initReveal === 'function') window.initReveal();
+    initCardSlideshows();
   }
 
   // ─── COLLECTION PAGE: scale statement + availability toggle ──
   function renderCollectionStats(products) {
     var el2 = document.getElementById('collection-stats');
     if (!el2) return;
+    // The Collection page is Jookh only — pillows + paintings live in the P·Lo world.
+    products = products.filter(function (p) { return JOOKH_CATS.indexOf(p.category) !== -1; });
     var subs = {};
     products.forEach(function (p) { var s = (p.subcollection || '').trim().toLowerCase(); if (s) subs[s] = 1; });
     var avail = products.filter(function (p) { return p.status !== 'sold'; }).length;
@@ -830,38 +833,37 @@
   function buildCard(product, variant, index) {
     var isPlo         = product.collection === 'P-Lo';
     var isSold        = product.status === 'sold';
-    var isWearable    = product.category === 'wearables';
-    var hasSecondView = Array.isArray(product.views) && product.views.length >= 2;
+    var views         = (product.views || []).filter(Boolean);
+    var hasMultipleViews = views.length >= 2;
 
     var nameText = (product.name || 'Artwork').trim();
     var altMain  = nameText + (isPlo ? ' — hand-painted pillow' : ' — hand-painted wearable art');
     var altHover = nameText + ' — alternate view';
 
-    var wrapClass = 'card-img-wrap' + (isWearable && hasSecondView ? ' card-crossfade' : '');
+    var wrapClass = 'card-img-wrap' + (hasMultipleViews ? ' card-slideshow' : '');
     var imgWrap = el('div', wrapClass);
     imgWrap.setAttribute('role', 'button');
     imgWrap.setAttribute('tabindex', '0');
     imgWrap.setAttribute('aria-label', 'View ' + nameText + ' in lightbox');
 
-    var mainImg = el('img', 'main-img');
-    mainImg.src      = withV((product.views && product.views[0]) || '');
-    mainImg.alt      = altMain;
-    mainImg.loading  = index < 6 ? 'eager' : 'lazy';
-    mainImg.decoding = index < 6 ? 'sync' : 'async';
-    imgWrap.appendChild(mainImg);
+    views.forEach(function (src, i) {
+      var imgClass = 'card-view-img' + (i === 0 ? ' main-img is-active' : '');
+      var img = el('img', imgClass);
+      img.src      = withV(src);
+      img.alt      = i === 0 ? altMain : altHover;
+      img.loading  = index < 6 && i === 0 ? 'eager' : 'lazy';
+      img.decoding = index < 6 && i === 0 ? 'sync' : 'async';
+      imgWrap.appendChild(img);
+    });
 
     // Blur-up: hold a shimmer placeholder until the art has loaded, then dissolve.
-    var markLoaded = function () { imgWrap.classList.add('img-loaded'); };
-    if (mainImg.complete && mainImg.naturalWidth > 0) markLoaded();
-    else { mainImg.addEventListener('load', markLoaded); mainImg.addEventListener('error', markLoaded); }
-
-    if (isWearable && hasSecondView) {
-      var hoverImg = el('img', 'hover-img');
-      hoverImg.src      = withV(product.views[1]);
-      hoverImg.alt      = altHover;
-      hoverImg.loading  = 'lazy';
-      hoverImg.decoding = 'async';
-      imgWrap.appendChild(hoverImg);
+    var mainImg = imgWrap.querySelector('.main-img');
+    if (mainImg) {
+      var markLoaded = function () { imgWrap.classList.add('img-loaded'); };
+      if (mainImg.complete && mainImg.naturalWidth > 0) markLoaded();
+      else { mainImg.addEventListener('load', markLoaded); mainImg.addEventListener('error', markLoaded); }
+    } else {
+      imgWrap.classList.add('img-loaded');
     }
 
     if (isSold) {
