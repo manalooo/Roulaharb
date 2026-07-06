@@ -4,7 +4,7 @@ const fs = require('fs');
 const path = require('path');
 
 const ROOT = path.join(__dirname, '..');
-const VER = 'v=20260618collection-035';           // keep in step with the HTML cache-bust token
+const VER = 'v=20260618collection-036';           // keep in step with the HTML cache-bust token
 const SITE = 'https://roulaharb.com';
 const products = JSON.parse(fs.readFileSync(path.join(ROOT, 'data', 'products.json'), 'utf8'))
   .filter(p => p.id && p.category && p.name);
@@ -149,7 +149,7 @@ function page(p) {
         specRows(p) +
         '<p class="piece-edition">' + esc(p.edition || 'One-of-a-kind · Signed by the artist') + '</p>\n' +
         '<div class="piece-cta">' + cta + '</div>\n' +
-        '<p class="piece-note">Worldwide delivery from Beirut. Reserve here, or message on WhatsApp / Instagram to arrange.</p>\n' +
+        '<p class="piece-note">One-of-a-kind and signed by the artist. Reserve here, or message on WhatsApp / Instagram to arrange the details.</p>\n' +
       '</aside>\n' +
     '</div>\n' +
     related(p) + '\n' +
