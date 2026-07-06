@@ -875,8 +875,10 @@
 
     var infoRow = el('div', 'card-info' + (isPlo ? ' card-info--plo' : ''));
 
-    var nameEl = el('span', 'card-piece-num' + (isPlo ? ' card-piece-num--plo' : ''));
+    var nameEl = el('a', 'card-piece-num' + (isPlo ? ' card-piece-num--plo' : ''));
     nameEl.textContent = product.name || '';
+    nameEl.href = '/piece/' + product.id + '/';
+    nameEl.setAttribute('aria-label', 'View ' + (product.name || 'piece') + ' details');
     infoRow.appendChild(nameEl);
 
     if (product.medium && product.medium.indexOf('ENTER') === -1 && product.medium.indexOf('[') === -1) {

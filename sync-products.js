@@ -227,4 +227,11 @@ if (placeholderCount > 0) {
   console.log('   Open inventory.csv, fill in Name / Price / Story, then re-run.');
 }
 
+// Regenerate the per-piece pages (/piece/<id>/) + sitemap from the fresh products.json.
+try {
+  require('child_process').execSync('node ' + path.join(__dirname, 'scripts', 'gen-piece-pages.js'), { stdio: 'inherit' });
+} catch (e) {
+  console.log('⚠  Could not regenerate piece pages: ' + e.message);
+}
+
 console.log('\nDone. Refresh your browser to see the changes.');
