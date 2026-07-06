@@ -1531,8 +1531,8 @@ window.PRODUCTS = [
     "medium": "silk/wool",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
-      "images/jookh/wearables/wear-62-view-1.png",
-      "images/jookh/wearables/wear-62-view-2.png"
+      "images/jookh/wearables/wear-62-view-2.png",
+      "images/jookh/wearables/wear-62-view-1.png"
     ],
     "status": "sold",
     "subcollection": "Dusseldorf",
@@ -1552,8 +1552,8 @@ window.PRODUCTS = [
     "medium": "silk/wool",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
-      "images/jookh/wearables/wear-63-view-1.png",
-      "images/jookh/wearables/wear-63-view-2.png"
+      "images/jookh/wearables/wear-63-view-2.png",
+      "images/jookh/wearables/wear-63-view-1.png"
     ],
     "status": "sold",
     "subcollection": "Dusseldorf",
@@ -2842,8 +2842,8 @@ window.PRODUCTS = [
     "medium": "wool/silk",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
-      "images/jookh/wearables/wear-242-view-1.png",
-      "images/jookh/wearables/wear-242-view-2.png"
+      "images/jookh/wearables/wear-242-view-2.png",
+      "images/jookh/wearables/wear-242-view-1.png"
     ],
     "status": "sold",
     "subcollection": "Kitsuki",
@@ -3187,8 +3187,8 @@ window.PRODUCTS = [
     "medium": "denim/cotton",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
-      "images/jookh/wearables/wear-24-view-1.jpg",
-      "images/jookh/wearables/wear-24-view-2.jpg"
+      "images/jookh/wearables/wear-24-view-2.jpg",
+      "images/jookh/wearables/wear-24-view-1.jpg"
     ],
     "status": "sold",
     "subcollection": "Kyoto",
@@ -3227,8 +3227,8 @@ window.PRODUCTS = [
     "medium": "wool/cotton",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
-      "images/jookh/wearables/wear-26-view-1.jpg",
-      "images/jookh/wearables/wear-26-view-2.jpg"
+      "images/jookh/wearables/wear-26-view-2.jpg",
+      "images/jookh/wearables/wear-26-view-1.jpg"
     ],
     "status": "sold",
     "subcollection": "Kyoto",
@@ -3267,8 +3267,8 @@ window.PRODUCTS = [
     "medium": "wool/cotton",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
-      "images/jookh/wearables/wear-28-view-1.jpg",
-      "images/jookh/wearables/wear-28-view-2.jpg"
+      "images/jookh/wearables/wear-28-view-2.jpg",
+      "images/jookh/wearables/wear-28-view-1.jpg"
     ],
     "status": "sold",
     "subcollection": "Kyoto",
@@ -3306,8 +3306,8 @@ window.PRODUCTS = [
     "medium": "wool",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
-      "images/jookh/wearables/wear-41-view-1.jpg",
-      "images/jookh/wearables/wear-41-view-2.jpg"
+      "images/jookh/wearables/wear-41-view-2.jpg",
+      "images/jookh/wearables/wear-41-view-1.jpg"
     ],
     "status": "sold",
     "subcollection": "Kyoto",
@@ -3738,8 +3738,8 @@ window.PRODUCTS = [
     "medium": "ENTER MATERIAL HERE",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
-      "images/jookh/wearables/wear-244-view-1.png",
-      "images/jookh/wearables/wear-244-view-2.png"
+      "images/jookh/wearables/wear-244-view-2.png",
+      "images/jookh/wearables/wear-244-view-1.png"
     ],
     "status": "sold",
     "subcollection": "Oxford",
@@ -3855,8 +3855,8 @@ window.PRODUCTS = [
     "medium": "wool/cotton tweed",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
-      "images/jookh/wearables/wear-60-view-1.png",
-      "images/jookh/wearables/wear-60-view-2.png"
+      "images/jookh/wearables/wear-60-view-2.png",
+      "images/jookh/wearables/wear-60-view-1.png"
     ],
     "status": "sold",
     "subcollection": "Oxford",
@@ -3895,8 +3895,8 @@ window.PRODUCTS = [
     "medium": "silk",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
-      "images/jookh/wearables/wear-65-view-1.png",
-      "images/jookh/wearables/wear-65-view-2.png"
+      "images/jookh/wearables/wear-65-view-2.png",
+      "images/jookh/wearables/wear-65-view-1.png"
     ],
     "status": "sold",
     "subcollection": "Oxford",
@@ -3916,8 +3916,8 @@ window.PRODUCTS = [
     "medium": "silk",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
-      "images/jookh/wearables/wear-66-view-1.png",
-      "images/jookh/wearables/wear-66-view-2.png"
+      "images/jookh/wearables/wear-66-view-2.png",
+      "images/jookh/wearables/wear-66-view-1.png"
     ],
     "status": "sold",
     "subcollection": "Oxford",
@@ -3957,8 +3957,8 @@ window.PRODUCTS = [
     "medium": "linen",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
-      "images/jookh/wearables/wear-72-view-1.jpg",
-      "images/jookh/wearables/wear-72-view-2.jpg"
+      "images/jookh/wearables/wear-72-view-2.jpg",
+      "images/jookh/wearables/wear-72-view-1.jpg"
     ],
     "status": "available",
     "subcollection": "Oxford",
@@ -3977,8 +3977,8 @@ window.PRODUCTS = [
     "medium": "linen",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
-      "images/jookh/wearables/wear-73-view-1.jpg",
-      "images/jookh/wearables/wear-73-view-2.jpg"
+      "images/jookh/wearables/wear-73-view-2.jpg",
+      "images/jookh/wearables/wear-73-view-1.jpg"
     ],
     "status": "available",
     "subcollection": "Oxford",
@@ -3997,8 +3997,8 @@ window.PRODUCTS = [
     "medium": "silk",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
-      "images/jookh/wearables/wear-82-view-1.jpg",
-      "images/jookh/wearables/wear-82-view-2.jpg"
+      "images/jookh/wearables/wear-82-view-2.jpg",
+      "images/jookh/wearables/wear-82-view-1.jpg"
     ],
     "status": "sold",
     "subcollection": "Oxford",
@@ -4017,8 +4017,8 @@ window.PRODUCTS = [
     "medium": "silk/satin",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
-      "images/jookh/wearables/wear-83-view-1.jpg",
-      "images/jookh/wearables/wear-83-view-2.jpg"
+      "images/jookh/wearables/wear-83-view-2.jpg",
+      "images/jookh/wearables/wear-83-view-1.jpg"
     ],
     "status": "sold",
     "subcollection": "Oxford",
@@ -4036,8 +4036,8 @@ window.PRODUCTS = [
     "medium": "silk",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
-      "images/jookh/wearables/wear-84-view-1.png",
-      "images/jookh/wearables/wear-84-view-2.png"
+      "images/jookh/wearables/wear-84-view-2.png",
+      "images/jookh/wearables/wear-84-view-1.png"
     ],
     "status": "sold",
     "subcollection": "Oxford",
@@ -4055,8 +4055,8 @@ window.PRODUCTS = [
     "medium": "silk",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
-      "images/jookh/wearables/wear-85-view-1.png",
-      "images/jookh/wearables/wear-85-view-2.png"
+      "images/jookh/wearables/wear-85-view-2.png",
+      "images/jookh/wearables/wear-85-view-1.png"
     ],
     "status": "sold",
     "subcollection": "Oxford",
@@ -4132,8 +4132,8 @@ window.PRODUCTS = [
     "medium": "cotton",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
-      "images/jookh/wearables/wear-33-view-1.jpg",
-      "images/jookh/wearables/wear-33-view-2.jpg"
+      "images/jookh/wearables/wear-33-view-2.jpg",
+      "images/jookh/wearables/wear-33-view-1.jpg"
     ],
     "status": "available",
     "subcollection": "Roma",
@@ -4151,8 +4151,8 @@ window.PRODUCTS = [
     "medium": "cotton",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
-      "images/jookh/wearables/wear-35-view-1.jpg",
-      "images/jookh/wearables/wear-35-view-2.jpg"
+      "images/jookh/wearables/wear-35-view-2.jpg",
+      "images/jookh/wearables/wear-35-view-1.jpg"
     ],
     "status": "available",
     "subcollection": "Roma",
@@ -4170,8 +4170,8 @@ window.PRODUCTS = [
     "medium": "cotton",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
-      "images/jookh/wearables/wear-36-view-1.jpg",
-      "images/jookh/wearables/wear-36-view-2.jpg"
+      "images/jookh/wearables/wear-36-view-2.jpg",
+      "images/jookh/wearables/wear-36-view-1.jpg"
     ],
     "status": "available",
     "subcollection": "Roma",
@@ -4190,8 +4190,8 @@ window.PRODUCTS = [
     "medium": "cotton",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
-      "images/jookh/wearables/wear-37-view-1.jpg",
-      "images/jookh/wearables/wear-37-view-2.jpg"
+      "images/jookh/wearables/wear-37-view-2.jpg",
+      "images/jookh/wearables/wear-37-view-1.jpg"
     ],
     "status": "available",
     "subcollection": "Roma",
@@ -4209,8 +4209,8 @@ window.PRODUCTS = [
     "medium": "cotton",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
-      "images/jookh/wearables/wear-38-view-1.jpg",
-      "images/jookh/wearables/wear-38-view-2.jpg"
+      "images/jookh/wearables/wear-38-view-2.jpg",
+      "images/jookh/wearables/wear-38-view-1.jpg"
     ],
     "status": "available",
     "subcollection": "Roma",
@@ -4229,8 +4229,8 @@ window.PRODUCTS = [
     "medium": "cotton",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
-      "images/jookh/wearables/wear-70-view-1.jpg",
-      "images/jookh/wearables/wear-70-view-2.jpg"
+      "images/jookh/wearables/wear-70-view-2.jpg",
+      "images/jookh/wearables/wear-70-view-1.jpg"
     ],
     "status": "sold",
     "subcollection": "Roma",
@@ -4249,8 +4249,8 @@ window.PRODUCTS = [
     "medium": "cotton",
     "edition": "One-of-a-kind · Signed by the artist",
     "views": [
-      "images/jookh/wearables/wear-sold-olive-view-1.jpg",
-      "images/jookh/wearables/wear-sold-olive-view-2.jpg"
+      "images/jookh/wearables/wear-sold-olive-view-2.jpg",
+      "images/jookh/wearables/wear-sold-olive-view-1.jpg"
     ],
     "status": "available",
     "subcollection": "Roma",
