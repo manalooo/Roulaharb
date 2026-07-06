@@ -2933,7 +2933,7 @@ window.PRODUCTS = [
     "views": [
       "images/jookh/scarves/scarf-05-view-1.jpeg"
     ],
-    "status": "available",
+    "status": "sold",
     "subcollection": "KUMBAKONAM",
     "collection_line": "KUMBAKONAM",
     "type": "Scarf",
@@ -2950,7 +2950,7 @@ window.PRODUCTS = [
     "views": [
       "images/jookh/scarves/scarf-06-view-1.jpeg"
     ],
-    "status": "available",
+    "status": "sold",
     "subcollection": "KUMBAKONAM",
     "collection_line": "KUMBAKONAM",
     "type": "Scarf",
@@ -3018,7 +3018,7 @@ window.PRODUCTS = [
     "views": [
       "images/jookh/scarves/scarf-10-view-1.jpeg"
     ],
-    "status": "available",
+    "status": "sold",
     "subcollection": "KUMBAKONAM",
     "collection_line": "KUMBAKONAM",
     "type": "Scarf",
@@ -3538,7 +3538,7 @@ window.PRODUCTS = [
     "views": [
       "images/jookh/bags/bag-10-view-1.jpeg"
     ],
-    "status": "available",
+    "status": "sold",
     "subcollection": "OSAKA",
     "collection_line": "OSAKA",
     "type": "Bag"
@@ -3586,7 +3586,7 @@ window.PRODUCTS = [
     "views": [
       "images/jookh/bags/bag-13-view-1.jpeg"
     ],
-    "status": "available",
+    "status": "sold",
     "subcollection": "OSAKA",
     "collection_line": "OSAKA",
     "type": "Bag"
@@ -3634,7 +3634,7 @@ window.PRODUCTS = [
     "views": [
       "images/jookh/bags/bag-17-view-1.jpeg"
     ],
-    "status": "available",
+    "status": "sold",
     "subcollection": "OSAKA",
     "collection_line": "OSAKA",
     "type": "Bag"
@@ -4154,7 +4154,7 @@ window.PRODUCTS = [
       "images/jookh/wearables/wear-35-view-2.jpg",
       "images/jookh/wearables/wear-35-view-1.jpg"
     ],
-    "status": "available",
+    "status": "sold",
     "subcollection": "Roma",
     "collection_line": "Essential",
     "type": "Blazer",
@@ -4173,7 +4173,7 @@ window.PRODUCTS = [
       "images/jookh/wearables/wear-36-view-2.jpg",
       "images/jookh/wearables/wear-36-view-1.jpg"
     ],
-    "status": "available",
+    "status": "sold",
     "subcollection": "Roma",
     "collection_line": "Essential",
     "type": "Shirt",
@@ -5036,7 +5036,7 @@ window.PRODUCTS = [
     "views": [
       "images/jookh/bags/bag-14-view-1.jpeg"
     ],
-    "status": "available",
+    "status": "sold",
     "collection_line": "OSAKA",
     "type": "Bag"
   },
