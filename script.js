@@ -212,22 +212,34 @@ var prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)')
         }
       });
     }, {
-      threshold: 0.12,
-      rootMargin: '0px 0px -40px 0px'
+      threshold: 0,
+      rootMargin: '0px 0px 200px 0px'   // reveal a bit BEFORE it scrolls into view — no blank-then-pop
     });
 
     revealEls.forEach(function (el) {
-      const parent = el.parentElement;
-      if (parent && (parent.classList.contains('collection-grid') ||
-                     parent.classList.contains('jookh-grid') ||
-                     parent.classList.contains('statement-grid') ||
-                     parent.classList.contains('contact-grid'))) {
-        // stagger handled per-card in render.js
-      }
       el.classList.add('reveal-wired');
-      revealObserver.observe(el);
+      // Anything already in or above the viewport reveals immediately — never leaves a blank gap.
+      const r = el.getBoundingClientRect();
+      if (r.top < window.innerHeight + 200) el.classList.add('visible');
+      else revealObserver.observe(el);
     });
   }
+
+  // Safety net: if a reveal ever slips past the observer, reveal it once it's in view.
+  var _revealTick = false;
+  function revealSafetyNet() {
+    if (_revealTick) return; _revealTick = true;
+    requestAnimationFrame(function () {
+      _revealTick = false;
+      var vh = window.innerHeight;
+      document.querySelectorAll('.reveal:not(.visible)').forEach(function (el) {
+        var r = el.getBoundingClientRect();
+        if (r.top < vh + 200 && r.bottom > -100) el.classList.add('visible');
+      });
+    });
+  }
+  window.addEventListener('scroll', revealSafetyNet, { passive: true });
+  window.addEventListener('load', revealSafetyNet);
 
   window.initReveal = initReveal;
 
