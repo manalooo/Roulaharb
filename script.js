@@ -898,3 +898,131 @@ var prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)')
     spawn(r.left + r.width / 2, r.top + r.height / 2);
   });
 })();
+
+/* ═══════════════════════════════════════════════════════
+   SEARCH — find any available piece by name, collection,
+   type, colour, motif, technique or fit. Data comes from
+   data/search-index.js (available pieces only).
+   ═══════════════════════════════════════════════════════ */
+(function siteSearch() {
+  'use strict';
+
+  var INDEX = window.SEARCH_INDEX;
+  if (!Array.isArray(INDEX) || !INDEX.length) return;
+
+  var nav = document.querySelector('#navbar .nav-inner');
+  if (!nav) return;
+
+  // ── trigger in the nav ──────────────────────────────
+  var btn = document.createElement('button');
+  btn.className = 'nav-search-btn';
+  btn.type = 'button';
+  btn.setAttribute('aria-label', 'Search the collection');
+  btn.innerHTML =
+    '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" ' +
+    'stroke-width="1.6" stroke-linecap="round" aria-hidden="true">' +
+    '<circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="21" y2="21"/></svg>';
+  var anchor = nav.querySelector('.nav-edition') || nav.querySelector('.hamburger');
+  if (anchor) nav.insertBefore(btn, anchor); else nav.appendChild(btn);
+
+  // ── overlay ─────────────────────────────────────────
+  var overlay = document.createElement('div');
+  overlay.className = 'search-overlay';
+  overlay.hidden = true;
+  overlay.innerHTML =
+    '<div class="search-panel" role="dialog" aria-modal="true" aria-label="Search pieces">' +
+      '<div class="search-bar">' +
+        '<svg class="search-bar-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" ' +
+        'stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true">' +
+        '<circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="21" y2="21"/></svg>' +
+        '<input type="search" class="search-input" id="site-search-input" autocomplete="off" ' +
+        'placeholder="Search by name, colour, collection…" aria-label="Search pieces" />' +
+        '<button type="button" class="search-close" aria-label="Close search">&#215;</button>' +
+      '</div>' +
+      '<p class="search-hint">Try <em>roma</em>, <em>blazer</em>, <em>heart</em> or <em>pomegranate</em> &mdash; searching ' + INDEX.length + ' available pieces.</p>' +
+      '<div class="search-results" id="site-search-results" role="listbox" aria-label="Results"></div>' +
+    '</div>';
+  document.body.appendChild(overlay);
+
+  var input   = overlay.querySelector('.search-input');
+  var results = overlay.querySelector('.search-results');
+  var hint    = overlay.querySelector('.search-hint');
+  var closeEl = overlay.querySelector('.search-close');
+  var lastFocus = null;
+
+  function esc(s) {
+    return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+  }
+
+  // Every word typed must appear somewhere — so "red kimono" means both.
+  function search(q) {
+    var terms = q.toLowerCase().split(/\s+/).filter(Boolean);
+    if (!terms.length) return [];
+    var hits = [];
+    for (var i = 0; i < INDEX.length; i++) {
+      var it = INDEX[i], keys = it.k, ok = true;
+      for (var t = 0; t < terms.length; t++) {
+        if (keys.indexOf(terms[t]) === -1) { ok = false; break; }
+      }
+      if (!ok) continue;
+      // Rank: name match beats a match buried in the details.
+      var name = it.n.toLowerCase();
+      var score = name.indexOf(terms[0]) === 0 ? 0 : (name.indexOf(terms[0]) !== -1 ? 1 : 2);
+      hits.push({ it: it, score: score });
+    }
+    hits.sort(function (a, b) { return a.score - b.score || a.it.n.localeCompare(b.it.n); });
+    return hits.slice(0, 30).map(function (h) { return h.it; });
+  }
+
+  function render(q) {
+    if (!q.trim()) {
+      results.innerHTML = '';
+      hint.hidden = false;
+      return;
+    }
+    hint.hidden = true;
+    var found = search(q);
+    if (!found.length) {
+      results.innerHTML = '<p class="search-empty">Nothing matches &ldquo;' + esc(q) + '&rdquo;.<br />' +
+        '<span>Try a colour, a collection name, or a type like <em>kimono</em>.</span></p>';
+      return;
+    }
+    results.innerHTML = found.map(function (it) {
+      return '<a class="search-hit" href="/piece/' + esc(it.i) + '/" role="option">' +
+        '<span class="search-hit-img"><img src="/' + esc(it.t) + '" alt="" loading="lazy" decoding="async" /></span>' +
+        '<span class="search-hit-text">' +
+          '<span class="search-hit-name">' + esc(it.n) + '</span>' +
+          '<span class="search-hit-meta">' + esc(it.b) + ' &middot; ' + esc(it.g) + '</span>' +
+        '</span></a>';
+    }).join('');
+  }
+
+  function open() {
+    lastFocus = document.activeElement;
+    overlay.hidden = false;
+    document.body.classList.add('search-open');
+    input.value = '';
+    render('');
+    setTimeout(function () { input.focus(); }, 30);
+  }
+  function close() {
+    overlay.hidden = true;
+    document.body.classList.remove('search-open');
+    if (lastFocus && lastFocus.focus) lastFocus.focus();
+  }
+
+  btn.addEventListener('click', open);
+  closeEl.addEventListener('click', close);
+  overlay.addEventListener('click', function (e) { if (e.target === overlay) close(); });
+  input.addEventListener('input', function () { render(input.value); });
+
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && !overlay.hidden) { e.preventDefault(); close(); }
+    // "/" opens search, unless you're already typing somewhere
+    if (e.key === '/' && overlay.hidden) {
+      var t = e.target.tagName;
+      if (t === 'INPUT' || t === 'TEXTAREA' || e.target.isContentEditable) return;
+      e.preventDefault(); open();
+    }
+  });
+})();

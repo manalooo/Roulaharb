@@ -4,7 +4,7 @@ const fs = require('fs');
 const path = require('path');
 
 const ROOT = path.join(__dirname, '..');
-const VER = 'v=20260618collection-040';           // keep in step with the HTML cache-bust token
+const VER = 'v=20260618collection-042';           // keep in step with the HTML cache-bust token
 const SITE = 'https://roulaharb.com';
 const products = JSON.parse(fs.readFileSync(path.join(ROOT, 'data', 'products.json'), 'utf8'))
   .filter(p => p.id && p.category && p.name);
@@ -154,6 +154,7 @@ function page(p) {
     '</div>\n' +
     related(p) + '\n' +
     '</main>\n' + FOOTER + '\n' +
+    '<script src="/data/search-index.js?' + VER + '"></script>\n' +
     '<script src="/script.js?' + VER + '"></script>\n' +
     '<script>(function(){var hero=document.getElementById("piece-hero");var t=document.querySelectorAll(".piece-thumb");t.forEach(function(b){b.addEventListener("click",function(){hero.src=b.dataset.src;t.forEach(function(x){x.classList.remove("is-active");x.setAttribute("aria-selected","false");});b.classList.add("is-active");b.setAttribute("aria-selected","true");});});})();</script>\n' +
     '</body>\n</html>\n';
@@ -181,4 +182,22 @@ if (!fs.existsSync(path.join(ROOT, 'robots.txt'))) {
   fs.writeFileSync(path.join(ROOT, 'robots.txt'), 'User-agent: *\nAllow: /\nSitemap: ' + SITE + '/sitemap.xml\n');
 }
 
-console.log('Generated ' + n + ' piece pages + sitemap.xml (' + (staticUrls.length + products.length) + ' urls).');
+// ── search index — AVAILABLE pieces only, trimmed for size ──
+// Loaded on every page (incl. piece pages) to power the nav search.
+//   i=id  n=name  b=brand  g=group (collection/category)  t=thumb  k=keywords
+const searchable = products.filter(p => p.status !== 'sold');
+const idx = searchable.map(p => {
+  const plo = isPlo(p);
+  const cat = String(p.category || '');
+  const group = (p.subcollection || '').trim() || (cat.charAt(0).toUpperCase() + cat.slice(1));
+  const keys = [p.name, group, p.category, p.type, p.color, p.motif, p.technique, p.fit,
+                p.medium, plo ? 'p-lo plo artonpillows' : 'jookh couture']
+    .filter(v => v && String(v).indexOf('ENTER') === -1 && String(v).indexOf('[') === -1)
+    .join(' ').toLowerCase().replace(/\s+/g, ' ').trim();
+  return { i: p.id, n: p.name, b: plo ? 'P·Lo' : 'Jookh', g: group, t: (p.views && p.views[0]) || '', k: keys };
+});
+fs.writeFileSync(path.join(ROOT, 'data', 'search-index.js'),
+  '/* Auto-generated — available pieces only. Rebuild: node sync-products.js */\n' +
+  'window.SEARCH_INDEX = ' + JSON.stringify(idx) + ';\n');
+
+console.log('Generated ' + n + ' piece pages + sitemap.xml (' + (staticUrls.length + products.length) + ' urls) + search index (' + idx.length + ' available).');
