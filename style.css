@@ -2652,6 +2652,12 @@ body.page-plo #plo { overflow-x: clip; overflow-y: visible; }
   margin: 0.2rem 0 0.1rem;
 }
 .card-price--plo { color: var(--plo); }
+/* No figure set yet — quieter than a real price, still clearly for sale. */
+.card-price--request {
+  font-size: 0.92rem;
+  letter-spacing: 0.06em;
+  color: var(--text-muted);
+}
 
 /* ─── INQUIRE IN-BASKET STATE ─── */
 .btn-inquire.in-basket {

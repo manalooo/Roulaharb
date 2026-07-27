@@ -888,11 +888,18 @@
     }
 
     // Sold/claimed pieces (the Archive) never show a price — the "Claimed" tag says it all.
+    // Anything still for sale always shows something: a figure, or "Price on request".
     var priceRaw = product.price != null ? String(product.price) : '';
-    if (!isSold && priceRaw && priceRaw.indexOf('ENTER') === -1 && priceRaw.trim() !== '') {
+    var hasPlaceholder = !priceRaw.trim() || priceRaw.indexOf('ENTER') !== -1 || priceRaw.indexOf('[') !== -1;
+    if (!isSold) {
       var priceEl = el('span', 'card-price' + (isPlo ? ' card-price--plo' : ''));
       var priceNum = parseFloat(priceRaw);
-      priceEl.textContent = isNaN(priceNum) ? priceRaw : '$' + priceNum.toLocaleString('en-US');
+      if (hasPlaceholder || isNaN(priceNum)) {
+        priceEl.textContent = 'Price on request';
+        priceEl.classList.add('card-price--request');
+      } else {
+        priceEl.textContent = '$' + priceNum.toLocaleString('en-US');
+      }
       infoRow.appendChild(priceEl);
     }
 
