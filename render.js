@@ -840,11 +840,11 @@
     var altMain  = nameText + (isPlo ? ' — hand-painted pillow' : ' — hand-painted wearable art');
     var altHover = nameText + ' — alternate view';
 
+    // The image links to the piece's own page (shareable, with specs + Reserve).
     var wrapClass = 'card-img-wrap' + (hasMultipleViews ? ' card-slideshow' : '');
-    var imgWrap = el('div', wrapClass);
-    imgWrap.setAttribute('role', 'button');
-    imgWrap.setAttribute('tabindex', '0');
-    imgWrap.setAttribute('aria-label', 'View ' + nameText + ' in lightbox');
+    var imgWrap = el('a', wrapClass);
+    imgWrap.href = '/piece/' + product.id + '/';
+    imgWrap.setAttribute('aria-label', 'View ' + nameText);
 
     views.forEach(function (src, i) {
       var imgClass = 'card-view-img' + (i === 0 ? ' main-img is-active' : '');

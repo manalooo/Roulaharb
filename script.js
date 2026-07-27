@@ -438,6 +438,8 @@ var prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)')
 
     var wrap = e.target.closest('.card-img-wrap');
     if (!wrap) return;
+    // Card images now link to the piece's own page — let the navigation happen.
+    if (wrap.tagName === 'A' && wrap.getAttribute('href')) return;
     var card = wrap.closest('[data-lightbox]');
     if (!card) return;
 
