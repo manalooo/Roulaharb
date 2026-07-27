@@ -178,12 +178,13 @@ a   { text-decoration: none; color: inherit; }
 .reveal {
   opacity: 1;
   transform: translateY(0);
-  transition: opacity 0.7s var(--ease), transform 0.7s var(--ease);
+  /* Quick enough that scrolling never outruns it — content is there, not "arriving". */
+  transition: opacity 0.3s var(--ease), transform 0.3s var(--ease);
 }
 
 .js-enabled .reveal {
   opacity: 0;
-  transform: translateY(20px);
+  transform: translateY(10px);
 }
 .js-enabled .reveal.visible {
   opacity: 1;

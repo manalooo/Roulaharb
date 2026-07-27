@@ -213,14 +213,17 @@ var prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)')
       });
     }, {
       threshold: 0,
-      rootMargin: '0px 0px 200px 0px'   // reveal a bit BEFORE it scrolls into view — no blank-then-pop
+      // A full screen of head start: content is revealed long before you reach it,
+      // so fast scrolling can never outrun the fade.
+      rootMargin: '0px 0px ' + Math.round(window.innerHeight) + 'px 0px'
     });
 
+    const LEAD = window.innerHeight;
     revealEls.forEach(function (el) {
       el.classList.add('reveal-wired');
       // Anything already in or above the viewport reveals immediately — never leaves a blank gap.
       const r = el.getBoundingClientRect();
-      if (r.top < window.innerHeight + 200) el.classList.add('visible');
+      if (r.top < window.innerHeight + LEAD) el.classList.add('visible');
       else revealObserver.observe(el);
     });
   }
@@ -234,7 +237,7 @@ var prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)')
       var vh = window.innerHeight;
       document.querySelectorAll('.reveal:not(.visible)').forEach(function (el) {
         var r = el.getBoundingClientRect();
-        if (r.top < vh + 200 && r.bottom > -100) el.classList.add('visible');
+        if (r.top < vh * 2 && r.bottom > -vh) el.classList.add('visible');
       });
     });
   }
