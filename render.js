@@ -71,7 +71,7 @@
     wireFilters();   // availability is now folded into the faceted engine in wireArchiveFilters
 
     if (typeof window.initReveal === 'function') window.initReveal();
-    initCardSlideshows();
+    // (Card view-switching is handled by .card-slideshow hover in style.css/script.js.)
   }
 
   // ─── COLLECTION PAGE: scale statement + availability toggle ──
@@ -823,7 +823,12 @@
     tryFetch('/api/products')
       .catch(function () { return tryFetch('/data/products.json?_=' + Date.now()); })
       .then(renderAll)
-      .catch(function () { renderAll(window.PRODUCTS || []); });
+      .catch(function (err) {
+        // Only a *data* failure should fall back to the bundled copy. A crash inside
+        // renderAll must be visible — silently re-rendering hid a broken filter panel.
+        console.error('[render] failed:', err);
+        try { renderAll(window.PRODUCTS || []); } catch (e2) { console.error('[render] fallback failed:', e2); }
+      });
   } else {
     renderAll(window.PRODUCTS || []);
   }

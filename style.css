@@ -4567,3 +4567,57 @@ body.search-open { overflow: hidden; }
   font-family: var(--font-sans); font-size: 0.58rem; letter-spacing: 0.12em;
   text-transform: uppercase; color: var(--text-muted); vertical-align: middle;
 }
+
+/* ═══════════════════════════════════════════════════════
+   MOBILE POLISH — most visitors arrive from Instagram on a
+   phone. Comfortable tap targets, readable minimum type.
+   ═══════════════════════════════════════════════════════ */
+@media (max-width: 860px) {
+  /* — Tap targets: 44px is the accepted minimum for a fingertip — */
+  .hamburger {
+    width: 44px; height: 44px;
+    align-items: center; justify-content: center;
+    padding: 0; margin-right: -8px;   /* keep the bars optically where they were */
+  }
+  .nav-search-btn {
+    width: 44px; height: 44px; margin-right: 0;
+  }
+  .nav-search-btn svg { width: 1.2rem; height: 1.2rem; }
+
+  .collection-filter-btn,
+  .toolbar-toggle,
+  .toolbar-clear,
+  .rooms-arrow,
+  .btn-inquire,
+  .piece-thumb,
+  .search-close {
+    min-height: 44px;
+  }
+  .collection-filter-btn { padding-top: 0.6rem; padding-bottom: 0.6rem; }
+  /* Filter chips inside the panel — 59 of them, all need thumb room */
+  .refine-chip { min-height: 40px; padding-top: 0.5rem; padding-bottom: 0.5rem; }
+  /* The most important button on the site — make it a comfortable thumb target */
+  .btn-inquire { display: inline-flex; align-items: center; justify-content: center; }
+  .piece-thumb { min-width: 44px; }
+  /* Lightbox controls — closing a full-screen image must be easy */
+  .lb-close { width: 44px; height: 44px; font-size: 1.6rem; }
+  .lb-nav { width: 46px; height: 46px; }
+  /* Piece names are links to the piece page — give them tappable height */
+  .card-piece-num { display: inline-block; padding: 0.32rem 0; }
+
+  /* — Readable minimums: nothing below ~11px on a phone — */
+  .hero-tagline      { font-size: 0.7rem; letter-spacing: 0.2em; }
+  .section-label     { font-size: 0.72rem; }
+  .lookbook-look-meta,
+  .lookbook-year-label { font-size: 0.72rem; }
+  .lookbook-hero-back  { font-size: 0.75rem; }
+  .card-medium         { font-size: 0.72rem; }
+
+  /* "Est. Beirut" is decoration — at 8px it only crowds the bar */
+  .nav-edition { display: none; }
+
+  /* — Filter bar: the palette dots squeezed out the piece count — */
+  .toolbar-summary .sum-palette { display: none; }
+  .toolbar-summary { overflow: visible; }
+  .sum-count { white-space: nowrap; }
+}

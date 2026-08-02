@@ -4,7 +4,7 @@ const fs = require('fs');
 const path = require('path');
 
 const ROOT = path.join(__dirname, '..');
-const VER = 'v=20260618collection-043';           // keep in step with the HTML cache-bust token
+const VER = 'v=20260618collection-049';           // keep in step with the HTML cache-bust token
 const SITE = 'https://roulaharb.com';
 const products = JSON.parse(fs.readFileSync(path.join(ROOT, 'data', 'products.json'), 'utf8'))
   .filter(p => p.id && p.category && p.name);
