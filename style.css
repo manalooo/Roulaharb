@@ -4550,3 +4550,20 @@ body.search-open { overflow: hidden; }
   .search-overlay { padding: 4vh 0.7rem 1rem; }
   .search-input { font-size: 1.1rem; }
 }
+
+/* Claimed pieces in search — shown after the available ones, visibly quieter */
+.search-sold-head {
+  margin: 0.9rem 0.7rem 0.3rem; padding-top: 0.8rem;
+  border-top: 1px solid rgba(60,24,32,0.1);
+  font-family: var(--font-sans); font-size: 0.66rem; letter-spacing: 0.14em;
+  text-transform: uppercase; color: var(--text-muted);
+}
+.search-sold-head span { text-transform: none; letter-spacing: 0.04em; opacity: 0.8; }
+.search-hit--sold .search-hit-img img { filter: saturate(0.55) brightness(0.98); }
+.search-hit--sold .search-hit-name { color: var(--text-muted); }
+.search-hit-claimed {
+  display: inline-block; margin-left: 0.5rem; padding: 0.1rem 0.45rem;
+  border-radius: 100px; background: rgba(60,24,32,0.09);
+  font-family: var(--font-sans); font-size: 0.58rem; letter-spacing: 0.12em;
+  text-transform: uppercase; color: var(--text-muted); vertical-align: middle;
+}

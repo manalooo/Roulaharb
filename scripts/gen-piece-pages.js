@@ -4,7 +4,7 @@ const fs = require('fs');
 const path = require('path');
 
 const ROOT = path.join(__dirname, '..');
-const VER = 'v=20260618collection-042';           // keep in step with the HTML cache-bust token
+const VER = 'v=20260618collection-043';           // keep in step with the HTML cache-bust token
 const SITE = 'https://roulaharb.com';
 const products = JSON.parse(fs.readFileSync(path.join(ROOT, 'data', 'products.json'), 'utf8'))
   .filter(p => p.id && p.category && p.name);
@@ -182,22 +182,27 @@ if (!fs.existsSync(path.join(ROOT, 'robots.txt'))) {
   fs.writeFileSync(path.join(ROOT, 'robots.txt'), 'User-agent: *\nAllow: /\nSitemap: ' + SITE + '/sitemap.xml\n');
 }
 
-// ── search index — AVAILABLE pieces only, trimmed for size ──
+// ── search index — every piece; sold ones are flagged, not dropped ──
+// (A whole category can be sold out — searching "kimono" must still find them.)
 // Loaded on every page (incl. piece pages) to power the nav search.
-//   i=id  n=name  b=brand  g=group (collection/category)  t=thumb  k=keywords
-const searchable = products.filter(p => p.status !== 'sold');
-const idx = searchable.map(p => {
+//   i=id  n=name  b=brand  g=group (collection/category)  t=thumb  k=keywords  s=1 when sold
+const idx = products.map(p => {
   const plo = isPlo(p);
+  const sold = p.status === 'sold';
   const cat = String(p.category || '');
   const group = (p.subcollection || '').trim() || (cat.charAt(0).toUpperCase() + cat.slice(1));
   const keys = [p.name, group, p.category, p.type, p.color, p.motif, p.technique, p.fit,
-                p.medium, plo ? 'p-lo plo artonpillows' : 'jookh couture']
+                p.medium, plo ? 'p-lo plo artonpillows' : 'jookh couture',
+                sold ? 'sold claimed' : 'available']
     .filter(v => v && String(v).indexOf('ENTER') === -1 && String(v).indexOf('[') === -1)
     .join(' ').toLowerCase().replace(/\s+/g, ' ').trim();
-  return { i: p.id, n: p.name, b: plo ? 'P·Lo' : 'Jookh', g: group, t: (p.views && p.views[0]) || '', k: keys };
+  const e = { i: p.id, n: p.name, b: plo ? 'P·Lo' : 'Jookh', g: group, t: (p.views && p.views[0]) || '', k: keys };
+  if (sold) e.s = 1;
+  return e;
 });
 fs.writeFileSync(path.join(ROOT, 'data', 'search-index.js'),
-  '/* Auto-generated — available pieces only. Rebuild: node sync-products.js */\n' +
+  '/* Auto-generated — all pieces (s:1 = sold). Rebuild: node sync-products.js */\n' +
   'window.SEARCH_INDEX = ' + JSON.stringify(idx) + ';\n');
 
-console.log('Generated ' + n + ' piece pages + sitemap.xml (' + (staticUrls.length + products.length) + ' urls) + search index (' + idx.length + ' available).');
+const nAvail = idx.filter(x => !x.s).length;
+console.log('Generated ' + n + ' piece pages + sitemap.xml (' + (staticUrls.length + products.length) + ' urls) + search index (' + idx.length + ' pieces, ' + nAvail + ' available).');

@@ -910,6 +910,9 @@ var prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)')
   var INDEX = window.SEARCH_INDEX;
   if (!Array.isArray(INDEX) || !INDEX.length) return;
 
+  var SOLD_SHOWN = 2;   // how many claimed pieces to show beneath the available ones
+  var AVAIL_COUNT = INDEX.filter(function (x) { return !x.s; }).length;
+
   var nav = document.querySelector('#navbar .nav-inner');
   if (!nav) return;
 
@@ -939,7 +942,7 @@ var prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)')
         'placeholder="Search by name, colour, collection…" aria-label="Search pieces" />' +
         '<button type="button" class="search-close" aria-label="Close search">&#215;</button>' +
       '</div>' +
-      '<p class="search-hint">Try <em>roma</em>, <em>blazer</em>, <em>heart</em> or <em>pomegranate</em> &mdash; searching ' + INDEX.length + ' available pieces.</p>' +
+      '<p class="search-hint">Try <em>roma</em>, <em>blazer</em>, <em>heart</em> or <em>pomegranate</em> &mdash; ' + AVAIL_COUNT + ' pieces available now, ' + INDEX.length + ' in all.</p>' +
       '<div class="search-results" id="site-search-results" role="listbox" aria-label="Results"></div>' +
     '</div>';
   document.body.appendChild(overlay);
@@ -971,7 +974,12 @@ var prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)')
       hits.push({ it: it, score: score });
     }
     hits.sort(function (a, b) { return a.score - b.score || a.it.n.localeCompare(b.it.n); });
-    return hits.slice(0, 30).map(function (h) { return h.it; });
+    // Available pieces are the answer. Show at most SOLD_SHOWN claimed ones after
+    // them — enough to prove the work exists (e.g. every kimono is sold) without
+    // burying what someone can actually buy.
+    var avail = [], sold = [];
+    hits.forEach(function (h) { (h.it.s ? sold : avail).push(h.it); });
+    return { avail: avail.slice(0, 30), sold: sold.slice(0, SOLD_SHOWN), soldTotal: sold.length };
   }
 
   function render(q) {
@@ -982,19 +990,30 @@ var prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)')
     }
     hint.hidden = true;
     var found = search(q);
-    if (!found.length) {
+    if (!found.avail.length && !found.sold.length) {
       results.innerHTML = '<p class="search-empty">Nothing matches &ldquo;' + esc(q) + '&rdquo;.<br />' +
-        '<span>Try a colour, a collection name, or a type like <em>kimono</em>.</span></p>';
+        '<span>Try a colour, a collection name, or a type like <em>blazer</em>.</span></p>';
       return;
     }
-    results.innerHTML = found.map(function (it) {
-      return '<a class="search-hit" href="/piece/' + esc(it.i) + '/" role="option">' +
+
+    function row(it) {
+      return '<a class="search-hit' + (it.s ? ' search-hit--sold' : '') + '" href="/piece/' + esc(it.i) + '/" role="option">' +
         '<span class="search-hit-img"><img src="/' + esc(it.t) + '" alt="" loading="lazy" decoding="async" /></span>' +
         '<span class="search-hit-text">' +
-          '<span class="search-hit-name">' + esc(it.n) + '</span>' +
+          '<span class="search-hit-name">' + esc(it.n) +
+            (it.s ? '<span class="search-hit-claimed">Claimed</span>' : '') + '</span>' +
           '<span class="search-hit-meta">' + esc(it.b) + ' &middot; ' + esc(it.g) + '</span>' +
         '</span></a>';
-    }).join('');
+    }
+
+    var html = found.avail.map(row).join('');
+    if (found.sold.length) {
+      html += '<p class="search-sold-head">' +
+        (found.avail.length ? 'Also in the archive' : 'All claimed &mdash; from the archive') +
+        (found.soldTotal > found.sold.length ? ' <span>(' + found.soldTotal + ' claimed in total)</span>' : '') +
+        '</p>' + found.sold.map(row).join('');
+    }
+    results.innerHTML = html;
   }
 
   function open() {
